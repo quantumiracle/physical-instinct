@@ -1,0 +1,852 @@
+﻿产品,公司,中文名,国家代码,国家,类别,发布,状态,价格,关键参数,模型/AI,官网,YouTube ID,数据来源,新设备
+Alice,AEI Robot,,OT,韩国,人形,2025-11（收录）,原型,65 000 美元,157 cm，50 kg，全身 31 DoF，手 7 DoF,,https://arobot4all.com/,djVXLLD8DFM,https://humanoid.guide/product/alice/,1
+A2,AgiBot,智元机器人,CN,,人形,2024-08,原型,100 000 美元,170 cm，60 kg，全身 20 DoF，手 N/A DoF,in-house,https://www.agibot.com/,hZ3naA_5010,https://data.robo2u.com/robots,0
+A2 Max,AgiBot,智元机器人,CN,,人形,2024-11（收录）,原型,100 000 美元,178 cm，85 kg，全身 25 DoF，手 N/A DoF,,https://www.agibot.com/,,https://humanoid.guide/product/a2-max/,0
+A2 Ultra,AgiBot,智元机器人,CN,,人形,,,"$69,999",,,,,https://www.roboticscenter.ai/store/product/agibot-a2-ultra,0
+A3,AgiBot,智元机器人,CN,,人形,2026-02,量产/在售,45 000 美元,173 cm，55 kg，全身 31 DoF，手 12 DoF,AgiBot LinkCraft and LinkSoul motion and character platforms,https://www.agibot.com,VDej0ddfQd4,https://data.robo2u.com/robots,1
+A3 Ultra,AgiBot,智元机器人,CN,,人形,2026-07,量产/在售,50 000 美元,174 cm，60 kg,NVIDIA Jetson Thor,https://www.agibot.com/,L-JmM5PXCjU,https://data.robo2u.com/robots,1
+G1,AgiBot,智元机器人,CN,,人形,2024-08,试点/小批量,95 000 美元,130-180 cm，150 kg，全身 26 DoF，手 6 DoF,NVIDIA Jetson AGX Orin 64GB,https://www.agibot.com,zwde6JYyQTc,https://data.robo2u.com/robots,0
+QUESTER1 (Q1),AgiBot,智元机器人,CN,,人形,2026-01（收录）,原型,28 000 美元,79 cm (2’7”) cm，~20–30 kg，全身 ~24–32 DoF，手 ~8–12 DoF,,https://www.agibot.com,SY24ya8lQ1o,https://humanoid.guide/product/quester1-q1/,1
+RAISE A1,AgiBot,智元机器人,CN,,人形,2025-08（收录）,原型,30 000 美元,175 cm，55 kg，全身 49 DoF，手 12 DoF,,https://www.agibot.com,EhHexbsI1Ok,https://humanoid.guide/product/raise-a1/,1
+X1,AgiBot,智元机器人,CN,,人形,2024-10,原型,20 000 美元,130 cm，33 kg，全身 34 DoF，手 Not specified DoF,AimRT open-source framework with PowerFlow joint modules,https://www.agibot.com,rayedzqtlaw,https://data.robo2u.com/robots,0
+X2,AgiBot,智元机器人,CN,,人形,2025-03,量产/在售,34 000 美元,"130 cm，35–37 kg depending on variant kg，全身 27 to 31 DOF depending on version (base X2: 27 DOF; Pro/Ultra: 31 DOF) DoF，手 5 DOF per arm on base X2, 7 DOF per arm on Pro/Ultra DoF",WorkGPT,https://www.agibot.com/products/X2,kBGNvPq0Iyg,https://data.robo2u.com/robots,1
+Elf V1,AheadForm,首形科技,CN,,人形,2025,原型,,4.5 kg，30 DoF,"Self-supervised emotion AI; ~30 brushless micro-motors, pupil cameras",,,https://data.robo2u.com/robots,1
+Elf Xuan 2.0,AheadForm,首形科技,CN,,人形,2026-10（收录）,原型,55 000 美元,165 cm，50 kg,,https://www.aheadform.com/,Y04xlNj4giw,https://humanoid.guide/product/elf-xuan-v2/,1
+Origin M1,AheadForm,首形科技,CN,,人形,2025,原型,,25 DoF,,,,https://data.robo2u.com/robots,1
+Mornine,AiMOGA (Chery Group),奇瑞集团,CN,,人形,2026-10（收录）,量产/在售,41 400 美元,167 cm，70 kg,,https://www.aimoga-robot.com/,XrVoYorJWIE,https://humanoid.guide/product/mornine/,1
+Mornine M1,AiMOGA (Chery Group),奇瑞集团,CN,,人形,2026-04,量产/在售,"$41,400",167 cm，70 kg，40 DoF,CheryGPT + DeepSeek large models (multilingual LLM 'smart brain') for semantic understanding and dialogue; motion via imitation + reinforcement learning,,,https://data.robo2u.com/robots,1
+AlphaBot 2,AI² Robotics,智平方,CN,,人形,2026-09（收录）,量产/在售,70 000 美元,180 cm，135 kg，全身 34 DoF，手 16 DoF,,https://ai2robotics.com/,cYP6qHWgNOM,https://humanoid.guide/product/alphabot-2/,1
+Astribot S1,Astribot,星尘智能,CN,,人形,2024-04,量产/在售,99 000 美元,170 cm，80 kg，全身 23 DoF，手 14 DoF,in-house,https://www.astribot.com/en/product,AePEcHIIk9s,https://data.robo2u.com/robots,0
+Fengxing-001,"AVIC (Aviation Industry Corporation of China, 中国航空工业集团)",中国航空工业集团,CN,,人形,2026-10（收录）,原型,150 000 美元,180 cm，80 kg,,https://www.avic.com/,,https://humanoid.guide/product/fengxing-001/,1
+ET1,"Beijing Galbot AI Co., Ltd.",银河通用,CN,,人形,2026-09,原型,95 000 美元,173 cm，65 kg，全身 48 DoF，手 24 DoF,"RK3588 and RDK X5, with NVIDIA Orin Nano or Orin NX options, running a 100M-parameter motion model",https://www.galbot.com/,,https://data.robo2u.com/robots,1
+G1,"Beijing Galbot AI Co., Ltd.",银河通用,CN,,人形,2025,已部署,"$87,000",173 cm，85 kg，47 DoF,"AstraBrain (GraspVLA, GroceryVLA, TrackVLA, NavFoM)",,,https://data.robo2u.com/robots,1
+S1,"Beijing Galbot AI Co., Ltd.",银河通用,CN,,人形,2026-01,量产/在售,55 000 美元,179 cm，320 kg，全身 N/A DoF，手 6 DoF,NVIDIA Jetson AGX Orin 64GB running Galbot AstraBrain model,https://www.galbot.com/,3ezq-WJbPJw,https://data.robo2u.com/robots,1
+Tiangong 3.0,Beijing Humanoid Robot Innovation Center (X-Humanoid),北京人形机器人创新中心,CN,,人形,2026-02,原型,,169 cm，62 kg，43 DoF,Huisi Kaiwu,,,https://data.robo2u.com/robots,1
+Tiangong Ultra,Beijing Humanoid Robot Innovation Center (X-Humanoid),北京人形机器人创新中心,CN,,人形,2025-04,科研,,180 cm，52 kg,Huisi Kaiwu,,,https://data.robo2u.com/robots,1
+Tiangong Walker DEX,Beijing Humanoid Robot Innovation Center (X-Humanoid),北京人形机器人创新中心,CN,,人形,2026-02,科研,,,,,,https://data.robo2u.com/robots,1
+K1,Booster Robotics,加速进化,CN,,人形,2025-10,量产/在售,6 000 美元,95 cm，19.5 kg，全身 22 DoF，手 4 per arm DoF,NVIDIA Jetson Orin (Orin NX 8GB base; AGX Orin on Pro tier): 48/117/200 TOPS across Geek/Education/Professional tiers; Doubao LLM integrated (6 months free),http://booster.tech/,7KJJjYyhVEk,https://data.robo2u.com/robots,1
+T1,Booster Robotics,加速进化,CN,,人形,2024,原型,75 000 美元,118 cm，30 kg，全身 23 DoF，手 N/A DoF,NVIDIA Jetson AGX Orin,https://www.boosterobotics.com/,oYSEtXH3gEY,https://data.robo2u.com/robots,0
+T2,Booster Robotics,加速进化,CN,,人形,2026-07,量产/在售,45 000 美元,140 cm，43 kg，全身 31 DoF，手 12 DoF,NVIDIA Jetson Thor T5000 on Pro version,http://booster.tech/,yyAgPHg4VS4,https://data.robo2u.com/robots,1
+DexBot,"BOSHIAC (Harbin, China)",博实股份,CN,,人形,2026-01（收录）,原型,120 000 美元,160 to 175 cm cm，80 kg，全身 Assumed ~30–50 DoF DoF，手 Assumed 15–20 DoF DoF,,https://en.boshi.cn/,,https://humanoid.guide/product/dexbot/,1
+Xiao Di,"BYD (BYD Company Limited, 比亚迪股份有限公司)",比亚迪股份有限公司,CN,,人形,2026-08,原型,25 000 美元,161 cm，58.5 kg,,https://www.byd.com/,BFXf3yo5pdQ,https://data.robo2u.com/robots,1
+CASBOT 02,"CASBOT / Beijing Zhongke Huiling Robotics Technology Co., Ltd.",中科慧灵（灵宝 CASBOT）,CN,,人形,2026-02（收录）,小批量,63 500 美元,163 cm，50 kg，全身 25 DoF，手 11 DOF per hand (6 active) with dexterous hand option DoF,,https://casbot.tech/,KeAph6VIG5M,https://humanoid.guide/product/casbot-02/,1
+CASIVIBOT,CasiVision,,CN,,人形,2025-12（收录）,量产/在售,29 000 美元,140 cm，55 kg，全身 14 DoF，手 2–3 per gripper DoF,,https://en.zhongkehuiyuan.com/,,https://humanoid.guide/product/casivibot/,1
+Orca,Cyan Robotics,,CN,,人形,2025-11（收录）,原型,34 000 美元,160 cm，50 kg，全身 40 DoF，手 10 DoF,,,lfPE_CSH8Jg,https://humanoid.guide/product/orca/,1
+CYBORG RO1,Cyborg Robotics (赛博格机器人有限公司),赛博格机器人有限公司,CN,,人形,2026-10（收录）,量产/在售,70 000 美元,180 cm，75 kg,,https://www.cyb-org.cn/,,https://humanoid.guide/product/cyborg-ro1/,1
+DR01,Deep Robotics,云深处科技,CN,,人形,2024,原型,200 000 美元,170 cm，80 kg，全身 12 DoF，手 N/A DoF,,https://www.deeprobotics.cn/en,lCFyfh3mLOQ,https://data.robo2u.com/robots,0
+DR02,Deep Robotics,云深处科技,CN,,人形,2025-10（收录）,量产/在售,65 000 美元,175 cm，65 kg，手 18 DoF,,https://www.deeprobotics.cn/,GZ4FReHiCFE,https://data.robo2u.com/robots,1
+Nezha P01,Digit Robotics,数字华夏,CN,,人形,2026-02（收录）,原型,80 000 美元,145 cm，65 kg，全身 54 DoF，手 11 per hand DoF,,https://www.digit.com.cn,,https://humanoid.guide/product/nezha-p01/,1
+XiaQi,Digit Robotics,数字华夏,CN,,人形,2026-02（收录）,量产/在售,75 000 美元,169 cm，69 kg，全身 40+ DoF，手 29+ DoF,,https://www.digit.com.cn,,https://humanoid.guide/product/xiaqi/,1
+Xialan S0,Digit Robotics,数字华夏,CN,,人形,2026-02（收录）,原型,90 000 美元,169 cm，N/A kg，全身 40+ DoF，手 29+ DoF,,https://www.digit.com.cn,YN2gxVGBEvU,https://humanoid.guide/product/xialan-s0/,1
+Atom,Dobot,越疆科技,CN,,人形,2025-03,原型,30 000 美元,153 cm，62 kg，全身 41 DoF，手 N/A DoF,Robot Operator Model-1 (ROM-1),https://www.dobot-robots.com/​,CrDyoVR2dnk,https://data.robo2u.com/robots,1
+Atom D,Dobot,越疆科技,CN,,人形,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-atom-d,0
+Atom Max,Dobot,越疆科技,CN,,人形,2025-11（收录）,原型,68 000 美元,170 cm，55 kg，全身 40–45 DoF (based on 7-DoF arms + typical biped DoF configuration) DoF，手 12 DoF,,https://www.dobot-robots.com,-xK5l0kPyTE,https://humanoid.guide/product/atom-max/,1
+Atom-W,Dobot,越疆科技,CN,,人形,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-atom-w,0
+LUMO,Dobot,越疆科技,CN,,人形,2026-10（收录）,量产/在售,12 000 美元,130 cm，35 kg,,https://www.dobot-robots.com/​,yRJHTof-O3w,https://humanoid.guide/product/lumo/,1
+Moya,"DroidUp (Shanghai Zhuoyide Robotics Co., Ltd.)",卓益得机器人,CN,,人形,2026-02,原型,"$173,000",165 cm，25 DoF,Context-retaining conversational AI,,,https://data.robo2u.com/robots,1
+Walker II,"DroidUp (Shanghai Zhuoyide Robotics Co., Ltd.)",卓益得机器人,CN,,人形,2026-09（收录）,量产/在售,23 800 美元,170 cm，32 kg，全身 30 DoF，手 10 DoF,,https://www.droidup.com/,,https://humanoid.guide/product/walker-2/,1
+SkyWalker 2,EIR Technology,,CN,,人形,2025-11（收录）,小批量,85 000 美元,165 cm，55 kg，全身 55 DoF，手 12 DoF,,https://www.eir.com.cn/,18tkwaBS-Lk,https://humanoid.guide/product/skywalker-2/,1
+PM01,EngineAI Robotics,众擎机器人,CN,,人形,2024-12,原型,20 000 美元,138 cm，40 kg，全身 24 DoF，手 N/A DoF,Jetson Orin + Intel N97,https://www.engineai.com.cn/,N_ALMlOipCI,https://data.robo2u.com/robots,0
+SA01,EngineAI Robotics,众擎机器人,CN,,人形,2024-07,量产/在售,"$5,400",138 cm，40 kg，12 DoF,,,,https://data.robo2u.com/robots,0
+SAO2,EngineAI Robotics,众擎机器人,CN,,人形,2025-08（收录）,量产/在售,5 300 美元,125 cm，25 kg，全身 28 DoF，手 Not specified DoF,,https://www.engineai.com.cn/,P_I9nGGQEyg,https://humanoid.guide/product/sao2/,1
+SE01,EngineAI Robotics,众擎机器人,CN,,人形,2024-10,原型,20 000 美元,180 cm，80 kg，全身 12 DoF，手 N/A DoF,"Dual-processor onboard compute: NVIDIA GPU + Intel CPU; drives Intel RealSense depth camera + 360deg LiDAR perception, with an end-to-end RL/imitation-learning locomotion neural net",https://www.engineai.com.cn/,I7Oh-ma4o1A,https://data.robo2u.com/robots,0
+Exrobot,EX Robot (Dalian EX Technology),蒂艾斯科技（EX 机器人）,CN,,人形,2016,量产/在售,"$207,000",140 DoF,,,,https://data.robo2u.com/robots,0
+GR-1,Fourier Intelligence,傅利叶,CN,,人形,2023-07,原型,125 000 美元,165 cm，55 kg，全身 25 DoF，手 N/A DoF,,https://fourierintelligence.com/gr1/,SHPxcRBlXN0,https://data.robo2u.com/robots,0
+GR-2,Fourier Intelligence,傅利叶,CN,,人形,2024-09,原型,125 000 美元,175 cm，65 kg，全身 53 DoF，手 N/A DoF,in-house,https://www.fftai.com/products-gr2,B-ebMigAHzQ,https://data.robo2u.com/robots,0
+GR-3,Fourier Intelligence,傅利叶,CN,,人形,2025-08,量产/在售,80 000 美元,165 cm，71 kg，全身 55 DoF，手 12 DoF,"Full-perception multimodal interaction system with a dual-path response architecture: fast reflex path for immediate cues plus large-model (LLM) reasoning for contextual dialogue; fuses RGB + structured-light vision, 4-mic array audio, and 31 distributed pressure sensors. No specific compute chip / named VLA disclosed by Fourier.",https://www.fftai.com/,25ULRycszkA,https://data.robo2u.com/robots,1
+N1,Fourier Intelligence,傅利叶,CN,,人形,2025-04,量产/在售,,130 cm，38 kg，23 DoF,,,,https://data.robo2u.com/robots,1
+Futuring 2,Futuring Robot,未来不远科技,CN,,人形,2026-04（收录）,原型,5 000 美元,~150–160 cm，70 kg，全身 26 DoF，手 12 DoF,,https://futuringrobot.com/,hkmEuMPxo-I,https://humanoid.guide/product/futuring-2/,1
+Kengo,Galaxea Dynamics,星海图,CN,,人形,2026-06（收录）,原型,69 999 美元,170 cm，65 kg，全身 32 DoF，手 12 DoF,,https://galaxea-dynamics.com/,,https://humanoid.guide/product/kengo/,1
+Gino 1,"Geek+ (Beijing Geekplus Technology Co., Ltd., 北京极智嘉科技股份有限公司; HKEX: 2590)",北京极智嘉科技股份有限公司,CN,,人形,2026-10（收录）,量产/在售,55 000 美元,168 cm，63 kg,,https://www.geekplus.com/en,GFYhyjurf_U,https://humanoid.guide/product/gino-1/,1
+NE01,"GENISOM AI (智身科技, Zhishen New Creation (Suzhou) Intelligent Technology Co., Ltd.)",智身科技,CN,,人形,2026-10（收录）,原型,20 000 美元,145 cm，40 kg,,https://www.genisomai.com/,CsO5-wVtXd8,https://humanoid.guide/product/ne01/,1
+Laborer C1,"Glroad (Wuhan Glroad Intelligent Technology Co., Ltd., 武汉格蓝若智能技术股份有限公司)",武汉格蓝若智能技术股份有限公司,CN,,人形,2026-10（收录）,量产/在售,70 000 美元,138 cm，38 kg,,https://www.glroad.com/,,https://humanoid.guide/product/laborer-c1/,1
+Laborer M1,"Glroad (Wuhan Glroad Intelligent Technology Co., Ltd., 武汉格蓝若智能技术股份有限公司)",武汉格蓝若智能技术股份有限公司,CN,,人形,2026-10（收录）,量产/在售,70 000 美元,187 cm，86 kg,,https://www.glroad.com/,,https://humanoid.guide/product/laborer-m1/,1
+Lumen H1,"Guanggu Dongzhi (HECbot; Hubei Guanggu Dongzhi Embodied Intelligence Technology Co., Ltd., 光谷东智)",光谷东智,CN,,人形,2026-10（收录）,量产/在售,40 000 美元,169 cm，69 kg,,https://www.hecbot.cn/,,https://humanoid.guide/product/lumen-h1/,1
+Lumen S1,"Guanggu Dongzhi (HECbot; Hubei Guanggu Dongzhi Embodied Intelligence Technology Co., Ltd., 光谷东智)",光谷东智,CN,,人形,2026-10（收录）,量产/在售,20 000 美元,130 cm，35 kg,,https://www.hecbot.cn/,,https://humanoid.guide/product/lumen-s1/,1
+HIVA Haiwa,Haier,海尔,CN,,人形,2025-12（收录）,原型,80 000 美元,165 cm，70 kg，全身 44 DoF，手 12 DoF,,https://www.haier.com/,,https://humanoid.guide/product/hiva-haiwa/,1
+Grace,Hanson Robotics,汉森机器人,CN,,人形,2021,原型,,,Hanson AI conversational/character AI,,,https://data.robo2u.com/robots,0
+Sophia,Hanson Robotics,汉森机器人,CN,,人形,2016,量产/在售,,167 cm，74 DoF,Hanson AI SDK linked to OpenCog / SingularityNET; 60+ expressions via patented Frubber skin,,,https://data.robo2u.com/robots,0
+HONOR A1,"HONOR Device Co., Ltd.",荣耀,CN,,人形,2026-09（收录）,原型,25 000 美元,136.9 cm，40 kg，全身 N/A DoF，手 N/A DoF,,https://www.honor.com/,K26Oj-lOrZ0,https://humanoid.guide/product/honor-a1/,1
+HONOR D1,"HONOR Device Co., Ltd.",荣耀,CN,,人形,2026-09（收录）,原型,100 000 美元,169 cm，45 kg，全身 25 DoF，手 N/A DoF,,https://www.honor.com/,K26Oj-lOrZ0,https://humanoid.guide/product/honor-d1/,1
+K1,JAKA Robotics,节卡机器人,CN,,人形,2025-01（收录）,原型,100 000 美元,165 cm，40 kg，全身 18 DoF，手 N/A DoF,,https://www.jaka.com/,mMm4w90QZV8,https://humanoid.guide/product/jaka-k1/,1
+Kargo,JAKA Robotics,节卡机器人,CN,,人形,2026-06（收录）,量产/在售,65 000 美元,156.5 cm，180 kg，全身 21 DoF，手 N/A DoF,,https://www.jaka.com,,https://humanoid.guide/product/jaka-kargo/,1
+YMBOT E3,"Jiangsu Yunmu Intelligent Manufacturing Technology Co., Ltd.",云幕智造,CN,,人形,2026-10（收录）,原型,38 000 美元,140 cm，35 kg,,https://www.ymbot.com/,,https://humanoid.guide/product/ymbot-e3/,1
+YMBot C,"Jiangsu Yunmu Intelligent Manufacturing Technology Co., Ltd.",云幕智造,CN,,人形,2026-10（收录）,原型,60 000 美元,174 cm，75 kg,,https://www.ymbot.com/,leIogigYmPs,https://humanoid.guide/product/ymbot-c/,1
+YMBot D2,"Jiangsu Yunmu Intelligent Manufacturing Technology Co., Ltd.",云幕智造,CN,,人形,2026-10（收录）,原型,48 000 美元,180 cm，150 kg,,https://www.ymbot.com/,,https://humanoid.guide/product/ymbot-d2/,1
+YMBot D4,"Jiangsu Yunmu Intelligent Manufacturing Technology Co., Ltd.",云幕智造,CN,,人形,2026-10（收录）,原型,55 000 美元,165 cm，100 kg,,https://www.ymbot.com/,,https://humanoid.guide/product/ymbot-d4/,1
+Keenon XMAN‑R1,KEENON Robotics,擎朗智能,CN,,人形,2025-06（收录）,量产/在售,100 000 美元,172 cm，110 kg，全身 36 DoF，手 6 DoF,,https://www.keenon.com/,t6K-tCAg1Z0,https://humanoid.guide/product/keenon-xman-r1/,1
+K2 Bumblebee,Kepler Exploration Robot Co.,开普勒探索机器人,CN,,人形,2025-11（收录）,原型,18 000 美元,175 cm，75 kg，全身 28 DoF，手 7 DoF,,https://www.gotokepler.com/home,IAdq_1ULIRQ,https://humanoid.guide/product/k2-bumblebee/,1
+K3 Bumblebee,Kepler Exploration Robot Co.,开普勒探索机器人,CN,,人形,2026-07,试点/小批量,,,Force-tactile full-modal VTLA model,,,https://data.robo2u.com/robots,1
+Kepler K2,Kepler Exploration Robot Co.,开普勒探索机器人,CN,,人形,2024-10,原型,25 000 美元,178 cm，85 kg，全身 52 DoF，手 N/A DoF,"Cloud-based advanced cognitive model integrated with an embodied ('brain + cerebellum') control system using imitation and reinforcement learning for perception, task planning, full-body coordination and motion control (per official Kepler release). No specific onboard compute chip/SoC or named VLA disclosed by the company; third-party 'Nebula 100 TOPS' claims are unverified.",https://www.gotokepler.com/home,iWC8rSjDywU,https://data.robo2u.com/robots,0
+KAI,KinetixAI,,CN,,人形,2026-04（收录）,原型,80 000 美元,173 cm，70 kg，全身 115 DoF，手 72 DoF,,https://www.kinetixai.tech/en/,KtYD9HLY6pw,https://humanoid.guide/product/kai/,1
+Knowin-X1,"Knowin (Shenzhen Nuoyin Intelligence, 诺因智能)",诺因智能,CN,,人形,2026-10（收录）,原型,25 000 美元,140 cm，50 kg,,https://knowinai.com/,,https://humanoid.guide/product/knowin-x1/,1
+VB1-I,Lanxin Robotics,蓝芯科技,CN,,人形,2026-01（收录）,量产/在售,120 000 美元,~165 cm，~60–70 kg，全身 ~40–45 DoF，手 ~6–7 per hand DoF,,https://www.lanxinrobotics.com/,XvvnNGZHp1E,https://humanoid.guide/product/vb1-i/,1
+VB2,Lanxin Robotics,蓝芯科技,CN,,人形,2026-01（收录）,量产/在售,150 000 美元,~170 cm，~65–75 kg，全身 ~45–50 DoF，手 ~6–7 per hand DoF,,https://www.lanxinrobotics.com/,cJVgypCriy8,https://humanoid.guide/product/vb2/,1
+VersaBot VB-1,Lanxin Robotics,蓝芯科技,CN,,人形,2025-12（收录）,试点/小批量,120 000 美元,165 cm，75 kg，全身 38 DoF，手 12 DoF,,https://www.lanxinrobotics.com/,XvvnNGZHp1E,https://humanoid.guide/product/versabot-vb-1/,1
+Kuavo,Leju Robotics,乐聚机器人,CN,,人形,2025,量产/在售,"$50,000",166 cm，63.5 kg，40 DoF,Huawei Pangu embodied large model running on KaihongOS (OpenHarmony/HarmonyOS-based); supports external LLM ecosystem integration and imitation-learning framework,,,https://data.robo2u.com/robots,1
+Kuavo-my,Leju Robotics,乐聚机器人,CN,,人形,2025-02（收录）,原型,50 000 美元,145 cm，45 kg，全身 26 DoF，手 N/A DoF,,https://www.lejurobot.com/en/application/kuavo-my,nXPgRbeRW2A,https://humanoid.guide/product/kuavo-my/,1
+Roban2,Leju Robotics,乐聚机器人,CN,,人形,2025-11（收录）,原型,25 000 美元,145 cm，40 kg，全身 40 DoF，手 10 DoF,,https://www.lejurobot.com/en,FMYwsXXIRJk,https://humanoid.guide/product/roban-2/,1
+LightBot-0,Light Origins,,CN,,人形,2026-09（收录）,原型,55 000 美元,90 cm，35 kg，全身 N/A DoF，手 N/A DoF,,https://www.lightorigins.com/en,96Rfm7OmHjY,https://humanoid.guide/product/lightbot-0/,1
+CL,Limx Dynamics,逐际动力,CN,,人形,2025-07（收录）,原型,40 000 美元,164 cm，45 kg，全身 52 DoF，手 6 DoF,,https://www.limxdynamics.com/,4DOiGYcEqXE,https://humanoid.guide/product/limx-cl-series/,1
+Luna,Limx Dynamics,逐际动力,CN,,人形,2026-05,原型,80 000 美元,165 cm，55 kg，全身 33 DoF，手 12 DoF,"Dual Rockchip RK3588 SoCs (motion control RK3588/16G/256G + perception RK3588/8G/32G), running LimX Sys 0 engine and LimX UP software",https://www.limxdynamics.com/en,bHEX7ESdZXk,https://data.robo2u.com/robots,1
+Oli,Limx Dynamics,逐际动力,CN,,人形,2025-07,量产/在售,60 000 美元,165 cm，55 kg，全身 43 DoF，手 10 DoF,,https://www.limxdynamics.com/,YrHf5X2Ggyc,https://data.robo2u.com/robots,1
+TRON1 Biped Robot,Limx Dynamics,逐际动力,CN,,人形,,,,,,,,https://www.roboticscenter.ai/store/product/limx-tron1-biped-robot,0
+CASBOT 01,Lingbao CASBOT,中科慧灵（灵宝 CASBOT）,CN,,人形,2025-01,原型,,179 cm，60 kg，52 DoF,~550 TOPS onboard compute running a self-developed end-to-end embodied AI model (specific chip/VLA vendor not disclosed),,,https://data.robo2u.com/robots,1
+LinkerArm A7,LINKERBOT,灵心巧手,CN,,人形,2026-09（收录）,量产/在售,16 000 美元,140 cm，40 kg，全身 14 DoF，手 14 DoF,,https://www.linkerbot.cn/,lWQb99hitJc,https://humanoid.guide/product/linkerarm-a7/,1
+LUS2,Lumos,鹿明机器人,CN,,人形,2025-12（收录）,小批量,99 000 美元,160 cm，65 kg，全身 38 DoF，手 10 DoF,,https://www.lumosbot.tech/,0z12DnLR3TY,https://humanoid.guide/product/lus2/,1
+NIX,Lumos,鹿明机器人,CN,,人形,2025-12（收录）,原型,12 000 美元,80 cm，20 kg，全身 N/A DoF，手 N/A DoF,,https://lumosbot.tech,2UZ0x91KOF0,https://humanoid.guide/product/nix/,1
+MagicBot Gen1,MagicLab,魔法原子,CN,,人形,2026-10（收录）,量产/在售,50 000 美元,174 cm，70 kg,8-core CPU with 100 TOPS AI processor,https://www.magiclabglobal.com/,ZEjrXkSI60M,https://data.robo2u.com/robots,1
+MagicBot X1,MagicLab,魔法原子,CN,,人形,2026-07,量产/在售,75 000 美元,170 cm，65 kg，全身 42 DoF，手 22 DoF,"Magic-VLA K02 on NVIDIA Jetson Orin NX, configurable up to Jetson Thor",https://www.magiclab.top/,yTq2O5gcU3w,https://data.robo2u.com/robots,1
+MagicBot Z1,MagicLab,魔法原子,CN,,人形,2025-07,原型,50 000 美元,140 cm，40 kg，全身 49 DoF，手 N/A DoF,8-core high-performance CPU; onboard VLM multimodal large model for interaction + VLN navigation algorithms for autonomous obstacle avoidance,https://www.magiclab.top/,Id7FBvOBtDA,https://data.robo2u.com/robots,1
+MATRIX-3,Matrix Robotics,矩阵超智,CN,,人形,2026-01,原型,85 000 美元,~160–180 cm，N/A kg，全身 ~30–45 DOF DoF，手 27 DOF in each hand DoF,WAVE physical world foundation model,https://matrixrobotics.ai/,dX1IG16Nr1E,https://data.robo2u.com/robots,1
+Matrix-1,Matrix Robotics,矩阵超智,CN,,人形,2025-02（收录）,原型,100 000 美元,180 cm，67 kg，全身 55 DoF，手 N/A DoF,,https://www.matrixrobotics.ai/,R6cO-uqxZeg,https://humanoid.guide/product/matrix-1/,1
+MIRO,Midea,美的集团,CN,,人形,2025-11（收录）,原型,58 000 美元,N/A cm，N/A kg，全身 N/A DoF，手 N/A DoF,,https://www.midea.com.cn/en,9B0iG2uIaTk,https://humanoid.guide/product/miro/,1
+Bolt,"MirrorMe Technology (Jingshi Technology (Beijing) Co., Ltd.)",镜识科技,CN,,人形,2026-10（收录）,原型,100 000 美元,175 cm，75 kg,,https://www.mirrormetech.com/,FhSjbcBrcaE,https://humanoid.guide/product/bolt/,1
+Qinglong,National-Local Joint Humanoid Robot Innovation Center,国家地方共建人形机器人创新中心,CN,,人形,2024-07,科研,,185 cm，80 kg，43 DoF,OpenLoong,,,https://data.robo2u.com/robots,0
+Neo1,"Neodra Dynamics (NeodraDynamics Co., Ltd., 清卓动力机器人科技（北京）有限公司)",清卓动力机器人科技（北京）有限公司,CN,,人形,2026-10（收录）,原型,150 000 美元,400 cm，1200 kg，全身 41 DoF，手 15 DoF,,http://neodradynamics.com/,OyiCuPadfOI,https://humanoid.guide/product/neo1/,1
+Neo1,NeodraDynamics,清卓动力,CN,,人形,2026-10,原型,,400 cm，1200 kg，41 DoF,,,,https://data.robo2u.com/robots,1
+RayNex G3,NineRay,,CN,,人形,2026-08（收录）,量产/在售,6 500 美元,173 cm，60 kg，全身 32 DoF，手 12 DoF,,https://www.nineraygroup.com/,,https://humanoid.guide/product/raynex-g3/,1
+Bumi,Noetix Robotics,松延动力,CN,,人形,2025-10,量产/在售,1 400 美元,98 cm，17 kg,,https://en.noetixrobotics.com,1VMp5NeaQKI,https://data.robo2u.com/robots,1
+Dora,Noetix Robotics,松延动力,CN,,人形,2025-08（收录）,原型,10 000 美元,100 cm，20 kg，全身 26 DoF，手 Not specified DoF,,https://en.noetixrobotics.com,,https://humanoid.guide/product/dora/,1
+E1,Noetix Robotics,松延动力,CN,,人形,2026-10（收录）,量产/在售,21 000 美元,136 cm，40 kg,,https://en.noetixrobotics.com,,https://humanoid.guide/product/e1/,1
+Hobbs,Noetix Robotics,松延动力,CN,,人形,2026-01（收录）,量产/在售,35 000 美元,~120–140 cm，~40–50 kg，全身 20 DoF，手 N/A DoF,,https://en.noetixrobotics.com/products-279.html,bcxezKIAw9M,https://humanoid.guide/product/hobbs/,1
+Hobbs 3 Robot,Noetix Robotics,松延动力,CN,,人形,,,"$105,000",,,,,https://www.roboticscenter.ai/store/product/noetix-hobbs-3-robot,0
+N2,Noetix Robotics,松延动力,CN,,人形,2025,原型,9 000 美元,118 cm，30 kg，全身 18 DoF，手 Not specified DoF,"Edge AI compute up to 67 TOPS; NVIDIA Jetson (Orin) + Rockchip RK3588s; LLM-driven speech & visual interaction, 3D/depth vision",https://en.noetixrobotics.com,xPSY3HaT1eY,https://data.robo2u.com/robots,1
+NORI L3,Nori Robotics,,US,,人形,2026-08（收录）,量产/在售,1 688 美元,145 cm，40 kg，全身 20 DoF，手 16 DoF,,https://www.norirobotics.com/,,https://humanoid.guide/product/nori-l3/,1
+Qinglong V3.0,OpenLoong,青龙开源社区（OpenLoong）,CN,,人形,2025-12（收录）,小批量,90 000 美元,165 cm，75 kg，全身 40 DoF，手 12 DoF,,https://www.openloong.net/,,https://humanoid.guide/product/qinglong-v3-0/,1
+Tora-One,PaXini (PaXini Tech),帕西尼感知,CN,,人形,2025,原型,,186 cm，21 DoF,,,,https://data.robo2u.com/robots,1
+PHYBOT C1,PHYBOT,动易科技,CN,,人形,2025-11（收录）,原型,22 000 美元,125 cm，25 kg，全身 28 DoF，手 12 DoF,,https://www.phybot.tech/,52nqK7xMS5Y,https://humanoid.guide/product/phybot-c1/,1
+PHYBOT M1,PHYBOT,动易科技,CN,,人形,2025-12（收录）,小批量,39 000 美元,172 cm，60 kg，全身 32 DoF，手 12 DoF,,https://www.phybot.tech/,FQkN3wauOuE,https://humanoid.guide/product/phybot-m1/,1
+ProWhite,PL-Universe,,CN,,人形,2026-01（收录）,量产/在售,45 000 美元,~155–165 cm，~45–55 kg，全身 ~28–32 DoF，手 ~5 per hand DoF,,https://en.pl-universe.com/,bZXKwD8-FeA,https://humanoid.guide/product/prowhite/,1
+Zeus 1,PL-Universe,,CN,,人形,2025-12（收录）,小批量,140 000 美元,160 to 175 cm cm，~300 kg kg，全身 42 DoF，手 14 DoF,,https://en.pl-universe.com/,,https://humanoid.guide/product/zeus-1/,1
+Adam Lite,PNDbotics,柏奥尼克,CN,,人形,2024-11（收录）,原型,120 000 美元,160 cm，60 kg，全身 25 DoF，手 N/A DoF,,https://pndbotics.com/,fwO2QK5m26s,https://humanoid.guide/product/adam/,0
+Adam SP,PNDbotics,柏奥尼克,CN,,人形,2025-07（收录）,原型,100 000 美元,167 cm，62 kg，全身 41 DoF，手 7 DoF,,https://pndbotics.com/,v2XnGkXQrLU,https://humanoid.guide/product/adamsp/,1
+PrimeBOT Q1,PrimeBOT,启元机器人（上纬新材）,CN,,人形,2026-08（收录）,原型,12 000 美元,88 cm，全身 22 DoF,,https://www.primebot.cn/,cC1e4GTv9TQ,https://humanoid.guide/product/primebot-q1/,1
+Psi V1,PsiBot,灵初智能,CN,,人形,2026-04（收录）,量产/在售,9 300 美元,175 cm，150 kg，全身 42 DoF，手 22 DoF,,https://www.psibot.ai/,Wif4nZ_JPNg,https://humanoid.guide/product/psi-v1/,1
+FlashBot Arm,Pudu Robotics,普渡机器人,CN,,人形,2025-12（收录）,量产/在售,34 000 美元,"144 cm，70 kg，全身 7 DOF per arm (two arms → 14 DOF for both arms, excluding hands and any base DOFs) DoF，手 6 active + 5 passive DoF",,https://www.pudurobotics.com/,WvhUxlcuZAI,https://humanoid.guide/product/flashbot-arm/,1
+Pudu D7,Pudu Robotics,普渡机器人,CN,,人形,2024-11（收录）,原型,70 000 美元,165 cm，45 kg，全身 30 DoF，手 N/A DoF,,https://www.pudurobotics.com/,CbA9wA9etGA,https://humanoid.guide/product/pudu-d7/,0
+Pudu D9,Pudu Robotics,普渡机器人,CN,,人形,2024-12,原型,100 000 美元,170 cm，55 kg，全身 42 DoF，手 N/A DoF,"275 TOPS onboard compute; multimodal perception (RGB + RGB-D cameras, tactile sensors, IMU) driving proprietary reinforcement-learning and embodied-AI models for locomotion and manipulation",https://www.pudurobotics.com/,gd5DdfJX_RM,https://data.robo2u.com/robots,0
+Dual-Arm Lift,RealMan Robotics (睿尔曼智能科技（北京）有限公司),睿尔曼智能科技（北京）有限公司,CN,,人形,2026-10（收录）,量产/在售,45 000 美元,178 cm，157 kg,,https://www.realman-robotics.com/,0MJypHJNyMU,https://humanoid.guide/product/dual-arm-lift/,1
+RealBot-S2,RealMan Robotics (睿尔曼智能科技（北京）有限公司),睿尔曼智能科技（北京）有限公司,CN,,人形,2026-10（收录）,量产/在售,35 000 美元,170 cm，125 kg,,https://www.realman-robotics.com/,3_cm4AJafhU,https://humanoid.guide/product/realbot-s2/,1
+RP1,RoboParty,萝博派对,CN,,人形,2026-09,原型,,,PartyOS with UFO training framework,,,https://data.robo2u.com/robots,1
+L7,Robotera,星动纪元,CN,,人形,2025-07,原型,120 000 美元,171 cm，65 kg，全身 55 DoF，手 12 DoF,ERA-42,https://www.robotera.com/,CW1QY4ZoFro,https://data.robo2u.com/robots,1
+M7,Robotera,星动纪元,CN,,人形,2026-08（收录）,量产/在售,100 000 美元,119 cm，43 kg，全身 43 DoF，手 24 DoF,,https://www.robotera.com/,pXTj8QK1iDQ,https://humanoid.guide/product/robotera-m7/,1
+Star1,Robotera,星动纪元,CN,,人形,2024-10,原型,120 000 美元,171 cm，63 kg，全身 55 DoF，手 N/A DoF,ERA-42,https://www.robotera.com/en,qw2y0kceAv0,https://data.robo2u.com/robots,0
+RP1,"Shanghai RoboParty Technology Co., Ltd.",萝博派对,CN,,人形,2026-10（收录）,原型,16 000 美元,130 cm，34 kg,,https://www.roboparty.com/,kIbzFeb2sWI,https://humanoid.guide/product/rp1/,1
+Roboto Origin,"Shanghai RoboParty Technology Co., Ltd.",萝博派对,CN,,人形,2026-08（收录）,原型,4 900 美元,125 cm，34 kg，全身 23 DoF，手 0 DoF,,https://www.roboparty.com/,gxdKXrVlO9g,https://humanoid.guide/product/roboto-origin/,1
+DUCO,Siasun Robot & Automation,新松机器人,CN,,人形,2026-01（收录）,原型,85 000 美元,~150–160 cm，~90–110 kg，全身 ~30–35 DoF，手 ~5 per hand DoF,,https://www.siasun.com,,https://humanoid.guide/product/duco/,1
+Songxing,Siasun Robot & Automation,新松机器人,CN,,人形,2025-12（收录）,小批量,140 000 美元,165 cm，85 kg，全身 38 DoF，手 10 DoF,,https://en.siasun.com/,,https://humanoid.guide/product/songxing/,1
+I-Series,Simplexity Robotics,,CN,,人形,2026-03（收录）,原型,78 000 美元,175 cm，60 kg，全身 20 DoF，手 10 DoF,,http://N/A,,https://humanoid.guide/product/simplexity-robotics-i-series/,1
+Moz1,Spirit AI,千寻智能,CN,,人形,2025-12（收录）,原型,150 000 美元,160 cm，70 kg，全身 26 DoF，手 >10 DoF,,https://spirit-ai.com/,WjO5u6pZP4Y,https://humanoid.guide/product/moz1/,1
+T140,Ti5 ROBOT,钛虎机器人,CN,,人形,,,,,,,,https://www.roboticscenter.ai/store/product/ti5-robot-t140-robot,0
+T170A,Ti5 ROBOT,钛虎机器人,CN,,人形,,,,,,,,https://www.roboticscenter.ai/store/product/ti5-robot-t170a-robot,0
+T170V2.1,Ti5 ROBOT,钛虎机器人,CN,,人形,,,,,,,,https://www.roboticscenter.ai/store/product/ti5-robot-t170v2-1-robot,0
+T230C,Ti5 ROBOT,钛虎机器人,CN,,人形,,,,,,,,https://www.roboticscenter.ai/store/product/ti5-robot-t230c-robot,0
+Yao Guang,Ti5 ROBOT,钛虎机器人,CN,,人形,2024-07,原型,,170 cm，48 kg，44 DoF,NVIDIA Jetson AGX Orin 64GB,,,https://data.robo2u.com/robots,0
+Marvin Pro,TianJi,天机智能,CN,,人形,,,,,,,,https://www.roboticscenter.ai/store/product/tianji-marvin-pro,0
+TLIBOT T1,"Tlibot (Sichuan Tianlian Robot Co., Ltd., 四川天链机器人股份有限公司)",四川天链机器人股份有限公司,CN,,人形,2026-10（收录）,量产/在售,40 000 美元,160 cm，43 kg,,https://www.tlibot.com/,BWXn_7_zd4Q,https://humanoid.guide/product/tlibot-t1/,1
+Tianzhen Z1,"Tlibot (Sichuan Tianlian Robot Co., Ltd., 四川天链机器人股份有限公司)",四川天链机器人股份有限公司,CN,,人形,2026-10（收录）,原型,35 000 美元,167 cm，45 kg,,https://www.tlibot.com/,,https://humanoid.guide/product/tianzhen-z1/,1
+Y4,"Tlibot (Sichuan Tianlian Robot Co., Ltd., 四川天链机器人股份有限公司)",四川天链机器人股份有限公司,CN,,人形,2026-10（收录）,量产/在售,12 000 美元,144.5 cm，95 kg,,https://www.tlibot.com/,4BekTD8H4Gg,https://humanoid.guide/product/y4/,1
+ToraOne,Tokyo Robotics,,OT,日本,人形,2025-01（收录）,原型,100 000 美元,186 cm，N/A kg，全身 47 DoF，手 N/A DoF,,https://paxini.com/robot,jwGz_x1xASI,https://humanoid.guide/product/toraone/,1
+Xiao Tuo,TOPSTAR Group,拓斯达,CN,,人形,2025-11（收录）,原型,21 000 美元,120 cm，40 kg，全身 30 DoF，手 3 DoF,,https://www.topstarmachine.com/,,https://humanoid.guide/product/xiao-tuo/,1
+Cruzr Y1,UBTECH Robotics,优必选,CN,,人形,2026-08（收录）,量产/在售,55 000 美元,170 cm，90 kg，全身 14 DoF，手 7 DoF,,https://www.ubtrobot.com/en/,,https://humanoid.guide/product/cruzr-y1/,1
+U1,UBTECH Robotics,优必选,CN,,人形,2026-06,预订,"$17,600",88 DoF,"On-board emotional AI: eye cameras + chest sensors/mics read facial expression, tone and mood to hold adaptive conversations",,,https://data.robo2u.com/robots,1
+U1 Pro,UBTECH Robotics,优必选,CN,,人形,2026-07（收录）,预订,25 000 美元,183 cm，42 kg，全身 88 DoF，手 24 DoF,,https://www.ubtrobot.com/en/,wdf3BORclRA,https://humanoid.guide/product/u1-pro/,1
+Walker C,UBTECH Robotics,优必选,CN,,人形,2025-08（收录）,原型,30 000 美元,163 cm，43 kg，全身 20 DoF，手 Not specified DoF,,https://www.ubtrobot.com/en/,INZ5jXuyUBg,https://humanoid.guide/product/walker-c/,1
+Walker C1,UBTECH Robotics,优必选,CN,,人形,2026-05（收录）,原型,79 000 美元,165 cm，50 kg，全身 26 DoF，手 10 DoF,,https://www.ubtrobot.com/en/,xQcSzHbYjtI,https://humanoid.guide/product/walker-c1/,1
+Walker S1,UBTECH Robotics,优必选,CN,,人形,2024-10,原型,75 000 美元,172 cm，76 kg，全身 41 DoF，手 N/A DoF,UBTECH BrainNet swarm-intelligence framework: cloud-device 'super brain' running a multimodal large reasoning model (developed with DeepSeek-R1 deep-reasoning tech) plus Transformer-based 'intelligent sub-brains' for multi-robot control and sensory integration,https://www.commercial.ubtrobot.com/,qlV9EWPe91o,https://data.robo2u.com/robots,0
+Walker S2,UBTECH Robotics,优必选,CN,,人形,2025-07,原型,80 000 美元,"176 cm，43, 73 kg，全身 52 DoF，手 22 DoF",BrainNet 2.0 + Co-Agent stack,https://www.commercial.ubtrobot.com/,mHP1WGlw5Wk,https://data.robo2u.com/robots,1
+Walker Tienkung,UBTECH Robotics,优必选,CN,,人形,2026-09（收录）,量产/在售,41 000 美元,170 cm，55 kg，全身 49 DoF，手 12 DoF,,https://www.ubtrobot.com/en/,feAlx7gnJ3c,https://humanoid.guide/product/walker-tienkung/,1
+Walker X,UBTECH Robotics,优必选,CN,,人形,2021-07,量产/在售,,130 cm，63 kg，41 DoF,Dual Intel Core i7-8665U (1.9GHz) CPUs + NVIDIA GT1030 GPU (384 cores); OS: Ubuntu + Linux RT Preempt + Android,,,https://data.robo2u.com/robots,0
+G1+,Unitree Robotics,宇树科技,CN,,人形,2024-05,量产/在售,15 000 美元,134 cm，35 kg，全身 25 DoF，手 14 DoF,8-core high-performance CPU (base G1); optional NVIDIA Jetson Orin module on G1 EDU,https://www.unitree.com/,IiNbFPOUrz8,https://data.robo2u.com/robots,0
+GD01,Unitree Robotics,宇树科技,CN,,人形,2026-05,量产/在售,"$573,674",270 cm，500 kg,,,,https://data.robo2u.com/robots,1
+H1,Unitree Robotics,宇树科技,CN,,人形,2023-08,量产/在售,"$99,900",180 cm，47 kg，19 DoF,"Intel Core i5/i7 x86 onboard, optional NVIDIA Jetson Orin NX",,,https://data.robo2u.com/robots,0
+H1-2,Unitree Robotics,宇树科技,CN,,人形,2026-02（收录）,量产/在售,112 000 美元,178 cm，70 kg，全身 27 DoF，手 7 DoF,,https://www.unitree.com/,eUdBIFkMh-M,https://humanoid.guide/product/h1-2/,1
+H2,Unitree Robotics,宇树科技,CN,,人形,2025-10,原型,90 000 美元,180 cm，70 kg，手 Not specified DoF,2070 TOPS onboard AI chip,https://www.unitree.com/,eUdBIFkMh-M,https://data.robo2u.com/robots,1
+H2 Plus,Unitree Robotics,宇树科技,CN,,人形,2026-06,试点/小批量,95 000 美元,180 cm，68 kg，全身 75 DoF，手 44 DoF,"NVIDIA Jetson AGX Thor T5000 (Blackwell GPU, 2,070 TFLOPS, 128GB; Isaac GR00T reference design)",https://www.unitree.com/,,https://data.robo2u.com/robots,1
+H2-X,Unitree Robotics,宇树科技,CN,,人形,2026-10（收录）,原型,45 000 美元,182 cm，70 kg，全身 31 DoF，手 22 DoF,,https://www.unitree.com/,Y3zb4o47yqA,https://humanoid.guide/product/unitree-h2-x/,1
+R1 Air,Unitree Robotics,宇树科技,CN,,人形,,,"$6,770",,,,,https://www.roboticscenter.ai/store/product/unitree-r1-air,0
+R1 Basic,Unitree Robotics,宇树科技,CN,,人形,,,"$8,890",,,,,https://www.roboticscenter.ai/store/product/unitree-r1-basic,0
+R1-A5,Unitree Robotics,宇树科技,CN,,人形,,,"$4,190",,,,,https://www.roboticscenter.ai/store/product/unitree-r1-a5-without-hand,0
+R1-A7,Unitree Robotics,宇树科技,CN,,人形,,,"$4,790",,,,,https://www.roboticscenter.ai/store/product/unitree-r1-a7-without-hand,0
+Superman,Unitree Robotics,宇树科技,CN,,人形,2026-08（收录）,原型,55 000 美元,170 cm，45 kg，全身 20 DoF，手 0 DoF,,https://www.unitree.com/,O7OkiZfIlS4,https://humanoid.guide/product/superman/,1
+Martian,Unix Group,,CN,,人形,2026-02（收录）,原型,125 000 美元,160 cm，50 kg，全身 16 DoF，手 7 per arm DoF,,https://www.unix-group.ai,,https://humanoid.guide/product/martian/,1
+Panther,Unix Group,,CN,,人形,2026-02（收录）,试点/小批量,115 000 美元,160 cm，N/A kg，全身 34 DoF，手 8 per arm DoF,,https://www.unix-group.ai,,https://humanoid.guide/product/panther/,1
+Wanda 2.0,Unix Group,,CN,,人形,2026-02（收录）,量产/在售,120 000 美元,142 – 168 cm，N/A kg，全身 22 DoF，手 8 per arm DoF,,https://www.unix-group.ai,,https://humanoid.guide/product/wanda-2-0/,1
+ATOM,Vbot (Vita Dynamics; 维他动力北京科技有限公司),维他动力北京科技有限公司,CN,,人形,2026-10（收录）,原型,25 000 美元,160 cm，50 kg,,https://www.vbot.cn/,UFUth_uudso,https://humanoid.guide/product/vbot-atom/,1
+Totan O1,WL Robotics (WL Robo),,CN,,人形,2026-02（收录）,试点/小批量,60 000 美元,134 cm，34 kg，全身 30 DoF，手 ~6–7 per hand DoF,,https://wlrobo.com/,vy6cDQ70KnA,https://humanoid.guide/product/totan-o1/,1
+Omni,X-Humanoid,北京人形机器人创新中心,CN,,人形,2026-05（收录）,原型,75 000 美元,~165 cm，~55–75 kg，全身 32 DoF，手 12 DoF,,https://www.x-humanoid.com/,8TGCHFJRHHo,https://humanoid.guide/product/omni/,1
+Tian Yi 2.0,X-Humanoid,北京人形机器人创新中心,CN,,人形,2026-01（收录）,量产/在售,60 000 美元,"~160–180 cm，N/A kg，全身 20, Not disclosed (likely 30+ with arms and base) DoF，手 N/A DoF",,https://www.x-humanoid.com/detail/tianyi.html,iZeURey51VE,https://humanoid.guide/product/tian-yi-2-0/,1
+TianGong Ultra,X-Humanoid,北京人形机器人创新中心,CN,,人形,2026-10（收录）,原型,80 000 美元,180 cm，55 kg,,https://www.x-humanoid.com/,B8DyUJagc2M,https://humanoid.guide/product/tiangong-ultra/,1
+Tien Kung 2.0,X-Humanoid,北京人形机器人创新中心,CN,,人形,2026-01（收录）,量产/在售,41 000 美元,170 cm，~70–90 kg，全身 20 DoF，手 N/A DoF,,https://www.x-humanoid.com/detail/jstg.html,,https://humanoid.guide/product/tien-kung-2-0/,1
+Tien Kung 3.0,X-Humanoid,北京人形机器人创新中心,CN,,人形,2026-02（收录）,原型,125 000 美元,169 cm，62 kg，全身 43 DoF，手 12 DoF,,https://www.x-humanoid.com/,Ipl4qdpzucg,https://humanoid.guide/product/tien-kung-3-0/,1
+CyberOne,Xiaomi,小米,CN,,人形,2022-08,原型,100 000 美元,177 cm，52 kg，全身 21 DoF，手 N/A DoF,MiAI,http://mi.com,I28Q9czUx2Q,https://data.robo2u.com/robots,0
+CyberOne v2,Xiaomi,小米,CN,,人形,2026-03（收录）,原型,99 000 美元,177 cm，52 kg，全身 21 DoF，手 N/A DoF,,http://mi.com,ZvHXUjvzzsU,https://humanoid.guide/product/cyberone-v2/,1
+Tieda,Xiaomi,小米,CN,,人形,2026-08,原型,,170 cm，66 kg，66 DoF,Xiaomi-Robotics-0 VLA foundation model,,,https://data.robo2u.com/robots,1
+IRON,Xpeng,小鹏汽车,CN,,人形,2025-11（收录）,原型,150 000 美元,173 cm，70 kg，全身 60 DoF，手 22 DoF,小鹏自研 VLA,https://www.pxing.com/en/index,m_Ag_SgsHVg,https://humanoid.guide/product/iron/,1
+Iron 2,Xpeng,小鹏汽车,CN,,人形,2025-11,原型,,178 cm，70 kg，82 DoF,in-house,,,https://data.robo2u.com/robots,1
+PX5,Xpeng,小鹏汽车,CN,,人形,2024-11（收录）,原型,150 000 美元,150 cm，109 kg，全身 22 DoF，手 N/A DoF,,https://www.xpeng.com/,,https://humanoid.guide/product/px5/,0
+X-Bot,Yue Quan Bionics (月泉仿生),月泉仿生,CN,,人形,2026-10（收录）,量产/在售,47 000 美元,167 cm，60 kg,,https://www.yqbionics.com/,kl1YxjwLi8U,https://humanoid.guide/product/x-bot/,1
+Zerith Z1,Zerith Robotics,零次方,CN,,人形,2026-02（收录）,量产/在售,120 000 美元,145 cm，33 kg，全身 27 DoF，手 N/A DoF,,https://www.zerith.com/,XGfSCtQzaKw,https://humanoid.guide/product/zerith-z1/,1
+Jupiter,Zeroth Robotics,,CN,,人形,2026-09（收录）,小批量,131 999 美元,165 cm，60 kg，全身 30 DoF，手 16 DoF,,https://www.zeroth0.com/,uwRk4lDfG3A,https://humanoid.guide/product/jupiter/,1
+Sean,Zeroth Robotics,,CN,,人形,2026-03（收录）,原型,65 000 美元,155 cm，45 kg，全身 16 DoF，手 6 DoF,,https://www.zeroth0.com/,33JryLT7icc,https://humanoid.guide/product/sean/,1
+NAVAI-I3,Zhejiang Humanoid Robot Innovation Center,浙江人形机器人创新中心,CN,,人形,2025-12（收录）,原型,120 000 美元,180 cm，70 kg，全身 44 DoF，手 14 DoF,,https://www.zj-humanoid.com/,LtPzJAeCr_o,https://humanoid.guide/product/navai-i3/,1
+Navigator 2,Zhejiang Humanoid Robot Innovation Center,浙江人形机器人创新中心,CN,,人形,2025-06（收录）,原型,100 000 美元,165 cm，60 kg，全身 20 DoF，手 N/A DoF,,https://www.zj-humanoid.com/,HPULbycIw1Q,https://humanoid.guide/product/navigator-2/,1
+Elixis,Addverb Technologies,,OT,印度,人形,2026-09（收录）,原型,50 000 美元,175 cm，75 kg，全身 41 DoF，手 12 DoF,,https://addverb.ai/,m1gC6cEvRw4,https://humanoid.guide/product/elixis/,1
+Alice M1,AEI Robot,,OT,韩国,人形,2026-02（收录）,量产/在售,45 000 美元,130 – 180 cm，97 kg，全身 31 DoF，手 12 DoF,,https://arobot4all.com/,UBdRg2jhnkY,https://humanoid.guide/product/alice-m1/,1
+aeo,Aeolus Robotics,,OT,中国台湾,人形,2023-01,已部署,,14 DoF,,,,https://data.robo2u.com/robots,0
+Agile One,Agile Robots,,OT,德国,人形,2025-11（收录）,原型,100 000 美元,174 cm，69 kg，全身 40 DoF，手 21 DoF,,https://www.agile-robots.com/,1iM6oe4D66w,https://humanoid.guide/product/agile-one/,1
+HRP-5P,AIST,,OT,日本,人形,2018,原型,,182 cm，101 kg，37 DoF,,,,https://data.robo2u.com/robots,0
+AKINCI-5,AKINROBOTICS,,OT,土耳其,人形,2026-07（收录）,原型,95 000 美元,129 cm，42 kg，全身 19 DoF，手 6 DoF,,https://www.akinrobotics.com/,pQa0B5OS4jI,https://humanoid.guide/product/akinci-5/,1
+NAO6,Aldebaran,,OT,法国,人形,2018,量产/在售,,58 cm，5.48 kg，25 DoF,"Intel Atom E3845, 4 GB RAM, NAOqi OS",,,https://data.robo2u.com/robots,0
+Abi,Andromeda Robotics,,OT,澳大利亚,人形,2026-04（收录）,量产/在售,25 000 美元,120 cm，50 kg，全身 12 DoF，手 4 DoF,,https://andromedarobotics.ai/,aEtoni05ljY,https://humanoid.guide/product/abi/,1
+AIDOL,Artificial Intelligence Dynamic Organism Lab,,OT,俄罗斯,人形,2025-11（收录）,原型,60 000 美元,186 cm，95 kg，全身 67 DoF，手 Not specified DoF,,https://aidoltech.ru/,UuUSR8TyZDE,https://humanoid.guide/product/aidol/,1
+Clone Alpha,Clone Robotics,,OT,波兰,人形,2025-01（收录）,原型,100 000 美元,170 cm，60 kg，全身 164 DoF，手 N/A DoF,,http://www.clonerobotics.com,C6u08rIa8o4,https://humanoid.guide/product/clone-alpha/,1
+RH5 Manus,DFKI,,OT,德国,人形,2022,科研,,187 cm，36 kg，30 DoF,2x Intel Core i7 CPU (in head and torso) + 3x Auvidea Jetson TX2 GPU; no learned VLA policy stack disclosed,,,https://data.robo2u.com/robots,0
+TORO,DLR (German Aerospace Center),,OT,德国,人形,2013,科研,,174 cm，76 kg，39 DoF,,,,https://data.robo2u.com/robots,0
+Cinnamon 1,"Donut Robotics Co., Ltd.",,OT,日本,人形,2026-01（收录）,原型,165 000 美元,~160–180 cm，~60–90 kg，全身 ~20–30+ DoF，手 ~10+ DoF,,https://www.donutrobotics.com/en,1vBI0GYjAKM,https://humanoid.guide/product/cinnamon-1/,1
+Mirokaï,Enchanted Tools,,OT,法国,人形,2025-06（收录）,原型,30 000 美元,123 cm，29 kg，全身 26 DoF，手 2 DoF,,https://enchanted.tools/,v_yO4Y6j9_s,https://humanoid.guide/product/mirokai/,1
+Ameca,Engineered Arts,,OT,英国,人形,2021-12,量产/在售,,187 cm，62 kg，61 DoF,"Tritium OS + Tritium AI (integrates OpenAI ChatGPT, Amazon Polly, Cartesia)",,,https://data.robo2u.com/robots,0
+Azi,Engineered Arts,,OT,英国,人形,2026-06,量产/在售,,52.5 cm，32 DoF,Tritium OS with OpenAI GPT models,,,https://data.robo2u.com/robots,1
+GENE.01,Generative Bionics,,OT,意大利,人形,2026-01（收录）,原型,50 000 美元,~170 cm，~60–80 kg，全身 ~40–60 DoF，手 ~5 per hand DoF,,https://gbionics.ai/,zYRz1uIIpwQ,https://humanoid.guide/product/gene-01/,1
+AEON,Hexagon,,OT,瑞典,人形,2025-08（收录）,原型,20 000 美元,165 cm，60 kg，全身 34 DoF，手 Not specified DoF,,https://robotics.hexagon.com/product/,ytPGe63TtOg,https://data.robo2u.com/robots,1
+ASIMO,"Honda R&D Co., Ltd.",,OT,日本,人形,2011-11,已停产,,130 cm，54 kg，57 DoF,,,,https://data.robo2u.com/robots,0
+HMND 01 Alpha Bipedal,Humanoid,,OT,英国,人形,2025-12,原型,,179 cm，90 kg，29 DoF,Vision-language-action framework on NVIDIA compute,,,https://data.robo2u.com/robots,1
+HMND 01 Alpha Wheeled,Humanoid,,OT,英国,人形,2025-09,原型,,29 DoF,KinetIQ four-layer AI stack on NVIDIA compute,,,https://data.robo2u.com/robots,1
+HMND 01,Humanoid.ai,,OT,英国,人形,2025-02（收录）,原型,100 000 美元,175 cm，70 kg，全身 41 DoF，手 N/A DoF,,https://thehumanoid.ai/,44WPYlAvIK0,https://humanoid.guide/product/hmnd-01/,1
+HMND 01 Alpha,Humanoid.ai,,OT,英国,人形,2025-12（收录）,原型,110 000 美元,179 cm，90 kg，全身 29 DoF，手 12 per hand DoF,,https://thehumanoid.ai/,44WPYlAvIK0,https://humanoid.guide/product/hmnd-01-alpha-bipedal/,1
+TARA GEN1,iHub Robotics,,OT,印度,人形,2025-06（收录）,量产/在售,13 998 美元,163 cm，75 kg，全身 3 DoF，手 3 DoF,,https://www.ihubrobotics.com/,mSPfVlQg7xI,https://humanoid.guide/product/tara-gen1/,1
+WALK-MAN,IIT,,OT,意大利,人形,2015,科研,,185 cm，102 kg，31 DoF,,,,https://data.robo2u.com/robots,0
+ergoCub,IIT,,OT,意大利,人形,2023,科研,,150 cm，55.7 kg,NVIDIA Jetson AGX Xavier,,,https://data.robo2u.com/robots,0
+iCub3,IIT,,OT,意大利,人形,2021,科研,,125 cm，52 kg，54 DoF,"Onboard head PC: 11th-gen Intel Core i7 @1.8 GHz with 16 GB RAM (Ubuntu), plus an NVIDIA Jetson Xavier NX module for processing the 4K stereo camera images; distributed Arm Cortex microcontrollers handle real-time motor control (1 kHz / 20 kHz). Runs YARP middleware. Teleoperation/avatar system, not an autonomous VLA stack.",,,https://data.robo2u.com/robots,0
+iRonCub3,IIT,,OT,意大利,人形,2025,科研,,125 cm，70 kg，53 DoF,,,,https://data.robo2u.com/robots,1
+pib.Pro,isento robotics GmbH,,OT,德国,人形,2026-02（收录）,量产/在售,5 999 美元,80 cm，N/A kg，全身 20 DoF，手 N/A DoF,,https://pib.rocks,,https://humanoid.guide/product/pib-pro/,1
+ERICA,Ishiguro Lab (Osaka University),,OT,日本,人形,2015,科研,,166 cm，44 DoF,"Autonomous spoken-dialogue system coordinating voice, gaze and expression; pneumatic actuators",,,https://data.robo2u.com/robots,0
+Geminoid HI-6,Ishiguro Lab (Osaka University),,OT,日本,人形,2024,科研,,53 DoF,LLM trained on Ishiguro's books and interviews,,,https://data.robo2u.com/robots,0
+DRC-HUBO+,KAIST,,OT,韩国,人形,2015,原型,,175 cm，80 kg，32 DoF,,,,https://data.robo2u.com/robots,0
+ARMAR-6,"Karlsruhe Institute of Technology (KIT), H²T Lab",,OT,德国,人形,2018,科研,,192 cm，22 DoF,,,,https://data.robo2u.com/robots,0
+ARMAR-7,"Karlsruhe Institute of Technology (KIT), H²T Lab",,OT,德国,人形,2026-10（收录）,原型,75 000 美元,175 cm，120 kg,,https://h2t.iar.kit.edu/,Rrj1t-l9jqQ,https://humanoid.guide/product/armar-7/,1
+Kaleido 9,Kawasaki,,OT,日本,人形,2025-12,原型,200 000 美元,190 cm，99 kg，全身 N/A DoF，手 N/A DoF,,https://kawasakirobotics.com/,iJffdB9EWPU,https://data.robo2u.com/robots,1
+RHP Friends,Kawasaki,,OT,日本,人形,2022-03,原型,,160 cm，55 kg，30 DoF,,,,https://data.robo2u.com/robots,0
+RHP Kaleido,Kawasaki,,OT,日本,人形,2022,原型,,178 cm，85 kg，32 DoF,,,,https://data.robo2u.com/robots,0
+CLOiD,LG Electronics,,OT,韩国,人形,2026-01,试点/小批量,35 000 美元,~120–130 cm，~60–70 kg，全身 ~10–15 DoF，手 2–3 per hand DoF,Vision language and vision-language-action models on an LG chipset,https://www.lg.com/,GvLbSQ0Qelo,https://data.robo2u.com/robots,1
+KAPEX,LG Electronics,,OT,韩国,人形,2025-12（收录）,原型,150 000 美元,175 cm，65 kg，全身 40–50 DOF (based on multi-joint limbs + dexterous hands) DoF，手 20 DoF,,https://www.lg.com/,dGlgiGMRoII,https://humanoid.guide/product/kapex/,1
+Asimov,MenloAI,,OT,新加坡,人形,2026-04（收录）,量产/在售,15 000 美元,120 cm，35 kg，全身 27 DoF，手 N/A DoF,,https://menlo.ai/,GpyB-VSjk4Q,https://humanoid.guide/product/asimov/,1
+Asimov 1,MenloAI,,OT,新加坡,人形,2026-08（收录）,量产/在售,20 000 美元,120 cm，35 kg，全身 27 DoF，手 0 DoF,,https://menlo.ai/,GpyB-VSjk4Q,https://humanoid.guide/product/asimov-one/,1
+Asimov 2,MenloAI,,OT,新加坡,人形,2026-08（收录）,原型,35 000 美元,120 cm，38 kg，全身 27 DoF，手 0 DoF,,https://menlo.ai/,,https://humanoid.guide/product/asimov-two/,1
+MenteeBot,Mentee Robotics,,OT,以色列,人形,2024-11（收录）,原型,35 000 美元,175 cm，70 kg，全身 40 DoF，手 N/A DoF,,https://www.menteebot.com/,QumzgbjcjiQ,https://humanoid.guide/product/menteebot/,0
+MenteeBot V3,Mentee Robotics,,OT,以色列,人形,2025,原型,35 000 美元,175 cm，65 kg，全身 55 DoF，手 N/A DoF,Dual NVIDIA Jetson Orin AGX + LLM,https://www.menteebot.com/,sZPqfes6Gk8,https://data.robo2u.com/robots,1
+MH3,Mirsee Robotics,,OT,加拿大,人形,2025-05（收录）,量产/在售,200 000 美元,180 cm，125 kg，全身 31 DoF，手 6 DoF,,http://www.mirsee.com,n177Zja4E4o,https://humanoid.guide/product/mh3/,1
+Spaceo M1,Muks Robotics,,OT,印度,人形,2026-01,量产/在售,11 000 美元,167 cm，65 kg，全身 16 DoF，手 Not specified DoF,FusionMax,http://muksrobotics.com,bhkP-fQTSBA,https://data.robo2u.com/robots,1
+Spaceo Pro,Muks Robotics,,OT,印度,人形,2025-03,量产/在售,60 000 美元,167 cm，65 kg，全身 20 DoF，手 7 DoF,FusionMax,http://muksrobotics.com,wJqgrq4cqbw,https://data.robo2u.com/robots,1
+Nadine,Nanyang Technological University (MIRALab),,OT,新加坡,人形,2013,科研,,170 cm，27 DoF,LLM-driven social dialogue system with affective/memory modules,,,https://data.robo2u.com/robots,0
+Ambidex,Naver Labs,,OT,韩国,人形,2025-01（收录）,量产/在售,100 000 美元,186 cm，N/A kg，全身 47 DoF，手 N/A DoF,,https://www.naverlabs.com/ambidex,3LvZyOY6vVk,https://humanoid.guide/product/ambidex/,1
+Billi,NEUBILITY,,OT,韩国,人形,2026-10（收录）,原型,35 000 美元,149.7 cm，110 kg,,https://www.neubility.ai/en,GjJP4aiM0UU,https://humanoid.guide/product/billi/,1
+4NE-1,NEURA Robotics,,OT,德国,人形,2024-07,原型,200 000 美元,180 cm，80 kg，全身 25 DoF，手 N/A DoF,NVIDIA Jetson Thor (Isaac GR00T foundation model) + NEURA Neuraverse/AURA AI,http://neura-robotics.com/,RpphFszxQbM,https://data.robo2u.com/robots,0
+4NE1 Gen 3.5,NEURA Robotics,,OT,德国,人形,2026-09（收录）,量产/在售,115 000 美元,180 cm，80 kg，全身 55 DoF，手 12 DoF,,https://neura-robotics.com/,tZO97d281hY,https://humanoid.guide/product/4ne1-gen-3-5/,1
+4NE1 Gen 4,NEURA Robotics,,OT,德国,人形,2026-10,量产/在售,70 000 美元,180 cm，65 kg，全身 55 DoF，手 24 DoF,Neuron AI (perception-language-action model),https://neura-robotics.com/,u02bHNHkqxg,https://data.robo2u.com/robots,1
+OpenArm 02,OpenArm,,OT,日本,人形,2026-08（收录）,量产/在售,6 500 美元,N/A cm，30 kg，全身 14 DoF，手 1 DoF grippers each hand DoF,,https://openarm.dev/,QzJSBbF7zIE,https://humanoid.guide/product/openarm-02/,1
+HELIOS,ORBIT Robotics,,OT,瑞士,人形,2026-05（收录）,原型,75 000 美元,160 cm，~60–80 kg，全身 28 DoF，手 14 DoF,,https://www.orbitrobotics.ch/,cqEEX4ct2A0,https://humanoid.guide/product/helios/,1
+RoBee,Oversonic Robotics,,OT,意大利,人形,2026-01（收录）,量产/在售,140 000 美元,190 cm，180 kg，全身 40 DoF，手 18 DoF,,https://www.oversonicrobotics.com,DJI0qUxzke0,https://humanoid.guide/product/robee/,1
+Kangaroo,PAL Robotics,,OT,西班牙,人形,2022,原型,100 000 美元,160 cm，40 kg，全身 28 DoF，手 N/A DoF,"Intel i7 Control PC (32GB RAM, 1TB SSD); optional NVIDIA Jetson (Orin AGX) AI accelerator; Ubuntu LTS + ROS 2 (ros2_control); MuJoCo/mjlab sim support",https://pal-robotics.com/,rOfUe_SpCLs,https://data.robo2u.com/robots,0
+REEM-C,PAL Robotics,,OT,西班牙,人形,2013,量产/在售,325 000 美元,165 cm，80 kg，全身 68 DoF，手 38 DoF,Dual Intel Core i7 onboard computers,https://pal-robotics.com/,4HZIDpNSKyc,https://data.robo2u.com/robots,0
+TALOS,PAL Robotics,,OT,西班牙,人形,2017,量产/在售,350 000 美元,175 cm，95 kg，全身 32 DoF，手 2 DoF,EtherCAT real-time control on ROS,https://pal-robotics.com/,NO4Uu_Rq-EQ,https://data.robo2u.com/robots,0
+TIAGo Pro,PAL Robotics,,OT,西班牙,人形,2024,量产/在售,90 000 美元,155 cm，80 kg,ROS 2 / Intel i5 onboard PC,https://pal-robotics.com/,PC7Vuh00sfA,https://data.robo2u.com/robots,0
+PR-34D,Perceptyne,,OT,印度,人形,2025-12（收录）,试点/小批量,120 000 美元,N/A cm，N/A kg，全身 34 DoF，手 10 DoF,,https://www.perceptyne.com/,Q1Y62Pmkp_U,https://humanoid.guide/product/pr-34d/,1
+P0,Pink Robotics (Anyscrew GmbH),,OT,德国,人形,2026-09（收录）,原型,60 000 美元,175 cm，82 kg，全身 32 DoF，手 10 DoF,,https://www.pink-robotics.com/,MaKcxfeq1Fc,https://humanoid.guide/product/p0/,1
+Reachy 2,Pollen Robotics,,OT,法国,人形,2025,原型,78 000 美元,166 cm，50 kg，全身 14 DoF，手 N/A DoF,"ROS 2 with Python API, OTA updates",https://www.pollen-robotics.com/,z1PVHzbnUC4,https://data.robo2u.com/robots,1
+Reachy Mini,Pollen Robotics,,OT,法国,人形,2025-07,量产/在售,$299,28 cm，1.5 kg，6 DoF,,,,https://data.robo2u.com/robots,1
+Alfie,Prosper Robotics,,OT,英国,人形,,原型,,170 cm,Teleoperation-to-autonomy (learned from remote pilots),,,https://data.robo2u.com/robots,0
+RB-Y1,Rainbow Robotics,,OT,韩国,人形,2024-05,量产/在售,120 000 美元,160 cm，131 kg，全身 24 DoF，手 N/A DoF,"Open dual-PC compute architecture (official spec sheet): a real-time Robot PC handling low-level control/safety plus a User PC for building the AI development environment and running applications. Ships with robot-model, dynamics/motion libraries and URDF/MJCF models for Isaac Sim and MuJoCo, plus teleoperation/data-collection tooling for imitation learning (Learning-from-Demonstration). Positioned as a bring-your-own-model research platform 'for the generative-AI era': no specific onboard SoC/GPU (e.g. Jetson) is published.",https://www.rainbow-robotics.com/en_main,Dp0JxQzJ-NM,https://data.robo2u.com/robots,0
+AI Sapiens K1,Robotis,,OT,韩国,人形,2026-08（收录）,量产/在售,8 000 美元,135.5 cm，35 kg，全身 23 DoF，手 10 DoF,,https://www.robotis.us/,eFRftVHCwUs,https://humanoid.guide/product/ai-sapiens-k1/,1
+AI Worker,Robotis,,OT,韩国,人形,2025-07（收录）,量产/在售,60 000 美元,162 cm，90 kg，全身 25 DoF，手 7 DoF,,https://ai.robotis.com/,Gr867DGH5tk,https://humanoid.guide/product/ai-worker/,1
+K0,Robotis,,OT,韩国,人形,2026-04（收录）,原型,15 000 美元,130 cm，34 kg，全身 23 DoF，手 0 DoF,,https://ai.robotis.com/,eFRftVHCwUs,https://humanoid.guide/product/k0-by-robotis/,1
+OP3,Robotis,,OT,韩国,人形,2017,量产/在售,"$13,764",51 cm，3.5 kg，20 DoF,Intel i3 NUC (ROS/ROS 2),,,https://data.robo2u.com/robots,0
+IGRIS-C,ROBROS,,OT,韩国,人形,2026-01（收录）,量产/在售,100 000 美元,154 cm，56 kg，全身 43 DoF，手 12 DoF,,https://www.robros.co.kr/en,o3u3FmmCfnU,https://humanoid.guide/product/igris-c/,1
+Phoenix,Sanctuary AI,,OT,加拿大,人形,2023-05,原型,40 000 美元,170 cm，70 kg，全身 75 DoF，手 N/A DoF,Carbon,https://sanctuary.ai/product/,FH3zbUSMAAU,https://data.robo2u.com/hands,0
+D01,Sharpa (Sharpa Robotics),,OT,新加坡,人形,2026-09（收录）,小批量,120 000 美元,162 cm，40 kg，全身 66 DoF，手 44 DoF,,https://www.sharpa.com/,iXWjCZ6Xelo,https://humanoid.guide/product/d01/,1
+Shimizu’s Robot,Shimizu Corporation,,OT,日本,人形,2026-09（收录）,原型,88 000 美元,155 cm，N/A kg，全身 N/A DoF，手 N/A DoF,,https://www.shimz.co.jp/en/,xFSHuht9M98,https://humanoid.guide/product/shimizus-robot/,1
+Pepper,SoftBank Robotics,,OT,日本,人形,2014,已停产,,121 cm，28 kg，20 DoF,,,,https://data.robo2u.com/robots,0
+Steve,Sulu.be,,OT,比利时,人形,2025-07（收录）,量产/在售,60 000 美元,210 cm，140 kg，全身 22 DoF，手 2 DoF,,https://jandecoster.com/,p0cJeipSxU0,https://humanoid.guide/product/steve/,1
+Bimanual,Svaya Robotics,,OT,印度,人形,2025-12（收录）,小批量,90 000 美元,155 cm，70 kg，全身 12 DoF，手 N/A DoF,,https://svayarobotics.com/,QVaZkg9XSro,https://humanoid.guide/product/bimanual/,1
+Onero H1,SwitchBot,,OT,日本,人形,2026-01,原型,24 500 美元,~120–130 cm，~35 kg，全身 ~28–32 DoF，手 ~5 per hand DoF,On-device AI with depth cameras and lidar,https://www.switch-bot.com,xqLRDWNzzZ8,https://data.robo2u.com/robots,1
+Synthia,Syntheva Robotics,,OT,挪威,人形,2026-09（收录）,原型,6 490 美元,165 cm，30 kg，全身 23 DoF，手 8 DoF,,https://robotics.syntheva.no/,xKOH8TngKsU,https://humanoid.guide/product/synthia/,1
+ALPHA,TeknTrash,,OT,英国,人形,2025-07（收录）,原型,55 000 美元,200 cm，90 kg，全身 13 DoF，手 2 DoF,,https://www.tekntrash.com/,,https://humanoid.guide/product/alpha/,1
+Torobo,Tokyo Robotics,,OT,日本,人形,2024-11（收录）,原型,100 000 美元,166 cm，160 kg，全身 24 DoF，手 N/A DoF,,https://robotics.tokyo/,B_I2k7MZEKg,https://humanoid.guide/product/torobo/,0
+CUE7,Toyota,,OT,日本,人形,2026-04（收录）,原型,150 000 美元,218 cm，74 kg，全身 N/A DoF，手 N/A DoF,,https://global.toyota/en/,rOLlqmKskp0,https://humanoid.guide/product/cue7/,1
+Punyo,Toyota,,OT,日本,人形,2024-02,科研,,91 cm,Learned sensorimotor policies via Diffusion Policy and Example-Guided Reinforcement Learning (trained from human teleop demonstrations using camera + tactile bubble feedback); no dedicated onboard VLA/compute stack disclosed,,,https://data.robo2u.com/robots,0
+T-HR3,Toyota,,OT,日本,人形,2017-11,科研,,154 cm，75 kg，32 DoF,Master Maneuvering System teleoperation with force feedback,,,https://data.robo2u.com/robots,0
+Nova,"ugo, Inc. (ugo株式会社)",,OT,日本,人形,2026-09（收录）,原型,100 000 美元,162 cm，90 kg，全身 22 DoF，手 2 DoF,,https://ugo.plus/,4ehRWhJw5hA,https://humanoid.guide/product/nova/,1
+Northstar,UMA,,OT,法国,人形,2026-07（收录）,原型,70 000 美元,165 cm，40 kg，全身 24 DoF，手 12 DoF,,https://uma.bot/,0vc-dAQDIQc,https://humanoid.guide/product/northstar/,1
+Kengoro,University of Illinois Urbana-Champaign (UIUC),,OT,日本,人形,2016,科研,,170 cm，56 kg，114 DoF,,,,https://data.robo2u.com/robots,0
+Vesoma 1,Vesoma,,OT,德国,人形,2026-09（收录）,原型,50 000 美元,170 cm，75 kg,,https://vesoma.com/,,https://humanoid.guide/product/vesoma-1/,1
+Dyno,VinDynamics,,OT,越南,人形,2026-06,原型,,,in-house,,,https://data.robo2u.com/robots,1
+Motion 2,VinMotion,,OT,越南,人形,2025-12,原型,75 000 美元,~160–165 cm cm，~60–75 kg，全身 ~32–40 DoF DoF，手 ~10–14 DoF,"Qualcomm Dragonwing IQ9 Series (on-device AI/physical reasoning; integrated LLM + ASR, multilingual AI)",https://vinmotion.net/,V_XIjoSKxd0,https://data.robo2u.com/robots,1
+Motion1,VinMotion,,OT,越南,人形,2025-06,原型,,178 cm，75 kg,,,,https://data.robo2u.com/robots,1
+VR-H3,VinRobotics,,OT,越南,人形,2026-06,原型,,178 cm，80 kg，31 DoF,"Dual onboard edge computers; in-house RL-based control (bio-inspired gait, domain randomization, curriculum learning)",,,https://data.robo2u.com/robots,1
+CALVIN-40,Wandercraft,,OT,法国,人形,2025,试点/小批量,65 000 美元,170 cm，80 kg，全身 28 DoF，手 10 DoF,NVIDIA Jetson,https://en.wandercraft.eu/,YddS-aI097Q,https://data.robo2u.com/robots,1
+ALLEX,WIRobotics,,OT,韩国,人形,2025-08,原型,180 000 美元,Not specified cm，Not specified kg，全身 Not specified DoF，手 15 DoF,,http://www.wirobotics.com,qT2UZ3oN4xI,https://data.robo2u.com/robots,1
+DEUX,XYZ,,OT,韩国,人形,2026-07（收录）,量产/在售,29 900 美元,155 cm，60 kg，全身 32 DoF，手 14 DoF,,https://xyzcorp.imweb.me/,tqhQTiX0NPw,https://humanoid.guide/product/deux/,1
+1X NEO,1X Technologies,,US,,人形,2025-10,原型,20 000 美元,170 cm，30 kg，全身 75 DoF，手 22 DoF,1X NEO Cortex (NVIDIA Jetson Thor),https://www.1x.tech,LTYMWadOW7c,https://data.robo2u.com/hands,1
+NEO Beta,1X Technologies,,US,,人形,2024-11（收录）,原型,75 000 美元,165 cm，30 kg，全身 55 DoF，手 N/A DoF,,https://www.1x.tech/androids/neo,bUrLuUxv9gE,https://humanoid.guide/product/neo-beta/,0
+NEO Gamma,1X Technologies,,US,,人形,2025-02（收录）,原型,75 000 美元,165 cm，35 kg，全身 25 DoF，手 N/A DoF,Redwood AI,https://www.1x.tech,uVcBa6NXAbk,https://humanoid.guide/product/neo-gamma/,1
+Digit,Agility Robotics,,US,,人形,2023-03,量产/在售,45 000 美元,180 cm，76 kg，全身 28 DoF，手 N/A DoF,in-house,https://agilityrobotics.com/,LM3hTXUShvA,https://data.robo2u.com/robots,0
+Digit 5,Agility Robotics,,US,,人形,2026-09,小批量,150 000 美元,180 cm，129 kg，全身 30 DoF，手 6 DoF,Agility physical AI stack with a safety controller on NVIDIA IGX Thor and Halos,https://www.agilityrobotics.com,oyq9BOwK5XI,https://data.robo2u.com/robots,1
+Axol,"Almond AI, Inc.",,US,,人形,2026-09（收录）,量产/在售,9 499 美元,61 cm，19.5 kg，全身 14 DoF，手 2 DoF,,https://www.almond.bot/,WjcBwSufr7Q,https://humanoid.guide/product/axol/,1
+Apollo,Apptronik,,US,,人形,2023-08,原型,50 000 美元,173 cm，72 kg，全身 71 DoF，手 N/A DoF,Gemini Robotics,https://apptronik.com/apollo,uJOA5IDaL5g,https://data.robo2u.com/robots,0
+Astra,Apptronik,,US,,人形,2026-04（收录）,原型,45 000 美元,"~100–140 cm (upper-body unit, depends on platform) cm，~25–40 kg kg，全身 24 DoF，手 12 DoF",,https://apptronik.com/,0LWRV7oFHUk,https://humanoid.guide/product/astra/,1
+QDH,Apptronik,,US,,人形,2026-04（收录）,原型,80 000 美元,~165 cm，~60–70 kg，全身 14 DoF，手 0 DoF,,https://apptronik.com/,nRX6XvFUnls,https://humanoid.guide/product/qdh/,1
+Beomni 1.0,Beyond Imagination,,US,,人形,2022,试点/小批量,,180 cm,Evolving AI brain (VR teleop learning toward autonomy),,,https://data.robo2u.com/robots,0
+Alex,Boardwalk Robotics,,US,,人形,2024-08,试点/小批量,,19 DoF,Proprietary high-speed manipulation control,,,https://data.robo2u.com/robots,0
+Atlas,Boston Dynamics,,US,,人形,2024-04,小批量,120 000 美元,190 cm，90 kg，全身 56 DoF，手 Part of overall 56 (exact split not published; tactile hands) DoF,No onboard compute hardware is officially published. AI stack: Boston Dynamics + Toyota Research Institute Large Behavior Models (LBMs) (a single end-to-end learned policy controlling the whole robot) plus a renewed Google DeepMind collaboration on foundation models for Atlas.,https://bostondynamics.com/,sd8ivhpjI6g,https://data.robo2u.com/robots,0
+Atlas (old),Boston Dynamics,,US,,人形,2024-11（收录）,原型,39 000 美元,150 cm，89 kg，全身 50 DoF，手 N/A DoF,,https://bostondynamics.com/atlas/,29ECwExc-_M,https://humanoid.guide/product/atlas-2013/,0
+Protoclone,Clone Robotics,,US,,人形,2025-02,原型,,180 cm，200 DoF,NVIDIA Jetson Thor GPU running Clone's proprietary Cybernet visuomotor AI model,,,https://data.robo2u.com/robots,1
+Vega,Dexmate,,US,,人形,2025-07（收录）,量产/在售,80 000 美元,171 cm，135 kg，全身 36 DoF，手 12 DoF,,http://dexmate.ai,NaTbycD_fdc,https://humanoid.guide/product/vega/,1
+Moxi,Diligent Robotics,,US,,人形,2018,已部署,,152 cm，23 DoF,Proprietary AI stack (Moxi 2.0),,,https://data.robo2u.com/robots,0
+T800,EngineAI Robotics,,US,,人形,2026-01,原型,85 000 美元,173 cm，60 kg，全身 29-DOF (excluding dexterous hands) DoF，手 12 DoF,RK3588S robot PC with NVIDIA Jetson Orin NX or AGX Orin 64GB,https://www.engineai.com.cn/,FGcQqyCaG5s,https://data.robo2u.com/robots,1
+FF Futurist,Faraday Future Intelligent Electric Inc.,,US,,人形,2026-06,小批量,34 990 美元,169 cm，69 kg，全身 40 DoF，手 7 per arm DoF,VLA (Vision-Language-Action) embodied-AI architecture combined with a World Model; first U.S. full-size humanoid to natively support NVIDIA Sonic full-body motion control (Ultra variant adds NVIDIA Jetson Thor compute),https://robotics.ff.com/us/,HXaOYV4Je48,https://data.robo2u.com/robots,1
+FF Master,Faraday Future Intelligent Electric Inc.,,US,,人形,2026-02（收录）,小批量,19 990 美元,131 cm，39 kg，全身 30 DoF，手 7 per arm DoF,,https://robotics.ff.com/us/,HXaOYV4Je48,https://humanoid.guide/product/master/,1
+FF Nova,Faraday Future Intelligent Electric Inc.,,US,,人形,2026-10,量产/在售,2 490 美元,49.7 cm，2.8 kg，全身 20 DoF，手 0 DoF,"ROS 2, with Nvidia Isaac-based training program",https://robotics.ff.com/us/,j-Xh-v3awX4,https://data.robo2u.com/robots,1
+Sprout,Fauna Robotics,,US,,人形,2026-02（收录）,量产/在售,50 000 美元,107 cm，22.7 kg，全身 29 DoF，手 1 DoF grippers each hand DoF,,https://faunarobotics.com/,XbAOMqkKLGU,https://humanoid.guide/product/sprout/,1
+Figure 01,Figure AI,,US,,人形,2023-03,原型,,168 cm，60 kg，41 DoF,OpenAI multimodal VLM,,,https://data.robo2u.com/robots,0
+Figure 02,Figure AI,,US,,人形,2024-08,原型,130 000 美元,168 cm，70 kg，全身 28 DoF，手 Not specified DoF,Helix,https://www.figure.ai/,0SRVJaOg9Co,https://data.robo2u.com/robots,0
+Figure 03,Figure AI,,US,,人形,2025-10,原型,130 000 美元,168 cm，60 kg，全身 30 DoF，手 20 DoF,Helix,https://www.figure.ai/,Eu5mYMavctM,https://data.robo2u.com/hands,1
+Phantom MK1,Foundation,,US,,人形,2025,原型,100 000 美元,"175 cm，80 kg，全身 19, Upper body DoF，手 Not specified DoF",Hybrid AI with LLM camera-first vision,http://www.foundation.bot,sJmg3abOASM,https://data.robo2u.com/robots,1
+Eno,Genesis AI,,US,,人形,2026-06（收录）,原型,90 000 美元,170 cm，120 kg，全身 40 DoF，手 20 DoF,,https://www.genesis.ai/,zab62_u-a5U,https://humanoid.guide/product/eno/,1
+Origin,HIRO Industries,,US,,人形,2026-09（收录）,原型,55 000 美元,160 cm，N/A kg，全身 17 DoF，手 16 DoF,,https://www.hiroindustries.com/,,https://humanoid.guide/product/origin-humanoid-robot/,1
+HopeJR,Hugging Face (The Robot Studio),,US,,人形,2025,原型,"$3,000",66 DoF,,,,https://data.robo2u.com/robots,1
+Alex,IHMC (Florida Institute for Human and Machine Cognition),,US,,人形,2026-09（收录）,原型,500 000 美元,175 cm，85 kg，全身 29 DoF，手 6 DoF,,https://robots.ihmc.us/,1o8TE5FjsD0,https://humanoid.guide/product/alex/,1
+Nadia,IHMC (Florida Institute for Human and Machine Cognition),,US,,人形,2026-09（收录）,原型,700 000 美元,190 cm，100 kg，全身 29 DoF，手 2 DoF,,https://robots.ihmc.us/,wgthZ30kkLk,https://humanoid.guide/product/nadia/,1
+K-Bot,K-Scale Labs,,US,,人形,2025-05,已停产,"$8,999",140 cm，34 kg，20 DoF,K-OS with K-VLA vision-language-action stack,,,https://data.robo2u.com/robots,1
+M-Bot,K-Scale Labs,,US,,人形,2025,已停产,"$3,000",70 cm,K-OS open-source stack,,,https://data.robo2u.com/robots,1
+Z-Bot,K-Scale Labs,,US,,人形,2025,已停产,$999,46 cm，9 kg，18 DoF,K-OS open-source stack,,,https://data.robo2u.com/robots,1
+Max,Meta,,US,,人形,2026-10,原型,100 000 美元,150 cm，48 kg，全身 40 DoF，手 24 DoF,NVIDIA Jetson Thor,https://www.meta.com/,,https://data.robo2u.com/robots,1
+Roger,Minerva Humanoids,,US,,人形,2026-10,原型,,,Minerva Intelligence (balance and navigation) with VR teleoperation,,,https://data.robo2u.com/robots,1
+Valkyrie (R5),NASA,,US,,人形,2013,原型,,187 cm，125 kg，44 DoF,,,,https://data.robo2u.com/robots,0
+Moby,Noble Machines,,US,,人形,2026-03,原型,75 000 美元,170 cm，45 kg，全身 34 DoF，手 10 DoF,NVIDIA Jetson Orin,https://www.noblemachines.ai/,UdtI_D_vIF0,https://data.robo2u.com/robots,1
+Isaac GR00T,NVIDIA,,US,,人形,2026-06（收录）,试点/小批量,95 000 美元,180 cm，68 kg，全身 75 DoF，手 44 DoF,,https://www.nvidia.com,,https://humanoid.guide/product/isaac-gr00t/,1
+Gen 1,Persona AI,,US,,人形,2025-12,原型,150 000 美元,175 cm，70 kg，全身 32 DoF，手 20 DoF,,https://persona.ai/,lDNrnmCj2DM,https://data.robo2u.com/robots,1
+Aria,Realbotix,,US,,人形,2025-01,量产/在售,"$150,000",175 cm，54 kg，44 DoF,"Runs Gemini/Llama/GPT-4/DeepSeek or Realbotix's own companionship AI; 17 facial motors, magnetically swappable faces, 100+ languages",,,https://data.robo2u.com/robots,1
+David,Realbotix,,US,,人形,2026-01,量产/在售,"$150,000",44 DoF,Emotion-reading AI vision + persistent memory; magnetically swappable face,,,https://data.robo2u.com/robots,1
+Echo Full Body,Realbotix,,US,,人形,2026-10,预订,"$59,950",183 cm，40 kg，39 DoF,"Integrates ChatGPT, Claude and Gemini; optional Vinci vision add-on",,,https://data.robo2u.com/robots,1
+Echo Tabletop,Realbotix,,US,,人形,2026-10,预订,"$11,950",81 cm，11.3 kg，17 DoF,"Integrates ChatGPT, Claude and Gemini; optional Vinci vision add-on",,,https://data.robo2u.com/robots,1
+Melody,Realbotix,,US,,人形,2025-01,量产/在售,"$95,000",39 DoF,Open modular AI platform (Realbotix Companionship AI or third-party LLMs such as ChatGPT),,,https://data.robo2u.com/robots,1
+ADAM,Richtech Robotics,,US,,人形,2022,已部署,,12 DoF,NVIDIA Jetson Thor (earlier: Jetson AGX Orin),,,https://data.robo2u.com/robots,0
+AICO 2,Rizon,,US,,人形,2026-06（收录）,量产/在售,120 000 美元,160 cm，281 kg，全身 14 DoF，手 N/A DoF,,https://flexiv.com/,,https://humanoid.guide/product/aico-2/,1
+MICO,Rizon,,US,,人形,2026-06,量产/在售,80 000 美元,150 cm，79 kg，全身 14 DoF，手 N/A DoF,,https://flexiv.com/,OxTCmmw63T4,https://data.robo2u.com/robots,1
+ROBO-T1,Robo Robotics Inc.,,US,,人形,2026-08（收录）,量产/在售,12 000 美元,130 cm，50 kg，全身 12 DoF，手 6 DoF,,http://www.robo.inc,,https://humanoid.guide/product/robo-t1/,1
+TITAN,RoboForce,,US,,人形,2025-11（收录）,原型,100 000 美元,210 cm，Not specified kg，全身 Not specified DoF，手 Not specified DoF,,http://www.roboforce.ai,90pv6IkqEYs,https://humanoid.guide/product/titan/,1
+Robin,Roboligent Inc.,,US,,人形,2025-12（收录）,量产/在售,85 000 美元,150 cm，80 kg，全身 14 DoF，手 N/A DoF,,https://www.roboligent.com/,bKt2spsFuS0,https://humanoid.guide/product/robin/,1
+RNoid,Robot.com,,US,,人形,2026-06,小批量,19 000 美元,160 cm，50 kg，全身 22 DoF，手 10 DoF,in-house,https://www.robot.com/,NcIZLkHCeC4,https://data.robo2u.com/robots,1
+StarBot Astra,StarBot (StarBot USA),,US,,人形,2026-10（收录）,预订,9 999 美元,152 cm，34 kg,,https://www.starbotusa.com/,,https://humanoid.guide/product/starbot-astra/,1
+OPTIMUS GEN 3,Tesla,,US,,人形,2025,量产/在售,50 000 美元,180 cm，52 kg，全身 80 DoF，手 25 DoF,in-house,https://www.tesla.com/en_in/AI,oca-iryhqdE,https://data.robo2u.com/hands,1
+Optimus Gen 1,Tesla,,US,,人形,2022-09,原型,,172 cm，73 kg，28 DoF,Tesla FSD-derived neural nets,,,https://data.robo2u.com/robots,0
+Optimus Gen2,Tesla,,US,,人形,2023-12,原型,30 000 美元,173 cm，56 kg，全身 22 DoF，手 N/A DoF,in-house,https://www.tesla.com/en_eu/AI,cpraXaw7dyc,https://data.robo2u.com/robots,0
+Voxel,Tuesday Labs,,US,,人形,2026-10（收录）,原型,20 000 美元,150 cm，45 kg，全身 22 DoF，手 2 DoF,,https://tuesdaylabs.com/,e1BoqzrzhLc,https://humanoid.guide/product/voxel/,1
+Voxel Series-1,Tuesday Labs,,US,,人形,2026-10,预订,,,,,,https://data.robo2u.com/robots,1
+Sonny,Tutor Intelligence,,US,,人形,2026,量产/在售,,173 cm，12 DoF,Intel Core i7 (28-core) + 64GB RAM + NVIDIA RTX 5060 Ti 16GB,,,https://data.robo2u.com/robots,1
+Tobi,TwoLabs,,US,,人形,2026-06（收录）,原型,50 000 美元,150 cm，60 kg，全身 16 DoF，手 6 DoF,,https://www.twolabs.ai/,70T6AzTqIHc,https://humanoid.guide/product/tobi/,1
+Berkeley Humanoid Lite,UC Berkeley (Hybrid Robotics),,US,,人形,2025,量产/在售,"$5,000",100 cm，16 kg，22 DoF,,,,https://data.robo2u.com/robots,1
+ARTEMIS,UCLA RoMeLa,,US,,人形,2023,原型,,142 cm，38.5 kg，20 DoF,,,,https://data.robo2u.com/robots,0
+Operator (OP1),Ultra Robotics Corp,,US,,人形,2026-06（收录）,量产/在售,80 000 美元,180 cm，140 kg，全身 14 DoF，手 2 DoF,,https://www.ultra.tech/,67AMjxwGOZE,https://humanoid.guide/product/operator-op1/,1
+Moby (old),Under Control Robotics,,US,,人形,2025-11（收录）,原型,75 000 美元,170 cm，45 kg，全身 34 DoF，手 10 DoF,,https://www.undercontrol.ai/,sCFaGJ7sB6g,https://humanoid.guide/product/moby-old/,1
+Isaac,"Weave Robotics, Inc.",,US,,人形,2026,预订,"$7,999",170 cm，16 DoF,,,,https://data.robo2u.com/robots,1
+Isaac 0,"Weave Robotics, Inc.",,US,,人形,2026-02（收录）,量产/在售,7 999 美元,170 cm，N/A kg，全身 17 DoF，手 2 DoF,,https://www.weaverobotics.com,KhImSR8GuCE,https://humanoid.guide/product/isaac-0/,1
+Isaac 1,"Weave Robotics, Inc.",,US,,人形,2026-07（收录）,预订,7 999 美元,160 cm，40 kg，全身 21 DoF，手 2 DoF,,https://www.weaverobotics.com,m7pZr90BQw4,https://humanoid.guide/product/isaac-1/,1
+THEMIS V2,Westwood Robotics,,US,,人形,2025-03（收录）,量产/在售,69 890 美元,160 cm，32 kg，全身 40 DoF，手 N/A DoF,,https://www.westwoodrobotics.io/,8hAt3ILlJrk,https://humanoid.guide/product/themis-v2/,1
+Syntro,WorkFar Technologies (USA),,US,,人形,2026-02（收录）,量产/在售,29 999 美元,170 cm (5′ 8″) cm，108 kg，全身 45 DoF，手 12 per hand (two hands) DoF,,https://www.workfar.com/,6j0RF6P2F0s,https://humanoid.guide/product/syntro/,1
+A2-W,AgiBot,智元机器人,CN,,轮式/移动操作,2024-08,试点/小批量,80 000 美元,163 cm，230 kg，全身 22 DoF，手 7 per arm DoF,,https://www.agibot.com,wM2Jp2hX428,https://data.robo2u.com/robots,0
+G2,AgiBot,智元机器人,CN,,轮式/移动操作,2025-10,已部署,"$143,999",175 cm，55 kg，手 12 DoF,Genie RL embodied AI stack,https://www.agibot.com,-_lTHbuRYwc,https://data.robo2u.com/robots,1
+G2 Max,AgiBot,智元机器人,CN,,轮式/移动操作,2026-07,量产/在售,135 000 美元,179 cm，185 kg，全身 50 DoF，手 24 DoF,,https://www.agibot.com/,,https://data.robo2u.com/robots,1
+COBOT Magic,AgileX,松灵机器人,CN,,轮式/移动操作,,,"$30,110",,,,,https://www.roboticscenter.ai/store/product/agilex-agilex-cobot-magic,0
+LIMO COBOT,AgileX,松灵机器人,CN,,轮式/移动操作,,,"$5,280",,,,,https://www.roboticscenter.ai/store/product/agilex-limo-cobot,0
+Mobile Manipulator Cobot Kit Pro,AgileX,松灵机器人,CN,,轮式/移动操作,,,"$35,000",,,,,https://www.roboticscenter.ai/store/product/agilex-mobile-manipulator-cobot-kit-pro,0
+Mobile Manipulator Cobot S,AgileX,松灵机器人,CN,,轮式/移动操作,,,"$35,000",,,,,https://www.roboticscenter.ai/store/product/agilex-mobile-manipulator-cobot-s,0
+Split COBOT Magic,AgileX,松灵机器人,CN,,轮式/移动操作,,,,,,,,https://www.roboticscenter.ai/store/product/agilex-split-cobot-magic,0
+Astribot T1,Astribot,星尘智能,CN,,轮式/移动操作,2026-05,量产/在售,13 500 美元,155 cm，66 kg，全身 23 DoF，手 16 DoF,in-house,https://www.astribot.com/en/product,qVdGU1-YkxY,https://data.robo2u.com/robots,1
+Mantis Standart,"Blue Worm (Xi’an Blue Worm EAI Technology Co., Ltd., 西安蓝虫具身智能科技有限公司)",西安蓝虫具身智能科技有限公司,CN,,轮式/移动操作,2026-10（收录）,量产/在售,1 400 美元,140 cm，50 kg,,https://www.bluewormrobotics.com/,,https://humanoid.guide/product/mantis-standart/,1
+CASBOT W1,"CASBOT / Beijing Zhongke Huiling Robotics Technology Co., Ltd.",中科慧灵（灵宝 CASBOT）,CN,,轮式/移动操作,2026-02（收录）,量产/在售,67 700 美元,112-210 cm，~260 kg，全身 20 DoF，手 7 per arm DoF,,https://casbot.tech/,,https://humanoid.guide/product/casbot-w1/,1
+CYBORG WO1,Cyborg Robotics (赛博格机器人有限公司),赛博格机器人有限公司,CN,,轮式/移动操作,2026-10（收录）,量产/在售,60 000 美元,160 cm，170 kg,,https://www.cyb-org.cn/,vgmedS9w3AA,https://humanoid.guide/product/cyborg-wo1/,1
+W1 Pro,"DexForce Technology Co., Ltd.",跨维智能,CN,,轮式/移动操作,2026-02（收录）,量产/在售,78 000 美元,163 cm，110 kg，全身 34 DoF，手 6 Active DOF and Humanoid 5 Fingers DoF,,https://en.dexforce.com/,yQ_VjHpxSSs,https://humanoid.guide/product/w1-pro/,1
+Centaur-G1,Elite Robots,艾利特机器人,CN,,轮式/移动操作,2026-10（收录）,量产/在售,48 000 美元,150 cm，260 kg,,https://www.elibot.com/,lWglaSUxUq8,https://humanoid.guide/product/centaur-g1/,1
+AstroD. AD-01,Elu.AI,,CN,,轮式/移动操作,2025-10（收录）,原型,100 000 美元,170 cm，120 kg，手 11 DoF,,http://www.elu-ai.com,,https://humanoid.guide/product/astrodroid-ad-01/,1
+GoMate,GAC Group,广汽集团,CN,,轮式/移动操作,2026-09（收录）,原型,80 000 美元,140 cm，45 kg，全身 38 DoF，手 14 DoF,,https://www.gacgroup.com/en,fsW77-LbgfM,https://humanoid.guide/product/gomate/,1
+GoMate Mini,GAC Group,广汽集团,CN,,轮式/移动操作,2026-10（收录）,原型,40 000 美元,170 cm，60 kg,,https://www.gacgroup.com/en,,https://humanoid.guide/product/gomate-mini/,1
+NEXO,Galaxea Dynamics,星海图,CN,,轮式/移动操作,2026-09（收录）,原型,90 000 美元,168 cm，85 kg，全身 30 DoF，手 12 DoF,,https://galaxea-dynamics.com/,t5jQGPa-prs,https://humanoid.guide/product/nexo/,1
+R1 Lite,Galaxea Dynamics,星海图,CN,,轮式/移动操作,2025,在售,,轮式双臂，面向科研和数据采集,G0（开源）,https://galaxea-dynamics.com/,,https://galaxea-dynamics.com/,1
+R1 PRO,Galaxea Dynamics,星海图,CN,,轮式/移动操作,2025-12（收录）,量产/在售,69 999 美元,170 cm，96 kg，全身 26 DoF，手 7 DoF,G0（开源）,https://galaxea-dynamics.com/,LzaGvmGvGGA,https://humanoid.guide/product/r1-pro/,1
+Gento Luna,Gento Robotics,,CN,,轮式/移动操作,2026-10（收录）,原型,40 000 美元,170 cm，90 kg,,https://www.gentorobotics.ai/,aipAQmEP4hE,https://humanoid.guide/product/gento-luna/,1
+Maker H01,GigaAI,极佳科技,CN,,轮式/移动操作,2025-12（收录）,原型,160 000 美元,160 cm，64 kg，全身 28 DoF，手 14 DoF,,,rtcKjOI8dsg,https://humanoid.guide/product/maker-h01/,1
+HSR-ER-HR705,"Huashu Robot (Chongqing Huashu Robot Co., Ltd., 重庆华数机器人有限公司)",重庆华数机器人有限公司,CN,,轮式/移动操作,2026-10（收录）,原型,45 000 美元,170 cm，200 kg,,https://www.hsrobotics.cn/,,https://humanoid.guide/product/hsr-er-hr705/,1
+Jingchu Elf,"Hubei Jingchu Humanoid Robot Co., Ltd. (湖北荆楚人形机器人有限公司, brand JCBOT)",湖北荆楚人形机器人有限公司,CN,,轮式/移动操作,2026-10（收录）,原型,25 000 美元,165 cm，70 kg,,https://www.jingchurobot.cn/,,https://humanoid.guide/product/elf/,1
+YMBot D,"Jiangsu Yunmu Intelligent Manufacturing Technology Co., Ltd.",云幕智造,CN,,轮式/移动操作,2026-10（收录）,量产/在售,35 000 美元,165 cm，100 kg,,https://www.ymbot.com/,,https://humanoid.guide/product/ymbot-d/,1
+YMBot H,"Jiangsu Yunmu Intelligent Manufacturing Technology Co., Ltd.",云幕智造,CN,,轮式/移动操作,2026-10（收录）,原型,35 000 美元,170 cm，75 kg,,https://www.ymbot.com/,31ofazjv-9Y,https://humanoid.guide/product/ymbot-h/,1
+KUAVO 5-W,Leju Robotics,乐聚机器人,CN,,轮式/移动操作,2026-09（收录）,量产/在售,80 000 美元,200 cm，156 kg，全身 40 DoF，手 12 DoF,,https://www.lejurobot.com/en,s-qfBqXx7zI,https://humanoid.guide/product/kuavo-5-w/,1
+Kuavo-5,Leju Robotics,乐聚机器人,CN,,轮式/移动操作,2025-12（收录）,原型,38 000 美元,168 cm，55 kg，全身 40 DoF，手 10 DoF,,https://www.lejurobot.com/en,fyZA6-DbJgw,https://humanoid.guide/product/kuavo-5/,1
+TRON 2,Limx Dynamics,逐际动力,CN,,轮式/移动操作,2025-12,量产/在售,37 700 美元,132 cm，35 kg,"Open SDK with Python and C++ support, ROS1 and ROS2 compatible, native VLA toolchain",https://www.limxdynamics.com/,Ut3QFPr7hyo,https://data.robo2u.com/robots,1
+MagicBot D1,MagicLab,魔法原子,CN,,轮式/移动操作,2026-07,量产/在售,65 000 美元,180 cm，150 kg,Magic-VLA K02 on Huawei 500 TOPS or 2070 TOPS high-compute module,https://www.magiclabglobal.com/,,https://data.robo2u.com/robots,1
+L1,Moon Dynamics,揽月动力,CN,,轮式/移动操作,2026-07（收录）,量产/在售,60 000 美元,165 cm，60 kg，全身 18 DoF，手 12 DoF,,http://N/A,,https://humanoid.guide/product/l1/,1
+Hobbs W1,Noetix Robotics,松延动力,CN,,轮式/移动操作,2025-12,量产/在售,32 000 美元,170 cm，75 kg,Dual onboard GPUs for local AI (offline conversation/emotion recognition),https://en.noetixrobotics.com,gVIWDhjpsOw,https://data.robo2u.com/robots,1
+Tora DoubleOne,PaXini (PaXini Tech),帕西尼感知,CN,,轮式/移动操作,2026-01（收录）,预订,45 000 美元,168 cm，70 kg，全身 58 DoF，手 18 DoF,,https://paxini.com/robot/doubleOne,PpWTPQlyHns,https://humanoid.guide/product/tora-doubleone/,1
+PrimeBOT T1,PrimeBOT,启元机器人（上纬新材）,CN,,轮式/移动操作,2026-07（收录）,原型,3 200 美元,60 cm，8.5 kg，全身 16 DoF，手 6 DoF,,https://www.primebot.cn/,,https://humanoid.guide/product/primebot-t1/,1
+ψ-SynRobot,PsiBot,灵初智能,CN,,轮式/移动操作,2026-04（收录）,原型,80 000 美元,145 cm，65 kg，全身 18 DoF，手 14 DoF,,https://www.psibot.ai/,,https://humanoid.guide/product/%cf%88-synrobot/,1
+RealBot-01,RealMan Robotics (睿尔曼智能科技（北京）有限公司),睿尔曼智能科技（北京）有限公司,CN,,轮式/移动操作,2026-10（收录）,量产/在售,30 000 美元,168 cm，125 kg,,https://www.realman-robotics.com/,3_cm4AJafhU,https://humanoid.guide/product/realbot-01/,1
+RealBot-L2,RealMan Robotics (睿尔曼智能科技（北京）有限公司),睿尔曼智能科技（北京）有限公司,CN,,轮式/移动操作,2026-10（收录）,量产/在售,35 000 美元,170 cm，120 kg,,https://www.realman-robotics.com/,lrcsH0Pffug,https://humanoid.guide/product/realbot-l2/,1
+Robbyant R1,"Robbyant (Ant Lingbo Technology), part of Ant Group (China)",灵波科技（蚂蚁集团）,CN,,轮式/移动操作,2025-11（收录）,量产/在售,55 000 美元,160 cm，110 kg，全身 34 DoF，手 N/A DoF,,https://www.antgroup.com/en,50tyJvDgbbo,https://humanoid.guide/product/robbyant-r1/,1
+REX G1,"RoboScience (Beijing Jike Future Technology Co., Ltd., 北京机科未来科技有限公司)",北京机科未来科技有限公司,CN,,轮式/移动操作,2026-10（收录）,原型,38 000 美元,170 cm，80 kg,,https://www.roboscience.co/,E-gB8iMDZck,https://humanoid.guide/product/rex-g1/,1
+Q5,Robotera,星动纪元,CN,,轮式/移动操作,2026-08（收录）,量产/在售,70 000 美元,165 cm，70 kg，全身 44 DoF，手 22 DoF,,https://www.robotera.com/,BBoyMgeuWvI,https://humanoid.guide/product/robotera-q5/,1
+Xiao Liu,Tencent Robotics X,腾讯 Robotics X 实验室,CN,,轮式/移动操作,2026-07（收录）,原型,90 000 美元,165 cm，70 kg，全身 38 DoF，手 12 DoF,,https://www.tencent.com/,DYu6_QRwEH8,https://humanoid.guide/product/xiao-liu/,1
+Y1,"Tlibot (Sichuan Tianlian Robot Co., Ltd., 四川天链机器人股份有限公司)",四川天链机器人股份有限公司,CN,,轮式/移动操作,2026-10（收录）,量产/在售,35 000 美元,195 cm，150 kg,,https://www.tlibot.com/,4BekTD8H4Gg,https://humanoid.guide/product/y1/,1
+Y2-B,"Tlibot (Sichuan Tianlian Robot Co., Ltd., 四川天链机器人股份有限公司)",四川天链机器人股份有限公司,CN,,轮式/移动操作,2026-10（收录）,量产/在售,25 000 美元,160 cm，85 kg,,https://www.tlibot.com/,4BekTD8H4Gg,https://humanoid.guide/product/y2-b/,1
+Y2-P,"Tlibot (Sichuan Tianlian Robot Co., Ltd., 四川天链机器人股份有限公司)",四川天链机器人股份有限公司,CN,,轮式/移动操作,2026-10（收录）,量产/在售,36 000 美元,156.5 cm，95 kg,,https://www.tlibot.com/,4BekTD8H4Gg,https://humanoid.guide/product/y2-p/,1
+Cruzr S2,UBTECH Robotics,优必选,CN,,轮式/移动操作,2025,量产/在售,200 000 美元,175 cm，150 kg，全身 >20 DoF，手 >10 DoF,,https://www.ubtrobot.com/en/,,https://data.robo2u.com/robots,1
+G1-D,Unitree Robotics,宇树科技,CN,,轮式/移动操作,2026-09（收录）,量产/在售,51 900 美元,160 cm，90 kg，全身 59 DoF，手 40 DoF,,https://www.unitree.com/,,https://humanoid.guide/product/g1-d/,1
+H2-D,Unitree Robotics,宇树科技,CN,,轮式/移动操作,2026-09（收录）,量产/在售,55 000 美元,170 cm，120 kg，全身 20 DoF，手 6 DoF,,https://www.unitree.com/,ub2gWviKZpk,https://humanoid.guide/product/h2-d/,1
+R1,Unitree Robotics,宇树科技,CN,,轮式/移动操作,2025-07,量产/在售,5 900 美元,122 cm，25 kg，全身 26 DoF，手 N/A DoF,UnifoLM,https://www.unitree.com/,v1Q4Su54iho,https://data.robo2u.com/robots,1
+R1-A (Dual-Arm Platform),Unitree Robotics,宇树科技,CN,,轮式/移动操作,2026-04,量产/在售,"$4,290",31 DoF,,,,https://data.robo2u.com/robots,1
+R1-D,Unitree Robotics,宇树科技,CN,,轮式/移动操作,2026-09（收录）,量产/在售,13 390 美元,160 cm，52 kg，全身 36 DoF，手 14 DoF,,https://www.unitree.com/,,https://humanoid.guide/product/r1-d/,1
+QUANTA X2,X-Humanoid,北京人形机器人创新中心,CN,,轮式/移动操作,2025-08（收录）,原型,80 000 美元,172 cm，95 kg，全身 62 DoF，手 20 DoF,WALL-OSS（开源）,http://x2robot.com,dF2e3c_Mm6I,https://humanoid.guide/product/quanta-x2/,1
+W-Bot,Yue Quan Bionics (月泉仿生),月泉仿生,CN,,轮式/移动操作,2026-10（收录）,量产/在售,50 000 美元,178 cm，60 kg,,https://www.yqbionics.com/,qYcmV-HEDKI,https://humanoid.guide/product/w-bot/,1
+Zerith H1,Zerith Robotics,零次方,CN,,轮式/移动操作,2026-02（收录）,量产/在售,80 000 美元,~180 cm，55 kg，全身 23 DoF，手 7 DoF,,https://www.zerith.com/,LOu_F9N-wwI,https://humanoid.guide/product/zerith-h1/,1
+Elixis-W,Addverb Technologies,,OT,印度,轮式/移动操作,2026-09（收录）,原型,45 000 美元,183 cm，75 kg，全身 67 DoF，手 24 DoF,,https://addverb.ai/,m1gC6cEvRw4,https://humanoid.guide/product/elixis-w/,1
+Anigon,"Aimbo Robotics (Altendorf, Switzerland)",,OT,瑞士,轮式/移动操作,2026-10（收录）,原型,80 000 美元,189 cm，120 kg,,https://anigon.ch/,,https://humanoid.guide/product/anigon/,1
+BracketBot 2.5,Bracket Bot,,OT,加拿大,轮式/移动操作,2026,预订,"$2,000",173 cm,,,,https://data.robo2u.com/robots,1
+Autopicker,Brightpick,,OT,斯洛伐克,轮式/移动操作,2022,已部署,,,Brightpick Intelligence AI,,,https://data.robo2u.com/robots,0
+Gridpicker,Brightpick,,OT,斯洛伐克,轮式/移动操作,2026-03,量产/在售,,,,,,https://data.robo2u.com/robots,1
+Ridgeback,Clearpath Robotics,,OT,加拿大,轮式/移动操作,2015,量产/在售,,30 cm，135 kg，3 DoF,ROS / onboard PC,,,https://data.robo2u.com/robots,0
+Duatic Alpha,Duatic,,OT,瑞士,轮式/移动操作,2026-03（收录）,原型,150 000 美元,175 cm，90 kg，全身 19 DoF，手 N/A DoF,,https://www.duatic.com/,96GEOCxmO88,https://humanoid.guide/product/duatic-alpha/,1
+AIR,Embodied AI,,OT,瑞士,轮式/移动操作,2026-11（收录）,量产/在售,50 000 美元,160 cm，65 kg，全身 25 DoF，手 18 DoF,,https://embodiedai.ch/,XkWLWwm24VM,https://humanoid.guide/product/embodied-humanoid-air/,1
+Mirokai,Enchanted Tools,,OT,法国,轮式/移动操作,2024,预订,"$30,000",123 cm，28 kg，26 DoF,Onboard AI compute / NVIDIA,,,https://data.robo2u.com/robots,0
+rob@work 3,Fraunhofer IPA,,OT,德国,轮式/移动操作,2010,原型,,100 kg，6 DoF,ROS,,,https://data.robo2u.com/robots,0
+Avatar,"Honda R&D Co., Ltd.",,OT,日本,轮式/移动操作,2026-10（收录）,原型,300 000 美元,155 cm，101 kg,,https://global.honda/en/,6i_-K3K3TNw,https://humanoid.guide/product/honda-avatar/,1
+MOVO,Kinova,,OT,加拿大,轮式/移动操作,2016,原型,,120 kg，7 DoF,ROS / NUC vision PC,,,https://data.robo2u.com/robots,0
+KMR iisy,KUKA,,OT,德国,轮式/移动操作,2023-06,量产/在售,,6 DoF,KUKA KR C5 controller,,,https://data.robo2u.com/robots,0
+KMR iiwa,KUKA,,OT,德国,轮式/移动操作,2015,量产/在售,,70 cm，400 kg，7 DoF,KUKA Sunrise / KR C controller,,,https://data.robo2u.com/robots,0
+TruckBot,Mujin,,OT,日本,轮式/移动操作,2023,已部署,,,MujinController,,,https://data.robo2u.com/robots,0
+Modular,O-ID,,OT,日本,轮式/移动操作,2026-06（收录）,小批量,70 000 美元,172 cm，70 kg，全身 30 DoF，手 N/A DoF,,https://o-id.net/,,https://humanoid.guide/product/modular/,1
+ARI,PAL Robotics,,OT,西班牙,轮式/移动操作,2026-09（收录）,量产/在售,75 000 美元,165 cm，60 kg，全身 14 DoF，手 0 DoF,,https://pal-robotics.com/,ii2f4LUxqJ8,https://humanoid.guide/product/ari/,1
+TIAGo,PAL Robotics,,OT,西班牙,轮式/移动操作,2016,量产/在售,,145 cm，70 kg，7 DoF,ROS / onboard Intel PC,,,https://data.robo2u.com/robots,0
+RIVR One,RIVR,,OT,瑞士,轮式/移动操作,2025,原型,,,RL neural networks,,,https://data.robo2u.com/robots,1
+RB-KAIROS+,Robotnik,,OT,西班牙,轮式/移动操作,2018,量产/在售,,115 kg，6 DoF,ROS 2,,,https://data.robo2u.com/robots,0
+RB-VOGUI+,Robotnik,,OT,西班牙,轮式/移动操作,2019,量产/在售,,74.2 cm，165 kg，6 DoF,ROS / onboard PC,,,https://data.robo2u.com/robots,0
+Phoenix Gen 8,Sanctuary AI,,OT,加拿大,轮式/移动操作,2026-09（收录）,原型,150 000 美元,170 cm，70 kg，全身 58 DoF，手 42 DoF,,https://sanctuary.ai/product/,-HizP4UQvug,https://humanoid.guide/product/phoenix-gen-8/,1
+North,Sharpa (Sharpa Robotics),,OT,新加坡,轮式/移动操作,2026-09（收录）,原型,130 000 美元,160 cm，90 kg，全身 67 DoF，手 44 DoF,,https://www.sharpa.com/,RQwjVGx6-O8,https://humanoid.guide/product/north/,1
+TM Xplore 1,Techman Robot (OMRON),,OT,中国台湾,轮式/移动操作,2025-12（收录）,原型,25 000 美元,160 to 175 cm cm，N/A kg，全身 22 DoF，手 N/A DoF,,https://www.tm-robot.com/en/,Sr8dZdoQodI,https://humanoid.guide/product/tm-xplore-1/,1
+Human Support Robot (HSR),Toyota,,OT,日本,轮式/移动操作,2012,原型,,37 kg，8 DoF,ROS / Intel CPU + NVIDIA GPU,,,https://data.robo2u.com/robots,0
+Apollo 2,Apptronik,,US,,轮式/移动操作,2026-06,原型,85 000 美元,173 cm，75 kg，全身 35 DoF，手 12 DoF,Apptronik Artemis with Google DeepMind Gemini Robotics models,https://apptronik.com/,iPyxwELiD9Q,https://data.robo2u.com/robots,1
+Sherpa Mecha,Ati Robotics,,US,,轮式/移动操作,2026-09（收录）,原型,80 000 美元,200 cm，180 kg，全身 21 DoF，手 19 DoF,,https://www.atirobotics.ai/,gTJ14Uax3WU,https://humanoid.guide/product/sherpa-mecha/,1
+Borg 01,Borg Robotics,,US,,轮式/移动操作,2025-01（收录）,原型,100 000 美元,173 cm，62 kg，全身 23 DoF，手 N/A DoF,,https://www.borgrobotic.com/,,https://humanoid.guide/product/borg-01/,1
+Stretch,Boston Dynamics,,US,,轮式/移动操作,2023-01,量产/在售,,1202 kg，7 DoF,,,,https://data.robo2u.com/robots,0
+Yogi,Cartwheel Robotics,,US,,轮式/移动操作,2025-05,原型,85 000 美元,150 cm，47 kg，全身 36 DoF，手 10 DoF,Motion Language Model (MLM),https://www.cartwheelrobotics.com/,XaSXltB_I1A,https://data.robo2u.com/robots,1
+Mech,Dexterity,,US,,轮式/移动操作,2024,已部署,,8 DoF,Dexterity Foresight world model,,,https://data.robo2u.com/robots,0
+DYNA 2.1,DYNA Robotics,,US,,轮式/移动操作,2026-09,已部署,,,DYNA 2 world action model,,,https://data.robo2u.com/robots,1
+Taku,DYNA Robotics,,US,,轮式/移动操作,2026-09（收录）,量产/在售,60 000 美元,170 cm，N/A kg,,https://www.dyna.co/,ArRaPV3QIqY,https://humanoid.guide/product/dyna-taku/,1
+Fetch Mobile Manipulator,Fetch Robotics (Zebra Technologies),,US,,轮式/移动操作,2015,量产/在售,,149.1 cm，113.3 kg，7 DoF,ROS / onboard PC,,,https://data.robo2u.com/robots,0
+Flourish 1,Flourish Robots,,US,,轮式/移动操作,2026-09,预订,"$3,555",110 cm，20 kg,,,,https://data.robo2u.com/robots,1
+Stretch 3,Hello Robot,,US,,轮式/移动操作,2024-02,量产/在售,"$24,950",24.5 kg,,,,https://data.robo2u.com/robots,0
+LinearBot,i2rt,,US,,轮式/移动操作,,,"$18,999",,,,,https://www.roboticscenter.ai/store/product/i2rt-linearbot,0
+inVia Picker,inVia Robotics,,US,,轮式/移动操作,,量产/在售,,90.2 cm，61.7 kg,inVia Logic AI warehouse execution system,,,https://data.robo2u.com/robots,0
+Kinisi 01,Kinisi Robotics,,US,,轮式/移动操作,2025-07（收录）,原型,75 000 美元,Not specified cm，Not specified kg，全身 Not specified DoF，手 Not specified DoF,,https://www.kinisi.com/,PinUCliN3dg,https://humanoid.guide/product/kinisi-01/,1
+Kinisi KR1,Kinisi Robotics,,US,,轮式/移动操作,2025-07（收录）,原型,75 000 美元,162 cm，100 kg，全身 21 DoF，手 2 DoF,,https://www.kinisi.com/,sk4t50DGr-Q,https://humanoid.guide/product/kinisi-kr1/,1
+Locus Array,Locus Robotics,,US,,轮式/移动操作,2026-04,量产/在售,,,,,,https://data.robo2u.com/robots,1
+Nori L2,Nori Robotics,,US,,轮式/移动操作,2026,预订,"$1,288",100 cm,,,,https://data.robo2u.com/robots,1
+Dill,Pickle Robot,,US,,轮式/移动操作,2024,已部署,,6 DoF,Physical AI,,,https://data.robo2u.com/robots,0
+F-Series,Realbotix,,US,,轮式/移动操作,2026-09（收录）,量产/在售,125 000 美元,165 cm，50 kg，全身 44 DoF，手 13 DoF,,https://www.realbotix.com/,A8QxYCD4-Is,https://humanoid.guide/product/f-series/,1
+Dex,Richtech Robotics,,US,,轮式/移动操作,2026-09（收录）,原型,60 000 美元,137 cm，60 kg，全身 18 DoF，手 16 DoF,,https://richtechrobotics.com/,a_aD8UlKKdQ,https://humanoid.guide/product/dex/,1
+RC M1 Mobile Manipulator,Robotics Center,,US,,轮式/移动操作,,,"$50,000",,,,,https://www.roboticscenter.ai/store/product/svrc-m1,0
+RC Mobile Aloha,Robotics Center,,US,,轮式/移动操作,,,"$20,000",,,,,https://www.roboticscenter.ai/store/product/mobile-aloha,0
+StarBot Flex,StarBot (StarBot USA),,US,,轮式/移动操作,2026-10（收录）,原型,25 000 美元,175 cm，50 kg,,https://www.starbotusa.com/,,https://humanoid.guide/product/starbot-flex/,1
+StarBot Nova,StarBot (StarBot USA),,US,,轮式/移动操作,2026-10（收录）,原型,20 000 美元,152 cm，32 kg,,https://www.starbotusa.com/,,https://humanoid.guide/product/starbot-nova/,1
+MEMO,Sunday Robotics,,US,,轮式/移动操作,2025,原型,10 000 美元,170 cm，77 kg，全身 20 DoF，手 3 DoF,ACT-1 home-chore foundation model,https://www.sunday.ai,ERH-tMUHV1E,https://data.robo2u.com/robots,1
+Eggie,Tangible Robots,,US,,轮式/移动操作,2025-12（收录）,原型,32 000 美元,160 cm，45 kg，全身 20 DoF，手 3 DoF,,https://tangiblerobots.ai/,Y9jrybBTV7Y,https://humanoid.guide/product/eggie/,1
+NERO,AgileX,松灵机器人,CN,,机械臂,,,"$4,160",7 DOF and a 3 kg payload,,,,https://www.roboticscenter.ai/store/product/agilex-agilex-nero,0
+PiPER,AgileX,松灵机器人,CN,,机械臂,,,"$3,500",,LeRobot / π0 等数据采集常用,,,https://www.roboticscenter.ai/store/product/agilex-agilex-piper,0
+PiPER-X,AgileX,松灵机器人,CN,,机械臂,,,"$4,250",6 DOF and a 1,,,,https://www.roboticscenter.ai/store/product/agilex-piper-x,0
+ARX Arm X5,ARX,方舟无限,CN,,机械臂,,,"$8,333",,,,,https://www.roboticscenter.ai/store/product/arx-arm-x5,0
+ARX Arm X7,ARX,方舟无限,CN,,机械臂,,,"$20,800",,,,,https://www.roboticscenter.ai/store/product/arx-arm-x7,0
+ARX Lift,ARX,方舟无限,CN,,机械臂,,,"$34,700",,,,,https://www.roboticscenter.ai/store/product/arx-lift,0
+ARX R5,ARX,方舟无限,CN,,机械臂,,,"$8,300",,,,,https://www.roboticscenter.ai/store/product/arx-r5,0
+AUBO i10,AUBO Robotics,遨博智能,CN,,机械臂,,量产/在售,,38.5 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+BRTIRUS2110A,Borunte Robot,伯朗特,CN,,机械臂,,量产/在售,,230 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+G12,CGXi Intelligent Manufacturing (Changguangxi),长广溪智能制造,CN,,机械臂,,量产/在售,,36 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+CR 30H,Dobot,越疆科技,CN,,机械臂,2025-06,量产/在售,,100 kg，6 DoF,,,,https://data.robo2u.com/robots,1
+CR10,Dobot,越疆科技,CN,,机械臂,,量产/在售,,40 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+CR10A,Dobot,越疆科技,CN,,机械臂,,量产/在售,,40 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+CR12,Dobot,越疆科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-cr12,0
+CR16,Dobot,越疆科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-cr16,0
+CR20A,Dobot,越疆科技,CN,,机械臂,,,,a 20 kg payload,,,,https://www.roboticscenter.ai/store/product/dobot-cr20a,0
+CR3,Dobot,越疆科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-cr3,0
+CR5,Dobot,越疆科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-cr5,0
+CR5AF,Dobot,越疆科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-cr5af,0
+CR7,Dobot,越疆科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-cr7,0
+CRA IP68 Series,Dobot,越疆科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-cra-ip68,0
+CRAF Series,Dobot,越疆科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-craf-series,0
+M1 Pro,Dobot,越疆科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-m1-pro,0
+MG400,Dobot,越疆科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-dobot-mg400,0
+Magician E6,Dobot,越疆科技,CN,,机械臂,,,,a 750 g payload,,,,https://www.roboticscenter.ai/store/product/dobot-magician-e6,0
+Nova 2,Dobot,越疆科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/dobot-nova2,0
+Nova 5,Dobot,越疆科技,CN,,机械臂,,量产/在售,,14 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+ECR5,EFORT Intelligent Robot,埃夫特,CN,,机械臂,,量产/在售,,20.5 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+mechArm 270 M5,Elephant Robotics,大象机器人,CN,,机械臂,,,$649,,,,,https://www.roboticscenter.ai/store/product/elephant-robotics-elephant-robotics-mecharm-270-m5,0
+myArm 300 Pi,Elephant Robotics,大象机器人,CN,,机械臂,,,"$1,499",,,,,https://www.roboticscenter.ai/store/product/elephant-robotics-elephant-robotics-myarm-300-pi,0
+myCobot 280,Elephant Robotics,大象机器人,CN,,机械臂,2020,量产/在售,$599,0.85 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+myCobot 320,Elephant Robotics,大象机器人,CN,,机械臂,,,"$2,399",,,,,https://www.roboticscenter.ai/store/product/elephant-robotics-elephant-robotics-mycobot-320-m5,0
+CS530H,Elite Robots,艾利特机器人,CN,,机械臂,,量产/在售,,58 kg，5 DoF,,,,https://data.robo2u.com/robots,0
+Elite Robots CS66,Elite Robots,艾利特机器人,CN,,机械臂,,量产/在售,,20 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+ER10-600-SR,Estun (Nanjing Estun Automation),埃斯顿,CN,,机械臂,,量产/在售,,4 DoF,,,,https://data.robo2u.com/robots,0
+ER20/10-2000-HI,Estun (Nanjing Estun Automation),埃斯顿,CN,,机械臂,,量产/在售,,248 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+FR30,FAIRINO,法奥意威,CN,,机械臂,,量产/在售,,85 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+FR5,FAIRINO,法奥意威,CN,,机械臂,,量产/在售,,22 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+A1,Galaxea Dynamics,星海图,CN,,机械臂,,,"$3,999",a 3kg payload and a 60cm reach,G0,,,https://www.roboticscenter.ai/store/product/galaxea-robotics-galaxea-a1,0
+Elfin E10,Han's Robot,大族机器人,CN,,机械臂,,量产/在售,,43 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+Elfin E15-Pro,Han's Robot,大族机器人,CN,,机械臂,,量产/在售,,60 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+IR-S7,Inovance (Shenzhen Inovance Technology),汇川技术,CN,,机械臂,,量产/在售,,4 DoF,,,,https://data.robo2u.com/robots,0
+A12,JAKA Robotics,节卡机器人,CN,,机械臂,,量产/在售,,41 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+MiniCobo,JAKA Robotics,节卡机器人,CN,,机械臂,,量产/在售,,9.4 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+Zu 12,JAKA Robotics,节卡机器人,CN,,机械臂,,量产/在售,,41 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+Zu 20,JAKA Robotics,节卡机器人,CN,,机械臂,2022,量产/在售,,6 DoF,,,,https://data.robo2u.com/robots,0
+In-house developed arm,LINKERBOT,灵心巧手,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/linkerbot-in-house-developed-arm,0
+AH20,QKM Technology (Dongguan),李群自动化,CN,,机械臂,2023,量产/在售,,56 kg，4 DoF,,,,https://data.robo2u.com/robots,0
+AP25X,QKM Technology (Dongguan),李群自动化,CN,,机械臂,2024-06,量产/在售,,162 kg，4 DoF,,,,https://data.robo2u.com/robots,0
+Eco65,RealMan Robotics (睿尔曼智能科技（北京）有限公司),睿尔曼智能科技（北京）有限公司,CN,,机械臂,,,"$12,100",,,,,https://www.roboticscenter.ai/store/product/realman-eco65,0
+Enlight,Rizon,非夕科技,CN,,机械臂,2026-06,量产/在售,,15 kg，7 DoF,,,,https://data.robo2u.com/robots,1
+Rizon 10,Rizon,非夕科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/rizon-10,0
+Rizon 10s,Rizon,非夕科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/rizon-10s,0
+Rizon 4,Rizon,非夕科技,CN,,机械臂,2019,量产/在售,,20 kg，7 DoF,,,,https://data.robo2u.com/robots,0
+Rizon 4s,Rizon,非夕科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/rizon-4s,0
+xMate CR20,ROKAE Robotics,珞石机器人,CN,,机械臂,,量产/在售,,75 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+xMate CR35,ROKAE Robotics,珞石机器人,CN,,机械臂,2025-02,量产/在售,,161 kg，6 DoF,xMate Control,,,https://data.robo2u.com/robots,1
+SO-ARM101 Pro Assembled Kit,Seeed Studio,矽递科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/seeed-studio-so-arm101-pro-assembled-kit,0
+SO-ARM101 Pro Servo Motor Kit,Seeed Studio,矽递科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/seeed-studio-so-arm101-pro-servo-motor-kit,0
+reBot Arm B601-DM,Seeed Studio,矽递科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/seeed-studio-rebot-arm-b601-dm,0
+reBot Arm B601-RS,Seeed Studio,矽递科技,CN,,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/seeed-studio-rebot-arm-b601-rs,0
+SD500,"Shanghai RoboParty Technology Co., Ltd.",萝博派对,CN,,机械臂,,量产/在售,,6 DoF,,,,https://data.robo2u.com/robots,0
+GCR16-2000,Siasun Robot & Automation,新松机器人,CN,,机械臂,,量产/在售,,60 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+MARVIN Series,TianJi,天机智能,CN,,机械臂,,,,"eight 7-axis configurations, 3-20 kg payloads per arm, EtherCAT control, and joint torque sensing",,,,https://www.roboticscenter.ai/store/product/tianji-marvin-series,0
+850,UFACTORY,众为创造（UFACTORY）,CN,,机械臂,,,"$10,500","an 850 mm reach, 5 kg payload, ±0",,,,https://www.roboticscenter.ai/store/product/ufactory-850,0
+Lite 6,UFACTORY,众为创造（UFACTORY）,CN,,机械臂,,,"$3,500","a 440 mm reach, 600 g payload, six-axis motion, and support for ROS, Python, and C++",,,,https://www.roboticscenter.ai/store/product/ufactory-lite6,0
+xArm 5,UFACTORY,众为创造（UFACTORY）,CN,,机械臂,,,"$6,000",a 3 kg payload and a 700 mm reach,,,,https://www.roboticscenter.ai/store/product/ufactory-xarm5,0
+xArm 6,UFACTORY,众为创造（UFACTORY）,CN,,机械臂,,,"$9,500",a 5 kg payload and a 700 mm reach,,,,https://www.roboticscenter.ai/store/product/ufactory-xarm6,0
+xArm 7,UFACTORY,众为创造（UFACTORY）,CN,,机械臂,,,"$11,000",,,,,https://www.roboticscenter.ai/store/product/ufactory-xarm7,0
+Z1,Unitree Robotics,宇树科技,CN,,机械臂,,,"$20,799",,,,,https://www.roboticscenter.ai/store/product/unitree-z1,0
+Mixed-Case Palletizing & Depalletizing,XYZ,,CN,,机械臂,,量产/在售,,6 DoF,XYZ Studio 3D-AI Vision,,,https://data.robo2u.com/robots,0
+GoFa,ABB,,OT,瑞士,机械臂,2021,量产/在售,,6 DoF,,,,https://data.robo2u.com/robots,0
+IRB 1010,ABB,,OT,瑞士,机械臂,,量产/在售,,,OmniCore E10,,,https://data.robo2u.com/robots,0
+IRB 1200 Next Generation,ABB,,OT,瑞士,机械臂,,量产/在售,,,OmniCore,,,https://data.robo2u.com/robots,0
+IRB 1300,ABB,,OT,瑞士,机械臂,2020-09,量产/在售,,6 DoF,OmniCore,,,https://data.robo2u.com/robots,0
+IRB 360 FlexPicker,ABB,,OT,瑞士,机械臂,2007,量产/在售,,120 kg，4 DoF,OmniCore C30,,,https://data.robo2u.com/robots,0
+IRB 5500 FlexPainter,ABB,,OT,瑞士,机械臂,,量产/在售,,600 kg，6 DoF,IRC5P,,,https://data.robo2u.com/robots,0
+IRB 910SC,ABB,,OT,瑞士,机械臂,2016,量产/在售,,25 kg，4 DoF,OmniCore / IRC5,,,https://data.robo2u.com/robots,0
+PoWa cobot family,ABB,,OT,瑞士,机械臂,2026-04,量产/在售,,6 DoF,,,,https://data.robo2u.com/robots,1
+SWIFTI CRB 1100,ABB,,OT,瑞士,机械臂,2021,量产/在售,,21 kg，6 DoF,OmniCore,,,https://data.robo2u.com/robots,0
+Diana 7,Agile Robots,,OT,德国,机械臂,,量产/在售,,7 DoF,AgileCore,,,https://data.robo2u.com/robots,0
+Thor 12,Agile Robots,,OT,德国,机械臂,,量产/在售,,6 DoF,,,,https://data.robo2u.com/robots,0
+D4 Series,Codian Robotics,,OT,荷兰,机械臂,,量产/在售,,4 DoF,B&R controller (open mechanics),,,https://data.robo2u.com/robots,0
+Racer-5 0.80 COBOT,Comau,,OT,意大利,机械臂,2021,量产/在售,,32 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+COBOTTA PRO 900,DENSO,,OT,日本,机械臂,2023,量产/在售,,29 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+Doosan M1013,Doosan Robotics,,OT,韩国,机械臂,2017,量产/在售,,33 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+E0509,Doosan Robotics,,OT,韩国,机械臂,,量产/在售,,6 DoF,,,,https://data.robo2u.com/robots,0
+H2017,Doosan Robotics,,OT,韩国,机械臂,,量产/在售,,6 DoF,,,,https://data.robo2u.com/robots,0
+P3020,Doosan Robotics,,OT,韩国,机械臂,2024,量产/在售,,83 kg，5 DoF,,,,https://data.robo2u.com/robots,0
+Epson G6 SCARA,Epson,,OT,日本,机械臂,,量产/在售,,4 DoF,Epson RC700-A controller,,,https://data.robo2u.com/robots,0
+Synthis T6 SCARA,Epson,,OT,日本,机械臂,2018,量产/在售,,22 kg，4 DoF,Built-in controller,,,https://data.robo2u.com/robots,0
+CRX-10iA,FANUC,,OT,日本,机械臂,2019,量产/在售,,40 kg，6 DoF,R-30iB Mini Plus,,,https://data.robo2u.com/robots,0
+CRX-25iA,FANUC,,OT,日本,机械臂,2023,量产/在售,,6 DoF,,,,https://data.robo2u.com/robots,0
+CRX-30iA,FANUC,,OT,日本,机械臂,,量产/在售,,135 kg，6 DoF,R-30iB Mini Plus,,,https://data.robo2u.com/robots,0
+CRX-3iA,FANUC,,OT,日本,机械臂,2026-04,量产/在售,,11 kg，6 DoF,R-30iB Mini Plus,,,https://data.robo2u.com/robots,1
+CRX-5iA,FANUC,,OT,日本,机械臂,,量产/在售,,25 kg，6 DoF,R-30iB Mini Plus,,,https://data.robo2u.com/robots,0
+LR Mate 200iD,FANUC,,OT,日本,机械臂,2013,量产/在售,,25 kg，6 DoF,R-30iB Mate,,,https://data.robo2u.com/robots,0
+M-2iA/3S,FANUC,,OT,日本,机械臂,,量产/在售,,120 kg，4 DoF,R-30iB Plus,,,https://data.robo2u.com/robots,0
+M-410iC/185,FANUC,,OT,日本,机械臂,,量产/在售,,1330 kg，4 DoF,R-30iB Plus,,,https://data.robo2u.com/robots,0
+SR-12iA,FANUC,,OT,日本,机械臂,,量产/在售,,53 kg，4 DoF,R-30iB Compact Plus,,,https://data.robo2u.com/robots,0
+SR-20iA,FANUC,,OT,日本,机械臂,,量产/在售,,64 kg，4 DoF,R-30iB Compact Plus,,,https://data.robo2u.com/robots,0
+SR-6iA,FANUC,,OT,日本,机械臂,2019,量产/在售,,30 kg，4 DoF,R-30iB Compact Plus,,,https://data.robo2u.com/robots,0
+Franka Research 3,Franka Robotics,,OT,德国,机械臂,2022-10,量产/在售,,18 kg，7 DoF,DROID / π0 / OpenVLA 等研究常用,,,https://data.robo2u.com/robots,0
+KR1240,Kassow Robots,,OT,丹麦,机械臂,,量产/在售,,80 kg，7 DoF,,,,https://data.robo2u.com/robots,0
+KR1824,Kassow Robots,,OT,丹麦,机械臂,,量产/在售,,76 kg，7 DoF,,,,https://data.robo2u.com/robots,0
+Kassow KR1018,Kassow Robots,,OT,丹麦,机械臂,2020-09,量产/在售,,34 kg，7 DoF,,,,https://data.robo2u.com/robots,0
+CP110L,Kawasaki,,OT,日本,机械臂,2026-02,量产/在售,,820 kg，4 DoF,,,,https://data.robo2u.com/robots,1
+RL030N,Kawasaki,,OT,日本,机械臂,2026-06,量产/在售,,8 DoF,,,,https://data.robo2u.com/robots,1
+RS007N,Kawasaki,,OT,日本,机械臂,2013-10,量产/在售,,35 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+Kinova Gen3,Kinova,,OT,加拿大,机械臂,2019,量产/在售,,8.2 kg，7 DoF,,,,https://data.robo2u.com/robots,0
+Kinova Gen3 7DOF,Kinova,,OT,加拿大,机械臂,,,"$38,696",7 DOF and a 4 kg payload,,,,https://www.roboticscenter.ai/store/product/kinova-kinova-gen3-7dof,0
+Kinova Gen3 Lite,Kinova,,OT,加拿大,机械臂,,,"$14,352",6 DOF,,,,https://www.roboticscenter.ai/store/product/kinova-kinova-gen3-lite,0
+Link 6,Kinova,,OT,加拿大,机械臂,2022-03,量产/在售,,23.45 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+KR AGILUS (KR 6 R900),KUKA,,OT,德国,机械臂,2011,量产/在售,,52 kg，6 DoF,KR C5,,,https://data.robo2u.com/robots,0
+KR CYBERTECH nano ARC,KUKA,,OT,德国,机械臂,2021-02,量产/在售,,6 DoF,KR C5,,,https://data.robo2u.com/robots,0
+KR QUANTEC,KUKA,,OT,德国,机械臂,,量产/在售,,6 DoF,KR C5,,,https://data.robo2u.com/robots,0
+KR QUANTEC PA,KUKA,,OT,德国,机械臂,2021-10,量产/在售,,1103 kg，5 DoF,KR C5,,,https://data.robo2u.com/robots,0
+KR TITAN ultra,KUKA,,OT,德国,机械臂,2025-06,量产/在售,,4500 kg，6 DoF,KR C5-2,,,https://data.robo2u.com/robots,1
+LBR iisy,KUKA,,OT,德国,机械臂,2022,量产/在售,,43.2 kg，6 DoF,iiQKA.OS,,,https://data.robo2u.com/robots,0
+LBR iiwa,KUKA,,OT,德国,机械臂,,量产/在售,,7 DoF,KUKA Sunrise Cabinet,,,https://data.robo2u.com/robots,0
+Mecademic Meca500,Mecademic,,OT,加拿大,机械臂,2015,量产/在售,,30.8 cm，4.5 kg，6 DoF,Embedded controller,,,https://data.robo2u.com/robots,0
+MELFA RV-7FR,Mitsubishi Electric,,OT,日本,机械臂,2017,量产/在售,,65 kg，6 DoF,CR800,,,https://data.robo2u.com/robots,0
+Robotic Case Picking,Mujin,,OT,日本,机械臂,,量产/在售,,6 DoF,MujinController / MujinOS,,,https://data.robo2u.com/robots,0
+MZ07,Nachi,,OT,日本,机械臂,,量产/在售,,30 kg，6 DoF,CFD controller,,,https://data.robo2u.com/robots,0
+LARA 30L,NEURA Robotics,,OT,德国,机械臂,,量产/在售,,126 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+MAiRA,NEURA Robotics,,OT,德国,机械臂,2023,量产/在售,,7 DoF,NEURAverse cognitive AI,,,https://data.robo2u.com/robots,0
+Shoebox Picker,Nomagic,,OT,波兰,机械臂,2026-01,量产/在售,,,Nomagic Physical AI perception + control,,,https://data.robo2u.com/robots,1
+OCADEX / Sort (Kindred),Ocado,,OT,英国,机械臂,2021,已部署,,680 kg，6 DoF,Kindred/Ocado reinforcement-learning AI,,,https://data.robo2u.com/robots,0
+eCobra 600,OMRON,,OT,日本,机械臂,2015,量产/在售,,41 kg，4 DoF,eAIB integrated amplifier,,,https://data.robo2u.com/robots,0
+i4H SCARA,OMRON,,OT,日本,机械臂,2021,量产/在售,,4 DoF,OMRON eV+ / Sysmac,,,https://data.robo2u.com/robots,0
+Sawyer BLACK Edition,Rethink Robotics,,OT,德国,机械臂,2019,量产/在售,,19 kg，7 DoF,,,,https://data.robo2u.com/robots,0
+TX2-60,Staubli,,OT,瑞士,机械臂,2017,量产/在售,,52.2 kg，6 DoF,CS9,,,https://data.robo2u.com/robots,0
+TP80 Fast Picker,Stäubli,,OT,瑞士,机械臂,2012,量产/在售,,4 DoF,Stäubli CS9 controller,,,https://data.robo2u.com/robots,0
+ItemPiQ,Swisslog,,OT,瑞士,机械臂,2019,量产/在售,,7 DoF,Swisslog SynQ + AI vision (2-camera),,,https://data.robo2u.com/robots,0
+TM25S,Techman Robot (OMRON),,OT,中国台湾,机械臂,2023,量产/在售,,80 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+TM30S,Techman Robot (OMRON),,OT,中国台湾,机械臂,2024-05,量产/在售,,82 kg，6 DoF,TMflow,,,https://data.robo2u.com/robots,0
+Techman TM12,Techman Robot (OMRON),,OT,中国台湾,机械臂,2018,量产/在售,,33.3 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+UR15,Universal Robots,,OT,丹麦,机械臂,2025-05,量产/在售,,6 DoF,PolyScope X,,,https://data.robo2u.com/robots,1
+UR16e,Universal Robots,,OT,丹麦,机械臂,2019-09,量产/在售,,33.1 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+UR18g-950,Universal Robots,,OT,丹麦,机械臂,2026-09,量产/在售,,39.2 kg，6 DoF,PolyScope X,,,https://data.robo2u.com/robots,1
+UR20,Universal Robots,,OT,丹麦,机械臂,2022-06,量产/在售,,64 kg，6 DoF,PolyScope X,,,https://data.robo2u.com/robots,0
+UR30,Universal Robots,,OT,丹麦,机械臂,2023-09,量产/在售,,63.5 kg，6 DoF,PolyScope X,,,https://data.robo2u.com/robots,0
+UR8 Long,Universal Robots,,OT,丹麦,机械臂,2025-09,量产/在售,,6 DoF,PolyScope X,,,https://data.robo2u.com/robots,1
+Universal Robots UR12e-1300 (formerly UR10e),Universal Robots,,OT,丹麦,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/universal-robots-ur10e,0
+Universal Robots UR3e,Universal Robots,,OT,丹麦,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/universal-robots-ur3e,0
+Universal Robots UR7e-920 (formerly UR5e),Universal Robots,,OT,丹麦,机械臂,,,,,,,,https://www.roboticscenter.ai/store/product/universal-robots-ur5e,0
+MOTOMAN NEXT NEX10,Yaskawa,,OT,日本,机械臂,2023-12,量产/在售,,,YNX1000,,,https://data.robo2u.com/robots,0
+MOTOMAN-GP10,Yaskawa,,OT,日本,机械臂,2025-07,量产/在售,,,YRC1000micro,,,https://data.robo2u.com/robots,1
+MOTOMAN-GP700,Yaskawa,,OT,日本,机械臂,2026-06,量产/在售,,,,,,https://data.robo2u.com/robots,1
+MOTOMAN-HC12,Yaskawa,,OT,日本,机械臂,2026-08,量产/在售,,,,,,https://data.robo2u.com/robots,1
+MOTOMAN-HC35,Yaskawa,,OT,日本,机械臂,2026-05,量产/在售,,,,,,https://data.robo2u.com/robots,1
+Motoman GP8,Yaskawa,,OT,日本,机械臂,2017,量产/在售,,32 kg，6 DoF,YRC1000micro,,,https://data.robo2u.com/robots,0
+Motoman HC10DTP,Yaskawa,,OT,日本,机械臂,2019,量产/在售,,47 kg，6 DoF,YRC1000,,,https://data.robo2u.com/robots,0
+Motoman HC20DTP,Yaskawa,,OT,日本,机械臂,2022-02,量产/在售,,140 kg，6 DoF,YRC1000,,,https://data.robo2u.com/robots,0
+Motoman HC30PL,Yaskawa,,OT,日本,机械臂,2021,量产/在售,,6 DoF,,,,https://data.robo2u.com/robots,0
+PL800 (MPL800),Yaskawa,,OT,日本,机械臂,2021,量产/在售,,4 DoF,YRC1000,,,https://data.robo2u.com/robots,0
+AmbiSort A-Series,Ambi Robotics,,US,,机械臂,2021,已部署,,,AmbiOS (Sim2Real AI),,,https://data.robo2u.com/robots,0
+Robotic Shuttle Put Wall (RSPW),Berkshire Grey,,US,,机械臂,2021-09,量产/在售,,,Berkshire Grey AI (BG perception),,,https://data.robo2u.com/robots,0
+Robotic Depalletization,Covariant,,US,,机械臂,,量产/在售,,,Covariant Brain / RFM foundation model,,,https://data.robo2u.com/robots,0
+BIG YAM 6-DOF Robot Arm,i2rt,,US,,机械臂,,,"$4,999",,,,,https://www.roboticscenter.ai/store/product/i2rt-big-yam-6dof,0
+YAM,i2rt,,US,,机械臂,,,"$2,999",,π0 / MolmoAct 等研究常用,,,https://www.roboticscenter.ai/store/product/i2rt-yam-arm-follower,0
+YAM 7,i2rt,,US,,机械臂,,,"$4,999","a 4 kg payload, 792 mm workspace range, enclosed cabling, and single-arm or bimanual set configurations",,,,https://www.roboticscenter.ai/store/product/i2rt-yam-7dof,0
+YAM Box with YAM,i2rt,,US,,机械臂,,,"$10,600",,,,,https://www.roboticscenter.ai/store/product/i2rt-yam-box,0
+YAM Leader,i2rt,,US,,机械臂,,,"$2,999",6 DOF,,,,https://www.roboticscenter.ai/store/product/i2rt-yam-leader,0
+YAM Mobile Station,i2rt,,US,,机械臂,,,"$15,999",,,,,https://www.roboticscenter.ai/store/product/i2rt-yam-mobile-station,0
+YAM Pro 6-DOF Robot Arm,i2rt,,US,,机械臂,,,"$3,499",,,,,https://www.roboticscenter.ai/store/product/i2rt-yam-pro-6dof,0
+YAM Ultra 2,i2rt,,US,,机械臂,,,"$4,399","a 4 kg payload, 750 mm workspace range, upgraded J4 actuator, and included linear gripper",,,,https://www.roboticscenter.ai/store/product/i2rt-yam-ultra-2-6dof,0
+YAM Ultra 6-DOF Robot Arm,i2rt,,US,,机械臂,,,"$4,399",,,,,https://www.roboticscenter.ai/store/product/i2rt-yam-ultra-6dof,0
+InductOne,Plus One Robotics,,US,,机械臂,2024-05,量产/在售,,,PickOne AI 2D+3D vision,,,https://data.robo2u.com/robots,0
+PickOne,Plus One Robotics,,US,,机械臂,,量产/在售,,,PickOne AI vision software,,,https://data.robo2u.com/robots,0
+RightPick 3,RightHand Robotics,,US,,机械臂,2021-04,量产/在售,,6 DoF,RightPick AI (dual-GPU processor module),,,https://data.robo2u.com/robots,0
+RC Aloha Leader,Robotics Center,,US,,机械臂,,,"$2,500",,,,,https://www.roboticscenter.ai/store/product/aloha-leader,0
+RC OpenArm V1 Follower,Robotics Center,,US,,机械臂,,,"$5,400",,,,,https://www.roboticscenter.ai/store/product/openarm,0
+RC OpenArm V1 Leader,Robotics Center,,US,,机械臂,,,"$5,400",8 DOF DOF and a 700 mm reach,,,,https://www.roboticscenter.ai/store/product/openarm-us,0
+RC OpenArm V2 Follower,Robotics Center,,US,,机械臂,,,"$5,600",,,,,https://www.roboticscenter.ai/store/product/openarm-2,0
+Core (RO1),Standard Bots,,US,,机械臂,,量产/在售,"$37,000",6 DoF,,,,https://data.robo2u.com/robots,0
+Spark,Standard Bots,,US,,机械臂,,预订,"$29,500",21 kg，6 DoF,,,,https://data.robo2u.com/robots,0
+Thor,Standard Bots,,US,,机械臂,2025-05,量产/在售,"$49,500",79 kg，6 DoF,,,,https://data.robo2u.com/robots,1
+SO Arm 101,The Robot Studio,,US,,机械臂,,,$500,,,,,https://www.roboticscenter.ai/store/product/so-arm101,0
+ViperX 300 S,Trossen Robotics,,US,,机械臂,2021,在售,,6 DoF 科研臂，原版 ALOHA 从臂,ALOHA / ACT,https://www.trossenrobotics.com/,,https://www.trossenrobotics.com/,0
+WidowX 250 S,Trossen Robotics,,US,,机械臂,2021,在售,,6 DoF 科研臂，BridgeData 采集平台,Octo / OpenVLA（BridgeData）,https://www.trossenrobotics.com/widowx,,https://www.trossenrobotics.com/widowx,0
+WidowX AI,Trossen Robotics,,US,,机械臂,2025,在售,"$4,545 起",负载 1.5 kg，臂展 700 mm，ALOHA 生态,ALOHA / π0 等模仿学习数据采集,https://www.trossenrobotics.com/widowx-ai,,https://www.trossenrobotics.com/widowx-ai,1
+Cassie（二代）,Tutor Intelligence,,US,,机械臂,2026-09,商用，按小时计费,$14–18/小时,码垛单臂，负载约 22.6 kg，约 14 箱/分钟,Ti0（45 亿参数 VLA）,https://www.tutorintelligence.com/,,https://www.massrobotics.org/tutor-intelligence-builds-data-factory-to-train-robot-ai-in-the-real-world/,1
+OmniHand 2025,AgiBot,智元机器人,CN,,灵巧手,2026-02（收录）,量产/在售,"$4,999",0.5 kg，16 DoF，5 指，触觉/力传感,,https://www.agibot.com,Ox0XluvI_MI,https://humanoid.guide/product/omnihand/,1
+OmniHand 3,AgiBot,智元机器人,CN,,灵巧手,2026-09（收录）,量产/在售,4 000 美元,0.51 kg，16 DoF，5 指，触觉/力传感,,https://www.agilink-ai.com,JdG21la1TcU,https://humanoid.guide/product/omnihand-3/,1
+OmniHand 3 Lite,AgiBot,智元机器人,CN,,灵巧手,2026-04,量产/在售,3 200 美元,0.35 kg，11 DoF，5 指，触觉/力传感,,https://www.agilink-ai.com,JdG21la1TcU,https://data.robo2u.com/hands,1
+OmniHand 3 Ultra-M,AgiBot,智元机器人,CN,,灵巧手,2026-06,量产/在售,16 000 美元,0.63 kg，20 DoF，5 指，触觉/力传感,,https://www.agilink-ai.com,,https://data.robo2u.com/hands,1
+OmniHand 3 Ultra-T,AgiBot,智元机器人,CN,,灵巧手,2026-04,量产/在售,12 000 美元,0.5 kg，25 DoF，5 指，触觉/力传感,,https://www.agilink-ai.com,,https://data.robo2u.com/hands,1
+OmniHand Pro 2025,AgiBot,智元机器人,CN,,灵巧手,2025,量产/在售,"$15,999",5 指，19 DoF，12 主动，触觉，Tendon,,https://www.agibot.com,eIRQ7abBt6w,https://data.robo2u.com/hands,1
+PiKA Data Gripper Kit,AgileX,松灵机器人,CN,,灵巧手,2026-04（收录）,量产/在售,"$5,950",,,https://global.agilex.ai/,JfUFSR_xnqI,https://humanoid.guide/product/pika/,1
+Intelligent Bionic Hand (TD-RH-1),"Avatar (ATAR Robot), Zhengzhou",,CN,,灵巧手,2025-12（收录）,量产/在售,2 100 美元,0.48 kg，6 DoF，5 per hand 指,,https://www.atarrobot.com/,3SlBQV8Amp4,https://humanoid.guide/product/atarobot/,1
+DexMano D22-PRO,Botyard Intelligence,,CN,,灵巧手,2026-02（收录）,量产/在售,30 000 美元,1.8 kg，22 DoF，5 指，触觉/力传感,,https://botyard.ai/,,https://humanoid.guide/product/dexmano-d22-pro/,1
+Revo 1,BrainCo,强脑科技,CN,,灵巧手,2026-10（收录）,量产/在售,9 500 美元,0.54 kg，10 DoF，5 指，触觉/力传感,,https://www.brainco.tech/,MA9H8EO9wW4,https://humanoid.guide/product/revo-1/,1
+Revo 2,BrainCo,强脑科技,CN,,灵巧手,2025,量产/在售,5 000 美元,0.38 kg，11 DoF，5 指，触觉/力传感,,https://autodiscovery.co.uk/,d-wd73Cnf7M,https://data.robo2u.com/hands,1
+Revo3,BrainCo,强脑科技,CN,,灵巧手,2026,量产/在售,8 000 美元,0.43 kg，21 DoF，5 指，触觉/力传感,,https://www.brainco.tech/,L0ToZr8dKgc,https://data.robo2u.com/hands,1
+ByteDexter,ByteDance Seed (ByteDance),字节跳动 Seed,CN,,灵巧手,2026-10（收录）,原型,20 000 美元,0.97 kg，21 DoF，5 指，触觉/力传感,,https://seed.bytedance.com/en/,7AAqSS7KC3A,https://humanoid.guide/product/bytedexter/,1
+Handle-L1,"CASBOT / Beijing Zhongke Huiling Robotics Technology Co., Ltd.",中科慧灵（灵宝 CASBOT）,CN,,灵巧手,2026-10（收录）,量产/在售,2 100 美元,0.61 kg，11 DoF，5 指，触觉/力传感,,https://casbot.tech/,j9X2FehEO3c,https://humanoid.guide/product/casbot-handle-l1/,1
+X2,"Changingtek Robotics Technology (Suzhou) Co., Ltd.",知行机器人,CN,,灵巧手,2026-03（收录）,量产/在售,3 000 美元,1.2 kg，16 DoF，5 per hand 指,,https://www.changingtek.com/,xRi_xjzKs7k,https://humanoid.guide/product/x2-robotic-hand/,1
+CYBORG HO2,Cyborg Robotics (赛博格机器人有限公司),赛博格机器人有限公司,CN,,灵巧手,2026-10（收录）,量产/在售,4 000 美元,0.75 kg，16 DoF，5 指,,https://www.cyb-org.cn/,,https://humanoid.guide/product/cyborg-ho2/,1
+DM-Hand1,Daimon Robotics,戴盟机器人,CN,,灵巧手,2026-09（收录）,量产/在售,7 000 美元,0.65 kg，12 DoF，5 指，触觉/力传感,,https://www.dmrobot.com/en/,3qgzPe0bHaw,https://humanoid.guide/product/dm-hand1/,1
+Apex Hand,DexcelRobotics,,CN,,灵巧手,2025-10（收录）,量产/在售,20 000 美元,21 DoF，5 指，触觉/力传感,,https://www.dexcelbot.com/,5mhagikmX78,https://humanoid.guide/product/apex-hand/,1
+DexHand021,DexRobot,灵巧智能,CN,,灵巧手,2025,量产/在售,13 000 美元,19 DoF，5 指，触觉/力传感,,https://www.dex-robot.com/en,iEDhAAqROrw,https://data.robo2u.com/hands,1
+DexHand021 Pro,DexRobot,灵巧智能,CN,,灵巧手,2026-01,量产/在售,"$14,000",5 指，22 DoF，触觉，Linkage,,,,https://data.robo2u.com/hands,1
+DexHand021 S,DexRobot,灵巧智能,CN,,灵巧手,2026-10（收录）,量产/在售,1 000 美元,0.6 kg，8 DoF，3 指，触觉/力传感,,https://www.dex-robot.com/en,wZzvbwGvMzQ,https://humanoid.guide/product/dexhand021-s/,1
+DH-5-6,"DH-Robotics (Shenzhen DH-Robotics Technology Co., Ltd., 大寰机器人)",大寰机器人,CN,,灵巧手,2026-10（收录）,量产/在售,4 000 美元,0.76 kg，6 DoF，5 指，触觉/力传感,,https://en.dh-robotics.com/,Cag2x_guwKs,https://humanoid.guide/product/dh-5-6/,1
+12-DoF Dexterous Hand,Fourier Intelligence,傅利叶,CN,,灵巧手,2024,量产/在售,,5 指，12 DoF，12 主动，触觉，Linkage,,,,https://data.robo2u.com/hands,0
+FDH-6,Fourier Intelligence,傅利叶,CN,,灵巧手,2025-11,量产/在售,,5 指，11 DoF，6 主动,,,,https://data.robo2u.com/hands,1
+eHand-6,Hitbot (Huiling Technology / 慧灵科技(深圳)有限公司),慧灵科技(深圳)有限公司,CN,,灵巧手,2026-10（收录）,量产/在售,420 美元,0.51 kg，6 DoF，5 指，触觉/力传感,,https://www.hitbotrobot.com/,,https://humanoid.guide/product/ehand-6/,1
+RH56BFX,Inspire Robotics,因时机器人,CN,,灵巧手,2026-10（收录）,量产/在售,6 000 美元,0.54 kg，8 DoF，5 指，触觉/力传感,,https://en.inspire-robots.com/,NC8K4N-FSLc,https://humanoid.guide/product/rh56bfx/,1
+RH56BFXW High-Speed Dexterous Hand with 2-DOF Wrist,Inspire Robotics,因时机器人,CN,,灵巧手,,,,"2-DOF wrist, 570°/s finger flexion, 650 g, RS485",,,,https://www.roboticscenter.ai/store/product/inspire-rh56bfxw,0
+RH56DFTP (FTP series),Inspire Robotics,因时机器人,CN,,灵巧手,2025,量产/在售,,5 指，12 DoF，6 主动，触觉,,,,https://data.robo2u.com/hands,1
+RH56DFX,Inspire Robotics,因时机器人,CN,,灵巧手,2021,量产/在售,6 500 美元,0.54 kg，6 DoF，5 指，触觉/力传感,,https://en.inspire-robots.com/,Uf0zDRnK8hE,https://data.robo2u.com/hands,0
+RH56DFXW Dexterous Hand with 2-DOF Wrist,Inspire Robotics,因时机器人,CN,,灵巧手,,,,"built-in 2-DOF wrist, 6+2 DOF, 650 g, RS485",,,,https://www.roboticscenter.ai/store/product/inspire-rh56dfxw,0
+RH56E2 Series,Inspire Robotics,因时机器人,CN,,灵巧手,2025-12（收录）,量产/在售,9 899 美元,"~700–1, 000 g kg，6 DoF，5 指",,https://en.inspire-robots.com,Na9FkdAKM6U,https://data.robo2u.com/hands,1
+RH56E2-T Industrial Tactile Dexterous Hand,Inspire Robotics,因时机器人,CN,,灵巧手,,,,,,,,https://www.roboticscenter.ai/store/product/inspire-rh56e2-t,0
+RH56F1,Inspire Robotics,因时机器人,CN,,灵巧手,2026-10（收录）,量产/在售,8 500 美元,0.64 kg，6 DoF，5 指，触觉/力传感,,https://en.inspire-robots.com/,zaKpnF4f8SU,https://data.robo2u.com/hands,1
+RH56F1-T1 Tactile Dexterous Hand,Inspire Robotics,因时机器人,CN,,灵巧手,,,,,,,,https://www.roboticscenter.ai/store/product/inspire-rh56f1-t1,0
+RH56H1,Inspire Robotics,因时机器人,CN,,灵巧手,2026-10（收录）,量产/在售,7 000 美元,0.48 kg，6 DoF，5 指，触觉/力传感,,https://en.inspire-robots.com/,7HjpTIXp8cA,https://data.robo2u.com/hands,1
+RH56H1-T2 Tactile Dexterous Hand,Inspire Robotics,因时机器人,CN,,灵巧手,,,,,,,,https://www.roboticscenter.ai/store/product/inspire-rh56h1-t2,0
+RH5DG2,Inspire Robotics,因时机器人,CN,,灵巧手,2026-01（收录）,量产/在售,15 667 美元,~350 g kg，13 DoF，5 指，触觉/力传感,,https://en.inspire-robots.com/,A-CSj1CMTTE,https://data.robo2u.com/hands,1
+RH5DG2 13-DOF Tactile Dexterous Hand,Inspire Robotics,因时机器人,CN,,灵巧手,,,,,,,,https://www.roboticscenter.ai/store/product/inspire-rh5dg2,0
+RH5MK1,Inspire Robotics,因时机器人,CN,,灵巧手,2026-10（收录）,量产/在售,15 000 美元,22 DoF，5 指，触觉/力传感,,https://en.inspire-robots.com/,EeVMC3aob2Y,https://humanoid.guide/product/rh5mk1/,1
+TeleHand Pro P20,Joyson Electronics,均胜电子,CN,,灵巧手,2026-09（收录）,原型,8 000 美元,0.65 kg，20 DoF，5 指，触觉/力传感,,https://www.joyson.com/,,https://humanoid.guide/product/telehand-pro-p20/,1
+DH116 Series,Leadshine,雷赛智能,CN,,灵巧手,2026-01,量产/在售,2 799 美元,0.54 kg，11 DoF，5 指，触觉/力传感,,https://www.leadshine.com/,5UJ10286VFw,https://data.robo2u.com/hands,1
+DH116S Series,Leadshine,雷赛智能,CN,,灵巧手,2026-09（收录）,量产/在售,2 399 美元,0.36 kg，11 DoF，5 指，触觉/力传感,,https://www.leadshine.com/,5UJ10286VFw,https://humanoid.guide/product/dh116s-series/,1
+DH2015,Leadshine,雷赛智能,CN,,灵巧手,2026-04（收录）,原型,,0.6 kg，20 DoF，5 指，触觉/力传感,,https://www.leadshine.com/,,https://humanoid.guide/product/dh2015/,1
+DH2116 Series,Leadshine,雷赛智能,CN,,灵巧手,2026-09（收录）,量产/在售,12 999 美元,0.87 kg，21 DoF，5 指，触觉/力传感,,https://www.leadshine.com/,5UJ10286VFw,https://humanoid.guide/product/dh2116-series/,1
+Linker Hand J42,LINKERBOT,灵心巧手,CN,,灵巧手,,,"$6,800",,,,,https://www.roboticscenter.ai/store/product/linkerbot-linker-hand-j42,0
+Linker Hand L10,LINKERBOT,灵心巧手,CN,,灵巧手,,,"$3,999",,,,,https://www.roboticscenter.ai/store/product/linkerbot-linker-hand-l10,0
+Linker Hand L20,LINKERBOT,灵心巧手,CN,,灵巧手,2025,量产/在售,4 200 美元,1.2 kg，21 DoF，5 指,,https://www.linkerbot.cn/,blrDM--YV20,https://data.robo2u.com/hands,1
+Linker Hand L20 Lite,LINKERBOT,灵心巧手,CN,,灵巧手,,量产/在售,,5 指，20 DoF，10 主动，Linkage,,,,https://data.robo2u.com/hands,0
+Linker Hand L30 Pro,LINKERBOT,灵心巧手,CN,,灵巧手,2026-10（收录）,量产/在售,,1.2 kg，22 DoF，5 指，触觉/力传感,,https://www.linkerbot.cn/,lUaf2tLE9F0,https://humanoid.guide/product/linker-hand-l30-pro/,1
+Linker Hand L6,LINKERBOT,灵心巧手,CN,,灵巧手,2026-10（收录）,量产/在售,2 800 美元,0.607 kg，11 DoF，5 指,,https://www.linkerbot.cn/,L0e6M5UxVIM,https://humanoid.guide/product/linker-hand-l6/,1
+Linker Hand O30,LINKERBOT,灵心巧手,CN,,灵巧手,2026-10（收录）,量产/在售,6 000 美元,0.73 kg，20 DoF，5 指,,https://www.linkerbot.cn/,DuGyL53McT4,https://data.robo2u.com/hands,1
+Linker Hand O7,LINKERBOT,灵心巧手,CN,,灵巧手,2026-01,量产/在售,,5 指，17 DoF，触觉，Tendon,,,,https://data.robo2u.com/hands,1
+Linker L30,LINKERBOT,灵心巧手,CN,,灵巧手,2026-03（收录）,量产/在售,14 800 美元,1.3 kg，21 DoF，5 指，触觉/力传感,,https://www.linkerbot.cn/,lUaf2tLE9F0,https://data.robo2u.com/hands,1
+Linker O6,LINKERBOT,灵心巧手,CN,,灵巧手,2026-01,量产/在售,990 美元,0.37 kg，6 DoF，5 指，触觉/力传感,,https://www.linkerbot.cn/,L0e6M5UxVIM,https://data.robo2u.com/hands,1
+O20,LINKERBOT,灵心巧手,CN,,灵巧手,,,,,,,,https://www.roboticscenter.ai/store/product/linkerbot-o20,0
+O6Lite/Hand,LINKERBOT,灵心巧手,CN,,灵巧手,,,"$2,000",,,,,https://www.roboticscenter.ai/store/product/linkerbot-o6,0
+FlexHand V1,LX ROBOTICS LIMITED,,CN,,灵巧手,2026-04（收录）,原型,,0.31 kg，6 DoF，5 指,,https://lxrobotics.com/,fw7MWdR5HU4,https://humanoid.guide/product/flexhand-v1/,1
+MagicHand H01,MagicLab,魔法原子,CN,,灵巧手,2026-10（收录）,量产/在售,15 000 美元,N/A kg，20 DoF，5 指，触觉/力传感,,https://www.magiclab.top/,BwgneTspZvM,https://humanoid.guide/product/magichand-h01/,1
+MagicHand S01,MagicLab,魔法原子,CN,,灵巧手,2025-12（收录）,量产/在售,7 500 美元,0.58 kg，11 DoF，5 per hand 指，触觉/力传感,,https://www.magiclab.top/,U6FMpSIadd8,https://humanoid.guide/product/magichand-s01/,1
+MM-Hand 1.0,"MMLab, The University of Hong Kong (HKU)",香港大学 MMLab,CN,,灵巧手,2026-10（收录）,原型,1 400 美元,0.35 kg，21 DoF，5 指，触觉/力传感,,https://mmlab.hk/,woCuTt5Y_tM,https://humanoid.guide/product/mm-hand/,1
+R1,OceanTrix Robotics,,CN,,灵巧手,2025-12（收录）,量产/在售,28 000 美元,6 DoF，5 per hand 指，触觉/力传感,,https://oceantrix.com/,v1II1EbRAcQ,https://humanoid.guide/product/r1/,1
+R2,OceanTrix Robotics,,CN,,灵巧手,2026-03（收录）,量产/在售,5 500 美元,6 DoF，5 指，触觉/力传感,,https://oceantrix.com/,dkj6h9yUbrA,https://humanoid.guide/product/r2/,1
+ROHand,OYMotion Technology,傲意科技,CN,,灵巧手,2025-12（收录）,量产/在售,9 750 美元,540 g ± 5 g kg，6 DoF，5 per hand 指，触觉/力传感,,https://www.oymotion.com/,X9bELWLgmXk,https://humanoid.guide/product/ro-hand/,1
+DexH13,PaXini (PaXini Tech),帕西尼感知,CN,,灵巧手,2024,量产/在售,14 500 美元,"~700–1, 000 g kg，16 DoF，4 指，触觉/力传感",,https://paxini.com/dex/gen2,pG3Vm1nc600,https://data.robo2u.com/hands,0
+DexH5,PaXini (PaXini Tech),帕西尼感知,CN,,灵巧手,2025-12（收录）,量产/在售,12 350 美元,"~700–1, 000 g kg，9 DoF，4 指，触觉/力传感",,https://paxini.com/dex/gen1,,https://humanoid.guide/product/dexh5/,1
+GMH18,PaXini (PaXini Tech),帕西尼感知,CN,,灵巧手,2025-12（收录）,量产/在售,25 000 美元,"~700–1, 000 g kg，18 DoF，5 指，触觉/力传感",,https://paxini.com/dex/gen3,,https://humanoid.guide/product/gmh18/,1
+PL-WitHand,PL-Universe,,CN,,灵巧手,2026-01（收录）,量产/在售,8 932 美元,~600–800 g kg，20 DoF，5 指，触觉/力传感,,https://en.pl-universe.com/,,https://humanoid.guide/product/pl-withand/,1
+Psi H1,PsiBot,灵初智能,CN,,灵巧手,2026-04（收录）,不单独销售,,0.6 kg，21 DoF，5 指，触觉/力传感,,https://www.psibot.ai/,gd8_eXOEu6I,https://humanoid.guide/product/psi-h1/,1
+XHAND 1 Lite,Robotera,星动纪元,CN,,灵巧手,2026-08（收录）,量产/在售,8 300 美元,0.73 kg，11 DoF，5 指，触觉/力传感,,https://www.robotera.com/,SN03Q30Wuys,https://humanoid.guide/product/xhand-1-lite/,1
+XHAND 1 PRO,Robotera,星动纪元,CN,,灵巧手,2026-06,量产/在售,16 750 美元,0.88 kg，21 DoF，5 指，触觉/力传感,,https://www.robotera.com/,lvkAYDTsHOw,https://data.robo2u.com/hands,1
+XHAND1,Robotera,星动纪元,CN,,灵巧手,2024,量产/在售,17 000 美元,1.1 kg，12 DoF，5 指，触觉/力传感,,https://www.robotera.com/en/goods1/4.html,QI-66_UkyLQ,https://data.robo2u.com/hands,0
+RY-H1,Ruiyan Robotics,睿研智控,CN,,灵巧手,2026-04（收录）,量产/在售,16 000 美元,0.87 kg，16 DoF，5 指,,https://www.ruiyanrobot.com/,,https://humanoid.guide/product/ry-h1/,1
+RY-H2,Ruiyan Robotics,睿研智控,CN,,灵巧手,2026-10（收录）,量产/在售,1 400 美元,0.56 kg，6 DoF，5 指，触觉/力传感,,https://www.ruirobot.cn/,3SATHgiZ8GA,https://humanoid.guide/product/ry-h2/,1
+RY-H5,Ruiyan Robotics,睿研智控,CN,,灵巧手,2026-10（收录）,量产/在售,2 500 美元,0.8 kg，6 DoF，5 指，触觉/力传感,,https://www.ruirobot.cn/,2H3AM7KfLkg,https://humanoid.guide/product/ry-h5/,1
+RY-H6,Ruiyan Robotics,睿研智控,CN,,灵巧手,2026-10（收录）,量产/在售,1 300 美元,0.278 kg，6 DoF，5 指，触觉/力传感,,https://www.ruirobot.cn/,2H3AM7KfLkg,https://humanoid.guide/product/ry-h6/,1
+ZWHAND A17,"Shenzhen ZWHAND Technology Co., Ltd.",兆威灵巧手（兆威机电）,CN,,灵巧手,2026-10（收录）,量产/在售,5 000 美元,0.85 kg，17 DoF，5 指，触觉/力传感,,https://www.zwhand.com/en,JuU6JoZJw7g,https://humanoid.guide/product/zwhand-a17/,1
+ZWHAND B06,"Shenzhen ZWHAND Technology Co., Ltd.",兆威灵巧手（兆威机电）,CN,,灵巧手,2026-10（收录）,量产/在售,699 美元,0.55 kg，6 DoF，5 指，触觉/力传感,,https://www.zwhand.com/en,JuU6JoZJw7g,https://humanoid.guide/product/zwhand-b06/,1
+ZWHAND B20,"Shenzhen ZWHAND Technology Co., Ltd.",兆威灵巧手（兆威机电）,CN,,灵巧手,2026-01,量产/在售,6 500 美元,0.6 kg，20 DoF，5 指，触觉/力传感,,https://www.zwhand.com/en,JuU6JoZJw7g,https://data.robo2u.com/hands,1
+Gaia Hand 20,Stella Robot,,CN,,灵巧手,2026-10（收录）,量产/在售,4 600 美元,0.79 kg，20 DoF，5 指，触觉/力传感,,https://www.stella-robot.com/,gCeQIqR14dk,https://humanoid.guide/product/gaia-hand-20/,1
+Pantheon Hand,Stella Robot,,CN,,灵巧手,2026-10（收录）,量产/在售,3 500 美元,0.29 kg，20 DoF，5 指,,https://www.stella-robot.com/,3vtWo1bai3U,https://humanoid.guide/product/pantheon-hand/,1
+Cool Hand,Ti5ROBOT,钛虎机器人,CN,,灵巧手,2026-09（收录）,量产/在售,5 000 美元,0.48 kg，6 DoF，5 指，触觉/力传感,,https://www.ti5robotics.com,,https://humanoid.guide/product/cool-hand/,1
+TORCH HAND 1,TorchKernel Robotics (炬坤机器人),炬坤机器人,CN,,灵巧手,2026-10（收录）,量产/在售,5 000 美元,1.1 kg，21 DoF，5 指，触觉/力传感,,https://www.torchkernel.com/,i4FxgJjiQUA,https://humanoid.guide/product/torch-hand-1/,1
+TORCH HAND 2,TorchKernel Robotics (炬坤机器人),炬坤机器人,CN,,灵巧手,2026-10（收录）,量产/在售,6 500 美元,0.48 kg，20 DoF，5 指，触觉/力传感,,https://www.torchkernel.com/,,https://humanoid.guide/product/torch-hand-2/,1
+4th-gen Dexterous Hand (Walker S2),UBTECH Robotics,优必选,CN,,灵巧手,2025,量产/在售,,5 指，11 DoF，触觉,,,,https://data.robo2u.com/hands,1
+Dex2/5,Unitree Robotics,宇树科技,CN,,灵巧手,2026-10（收录）,量产/在售,800 美元,0.365 kg，10 DoF，5 指，触觉/力传感,,https://www.unitree.com/,,https://humanoid.guide/product/dex2-5/,1
+Dex3-1,Unitree Robotics,宇树科技,CN,,灵巧手,2024,量产/在售,1 600 美元,0.71 kg，7 DoF，3 指，触觉/力传感,,https://www.unitree.com/,6sLF1Ii1ZEY,https://data.robo2u.com/hands,0
+Dex5-1,Unitree Robotics,宇树科技,CN,,灵巧手,2025,量产/在售,15 000 美元,"1.1 kg，20 DoF，5 fingers, all modular and independently replaceable 指，触觉/力传感",,https://www.unitree.com/Dex5-1,0rwYOa7pJCs,https://data.robo2u.com/hands,1
+Dex5-S,Unitree Robotics,宇树科技,CN,,灵巧手,2026-09,量产/在售,6 500 美元,0.62 kg，22 DoF，5 指，触觉/力传感,,https://www.unitree.com/,LAT2RIKjhTo,https://data.robo2u.com/hands,1
+G1 Dex1-1 Gripper Standard Version,Unitree Robotics,宇树科技,CN,,灵巧手,,,$380,,,,,https://www.roboticscenter.ai/store/product/unitree-g1-dex1-1-gripper-standard-version,0
+G1 Tendon-driven dexterous hand,Unitree Robotics,宇树科技,CN,,灵巧手,,,"$1,490",,,,,https://www.roboticscenter.ai/store/product/unitree-g1-tendon-driven-dexterous-hand,0
+H2 Dedicated DFQ Series Dexterous Hand,Unitree Robotics,宇树科技,CN,,灵巧手,,,"$7,000",,,,,https://www.roboticscenter.ai/store/product/unitree-h2-dedicated-dfq-series-dexterous-hand,0
+H2 Dedicated In-Time FTP Series Dexterous Hand,Unitree Robotics,宇树科技,CN,,灵巧手,,,"$9,000",,,,,https://www.roboticscenter.ai/store/product/unitree-h2-dedicated-in-time-ftp-series-dexterous-hand,0
+H2-Specific Dex5-1P Five-Finger Dexterous Hand,Unitree Robotics,宇树科技,CN,,灵巧手,,,"$29,000",,,,,https://www.roboticscenter.ai/store/product/unitree-h2-specific-dex5-1p-five-finger-dexterous-hand,0
+R1 Tendon Cable Dexterous Hand,Unitree Robotics,宇树科技,CN,,灵巧手,,,"$1,490",,,,,https://www.roboticscenter.ai/store/product/unitree-r1-tendon-cable-dexterous-hand,0
+YZ-T6,VEICHI & EasyLink Robotics,伟创电气,CN,,灵巧手,2025-12（收录）,量产/在售,2 500 美元,0.63 kg，6 DoF，5 指,,https://www.veichi.com/,jYCdHcDg6Ak,https://humanoid.guide/product/yz-t6/,1
+VH-HA-18T2,Vizum / ViHero,,CN,,灵巧手,2026-04（收录）,量产/在售,2 636 美元,0.76 kg，16 DoF，5 指,,http://www.vihero.com,,https://humanoid.guide/product/vh-ha-18t2/,1
+HAND 2,WUJI Tech,舞肌科技,CN,,灵巧手,2026-05,量产/在售,14 600 美元,0.6 kg，20 DoF，5 指，触觉/力传感,,http://wuji.tech,ChApa28PdGc,https://data.robo2u.com/hands,1
+ArtiXon,X-Humanoid,北京人形机器人创新中心,CN,,灵巧手,2025-12（收录）,量产/在售,7 600 美元,"~800–1, 000 g kg，20 DoF，5 指，触觉/力传感",,https://www.x2robot.com/,,https://humanoid.guide/product/artixon/,1
+Flex 2,Xynova,曦诺未来,CN,,灵巧手,2026-05（收录）,量产/在售,3 800 美元,0.4 kg，23 DoF，5 指，触觉/力传感,,https://xynova.com.cn/en/,hnp9my-bKm4,https://humanoid.guide/product/flex-2/,1
+Prima 1,Xynova,曦诺未来,CN,,灵巧手,2026-09（收录）,量产/在售,15 000 美元,0.65 kg，22 DoF，5 指，触觉/力传感,,https://xynova.com.cn/en/,vO1iogzGYCI,https://humanoid.guide/product/prima-1/,1
+X-Hand M1,Yue Quan Bionics (月泉仿生),月泉仿生,CN,,灵巧手,2026-10（收录）,量产/在售,7 000 美元,0.6 kg，11 DoF，5 指，触觉/力传感,,https://www.yqbionics.com/,hv3-p7WhGoo,https://humanoid.guide/product/x-hand-m1/,1
+Y Hand M2,Yue Quan Bionics (月泉仿生),月泉仿生,CN,,灵巧手,2026-10（收录）,量产/在售,15 000 美元,0.7 kg，38 DoF，5 指,,https://www.yqbionics.com/,hv3-p7WhGoo,https://humanoid.guide/product/y-hand-m2/,1
+AIDIN-Hand Gen1,AIDIN ROBOTICS Inc.,,OT,韩国,灵巧手,2026-04（收录）,原型,,1.3 kg，15 DoF，5 指，触觉/力传感,,http://www.aidinrobotics.co.kr,iIXxDqpHqt8,https://humanoid.guide/product/aidin-hand-gen1/,1
+Allonic Hand MK2,Allonic Inc.,,OT,匈牙利,灵巧手,2026-06（收录）,原型,,0.45 kg，15 DoF，5 指,,https://allonic.co/,pBpUBqAz41g,https://humanoid.guide/product/allonic-hand-mk2/,1
+Adam’s Hand Plus,BionIT Labs,,OT,意大利,灵巧手,2026-06（收录）,原型,,0.53 kg，10 DoF，5 指,,https://bionitlabs.com/robotics/,p45DOhsj_mw,https://humanoid.guide/product/adams-hand-plus/,1
+CR Hand,Curious Robotics,,OT,日本,灵巧手,2026-10（收录）,量产/在售,1 500 美元,0.326 kg，6 DoF，5 指，触觉/力传感,,https://www.curious-robotics.com/home-en,h3KDXTIZstY,https://humanoid.guide/product/cr-hand/,1
+UM1-Evo,Didrei Robotic,,OT,法国,灵巧手,2026-10（收录）,原型,5 000 美元,1.7 kg，24 DoF，5 指,,https://www.youtube.com/@didrei-robotic,DJ9wDMhtfLk,https://humanoid.guide/product/um1-evo/,1
+BionicSoftHand,Festo SE & Co. KG,,OT,德国,灵巧手,2025-12（收录）,原型,,1.295 kg，12 DoF，5 per hand 指,,https://www.festo.com/,5e0F14IRxVc,https://humanoid.guide/product/bionicsofthand/,1
+HW1,Gesture Platforms,,OT,加拿大,灵巧手,2026-05（收录）,预订,699 美元,0.475 kg，10 DoF，5 指,,https://gestureplatforms.com/,LPbB96fT_uw,https://humanoid.guide/product/hw1/,1
+FLLEX,IRIM LAB KoreaTech,,OT,韩国,灵巧手,2025-12（收录）,原型,,15 DoF，5 per hand 指,,https://www.koreatech.ac.kr/,n_7N_fpTs0g,https://humanoid.guide/product/fllex/,1
+iCub Hand,Istituto Italiano di Tecnologia (IIT),,OT,意大利,灵巧手,,科研,,5 指，19 DoF，9 主动，触觉，Tendon，开源,,,,https://data.robo2u.com/hands,0
+Mark 7,Mand.ro,,OT,韩国,灵巧手,2026-04（收录）,,4 500 美元,0.395 kg，7 DoF，5 指，触觉/力传感,,https://mand.ro,u3LF8a9pCnU,https://humanoid.guide/product/mark-7/,1
+Mimic Hand M1,Mimic Robotics,,OT,瑞士,灵巧手,2026-07（收录）,不单独销售,,1.8 kg，15 DoF，5 指，触觉/力传感,,https://www.mimicrobotics.com/,ikjPRgE8WLM,https://humanoid.guide/product/m1-0/,1
+mimic hand (mimic-one),Mimic Robotics,,OT,瑞士,灵巧手,2025,量产/在售,,5 指，16 DoF，16 主动，触觉,,,,https://data.robo2u.com/hands,1
+Hero RGD,Open Bionics Ltd.,,OT,英国,灵巧手,2025-12（收录）,量产/在售,4 500 美元,~600–800 g kg，6 DoF，5 指,,https://openbionics.com/,,https://humanoid.guide/product/hero-rgd/,1
+ORCA Hand Standard,ORCA Hand / Soft Robotics Lab (ETH Zürich),,OT,瑞士,灵巧手,2026-03,量产/在售,"$3,500",5 指，17 DoF，17 主动，Tendon，开源,,,,https://data.robo2u.com/hands,1
+OrcaHand Lite,ORCA Hand / Soft Robotics Lab (ETH Zürich),,OT,瑞士,灵巧手,2026-03,量产/在售,1 500 美元,0.7 kg，9 DoF，5 指，触觉/力传感,,https://www.orcahand.com,WNtlUViSrPg,https://data.robo2u.com/hands,1
+OrcaHand Touch,ORCA Hand / Soft Robotics Lab (ETH Zürich),,OT,瑞士,灵巧手,2026-03,量产/在售,6 100 美元,1.2 kg，17 DoF，5 指，触觉/力传感,,https://www.orcahand.com,WNtlUViSrPg,https://data.robo2u.com/hands,1
+Amazing Hand,Pollen Robotics,,OT,法国,灵巧手,2026-10（收录）,量产/在售,200 美元,0.4 kg，8 DoF，4 指，触觉/力传感,,https://www.pollen-robotics.com/,J6ybTv8J3jY,https://humanoid.guide/product/amazing-hand/,1
+IH2 Azzurra,Prensilia S.r.l.,,OT,意大利,灵巧手,2025-12（收录）,量产/在售,5 300 美元,0.64 kg，11 DoF，5 per hand 指,,https://www.prensilia.com/,XmxzH_Hw2b0,https://humanoid.guide/product/ih2-azzurra/,1
+Mia Hand,Prensilia S.r.l.,,OT,意大利,灵巧手,2026-02（收录）,量产/在售,5 500 美元,0.52 kg，4 DoF，5 per hand 指，触觉/力传感,,https://www.prensilia.com/,YpLcr7J7g4E,https://data.robo2u.com/hands,1
+SoftHand2,qb Robotics,,OT,意大利,灵巧手,2025-12（收录）,量产/在售,16 500 美元,0.94 kg，19 DoF，5 per hand 指,,https://qbrobotics.com/,EXmENpe3xCo,https://humanoid.guide/product/softhand2/,1
+qb SoftHand2 Research,qb Robotics,,OT,意大利,灵巧手,2022,量产/在售,,5 指，19 DoF，2 主动，Tendon,,,,https://data.robo2u.com/hands,0
+HX5-D20,Robotis,,OT,韩国,灵巧手,2025-12（收录）,量产/在售,7 700 美元,~0.6 kg，20 DoF，5 指，触觉/力传感,,https://www.robotis.us/,Gr867DGH5tk,https://humanoid.guide/product/hx5-d20/,1
+Phoenix 3.2,Sanctuary AI,,OT,加拿大,灵巧手,2025-12（收录）,原型,,~1.2–1.8 kg kg，17 DoF，5 指，触觉/力传感,,https://www.sanctuary.ai/,FH3zbUSMAAU,https://humanoid.guide/product/phoenix-hand-3-2/,1
+Sanctuary AI’s Hydraulic Hand,Sanctuary AI,,OT,加拿大,灵巧手,2026-09（收录）,原型,15 000 美元,N/A kg，24 DoF，5 指，触觉/力传感,,https://www.sanctuary.ai/,5RRBCJI2b78,https://humanoid.guide/product/sanctuary-ais-hydraulic-hand/,1
+ARTUS Lite,Sarcomere Dynamics Inc.,,OT,加拿大,灵巧手,2025-12（收录）,量产/在售,4 500 美元,"1.4 kg，20 DoF，Five digits (thumb + four fingers), human-hand configuration. (20 joints = 4 per finger + thumb joints) 指",,https://sarcomeredynamics.com/,NLN8Zw5YnIk,https://humanoid.guide/product/artus-lite/,1
+SVH,SCHUNK,,OT,德国,灵巧手,2025-10（收录）,量产/在售,66 000 美元,20 DoF，5 指,,https://schunk.com/,Fw5VOt6Q-tw,https://humanoid.guide/product/svh/,1
+SVH 5-Finger Hand,SCHUNK,,OT,德国,灵巧手,,量产/在售,,5 指，20 DoF，9 主动,,,,https://data.robo2u.com/hands,0
+RH6D,Seed Robotics,,OT,葡萄牙,灵巧手,2026-03（收录）,量产/在售,3 400 美元,0.31 kg，15 DoF，3 指，触觉/力传感,,https://www.seedrobotics.com/,xY95KnbUxtc,https://humanoid.guide/product/rh6d/,1
+RH8D,Seed Robotics,,OT,葡萄牙,灵巧手,2026-03（收录）,,6 500 美元,0.8 kg，19 DoF，5 指，触觉/力传感,,http://www.seedrobotics.com,xY95KnbUxtc,https://humanoid.guide/product/rh8d/,1
+RH8D Adult Hand,Seed Robotics,,OT,英国,灵巧手,,量产/在售,,5 指，19 DoF，8 主动，触觉，Tendon,,,,https://data.robo2u.com/hands,0
+DEX-EE,Shadow Robot Company,,OT,英国,灵巧手,2025-10（收录）,量产/在售,60 000 美元,12 DoF，3 指，触觉/力传感,,http://wuji-tech.com,Wcf9mbgoqKc,https://data.robo2u.com/hands,1
+DEX-EE Chiral,Shadow Robot Company,,OT,英国,灵巧手,2026,量产/在售,,3 指，12 DoF，12 主动，触觉，Tendon,,,,https://data.robo2u.com/hands,1
+SharpaWave,Sharpa (Sharpa Robotics),,OT,新加坡,灵巧手,2025,量产/在售,50 000 美元,1.3 kg，22 DoF，5 per hand 指，触觉/力传感,,https://www.sharpa.com/,GcTUlOHvdOs,https://data.robo2u.com/hands,1
+Wave W01 SE,Sharpa (Sharpa Robotics),,OT,新加坡,灵巧手,2026-09（收录）,量产/在售,20 000 美元,1.3 kg，22 DoF，5 指，触觉/力传感,,https://www.sharpa.com/,GcTUlOHvdOs,https://humanoid.guide/product/wave-w01-se/,1
+Wave W02,Sharpa (Sharpa Robotics),,OT,新加坡,灵巧手,2026-09（收录）,量产/在售,25 000 美元,0.75 kg，21 DoF，5 指，触觉/力传感,,https://www.sharpa.com/,GcTUlOHvdOs,https://humanoid.guide/product/wave-w02/,1
+DG-4F,Tesollo,,OT,韩国,灵巧手,2026-10（收录）,量产/在售,12 000 美元,1.494 kg，18 DoF，4 指，触觉/力传感,,https://tesollo.com/,agsHzPNj4OM,https://humanoid.guide/product/dg-4f/,1
+DG-5F,Tesollo,,OT,韩国,灵巧手,2025-12（收录）,量产/在售,16 000 美元,1.76 kg，20 DoF，5 per hand 指,,https://tesollo.com/,7JhqK_k9IGI,https://humanoid.guide/product/dg-5f/,1
+DG-5F-M,Tesollo,,OT,韩国,灵巧手,,量产/在售,,5 指，20 DoF，20 主动，触觉，Direct-drive,,,,https://data.robo2u.com/hands,0
+DG-5F-S,Tesollo,,OT,韩国,灵巧手,2026-01,量产/在售,8 792 美元,0.88 kg，20 DoF，5 per hand 指，触觉/力传感,,https://tesollo.com/,1I0rBwZGxWk,https://data.robo2u.com/hands,1
+Delto Gripper DG-3F,Tesollo,,OT,韩国,灵巧手,2024,量产/在售,,3 指，12 DoF，12 主动，Direct-drive,,,,https://data.robo2u.com/hands,0
+DexHand V2.3,The Robot Studio,,OT,法国,灵巧手,2025-12（收录）,量产/在售,1 500 美元,"~700–1, 000 g kg，19 DoF，5 指",,https://www.therobotstudio.com/,FMSXp-PBVJ8,https://humanoid.guide/product/dexhand-v2-3/,1
+YEAH,Vittorio Lumare,,OT,意大利,灵巧手,2025-12（收录）,开源,912 美元,0.750 kg，15 DoF，5 指,,http://www.robotgarage.org,wB7uZN7CMUo,https://humanoid.guide/product/yeah/,1
+Allegro Hand V4,Wonik Robotics,,OT,韩国,灵巧手,2026-01（收录）,量产/在售,10 350 美元,~1.1 – 1.2 kg kg，16 DoF，4 指,,https://www.allegrohand.com/,pphnYkghg0A,https://humanoid.guide/product/allegro-hand-v4/,1
+Allegro Hand V4,Wonik Robotics,,OT,韩国,灵巧手,,量产/在售,"$24,500",4 指，16 DoF，16 主动，Direct-drive,,,,https://data.robo2u.com/hands,0
+Allegro Hand V5,Wonik Robotics,,OT,韩国,灵巧手,2026-04（收录）,量产/在售,13 000 美元,1.024 kg kg，16 DoF，4 指，触觉/力传感,,https://www.allegrohand.com/,s9fp_oKMEDU,https://humanoid.guide/product/allegro-hand-v5/,1
+Allegro Hand V5 (3F),Wonik Robotics,,OT,韩国,灵巧手,2025,量产/在售,,3 指，9 DoF，9 主动，触觉,,,,https://data.robo2u.com/hands,1
+Allegro Hand V5 (4F Plus),Wonik Robotics,,OT,韩国,灵巧手,2025,量产/在售,,4 指，16 DoF，16 主动，触觉,,,,https://data.robo2u.com/hands,1
+Allegro Hand V6,Wonik Robotics,,OT,韩国,灵巧手,2026-10（收录）,量产/在售,15 000 美元,1.24 kg，20 DoF，5 指，触觉/力传感,,https://www.allegrohand.com/,Zu9CXUPhoSY,https://humanoid.guide/product/allegro-hand-v6/,1
+Allegro Hand V6 F,Wonik Robotics,,OT,韩国,灵巧手,,量产/在售,,5 指，20 DoF，触觉,,,,https://data.robo2u.com/hands,0
+Wonik Allegro Hand V5 (3-Finger),Wonik Robotics,,OT,韩国,灵巧手,,,,,,,,https://www.roboticscenter.ai/store/product/allegro-hand-v5,0
+Wonik Allegro Hand V5 Plus,Wonik Robotics,,OT,韩国,灵巧手,,,,,,,,https://www.roboticscenter.ai/store/product/allegro-hand-v5-plus,0
+Wonik Allegro Hand V5 Sense,Wonik Robotics,,OT,韩国,灵巧手,,,"$13,000",,,,,https://www.roboticscenter.ai/store/product/allegro-hand,0
+Wonik Allegro Hand V6 V,Wonik Robotics,,OT,韩国,灵巧手,,,,,,,,https://www.roboticscenter.ai/store/product/allegro-hand-v6-v,0
+Surge,Alt-Bionics,,US,,灵巧手,2025-12（收录）,量产/在售,8 700 美元,0.540 kg，6 DoF，5 指,,http://altbionics.com,fDOi8YNVDlU,https://humanoid.guide/product/surge/,1
+BarrettHand BH8-282,Barrett Technology,,US,,灵巧手,,量产/在售,,3 指，4 DoF，4 主动，触觉，Worm-gear,,,,https://data.robo2u.com/hands,0
+Atlas gripper,Boston Dynamics,,US,,灵巧手,2026,原型,,3 指，7 DoF，7 主动，触觉，Linkage,,,,https://data.robo2u.com/hands,1
+Muscle V0,Daxo Robotics,,US,,灵巧手,2026-09（收录）,原型,1 400 美元,0.75 kg，24 DoF，5 指，触觉/力传感,,https://www.daxo-robotics.com,-s-HR3345pc,https://humanoid.guide/product/muscle-v0/,1
+v1 Assembly Kit,LEAP Hand (CMU / ROBOTIS),,US,,灵巧手,,,"$2,066",,,,,https://www.roboticscenter.ai/store/product/leaphand-v1-kit,0
+v1 Bimanual Pair,LEAP Hand (CMU / ROBOTIS),,US,,灵巧手,,,"$4,133",,,,,https://www.roboticscenter.ai/store/product/leaphand-v1-pair,0
+v2 Advanced,LEAP Hand (CMU / ROBOTIS),,US,,灵巧手,2025,科研,"$3,000",5 指，21 DoF，17 主动，Tendon，开源,,,,https://data.robo2u.com/hands,1
+v2 Hybrid Rigid-Soft Hand,LEAP Hand (CMU / ROBOTIS),,US,,灵巧手,,,"$4,550",,,,,https://www.roboticscenter.ai/store/product/leaphand-v2,0
+RUKA,New York University (NYU),,US,,灵巧手,2025-12（收录）,量产/在售,1 300 美元,0.48 kg，15 DoF，5 per hand 指,,https://ruka-hand.github.io/,E0Zv1H4MF74,https://humanoid.guide/product/ruka/,1
+RUKA Hand,NYU (Lerrel Pinto lab) / WowRobo,,US,,灵巧手,2025,量产/在售,$549,5 指，15 DoF，11 主动，Tendon，开源,,,,https://data.robo2u.com/hands,1
+DH116,OpenDroids,,US,,灵巧手,2026-04（收录）,预订,3 100 美元,0.49 kg，11 DoF，5 指，触觉/力传感,,https://www.opendroids.com,,https://humanoid.guide/product/opendroids-dh116/,1
+ProHand,Proception Inc. (Proception AI),,US,,灵巧手,2025,科研,,5 指，22 DoF，触觉，Tendon,,,,https://data.robo2u.com/hands,1
+ProHand 1.0,Proception Inc. (Proception AI),,US,,灵巧手,2026-09（收录）,量产/在售,22 000 美元,0.58 kg，22 DoF，5 指，触觉/力传感,,https://www.proception.ai,cEo4WlCanMc,https://humanoid.guide/product/prohand-1-0/,1
+Ability Hand,PSYONIC,,US,,灵巧手,2021,量产/在售,15 000 美元,.47 kg，6 DoF，5 指，触觉/力传感,,https://www.psyonic.io/,mLk8w0Azifw,https://data.robo2u.com/hands,0
+RC Dex-UMI,Robotics Center,,US,,灵巧手,,,"$9,800",,,,,https://www.roboticscenter.ai/store/product/svrc-dex-umi,0
+RC G1 Tactile Glove,Robotics Center,,US,,灵巧手,,,"$3,625",,,,,https://www.roboticscenter.ai/store/product/rc-g1-tactile-glove,0
+Aero Hand Open,TetherIA,,US,,灵巧手,2025-11（收录）,量产/在售,314 美元,16 DoF，5 指,,https://tetheria.ai/,w1GwRfy01Ag,https://humanoid.guide/product/aero-hand-open/,1
+CRAFT Hand,UIUC / UC Irvine (Unnat Jain lab),,US,,灵巧手,2026,科研,$600,5 指，20 DoF，15 主动，Tendon-driven，开源,,,,https://data.robo2u.com/hands,1
+CRAFT Hand,University of Illinois Urbana-Champaign (UIUC),,US,,灵巧手,2026-10（收录）,原型,600 美元,0.6 kg，15 DoF，5 指，触觉/力传感,,https://illinois.edu/,Z70bwx7Psi4,https://humanoid.guide/product/craft-hand/,1
+PiKA Ego-H,AgileX,松灵机器人,CN,,数据采集,,,,,,,,https://www.roboticscenter.ai/store/product/agilex-pika-ego,0
+PiKA OS-H Data Backpack,AgileX,松灵机器人,CN,,数据采集,,,,,,,,https://www.roboticscenter.ai/store/product/agilex-pika-os,0
+Pika Sense,AgileX,松灵机器人,CN,,数据采集,,,"$1,650",,,,,https://www.roboticscenter.ai/store/product/agilex-pika-sense,0
+Pika Station,AgileX,松灵机器人,CN,,数据采集,,,"$1,200",,,,,https://www.roboticscenter.ai/store/product/agilex-pika-station,0
+Multi-Hand Controller,Hexacercle Technology,灏存科技,CN,,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://www.hexacercle.com/,iQiWBxnqdhs,https://humanoid.guide/product/multi-hand-controller/,1
+AMS,KinetixAI,,CN,,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://www.kinetixai.tech/en/,vrYhegnX7m0,https://humanoid.guide/product/ams/,1
+Ego Lite,Lumos,鹿明机器人,CN,,数据采集,,,,,,,,https://www.roboticscenter.ai/store/product/lumos-ego-lite,0
+FastUMI Go,Lumos,鹿明机器人,CN,,数据采集,,,,,,,,https://www.roboticscenter.ai/store/product/lumos-fastumi-go-backpack,0
+"FastUMI Pro - Non-Translation, Portable",Lumos,鹿明机器人,CN,,数据采集,,,,,,,,https://www.roboticscenter.ai/store/product/lumos-fastumi-pro-non-translation,0
+"FastUMI Pro - Translation, Portable",Lumos,鹿明机器人,CN,,数据采集,,,,,,,,https://www.roboticscenter.ai/store/product/lumos-fastumi-pro-translation,0
+gForcePro+ EMG Armband,OYMotion Technology,傲意科技,CN,,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://www.oymotion.com/,l8mULWR93mU,https://humanoid.guide/product/gforce-pro/,1
+Psi E1,PsiBot,灵初智能,CN,,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://www.psibot.ai/,MFOvOtpycik,https://humanoid.guide/product/psi-e1/,1
+Perception Neuron 3,Noitom,诺亦腾,CN/US,,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://www.noitom.com/,oYAzoHYDYQQ,https://humanoid.guide/product/perception-neuron-3/,1
+HAL Exoskeleton,Cyberdyne,,OT,日本,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://www.cyberdyne.jp/,E32-9eDJpPE,https://humanoid.guide/product/hal/,1
+DAS Dex,Genrobot.AI,,OT,荷兰,数据采集,2026-04（收录）,量产/在售,$ 0,,,http://genrobot.ai,,https://humanoid.guide/product/das-dex/,1
+Quantum Metagloves,MANUS Technology Group,,OT,荷兰,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://www.manus-meta.com/,dtrHQugU0ds,https://humanoid.guide/product/quantum-metagloves/,1
+TX System,Telexistence,,OT,日本,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://tx-inc.com/,5Q8rIQ6HA4M,https://humanoid.guide/product/tx-system/,1
+Vicon Vantage,Vicon,,OT,英国,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://www.vicon.com/,BrisftwyCMk,https://humanoid.guide/product/vicon-vantage/,1
+Wandelbots Teaching,Wandelbots,,OT,德国,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://www.wandelbots.com/,FoBm-7JasQ8,https://humanoid.guide/product/wandelbots-teaching/,1
+Xsens Link + Humanoid Software,Xsens Technologies,,OT,荷兰,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://www.xsens.com/,do75g6XcEYg,https://humanoid.guide/product/xsens-link-humanoid-software/,1
+HaptX Gloves G1,HaptX,,US,,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://haptx.com/,huNdXJuDMUQ,https://humanoid.guide/product/haptx-gloves-g1/,1
+ABC Box only,i2rt,,US,,数据采集,,,"$3,600",,,,,https://www.roboticscenter.ai/store/product/i2rt-abc-box,0
+ABC Research Kit,i2rt,,US,,数据采集,,,"$6,349",,,,,https://www.roboticscenter.ai/store/product/i2rt-abc-research-kit,0
+MolmoAct 2 Research Kit,i2rt,,US,,数据采集,,,"$6,349",,MolmoAct 2（AI2）,,,https://www.roboticscenter.ai/store/product/i2rt-molmoact-2-research-kit,0
+Data Collection Glove C1,OpenDroids,,US,,数据采集,2026-04（收录）,量产/在售,$ 3 000,,,https://www.opendroids.com,,https://humanoid.guide/product/data-collection-glove/,1
+OptiTrack Prime Series,OptiTrack,,US,,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://optitrack.com/,YimPWt1BVPw,https://humanoid.guide/product/optitrack-prime-series/,1
+RC E1 Ego Camera Set,Robotics Center,,US,,数据采集,,,$100,,,,,https://www.roboticscenter.ai/store/product/rcsv-ego-camera,0
+RC UMI,Robotics Center,,US,,数据采集,,,"$1,250",,,,,https://www.roboticscenter.ai/store/product/svrc-umi,0
+Tactile Sensors,Sensobright,,US,,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://sensobright.com/,5YdYie7xOho,https://humanoid.guide/product/tactile-sensors/,1
+TWIST,Stanford University,,US,,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://yanjieze.com/TWIST/,QgA7jNoiIZo,https://humanoid.guide/product/twist/,1
+Skill Capture Glove™,Sunday Robotics,,US,,数据采集,2026-04（收录）,量产/在售,$ 0,,,https://www.sunday.ai,,https://humanoid.guide/product/skill-capture-glove/,1
+ALOHA Mobile,Trossen Robotics,,US,,数据采集,,,"$36,999",,,,,https://www.roboticscenter.ai/store/product/trossen-robotics-trossen-robotics-aloha-mobile,0
+ALOHA Solo,Trossen Robotics,,US,,数据采集,,,"$9,000",,,,,https://www.roboticscenter.ai/store/product/trossen-robotics-trossen-robotics-aloha-solo,0
+ALOHA Stationary,Trossen Robotics,,US,,数据采集,,,"$27,999",,,,,https://www.roboticscenter.ai/store/product/trossen-robotics-trossen-robotics-aloha-stationary,0
