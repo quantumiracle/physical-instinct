@@ -1,12 +1,12 @@
 # Physical Instinct
 
-具身智能与机器人硬件相关的整理和工具。首页：https://quantumiracle.github.io/robot-atlas/
+具身智能与机器人硬件相关的整理和工具。首页：https://quantumiracle.github.io/physical-instinct/
 
 ## 机器人硬件图谱 Robot Hardware Spectrum
 
 人形机器人、轮式/移动操作平台、机械臂、灵巧手和数据采集设备的对比表，以中美为主，也收录 Franka、Sharpa、UR、Kinova 等其他国家常用于机器人学习的设备。
 
-网页：https://quantumiracle.github.io/robot-atlas/robot-hardware-spectrum/ （支持中英文切换）
+网页：https://quantumiracle.github.io/physical-instinct/robot-hardware-spectrum/ （支持中英文切换）
 
 ### 内容
 
@@ -31,7 +31,7 @@
 
 ### 图片与版权
 
-产品图片来自上述数据库和各厂商官网的公开页面，版权归原厂商或原网站所有，仅用于识别产品。如需移除某张图片或更正数据，请提 [Issue](https://github.com/quantumiracle/robot-atlas/issues)。
+产品图片来自上述数据库和各厂商官网的公开页面，版权归原厂商或原网站所有，仅用于识别产品。如需移除某张图片或更正数据，请提 [Issue](https://github.com/quantumiracle/physical-instinct/issues)。
 
 ## 本地预览
 
