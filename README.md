@@ -6,11 +6,10 @@
 
 | 栏目 | 内容 | 数据 |
 |---|---|---|
-| [机器人硬件图谱 Robot Hardware Spectrum](https://quantumiracle.github.io/physical-instinct/robot-hardware-spectrum/) | 人形、机械臂、灵巧手、移动操作和数据采集设备，851 款 | [robots.json](robot-hardware-spectrum/data/robots.json) |
+| [机器人硬件图谱 Robot Hardware Spectrum](https://quantumiracle.github.io/physical-instinct/robot-hardware-spectrum/) | 人形、机械臂、灵巧手、移动操作和数据采集设备，851 款；附 [数据洞察](https://quantumiracle.github.io/physical-instinct/robot-hardware-insights/) 页的 8 张图表 | [robots.json](robot-hardware-spectrum/data/robots.json) |
 | [机器人基础模型图谱 Robot Foundation Model Spectrum](https://quantumiracle.github.io/physical-instinct/robot-model-spectrum/) | VLA、通用策略、世界模型、具身推理和全身控制模型，141 个 | [models.json](robot-model-spectrum/data/models.json) |
 | [机器人数据集图谱 Robot Dataset Spectrum](https://quantumiracle.github.io/physical-instinct/robot-dataset-spectrum/) | 遥操作、UMI、第一视角视频、动捕和仿真数据集，112 个 | [datasets.json](robot-dataset-spectrum/data/datasets.json) |
 | [机器人融资追踪 Robotics Funding Tracker](https://quantumiracle.github.io/physical-instinct/robot-funding-tracker/) | 2023–2026 年具身智能公司的融资、上市和并购，320 条 | [funding.json](robot-funding-tracker/data/funding.json) |
-| [机器人硬件洞察 Robot Hardware Insights](https://quantumiracle.github.io/physical-instinct/robot-hardware-insights/) | 基于硬件图谱数据的 8 张图表 | [insights.json](robot-hardware-insights/data/insights.json) |
 | [机器人仿真图谱 Robot Simulation Spectrum](https://quantumiracle.github.io/physical-instinct/robot-sim-spectrum/) | 物理引擎、仿真与学习平台、世界模型仿真和资产库，57 个 | [sims.json](robot-sim-spectrum/data/sims.json) |
 | [机器人评测图谱 Robot Benchmark Spectrum](https://quantumiracle.github.io/physical-instinct/robot-benchmark-spectrum/) | 操作、导航、人形、灵巧手、具身推理和真机评测基准，61 个 | [benchmarks.json](robot-benchmark-spectrum/data/benchmarks.json) |
 

@@ -49,6 +49,11 @@ select{border:1px solid var(--line);background:var(--panel);color:var(--ink);bor
 .secnav{display:flex;flex-wrap:wrap;gap:4px 16px;margin:-6px 0 18px;font:500 12px var(--mono)}
 .secnav a{color:var(--muted);text-decoration:none;padding:2px 0;border-bottom:1px solid transparent}
 .secnav a:hover{color:var(--accent)} .secnav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--accent)}
+.subtabs{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--panel);margin:0 0 14px}
+.subtabs a{padding:6px 14px;font:500 13px var(--body);color:var(--muted);text-decoration:none;border-right:1px solid var(--line)}
+.subtabs a:last-child{border-right:0}
+.subtabs a:hover{color:var(--ink)}
+.subtabs a[aria-current=page]{background:var(--accent);color:var(--accent-ink)}
 .lang button{padding:4px 10px;font:500 12px var(--mono)}
 .count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
 .tablewrap{overflow-x:auto;margin-top:12px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
@@ -181,14 +186,14 @@ details.dt summary{cursor:pointer;color:var(--accent);font:500 12px var(--mono)}
   <div class="top"><a href="../">← Physical Instinct</a>
     <div class="seg lang" id="fLang" role="group" aria-label="Language / 语言"><button type="button" data-v="zh" aria-pressed="true">中文</button><button type="button" data-v="en" aria-pressed="false">EN</button></div></div>
   <nav class="secnav" aria-label="Sections">
-    <a href="../robot-hardware-spectrum/" data-i="n_hw">硬件</a>
+    <a href="../robot-hardware-spectrum/" aria-current="page" data-i="n_hw">硬件</a>
     <a href="../robot-model-spectrum/" data-i="n_md">模型</a>
     <a href="../robot-dataset-spectrum/" data-i="n_ds">数据集</a>
     <a href="../robot-funding-tracker/" data-i="n_fd">融资</a>
-    <a href="../robot-hardware-insights/" aria-current="page" data-i="n_in">洞察</a>
     <a href="../robot-sim-spectrum/" data-i="n_sim">仿真</a>
     <a href="../robot-benchmark-spectrum/" data-i="n_bm">评测</a>
   </nav>
+  <nav class="subtabs" aria-label="Hardware views"><a href="../robot-hardware-spectrum/" data-i="v_list">设备列表</a><a href="../robot-hardware-insights/" aria-current="page" data-i="v_ins">数据洞察</a></nav>
   <h1 data-i="title">机器人硬件洞察</h1>
   <p class="lede" data-i="lede">基于机器人硬件图谱的统计图。</p>
   <div class="kpis" id="kpis"></div>
@@ -214,7 +219,7 @@ details.dt summary{cursor:pointer;color:var(--accent);font:500 12px var(--mono)}
 <script>
 "use strict";
 const T={
-zh:{n_hw:"硬件",n_md:"模型",n_ds:"数据集",n_fd:"融资",n_in:"洞察",n_sim:"仿真",n_bm:"评测",title:"机器人硬件洞察",doc:"机器人硬件洞察",
+zh:{n_hw:"硬件",v_list:"设备列表",v_ins:"数据洞察",n_md:"模型",n_ds:"数据集",n_fd:"融资",n_in:"洞察",n_sim:"仿真",n_bm:"评测",title:"机器人硬件洞察",doc:"机器人硬件洞察",
  lede:"用硬件图谱里的 851 条记录画的统计图：发布节奏、类别结构、人形机器人的价格、自由度和尺寸、灵巧手自由度、产品状态、主要厂商和国别。所有数字都由脚本从 robots.json 解析得出，没有新增调研；解析不出来的字段不进入对应图表，规则见页脚。数据截至 2026 年 11 月 8 日。",
  loading:"正在加载数据…",err:"数据加载失败，请刷新重试，或直接下载 data/insights.json。",bar:"筛选",
  g_all:"全部",g_CN:"中国",g_US:"美国",g_OT:"其他国家",q:"高亮型号或公司（中英文）",
@@ -244,7 +249,7 @@ zh:{n_hw:"硬件",n_md:"模型",n_ds:"数据集",n_fd:"融资",n_in:"洞察",n_s
  t7:s=>`前 15 家中有 ${s.topCN} 家中国公司；${s.top1}以 ${s.top1n} 款居首，之后是 ${s.top2}（${s.top2n}）和 ${s.top3}（${s.top3n}）。`,
  t8:s=>`${s.otN} 条其他国家条目里，日本（${s.ctyN.Japan}）、韩国（${s.ctyN["South Korea"]}）和德国（${s.ctyN.Germany}）合计占 ${s.top3cp}%，来自 ${s.nCty} 个国家/地区。`
 },
-en:{n_hw:"Hardware",n_md:"Models",n_ds:"Datasets",n_fd:"Funding",n_in:"Insights",n_sim:"Simulation",n_bm:"Benchmarks",title:"Robot Hardware Insights",doc:"Robot Hardware Insights",
+en:{n_hw:"Hardware",v_list:"Device list",v_ins:"Insights",n_md:"Models",n_ds:"Datasets",n_fd:"Funding",n_in:"Insights",n_sim:"Simulation",n_bm:"Benchmarks",title:"Robot Hardware Insights",doc:"Robot Hardware Insights",
  lede:"Charts built from the 851 entries in the Robot Hardware Spectrum: release pace, category mix, humanoid price, DoF and size, dexterous-hand DoF, product status, leading makers and countries. Every number is parsed by a script from robots.json with no new research; fields that cannot be parsed are left out of the relevant chart (rules in the footer). Data as of 8 Nov 2026.",
  loading:"Loading data…",err:"Could not load the data. Refresh to retry, or download data/insights.json directly.",bar:"Filters",
  g_all:"All",g_CN:"China",g_US:"US",g_OT:"Other",q:"Highlight a model or company",
