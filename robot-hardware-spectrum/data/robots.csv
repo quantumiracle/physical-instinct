@@ -405,7 +405,7 @@ H2-D,Unitree Robotics,宇树科技,CN,,轮式/移动操作,2026-09（收录）,�
 R1,Unitree Robotics,宇树科技,CN,,轮式/移动操作,2025-07,量产/在售,5 900 美元,122 cm，25 kg，全身 26 DoF，手 N/A DoF,UnifoLM,https://www.unitree.com/,v1Q4Su54iho,https://data.robo2u.com/robots,1
 R1-A (Dual-Arm Platform),Unitree Robotics,宇树科技,CN,,轮式/移动操作,2026-04,量产/在售,"$4,290",31 DoF,,,,https://data.robo2u.com/robots,1
 R1-D,Unitree Robotics,宇树科技,CN,,轮式/移动操作,2026-09（收录）,量产/在售,13 390 美元,160 cm，52 kg，全身 36 DoF，手 14 DoF,,https://www.unitree.com/,,https://humanoid.guide/product/r1-d/,1
-QUANTA X2,X-Humanoid,北京人形机器人创新中心,CN,,轮式/移动操作,2025-08（收录）,原型,80 000 美元,172 cm，95 kg，全身 62 DoF，手 20 DoF,WALL-OSS（开源）,http://x2robot.com,dF2e3c_Mm6I,https://humanoid.guide/product/quanta-x2/,1
+QUANTA X2,X Square Robot,自变量机器人,CN,,轮式/移动操作,2025-08（收录）,原型,80 000 美元,172 cm，95 kg，全身 62 DoF，手 20 DoF,WALL-OSS（开源）,http://x2robot.com,dF2e3c_Mm6I,https://humanoid.guide/product/quanta-x2/,1
 W-Bot,Yue Quan Bionics (月泉仿生),月泉仿生,CN,,轮式/移动操作,2026-10（收录）,量产/在售,50 000 美元,178 cm，60 kg,,https://www.yqbionics.com/,qYcmV-HEDKI,https://humanoid.guide/product/w-bot/,1
 Zerith H1,Zerith Robotics,零次方,CN,,轮式/移动操作,2026-02（收录）,量产/在售,80 000 美元,~180 cm，55 kg，全身 23 DoF，手 7 DoF,,https://www.zerith.com/,LOu_F9N-wwI,https://humanoid.guide/product/zerith-h1/,1
 Elixis-W,Addverb Technologies,,OT,印度,轮式/移动操作,2026-09（收录）,原型,45 000 美元,183 cm，75 kg，全身 67 DoF，手 24 DoF,,https://addverb.ai/,m1gC6cEvRw4,https://humanoid.guide/product/elixis-w/,1
@@ -739,7 +739,7 @@ R1 Tendon Cable Dexterous Hand,Unitree Robotics,宇树科技,CN,,灵巧手,,,"$1
 YZ-T6,VEICHI & EasyLink Robotics,伟创电气,CN,,灵巧手,2025-12（收录）,量产/在售,2 500 美元,0.63 kg，6 DoF，5 指,,https://www.veichi.com/,jYCdHcDg6Ak,https://humanoid.guide/product/yz-t6/,1
 VH-HA-18T2,Vizum / ViHero,,CN,,灵巧手,2026-04（收录）,量产/在售,2 636 美元,0.76 kg，16 DoF，5 指,,http://www.vihero.com,,https://humanoid.guide/product/vh-ha-18t2/,1
 HAND 2,WUJI Tech,舞肌科技,CN,,灵巧手,2026-05,量产/在售,14 600 美元,0.6 kg，20 DoF，5 指，触觉/力传感,,http://wuji.tech,ChApa28PdGc,https://data.robo2u.com/hands,1
-ArtiXon,X-Humanoid,北京人形机器人创新中心,CN,,灵巧手,2025-12（收录）,量产/在售,7 600 美元,"~800–1, 000 g kg，20 DoF，5 指，触觉/力传感",,https://www.x2robot.com/,,https://humanoid.guide/product/artixon/,1
+ArtiXon,X Square Robot,自变量机器人,CN,,灵巧手,2025-12（收录）,量产/在售,7 600 美元,"~800–1, 000 g kg，20 DoF，5 指，触觉/力传感",,https://www.x2robot.com/,,https://humanoid.guide/product/artixon/,1
 Flex 2,Xynova,曦诺未来,CN,,灵巧手,2026-05（收录）,量产/在售,3 800 美元,0.4 kg，23 DoF，5 指，触觉/力传感,,https://xynova.com.cn/en/,hnp9my-bKm4,https://humanoid.guide/product/flex-2/,1
 Prima 1,Xynova,曦诺未来,CN,,灵巧手,2026-09（收录）,量产/在售,15 000 美元,0.65 kg，22 DoF，5 指，触觉/力传感,,https://xynova.com.cn/en/,vO1iogzGYCI,https://humanoid.guide/product/prima-1/,1
 X-Hand M1,Yue Quan Bionics (月泉仿生),月泉仿生,CN,,灵巧手,2026-10（收录）,量产/在售,7 000 美元,0.6 kg，11 DoF，5 指，触觉/力传感,,https://www.yqbionics.com/,hv3-p7WhGoo,https://humanoid.guide/product/x-hand-m1/,1

@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="2022 年至 2026 年 11 月的机器人基础模型图谱：VLA / 通用策略、单任务架构策略、世界模型、具身推理与全身控制模型，含机构、参数、架构、数据、开放程度和论文代码链接。">
+<title>机器人基础模型图谱</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: spec-sheet catalog. Sticky filter bar, then a dense table that folds into cards on phones. */
+:root{
+  --bg:#f3f5f6; --panel:#ffffff; --ink:#15212b; --muted:#5b6973; --line:#d9e0e4;
+  --accent:#0b6e8a; --accent-ink:#ffffff; --new:#b45309; --new-bg:#fdf1e3;
+  --us:#2f5fb3; --us-bg:#e8eefb; --cn:#b8322a; --cn-bg:#fbeceb; --thumb:#e7ecef;
+  --display:"Archivo","Noto Sans SC",system-ui,sans-serif;
+  --body:"Noto Sans SC",system-ui,-apple-system,"PingFang SC",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1519; --panel:#161e24; --ink:#e6ecef; --muted:#93a1aa; --line:#27333b;
+  --accent:#4fb3cf; --accent-ink:#0b1418; --new:#f0a957; --new-bg:#33240f;
+  --us:#8fb0f0; --us-bg:#1b2740; --cn:#f0918a; --cn-bg:#3a1c1a; --thumb:#1f2930; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1519; --panel:#161e24; --ink:#e6ecef; --muted:#93a1aa; --line:#27333b;
+  --accent:#4fb3cf; --accent-ink:#0b1418; --new:#f0a957; --new-bg:#33240f;
+  --us:#8fb0f0; --us-bg:#1b2740; --cn:#f0918a; --cn-bg:#3a1c1a; --thumb:#1f2930; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:14px/1.55 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1320px;margin:0 auto;padding-block:28px 48px}
+h1{font:700 clamp(26px,4vw,38px)/1.15 var(--display);letter-spacing:-.01em;margin:0 0 8px;text-wrap:balance}
+.lede{color:var(--muted);max-width:72ch;margin:0}
+.kpis{display:flex;flex-wrap:wrap;gap:10px 28px;margin:18px 0 6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.kpis b{display:block;font:500 22px/1.2 var(--mono);color:var(--ink);font-variant-numeric:tabular-nums}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;margin-top:14px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.seg{display:flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--panel)}
+.seg button{border:0;background:none;color:var(--ink);font:500 13px var(--body);padding:6px 11px;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+button:focus-visible,select:focus-visible,#q:focus-visible,a:focus-visible,.tog:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.tog{display:flex;align-items:center;gap:6px;font-size:13px;background:var(--new-bg);color:var(--new);border-radius:6px;padding:6px 10px;cursor:pointer;font-weight:500}
+select{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:6px 8px;font:13px var(--body)}
+#q{flex:1 1 180px;min-width:0;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:7px 10px;font:13px var(--body)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;font:500 12px var(--mono)}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--accent)}
+.secnav{display:flex;flex-wrap:wrap;gap:4px 16px;margin:-6px 0 18px;font:500 12px var(--mono)}
+.secnav a{color:var(--muted);text-decoration:none;padding:2px 0;border-bottom:1px solid transparent}
+.secnav a:hover{color:var(--accent)} .secnav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--accent)}
+.lang button{padding:4px 10px;font:500 12px var(--mono)}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+.tablewrap{overflow-x:auto;margin-top:12px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+table{width:100%;border-collapse:collapse;min-width:1120px}
+th{font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.thumb{width:128px;height:104px;border-radius:6px;background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.thumb.noimg{background:var(--thumb)}
+.thumb img{width:100%;height:100%;object-fit:contain;padding:3px}
+.thumb svg{width:36px;height:36px;color:var(--muted);opacity:.7}
+.name{font:700 15px/1.3 var(--display)}
+.co{color:var(--muted);font-size:12px}
+.zh{font-size:13px;font-weight:500;color:var(--ink);margin-top:1px}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.chip{font:500 11px/1 var(--body);padding:4px 6px;border-radius:4px;white-space:nowrap}
+.us{background:var(--us-bg);color:var(--us)} .cn{background:var(--cn-bg);color:var(--cn)} .ot{background:var(--thumb);color:var(--ink)}
+.nw{background:var(--new-bg);color:var(--new)} .cat{background:var(--thumb);color:var(--muted)}
+.mono{font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums}
+.spec{font-size:13px;max-width:28ch}
+.ai{font-size:13px;max-width:22ch}
+.links{display:flex;flex-direction:column;gap:3px;white-space:nowrap}
+.links a{color:var(--accent);text-decoration:none;font-size:13px}
+.links a:hover{text-decoration:underline}
+.dim{color:var(--muted)}
+.more{display:block;margin:14px auto 0;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:8px 16px;font:500 13px var(--body);cursor:pointer}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+footer{margin-top:28px;color:var(--muted);font-size:12px;max-width:92ch}
+footer h2{font:700 14px var(--display);color:var(--ink);margin:18px 0 6px}
+footer a{color:var(--accent)} footer ul{padding-left:18px;margin:4px 0}
+@media (max-width:760px){
+  table{min-width:0} thead{display:none}
+  tr{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 12px;padding:12px;border-bottom:1px solid var(--line)}
+  td{border:0;padding:0;min-width:0}
+  td.ti{grid-row:span 3} .thumb{width:96px;height:80px}
+  td[data-l]::before{content:attr(data-l)"：";color:var(--muted);font-size:12px}
+  td[data-l]{grid-column:1/-1;font-size:13px}
+  .spec,.ai{max-width:none}
+  .links{flex-direction:row;flex-wrap:wrap;gap:12px;grid-column:1/-1}
+  .tablewrap{overflow:visible}
+}
+</style>
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+/* Section-specific additions (same tokens as the hardware page). */
+.secnav{display:flex;flex-wrap:wrap;gap:4px 16px;margin:-6px 0 18px;font:500 12px var(--mono)}
+.secnav a{color:var(--muted);text-decoration:none;padding:2px 0;border-bottom:1px solid transparent}
+.secnav a:hover{color:var(--accent)} .secnav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--accent)}
+.t-vla{background:var(--us-bg);color:var(--us)}
+.t-policy{background:var(--thumb);color:var(--ink)}
+.t-world{background:var(--new-bg);color:var(--new)}
+.t-er{background:var(--cn-bg);color:var(--cn)}
+.t-wbc{background:var(--thumb);color:var(--accent)}
+.op-weights{background:var(--accent);color:var(--accent-ink)}
+.op-code,.op-api,.op-paper,.op-closed{background:none;color:var(--muted);border:1px solid var(--line);padding:3px 5px}
+.arch{font-size:13px;max-width:30ch}
+.act{display:block;margin-top:4px;font:500 11px/1.35 var(--mono);color:var(--muted)}
+.data{font-size:13px;max-width:26ch;color:var(--ink)}
+.emb{font-size:13px;max-width:24ch}
+.hw{display:flex;flex-wrap:wrap;gap:4px;margin-top:5px}
+.hw a{font:500 11px/1 var(--body);padding:4px 6px;border-radius:4px;border:1px solid var(--line);color:var(--accent);text-decoration:none;white-space:nowrap}
+.hw a:hover{border-color:var(--accent)}
+.note{font-size:13px;max-width:30ch}
+.status{padding:28px;text-align:center;color:var(--muted)}
+.status.err{color:var(--cn)}
+table{min-width:1240px}
+footer dl{margin:4px 0} footer dt{color:var(--ink);font-weight:500;margin-top:6px} footer dd{margin:0 0 0 0}
+@media (max-width:760px){
+  table{min-width:0}
+  tr{grid-template-columns:minmax(0,1fr)}
+  td{grid-column:1/-1}
+  .arch,.data,.emb,.note{max-width:none}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top"><a href="../">← Physical Instinct</a>
+    <div class="seg lang" id="fLang" role="group" aria-label="Language / 语言"><button type="button" data-v="zh" aria-pressed="true">中文</button><button type="button" data-v="en" aria-pressed="false">EN</button></div></div>
+  <nav class="secnav" id="secnav" aria-label="Sections">
+    <a href="../robot-hardware-spectrum/" data-zh="硬件" data-en="Hardware">硬件</a>
+    <a href="../robot-model-spectrum/" aria-current="page" data-zh="模型" data-en="Models">模型</a>
+    <a href="../robot-dataset-spectrum/" data-zh="数据集" data-en="Datasets">数据集</a>
+    <a href="../robot-funding-tracker/" data-zh="融资" data-en="Funding">融资</a>
+    <a href="../robot-hardware-insights/" data-zh="洞察" data-en="Insights">洞察</a>
+    <a href="../sim-benchmark-spectrum/" data-zh="仿真与评测" data-en="Sim &amp; Bench">仿真与评测</a>
+  </nav>
+  <h1 data-i="title">机器人基础模型图谱</h1>
+  <p class="lede" data-i="lede">从 2022 年的 RT-1 到 2026 年 11 月，这一轮机器人基础模型的整理：VLA / 通用策略、单任务架构策略、世界模型、具身推理模型和全身控制模型。每行列出机构、发布时间、参数、架构与动作表示、训练数据、所用机器人和开放程度，并链接论文、代码和项目页。数据截至 2026 年 11 月 8 日。</p>
+  <div class="kpis" id="kpis"></div>
+
+  <div class="bar" role="toolbar" aria-label="筛选">
+    <div class="seg" id="fCountry" aria-label="国家">
+      <button type="button" data-i="c_all" data-v="all" aria-pressed="true">全部</button>
+      <button type="button" data-i="c_CN" data-v="CN" aria-pressed="false">中国</button>
+      <button type="button" data-i="c_US" data-v="US" aria-pressed="false">美国</button>
+      <button type="button" data-i="c_OT" data-v="OT" aria-pressed="false">其他国家</button>
+    </div>
+    <div class="seg" id="fType" aria-label="类别">
+      <button type="button" data-i="t_all" data-v="all" aria-pressed="true">全部类别</button>
+      <button type="button" data-t="vla" data-v="vla" aria-pressed="false">VLA / 通用策略</button>
+      <button type="button" data-t="policy" data-v="policy" aria-pressed="false">架构策略</button>
+      <button type="button" data-t="world" data-v="world" aria-pressed="false">世界模型</button>
+      <button type="button" data-t="er" data-v="er" aria-pressed="false">具身推理</button>
+      <button type="button" data-t="wbc" data-v="wbc" aria-pressed="false">全身控制</button>
+    </div>
+    <label class="tog"><input type="checkbox" id="fOpen"> <span data-i="onlyOpen">只看开放权重</span></label>
+    <select id="fYear" aria-label="年份"><option value="all" data-i="y_all">全部年份</option></select>
+    <select id="fSort" aria-label="排序"><option value="new" data-i="s_new">发布时间（新→旧）</option><option value="old" data-i="s_old">发布时间（旧→新）</option><option value="org" data-i="s_org">按机构</option><option value="name" data-i="s_name">按名称</option></select>
+    <input id="q" type="search" placeholder="搜索模型、机构（中英文）、架构或机器人" aria-label="搜索">
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th data-i="h_n">模型</th><th data-i="h_d">发布</th><th data-i="h_p">参数</th><th data-i="h_a">架构 / 动作</th><th data-i="h_data">训练数据</th><th data-i="h_e">机器人</th><th data-i="h_note">要点</th><th data-i="h_l">链接</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="status" id="status" data-i="loading">正在加载数据…</div>
+    <div class="empty" id="empty" data-i="empty" hidden>没有符合条件的模型，换个筛选试试。</div>
+  </div>
+  <button type="button" class="more" id="more" hidden>再显示 100 条</button>
+
+  <footer id="foot">
+    <h2>类别说明</h2>
+    <dl>
+      <dt>VLA / 通用策略</dt><dd>一个模型直接输出多种任务、多种机器人的低层动作，通常以视觉语言模型为骨干（RT-2、OpenVLA、π0、GR00T），也包括不带语言模型、但在大规模多本体数据上预训练的通用策略（RT-1、Octo、HPT、公司的闭源“机器人大脑”）。</dd>
+      <dt>单任务 / 架构策略</dt><dd>提出一种策略结构或动作表示、通常按任务从少量示教训练的方法，如 ACT、Diffusion Policy、DP3、3D Diffuser Actor。它们本身不是预训练基础模型，但常被用作 VLA 的动作头。</dd>
+      <dt>世界模型 / 视频模型</dt><dd>预测未来画面或隐状态的模型，用于合成数据、评测、规划，或者与动作联合生成（世界动作模型，WAM），如 Cosmos、V-JEPA 2、Genie Envisioner、DreamZero、DYNA-2。以视频生成为核心、同时输出动作的策略也归在这里。</dd>
+      <dt>具身推理 / 高层规划</dt><dd>负责理解、空间推理、任务拆解和调用工具的视觉语言模型，不直接输出关节动作，而是给出计划、点位或子任务，再交给底层策略，如 Gemini Robotics-ER、Cosmos-Reason、RoboBrain、Pelican-VL。</dd>
+      <dt>运动 / 全身控制</dt><dd>面向人形和足式机器人的行走与全身控制模型，多为在仿真中用强化学习训练的动作跟踪或可提示策略，如 HOVER、SONIC、BFM-Zero、BeyondMimic。Helix 02 的 S0、Gemini Robotics 2 等把全身控制并入 VLA 的仍归入 VLA。</dd>
+    </dl>
+    <h2>开放程度</h2>
+    <ul>
+      <li><b>开放权重</b>：公开发布了预训练权重（部分为非商用许可或需申请）。<b>开源代码</b>：代码公开，但没有可用的预训练基础模型权重。<b>API</b>：可通过接口调用，权重不公开。<b>仅论文</b>：只有论文或技术报告。<b>闭源</b>：只有博客或新闻稿。</li>
+    </ul>
+    <h2>说明</h2>
+    <ul>
+      <li>发布时间取首次公开（论文、博客或发布会）的月份；之后才开放权重的，在“要点”里注明。</li>
+      <li>国家按主导机构总部计；Google DeepMind、Hugging Face、1X 计为美国，微软亚洲研究院与清华合作的 CogACT 计为中国。</li>
+      <li>参数、数据量和性能数字来自论文或公司公告，很多是公司自报、未经独立验证；未公开的留空（—）。参数前带“~”的为根据骨干估算。</li>
+      <li>“机器人”一栏的标签链接到硬件图谱中对应的设备。</li>
+      <li>Tesla Optimus、Skild、Generalist、Dyna 等公司模型没有论文，细节来自官方博客和媒体报道，可信度较低。</li>
+      <li>没有找到名为“Ti0”的机器人模型，未收录；类似名称的 τ0-VLA（上海创智学院）已收录。乐聚、开普勒等公司的模型缺少可靠公开资料，暂未收录。</li>
+    </ul>
+    <h2>数据来源</h2>
+    <ul>
+      <li>arXiv 论文与 arXiv API（核对标题和日期）、各项目主页和 GitHub 仓库</li>
+      <li>Hugging Face 模型库（核对权重是否公开）</li>
+      <li>官方博客：Physical Intelligence、Google DeepMind、NVIDIA、Figure、1X、Skild AI、Generalist、Sunday、智元、宇树、自变量、星海图等</li>
+      <li>媒体报道：The Robot Report、SiliconANGLE、Robotics 24/7、IT之家、量子位、新华网等</li>
+      <li>线索：<a href="https://github.com/ai4s-research/awesome-vision-language-action">awesome-vision-language-action</a> 列表（每条均回到原始论文核对）</li>
+    </ul>
+    <p>数据下载：<a href="data/models.json">models.json</a> · <a href="data/models.csv">models.csv</a> · 源码：<a href="https://github.com/quantumiracle/physical-instinct">github.com/quantumiracle/physical-instinct</a></p>
+  </footer>
+</div>
+<script>
+const T={
+zh:{title:"机器人基础模型图谱",doc:"机器人基础模型图谱",bar:"筛选",c_all:"全部",c_US:"美国",c_CN:"中国",c_OT:"其他国家",t_all:"全部类别",onlyOpen:"只看开放权重",y_all:"全部年份",
+ s_new:"发布时间（新→旧）",s_old:"发布时间（旧→新）",s_org:"按机构",s_name:"按名称",q:"搜索模型、机构（中英文）、架构或机器人",
+ h_n:"模型",h_d:"发布",h_p:"参数",h_a:"架构 / 动作",h_data:"训练数据",h_e:"机器人",h_note:"要点",h_l:"链接",
+ l_d:"发布",l_p:"参数",l_a:"架构",l_data:"数据",l_e:"机器人",l_note:"要点",
+ empty:"没有符合条件的模型，换个筛选试试。",loading:"正在加载数据…",err:"数据加载失败。请通过网页服务器打开本页（例如 python3 -m http.server），或直接下载 data/models.json。",
+ more:n=>`再显示 100 条（剩余 ${n}）`,count:(a,b)=>`${a} 个 / 共 ${b}`,paper:"论文 ↗",code:"代码 ↗",site:"项目页 ↗",act:"动作：",
+ k:["收录模型","开放权重","中国","美国","其他国家","2026 年发布"]},
+en:{title:"Robot Foundation Model Spectrum",doc:"Robot Foundation Model Spectrum",bar:"Filters",c_all:"All",c_US:"US",c_CN:"China",c_OT:"Other",t_all:"All types",onlyOpen:"Open weights only",y_all:"All years",
+ s_new:"Release (newest first)",s_old:"Release (oldest first)",s_org:"By organisation",s_name:"By name",q:"Search model, organisation (EN/中文), architecture or robot",
+ h_n:"Model",h_d:"Release",h_p:"Params",h_a:"Architecture / action",h_data:"Training data",h_e:"Robots",h_note:"Notes",h_l:"Links",
+ l_d:"Release",l_p:"Params",l_a:"Architecture",l_data:"Data",l_e:"Robots",l_note:"Notes",
+ empty:"No models match these filters.",loading:"Loading data…",err:"Could not load the data. Open this page through a web server (e.g. python3 -m http.server) or download data/models.json directly.",
+ more:n=>`Show 100 more (${n} left)`,count:(a,b)=>`${a} of ${b}`,paper:"Paper ↗",code:"Code ↗",site:"Project ↗",act:"Action: ",
+ k:["Models","Open weights","China","US","Other","Released in 2026"]}};
+const TYPE={vla:{zh:"VLA / 通用策略",en:"VLA / generalist"},policy:{zh:"架构策略",en:"Architecture policy"},world:{zh:"世界模型",en:"World model"},er:{zh:"具身推理",en:"Embodied reasoning"},wbc:{zh:"全身控制",en:"Whole-body control"}};
+const OPEN={weights:{zh:"开放权重",en:"Open weights"},code:{zh:"开源代码",en:"Code only"},api:{zh:"API",en:"API"},paper:{zh:"仅论文",en:"Paper only"},closed:{zh:"闭源",en:"Closed"}};
+const CTY_EN={"韩国":"South Korea","新加坡":"Singapore","英国":"UK","日本":"Japan","德国":"Germany","瑞士":"Switzerland","加拿大":"Canada","法国":"France","以色列":"Israel"};
+const LEDE_EN="The current wave of robot foundation models, from RT-1 in 2022 to November 2026: VLAs and generalist policies, architecture policies, world models, embodied-reasoning models and whole-body controllers. Each row gives the organisation, release date, parameters, architecture and action representation, training data, robots used and openness, with links to the paper, code and project page. Data as of 8 Nov 2026.";
+const FOOT_EN=`<h2>Categories</h2><dl>
+<dt>VLA / generalist policy</dt><dd>One model that outputs low-level actions for many tasks and robots, usually on a vision-language backbone (RT-2, OpenVLA, π0, GR00T). Also includes generalist policies without a language model that are pretrained on large multi-embodiment data (RT-1, Octo, HPT, closed company “robot brains”).</dd>
+<dt>Architecture / single-task policy</dt><dd>Methods that introduce a policy architecture or action representation and are typically trained per task from a few demos, e.g. ACT, Diffusion Policy, DP3, 3D Diffuser Actor. Not pretrained foundation models themselves, but often reused as VLA action heads.</dd>
+<dt>World model / video model</dt><dd>Models that predict future frames or latent states, used for synthetic data, evaluation, planning, or generated jointly with actions (world-action models, WAMs), e.g. Cosmos, V-JEPA 2, Genie Envisioner, DreamZero, DYNA-2. Policies built around video generation that also emit actions are listed here.</dd>
+<dt>Embodied reasoning / high-level planner</dt><dd>Vision-language models for understanding, spatial reasoning, task decomposition and tool calls. They output plans, points or subtasks for a lower-level policy rather than joint actions, e.g. Gemini Robotics-ER, Cosmos-Reason, RoboBrain, Pelican-VL.</dd>
+<dt>Locomotion / whole-body control</dt><dd>Walking and whole-body controllers for humanoids and legged robots, mostly motion-tracking or promptable policies trained with RL in simulation, e.g. HOVER, SONIC, BFM-Zero, BeyondMimic. VLAs that absorb whole-body control (Helix 02's S0, Gemini Robotics 2) stay under VLA.</dd></dl>
+<h2>Openness</h2><ul><li><b>Open weights</b>: pretrained weights published (some under non-commercial or gated licences). <b>Code only</b>: code is public but no usable pretrained foundation weights. <b>API</b>: callable through an API, weights not public. <b>Paper only</b>: paper or technical report only. <b>Closed</b>: blog or press release only.</li></ul>
+<h2>Notes</h2><ul>
+<li>The release date is the month of first public disclosure (paper, blog or keynote); later weight releases are mentioned in the notes.</li>
+<li>Country follows the lead organisation's headquarters. Google DeepMind, Hugging Face and 1X count as US; CogACT (Microsoft Research Asia with Tsinghua) counts as China.</li>
+<li>Parameters, data sizes and performance figures come from papers or company announcements; many are self-reported and not independently verified. Undisclosed values are left blank (—). A “~” marks an estimate from the backbone size.</li>
+<li>Tags in the Robots column link to the matching device in the hardware spectrum.</li>
+<li>Company models without papers (Tesla Optimus, Skild, Generalist, Dyna, …) rely on official blogs and press coverage and are lower confidence.</li>
+<li>No robot model called “Ti0” could be found, so none is listed; the similarly named τ0-VLA (Shanghai Innovation Institute) is included. Models from Leju, Kepler and some others lack reliable public documentation and are not yet listed.</li></ul>
+<h2>Sources</h2><ul>
+<li>arXiv papers and the arXiv API (titles and dates checked), project pages and GitHub repositories</li>
+<li>Hugging Face model hub (to check whether weights are public)</li>
+<li>Official blogs: Physical Intelligence, Google DeepMind, NVIDIA, Figure, 1X, Skild AI, Generalist, Sunday, AgiBot, Unitree, X Square, Galaxea and others</li>
+<li>Press: The Robot Report, SiliconANGLE, Robotics 24/7, IT Home, QbitAI, Xinhua and others</li>
+<li>Leads: the <a href="https://github.com/ai4s-research/awesome-vision-language-action">awesome-vision-language-action</a> list (every entry checked against the original paper)</li></ul>
+<p>Download: <a href="data/models.json">models.json</a> · <a href="data/models.csv">models.csv</a> · Source: <a href="https://github.com/quantumiracle/physical-instinct">github.com/quantumiracle/physical-instinct</a></p>`;
+
+let LANG="zh",D=[],limit=150;
+const tx=k=>T[LANG][k];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl=u=>/^https?:\/\//i.test(u||"")?u:"";
+const dash='<span class="dim">—</span>';
+const st={country:"all",type:"all",open:false,year:"all",sort:"new",q:""};
+const KEY="robot-atlas-models";
+
+function row(d){
+  const flag=d.c==="US"?`<span class="chip us">${tx("c_US")}</span>`:d.c==="CN"?`<span class="chip cn">${tx("c_CN")}</span>`:`<span class="chip ot">${esc((LANG==="en"?CTY_EN[d.cty]:d.cty)||tx("c_OT"))}</span>`;
+  const hw=(d.hwl||[]).map(([lab,n])=>`<a href="../robot-hardware-spectrum/?q=${encodeURIComponent(n)}">${esc(lab)}</a>`).join("");
+  const L=[["paper",d.paper],["code",d.code],["site",d.site]].filter(x=>safeUrl(x[1])).map(([k,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${tx(k)}</a>`).join("");
+  const note=LANG==="en"?d.note_en:(d.note_zh||d.note_en);
+  return `<tr>
+  <td><div class="name">${esc(d.name)}</div><div class="co">${esc(d.org)}</div>${d.zh?`<div class="zh">${esc(d.zh)}</div>`:""}<div class="chips">${flag}<span class="chip t-${esc(d.type)}">${esc(TYPE[d.type][LANG])}</span><span class="chip op-${esc(d.open)}">${esc(OPEN[d.open][LANG])}</span></div></td>
+  <td class="mono" data-l="${tx("l_d")}">${esc(d.date)}</td>
+  <td class="mono" data-l="${tx("l_p")}">${esc(d.params)||dash}</td>
+  <td class="arch" data-l="${tx("l_a")}">${esc(d.arch)||dash}${d.action?`<span class="act">${tx("act")}${esc(d.action)}</span>`:""}</td>
+  <td class="data" data-l="${tx("l_data")}">${esc(d.data)||dash}</td>
+  <td class="emb" data-l="${tx("l_e")}">${esc(d.emb)||dash}${hw?`<div class="hw">${hw}</div>`:""}</td>
+  <td class="note" data-l="${tx("l_note")}">${esc(note)||dash}</td>
+  <td><div class="links">${L}</div></td></tr>`;
+}
+function hay(d){return [d.name,d.org,d.zh,d.arch,d.action,d.data,d.emb,d.note_en,d.note_zh,d.params,TYPE[d.type].zh,TYPE[d.type].en,(d.hwl||[]).map(x=>x[0]).join(" ")].join(" ").toLowerCase()}
+function list(){
+  const q=st.q.trim().toLowerCase();
+  let L=D.filter(d=>(st.country==="all"||d.c===st.country)&&(st.type==="all"||d.type===st.type)&&(!st.open||d.open==="weights")&&(st.year==="all"||d.date.slice(0,4)===st.year)&&(!q||d._h.includes(q)));
+  const by={new:(a,b)=>b.date.localeCompare(a.date)||a.name.localeCompare(b.name),old:(a,b)=>a.date.localeCompare(b.date)||a.name.localeCompare(b.name),
+    org:(a,b)=>a.org.localeCompare(b.org)||b.date.localeCompare(a.date),name:(a,b)=>a.name.localeCompare(b.name)};
+  return L.slice().sort(by[st.sort]||by.new);
+}
+function render(){
+  if(!D.length)return;
+  const L=list();
+  document.getElementById("rows").innerHTML=L.slice(0,limit).map(row).join("");
+  document.getElementById("empty").hidden=L.length>0;
+  const m=document.getElementById("more"); m.hidden=L.length<=limit; m.textContent=tx("more")(L.length-limit);
+  document.getElementById("count").textContent=tx("count")(L.length,D.length);
+}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+function syncUI(){
+  [["fCountry","country"],["fType","type"]].forEach(([id,k])=>document.querySelectorAll(`#${id} button`).forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===st[k]?"true":"false")));
+  document.getElementById("fOpen").checked=!!st.open;document.getElementById("q").value=st.q||"";
+  document.getElementById("fSort").value=st.sort;
+}
+function seg(id,key){
+  const el=document.getElementById(id);
+  el.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+    el.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false"));
+    st[key]=b.dataset.v;limit=150;save();render();});
+}
+function yearOpts(){
+  const el=document.getElementById("fYear");
+  const ys=[...new Set(D.map(d=>d.date.slice(0,4)))].sort().reverse();
+  el.innerHTML=`<option value="all">${tx("y_all")}</option>`+ys.map(y=>`<option value="${y}">${y}</option>`).join("");
+  el.value=ys.includes(st.year)?st.year:"all";st.year=el.value;
+}
+function kpis(){
+  if(!D.length){document.getElementById("kpis").innerHTML="";return}
+  const k=f=>D.filter(f).length;
+  const KV=[D.length,k(d=>d.open==="weights"),k(d=>d.c==="CN"),k(d=>d.c==="US"),k(d=>d.c==="OT"),k(d=>d.date.startsWith("2026"))];
+  document.getElementById("kpis").innerHTML=T[LANG].k.map((a,i)=>`<div><b>${KV[i]}</b>${a}</div>`).join("");
+}
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null");if(s&&typeof s==="object")Object.assign(st,s)}catch(e){}
+syncUI();
+seg("fCountry","country");seg("fType","type");
+document.getElementById("fOpen").addEventListener("change",e=>{st.open=e.target.checked;limit=150;save();render();});
+document.getElementById("fYear").addEventListener("change",e=>{st.year=e.target.value;limit=150;save();render();});
+document.getElementById("fSort").addEventListener("change",e=>{st.sort=e.target.value;save();render();});
+document.getElementById("q").addEventListener("input",e=>{st.q=e.target.value;limit=150;save();render();});
+document.getElementById("more").addEventListener("click",()=>{limit+=100;render();});
+const foot=document.getElementById("foot"),FOOT_ZH=foot.innerHTML,ledeEl=document.querySelector("[data-i=lede]"),LEDE_ZH=ledeEl.textContent;
+let loadState="loading";
+function setLang(l){
+  LANG=l==="en"?"en":"zh";
+  document.documentElement.lang=LANG==="en"?"en":"zh-CN";
+  document.title=tx("doc");
+  document.querySelectorAll("[data-i]").forEach(el=>{const v=T[LANG][el.dataset.i];if(typeof v==="string")el.textContent=v;});
+  document.querySelectorAll("[data-t]").forEach(el=>el.textContent=TYPE[el.dataset.t][LANG]);
+  document.querySelectorAll("#secnav a").forEach(a=>a.textContent=a.dataset[LANG]);
+  ledeEl.textContent=LANG==="en"?LEDE_EN:LEDE_ZH;
+  foot.innerHTML=LANG==="en"?FOOT_EN:FOOT_ZH;
+  document.querySelector(".bar").setAttribute("aria-label",tx("bar"));
+  document.getElementById("q").placeholder=tx("q");
+  document.querySelectorAll("#fLang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===LANG?"true":"false"));
+  const s=document.getElementById("status");
+  s.hidden=loadState==="ok"; s.textContent=loadState==="err"?tx("err"):tx("loading"); s.classList.toggle("err",loadState==="err");
+  if(D.length)yearOpts();
+  kpis();render();
+}
+document.getElementById("fLang").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;try{localStorage.setItem("robot-atlas-lang",b.dataset.v)}catch(x){}
+  try{const u=new URL(location.href);u.searchParams.set("lang",b.dataset.v);history.replaceState(null,"",u);}catch(x){}
+  setLang(b.dataset.v);});
+let L0=new URLSearchParams(location.search).get("lang");
+if(L0!=="zh"&&L0!=="en"){L0=null;try{L0=localStorage.getItem("robot-atlas-lang")}catch(x){}}
+if(L0!=="zh"&&L0!=="en")L0=/^zh/i.test(navigator.language||"")?"zh":"en";
+setLang(L0);
+fetch("data/models.json").then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(j=>{
+  D=(Array.isArray(j)?j:[]).filter(d=>d&&d.name&&TYPE[d.type]&&OPEN[d.open]).map(d=>Object.assign({},d,{date:String(d.date||""),org:String(d.org||"")}));
+  D.forEach(d=>d._h=hay(d));
+  loadState="ok";setLang(LANG);
+}).catch(()=>{loadState="err";setLang(LANG);});
+</script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="2023 年 1 月至 2026 年 11 月具身智能与机器人公司的融资、上市和并购记录：人形机器人、机器人大模型、机械臂、灵巧手与零部件、数据与仿真、垂直应用。Funding rounds, IPOs and acquisitions of embodied-AI and robotics companies, Jan 2023 – Nov 2026.">
+<title>机器人融资追踪</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: spec-sheet catalog. Sticky filter bar, then a dense table that folds into cards on phones. */
+:root{
+  --bg:#f3f5f6; --panel:#ffffff; --ink:#15212b; --muted:#5b6973; --line:#d9e0e4;
+  --accent:#0b6e8a; --accent-ink:#ffffff; --new:#b45309; --new-bg:#fdf1e3;
+  --us:#2f5fb3; --us-bg:#e8eefb; --cn:#b8322a; --cn-bg:#fbeceb; --thumb:#e7ecef;
+  --display:"Archivo","Noto Sans SC",system-ui,sans-serif;
+  --body:"Noto Sans SC",system-ui,-apple-system,"PingFang SC",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1519; --panel:#161e24; --ink:#e6ecef; --muted:#93a1aa; --line:#27333b;
+  --accent:#4fb3cf; --accent-ink:#0b1418; --new:#f0a957; --new-bg:#33240f;
+  --us:#8fb0f0; --us-bg:#1b2740; --cn:#f0918a; --cn-bg:#3a1c1a; --thumb:#1f2930; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1519; --panel:#161e24; --ink:#e6ecef; --muted:#93a1aa; --line:#27333b;
+  --accent:#4fb3cf; --accent-ink:#0b1418; --new:#f0a957; --new-bg:#33240f;
+  --us:#8fb0f0; --us-bg:#1b2740; --cn:#f0918a; --cn-bg:#3a1c1a; --thumb:#1f2930; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:14px/1.55 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1320px;margin:0 auto;padding-block:28px 48px}
+h1{font:700 clamp(26px,4vw,38px)/1.15 var(--display);letter-spacing:-.01em;margin:0 0 8px;text-wrap:balance}
+.lede{color:var(--muted);max-width:72ch;margin:0}
+.kpis{display:flex;flex-wrap:wrap;gap:10px 28px;margin:18px 0 6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.kpis b{display:block;font:500 22px/1.2 var(--mono);color:var(--ink);font-variant-numeric:tabular-nums}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;margin-top:14px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.seg{display:flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--panel)}
+.seg button{border:0;background:none;color:var(--ink);font:500 13px var(--body);padding:6px 11px;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+button:focus-visible,select:focus-visible,#q:focus-visible,a:focus-visible,.tog:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.tog{display:flex;align-items:center;gap:6px;font-size:13px;background:var(--new-bg);color:var(--new);border-radius:6px;padding:6px 10px;cursor:pointer;font-weight:500}
+select{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:6px 8px;font:13px var(--body)}
+#q{flex:1 1 180px;min-width:0;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:7px 10px;font:13px var(--body)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;font:500 12px var(--mono)}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--accent)}
+.secnav{display:flex;flex-wrap:wrap;gap:4px 16px;margin:-6px 0 18px;font:500 12px var(--mono)}
+.secnav a{color:var(--muted);text-decoration:none;padding:2px 0;border-bottom:1px solid transparent}
+.secnav a:hover{color:var(--accent)} .secnav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--accent)}
+.lang button{padding:4px 10px;font:500 12px var(--mono)}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+.tablewrap{overflow-x:auto;margin-top:12px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+table{width:100%;border-collapse:collapse;min-width:1120px}
+th{font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.thumb{width:128px;height:104px;border-radius:6px;background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.thumb.noimg{background:var(--thumb)}
+.thumb img{width:100%;height:100%;object-fit:contain;padding:3px}
+.thumb svg{width:36px;height:36px;color:var(--muted);opacity:.7}
+.name{font:700 15px/1.3 var(--display)}
+.co{color:var(--muted);font-size:12px}
+.zh{font-size:13px;font-weight:500;color:var(--ink);margin-top:1px}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.chip{font:500 11px/1 var(--body);padding:4px 6px;border-radius:4px;white-space:nowrap}
+.us{background:var(--us-bg);color:var(--us)} .cn{background:var(--cn-bg);color:var(--cn)} .ot{background:var(--thumb);color:var(--ink)}
+.nw{background:var(--new-bg);color:var(--new)} .cat{background:var(--thumb);color:var(--muted)}
+.mono{font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums}
+.spec{font-size:13px;max-width:28ch}
+.ai{font-size:13px;max-width:22ch}
+.links{display:flex;flex-direction:column;gap:3px;white-space:nowrap}
+.links a{color:var(--accent);text-decoration:none;font-size:13px}
+.links a:hover{text-decoration:underline}
+.dim{color:var(--muted)}
+.more{display:block;margin:14px auto 0;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:8px 16px;font:500 13px var(--body);cursor:pointer}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+footer{margin-top:28px;color:var(--muted);font-size:12px;max-width:92ch}
+footer h2{font:700 14px var(--display);color:var(--ink);margin:18px 0 6px}
+footer a{color:var(--accent)} footer ul{padding-left:18px;margin:4px 0}
+@media (max-width:760px){
+  table{min-width:0} thead{display:none}
+  tr{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 12px;padding:12px;border-bottom:1px solid var(--line)}
+  td{border:0;padding:0;min-width:0}
+  td.ti{grid-row:span 3} .thumb{width:96px;height:80px}
+  td[data-l]::before{content:attr(data-l)"：";color:var(--muted);font-size:12px}
+  td[data-l]{grid-column:1/-1;font-size:13px}
+  .spec,.ai{max-width:none}
+  .links{flex-direction:row;flex-wrap:wrap;gap:12px;grid-column:1/-1}
+  .tablewrap{overflow:visible}
+}
+</style>
+<style>
+/* Funding tracker additions — reuse the hardware page tokens */
+.kpis b.sm{font-size:15px;line-height:1.3;max-width:26ch}
+.chart{margin:18px 0 0;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 14px 8px;position:relative}
+.chart h2{font:700 14px var(--display);margin:0 0 2px}
+.chart .sub{font-size:12px;color:var(--muted);margin:0 0 6px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .grid line{stroke:var(--line);stroke-width:1}
+.chart .ax text{fill:var(--muted);font:11px var(--mono)}
+.chart .bars path{fill:var(--accent)}
+.chart .bars path.dim{opacity:.35}
+.chart .hit{fill:transparent;cursor:default}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font:12px/1.4 var(--body);padding:6px 9px;border-radius:6px;white-space:nowrap;z-index:6;transform:translate(-50%,-100%);margin-top:-8px}
+.tip b{font:500 13px var(--mono)}
+.tip[hidden]{display:none}
+.view button{font:500 12px var(--body)}
+td.amt{white-space:nowrap}
+.amt b{font:500 14px var(--mono);font-variant-numeric:tabular-nums}
+.raw{display:block;color:var(--muted);font-size:11px;margin-top:2px;white-space:normal;max-width:20ch}
+.inv{font-size:13px;max-width:34ch}
+.inv .ld{font-weight:500}
+.note{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.rd{background:var(--thumb);color:var(--ink);font:500 12px var(--mono);padding:3px 6px;border-radius:4px;white-space:nowrap}
+.rep{background:var(--new-bg);color:var(--new)}
+.hwl{display:flex;flex-wrap:wrap;gap:4px 8px;max-width:22ch}
+.hwl a{color:var(--accent);text-decoration:none;font-size:12px}
+.hwl a:hover{text-decoration:underline}
+.state{padding:28px;text-align:center;color:var(--muted)}
+.tablewrap table.co{min-width:860px}
+.cname{font:700 15px/1.3 var(--display)}
+@media (max-width:760px){
+  .tablewrap table{min-width:0}
+  #tRounds tr,#tCos tr{grid-template-columns:minmax(0,1fr) auto}
+  #tRounds td.who,#tCos td.who{grid-column:1/2;grid-row:1}
+  #tRounds td.amt,#tCos td.amt{grid-column:2/3;grid-row:1;text-align:right}
+  #tRounds td.amt::before,#tCos td.amt::before{display:none}
+  .raw{margin-left:auto}
+  .inv,.hwl{max-width:none}
+}
+</style>
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top"><a href="../">← Physical Instinct</a>
+    <div class="seg lang" id="fLang" role="group" aria-label="Language / 语言"><button type="button" data-v="zh" aria-pressed="true">中文</button><button type="button" data-v="en" aria-pressed="false">EN</button></div></div>
+  <nav class="secnav" aria-label="Sections">
+    <a href="../robot-hardware-spectrum/" data-i="n_hw">硬件</a>
+    <a href="../robot-model-spectrum/" data-i="n_md">模型</a>
+    <a href="../robot-dataset-spectrum/" data-i="n_ds">数据集</a>
+    <a href="../robot-funding-tracker/" aria-current="page" data-i="n_fd">融资</a>
+    <a href="../robot-hardware-insights/" data-i="n_in">洞察</a>
+    <a href="../sim-benchmark-spectrum/" data-i="n_sb">仿真与评测</a>
+  </nav>
+  <h1 data-i="title">机器人融资追踪</h1>
+  <p class="lede" id="lede">2023 年 1 月至 2026 年 11 月，具身智能与机器人公司的融资轮次、上市和重要并购，覆盖中国、美国和其他国家：人形机器人、机器人大模型、机械臂与移动操作、灵巧手与零部件、数据与仿真、垂直应用和四足等。每条记录都附原始报道链接，截至 2026 年 11 月 8 日。</p>
+  <div class="kpis" id="kpis" aria-live="polite"></div>
+
+  <div class="bar" role="toolbar" aria-label="筛选">
+    <div class="seg view" id="fView" role="group" aria-label="视图">
+      <button type="button" data-v="rounds" data-i="v_rounds" aria-pressed="true">按轮次</button>
+      <button type="button" data-v="cos" data-i="v_cos" aria-pressed="false">按公司汇总</button>
+    </div>
+    <div class="seg" id="fCountry" role="group" aria-label="国家">
+      <button type="button" data-i="c_all" data-v="all" aria-pressed="true">全部</button>
+      <button type="button" data-i="c_CN" data-v="CN" aria-pressed="false">中国</button>
+      <button type="button" data-i="c_US" data-v="US" aria-pressed="false">美国</button>
+      <button type="button" data-i="c_OT" data-v="OT" aria-pressed="false">其他国家</button>
+    </div>
+    <select id="fSeg" aria-label="赛道"></select>
+    <select id="fYear" aria-label="年份"></select>
+    <select id="fRound" aria-label="轮次类型"></select>
+    <select id="fSort" aria-label="排序"></select>
+    <input id="q" type="search" placeholder="搜索公司（中英文）、投资方或备注" aria-label="搜索">
+    <span class="count" id="count"></span>
+  </div>
+
+  <figure class="chart" id="chart" aria-labelledby="chT">
+    <h2 id="chT" data-i="ch_t">每季度融资总额</h2>
+    <p class="sub" id="chS"></p>
+    <div id="chSvg"></div>
+    <div class="tip" id="tip" hidden></div>
+  </figure>
+
+  <div class="tablewrap" id="wRounds">
+    <table id="tRounds">
+      <thead><tr><th data-i="h_date">日期</th><th data-i="h_co">公司</th><th data-i="h_round">轮次</th><th data-i="h_amt">金额</th><th data-i="h_val">投后估值</th><th data-i="h_inv">投资方</th><th data-i="h_hw">相关硬件</th><th data-i="h_src">来源</th></tr></thead>
+      <tbody id="rows"><tr><td colspan="8" class="state" data-i="loading">正在加载数据…</td></tr></tbody>
+    </table>
+    <div class="empty" id="empty" data-i="empty" hidden>没有符合条件的记录，换个筛选试试。</div>
+  </div>
+  <div class="tablewrap" id="wCos" hidden>
+    <table id="tCos" class="co">
+      <thead><tr><th data-i="h_co">公司</th><th data-i="hc_total">累计融资（区间内）</th><th data-i="hc_val">最近估值</th><th data-i="hc_n">轮次数</th><th data-i="hc_last">最近一轮</th><th data-i="h_hw">相关硬件</th></tr></thead>
+      <tbody id="crows"></tbody>
+    </table>
+    <div class="empty" id="cempty" data-i="empty" hidden>没有符合条件的记录，换个筛选试试。</div>
+  </div>
+  <button type="button" class="more" id="more" hidden></button>
+
+  <footer id="foot">
+    <h2>说明</h2>
+    <ul>
+      <li>金额按报道口径记录。人民币、港元、欧元、韩元、日元按交易当时的大致汇率折算成美元（人民币约 7.05–7.25、港元 7.8），带“≈”的为折算或估算值，原币种金额列在下方，折算只是近似。媒体只写“数亿元”“亿元级”等区间的，金额留空，不计入合计。</li>
+      <li>估值优先用投后估值；只有投前或“超过 X”的报道时按报道数字填写，并在备注里说明。没有公开估值的留空（—）。</li>
+      <li>“合计融资”包括私募轮次、IPO/SPAC 和上市后配售募资；并购只列出交易金额，不计入融资合计、季度图和最大单笔。IPO 申报只记录计划募资额，不计入合计。</li>
+      <li>标注“报道”的记录来自媒体援引知情人士、监管文件或尚未正式宣布完成的交易（如 Physical Intelligence C 轮、FieldAI 2026 年轮次、Agility SPAC），以公司正式公告为准。</li>
+      <li>同一公司连续公布的多轮融资，如果报道只给出合计金额，就合并成一条。中国公司的轮次名称沿用公司或媒体的说法（如 A++、Pre-A+）。</li>
+      <li>公司国别按总部计：1X 计为美国（挪威起家），Sharpa 计为其他国家（新加坡/上海）。“相关硬件”链接到硬件图谱中该公司的产品。</li>
+      <li>收录 200 条左右的代表性记录，不是全量统计；2026 年下半年的中国早期小额轮次只收录了一部分。</li>
+    </ul>
+    <h2>主要来源</h2>
+    <ul>
+      <li>公司公告与新闻稿（Figure、Apptronik、Skild AI、NEURA、RobCo 等）、港交所/上交所公告</li>
+      <li>TechCrunch、Bloomberg、Reuters、SiliconANGLE、The Robot Report、Tech.eu、Caixin Global、DealStreetAsia、KrASIA、TechNode</li>
+      <li>36氪、投资界、财联社、钛媒体、界面新闻、第一财经、澎湃新闻、新京报，以及 36氪 2026 年 10 月具身智能融资盘点</li>
+      <li>每一行的具体出处见“来源”列</li>
+    </ul>
+    <p>数据下载：<a href="data/funding.json">funding.json</a> · <a href="data/funding.csv">funding.csv</a> · 源码：<a href="https://github.com/quantumiracle/physical-instinct">github.com/quantumiracle/physical-instinct</a></p>
+  </footer>
+</div>
+
+<script>
+const T={
+zh:{n_hw:"硬件",n_md:"模型",n_ds:"数据集",n_fd:"融资",n_in:"洞察",n_sb:"仿真与评测",title:"机器人融资追踪",doc:"机器人融资追踪",bar:"筛选",
+ v_rounds:"按轮次",v_cos:"按公司汇总",c_all:"全部",c_US:"美国",c_CN:"中国",c_OT:"其他国家",seg_all:"全部赛道",yr_all:"全部年份",rt_all:"全部轮次",
+ s_new:"日期（新→旧）",s_old:"日期（旧→新）",s_amt:"金额（大→小）",q:"搜索公司（中英文）、投资方或备注",
+ h_date:"日期",h_co:"公司",h_round:"轮次",h_amt:"金额",h_val:"投后估值",h_inv:"投资方",h_hw:"相关硬件",h_src:"来源",
+ hc_total:"累计融资（区间内）",hc_val:"最近估值",hc_n:"轮次数",hc_last:"最近一轮",
+ loading:"正在加载数据…",err:"数据加载失败，请刷新页面重试。",empty:"没有符合条件的记录，换个筛选试试。",
+ more:n=>`再显示 100 条（剩余 ${n}）`,count:(a,b)=>`${a} 条 / 共 ${b}`,ccount:(a)=>`${a} 家公司`,
+ src:"报道 ↗",lead:"领投：",rep:"报道",est:"≈",undisc:"未披露",n_rounds:n=>`${n} 轮`,
+ ch_t:"每季度融资总额",ch_s:"按当前筛选，单位百万美元；不含并购和未披露金额的轮次。悬停或点按柱子查看明细。",ch_tip:(q,v,n)=>`${q}<br><b>${v}</b> · ${n} 笔`,
+ k:["区间内合计融资","融资事件","公司","最大单笔"],kn:"不含并购",
+ l_date:"日期",l_round:"轮次",l_amt:"金额",l_val:"估值",l_inv:"投资方",l_hw:"硬件",l_src:"来源",l_total:"累计",l_n:"轮次",l_last:"最近"},
+en:{n_hw:"Hardware",n_md:"Models",n_ds:"Datasets",n_fd:"Funding",n_in:"Insights",n_sb:"Sim & Bench",title:"Robotics Funding Tracker",doc:"Robotics Funding Tracker",bar:"Filters",
+ v_rounds:"Rounds",v_cos:"By company",c_all:"All",c_US:"US",c_CN:"China",c_OT:"Other",seg_all:"All segments",yr_all:"All years",rt_all:"All round types",
+ s_new:"Date (newest first)",s_old:"Date (oldest first)",s_amt:"Amount (largest first)",q:"Search company (EN/中文), investor or note",
+ h_date:"Date",h_co:"Company",h_round:"Round",h_amt:"Amount",h_val:"Post-money",h_inv:"Investors",h_hw:"Hardware",h_src:"Source",
+ hc_total:"Raised (in range)",hc_val:"Latest valuation",hc_n:"Rounds",hc_last:"Latest round",
+ loading:"Loading data…",err:"Could not load the data. Please reload the page.",empty:"No records match these filters.",
+ more:n=>`Show 100 more (${n} left)`,count:(a,b)=>`${a} of ${b} records`,ccount:(a)=>`${a} companies`,
+ src:"Article ↗",lead:"Lead: ",rep:"Reported",est:"≈",undisc:"Undisclosed",n_rounds:n=>`${n} round${n===1?"":"s"}`,
+ ch_t:"Total raised per quarter",ch_s:"Current filters, USD millions; excludes M&A and rounds with undisclosed amounts. Hover or tap a bar for details.",ch_tip:(q,v,n)=>`${q}<br><b>${v}</b> · ${n} deal${n===1?"":"s"}`,
+ k:["Total raised in range","Funding events","Companies","Largest round"],kn:"excl. M&A",
+ l_date:"Date",l_round:"Round",l_amt:"Amount",l_val:"Valuation",l_inv:"Investors",l_hw:"Hardware",l_src:"Source",l_total:"Raised",l_n:"Rounds",l_last:"Latest"}};
+const SEG={humanoid:["人形机器人","Humanoid"],foundation_model:["机器人大模型 / 软件","Robot foundation model / software"],arms_mobile:["机械臂与移动操作","Arms & mobile manipulation"],hands_components:["灵巧手与零部件","Dexterous hands & components"],data_sim_teleop:["数据 / 仿真 / 遥操作","Data / simulation / teleop"],applied:["垂直应用机器人","Applied / vertical robotics"],quadruped_other:["四足及其他","Quadruped / other"]};
+const RT={seed:["种子 / 天使","Seed / angel"],early:["Pre-A / A 轮","Pre-A / Series A"],growth:["B 轮及以后","Series B and later"],strat:["战略投资","Strategic"],ipo:["IPO / 上市 / 配售","IPO / listing / placement"],ma:["并购","M&A"]};
+const CTY={"挪威 / 美国":"Norway / US","美国 / 法国":"US / France","美国 / 韩国":"US / South Korea","中国 / 美国":"China / US","新加坡 / 中国":"Singapore / China","德国":"Germany","英国":"UK","法国":"France","瑞士":"Switzerland","加拿大":"Canada","韩国":"South Korea","日本":"Japan","以色列":"Israel","波兰":"Poland"};
+const LEDE_EN="Funding rounds, listings and notable acquisitions of embodied-AI and robotics companies in China, the US and the rest of the world, January 2023 to November 2026: humanoids, robot foundation models, arms and mobile manipulation, dexterous hands and components, data and simulation, applied robotics and quadrupeds. Every record links to the original report. Data as of 8 Nov 2026.";
+const FOOT_EN=`<h2>Notes</h2><ul>
+<li>Amounts are recorded as reported. CNY, HKD, EUR, KRW and JPY are converted to USD at approximate rates for the time of the deal (CNY ≈ 7.05–7.25, HKD 7.8); converted or estimated values carry “≈” and the original-currency amount is shown underneath. Conversions are approximate. Where reports only give a range such as “hundreds of millions of yuan”, the amount is left blank and not counted in totals.</li>
+<li>Valuations are post-money where available; where only pre-money or “over X” was reported, the reported figure is used and the note says so. Blank (—) means no public valuation.</li>
+<li>“Total raised” includes private rounds, IPOs/SPACs and post-IPO placements. Acquisitions show the deal value but are left out of totals, the quarterly chart and the largest round. IPO filings record the planned raise only and are not counted.</li>
+<li>Records tagged “Reported” rely on media sources, regulatory filings or deals not yet formally announced as closed (e.g. Physical Intelligence Series C, FieldAI's 2026 round, the Agility SPAC); company announcements take precedence.</li>
+<li>Back-to-back rounds that were only reported as a combined amount are merged into one record. Chinese round names follow the company or press (A++, Pre-A+ and so on).</li>
+<li>Country is by headquarters: 1X counts as US (Norwegian origin), Sharpa as Other (Singapore / Shanghai). “Hardware” links to the company's products in the hardware spectrum.</li>
+<li>About 200 representative records, not an exhaustive census; small early-stage Chinese rounds in H2 2026 are only partly covered.</li></ul>
+<h2>Main sources</h2><ul>
+<li>Company announcements and press releases (Figure, Apptronik, Skild AI, NEURA, RobCo and others), HKEX / SSE filings</li>
+<li>TechCrunch, Bloomberg, Reuters, SiliconANGLE, The Robot Report, Tech.eu, Caixin Global, DealStreetAsia, KrASIA, TechNode</li>
+<li>36Kr, PEdaily (投资界), CLS, TMTPost, Jiemian, Yicai, The Paper, Beijing News, and 36Kr's October 2026 embodied-AI funding round-up</li>
+<li>The exact source for every row is in the “Source” column</li></ul>
+<p>Download: <a href="data/funding.json">funding.json</a> · <a href="data/funding.csv">funding.csv</a> · Source: <a href="https://github.com/quantumiracle/physical-instinct">github.com/quantumiracle/physical-instinct</a></p>`;
+let LANG="zh",D=[],limit=100;
+const tx=k=>T[LANG][k], I=()=>LANG==="en"?1:0;
+const segL=s=>(SEG[s]||[s,s])[I()], rtL=s=>(RT[s]||[s,s])[I()];
+const ctyL=s=>LANG==="en"?(CTY[s]||s):s;
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fm=v=>v==null?"":v>=1000?`$${(v/1000).toFixed(v>=10000?1:2).replace(/\.?0+$/,"")}B`:`$${v>=100?Math.round(v):(+v).toFixed(1).replace(/\.0$/,"")}M`;
+const st={view:"rounds",country:"all",seg:"all",year:"all",rt:"all",sort:"new",q:""};
+const counted=d=>d.round_type!=="ma"&&d.amount_usd_m!=null;
+function flag(d){
+  if(d.country==="US"&&!d.cty)return `<span class="chip us">${tx("c_US")}</span>`;
+  if(d.country==="CN"&&!d.cty)return `<span class="chip cn">${tx("c_CN")}</span>`;
+  const cls=d.country==="US"?"us":d.country==="CN"?"cn":"ot";
+  return `<span class="chip ${cls}">${esc(ctyL(d.cty)||tx("c_OT"))}</span>`;
+}
+function hwLinks(d){
+  if(!d.hw_names||!d.hw_names.length)return '<span class="dim">—</span>';
+  const names=[...new Set(d.hw_names)];const show=names.slice(0,4);
+  return `<div class="hwl">${show.map(n=>`<a href="../robot-hardware-spectrum/?q=${encodeURIComponent(n)}">${esc(n)}</a>`).join("")}${names.length>4?`<a href="../robot-hardware-spectrum/?q=${encodeURIComponent(d.company)}">+${names.length-4}</a>`:""}</div>`;
+}
+function match(d){
+  const q=st.q.trim().toLowerCase();
+  return (st.country==="all"||d.country===st.country)&&(st.seg==="all"||d.segment===st.seg)&&(st.year==="all"||d.date.slice(0,4)===st.year)&&(st.rt==="all"||d.round_type===st.rt)
+   &&(!q||[d.company,d.zh,d.lead,d.investors,d.note,d.round,d.cty,CTY[d.cty]||"",segL(d.segment)].join(" ").toLowerCase().includes(q));
+}
+function list(){
+  let L=D.filter(match);
+  if(st.sort==="old")L=L.slice().sort((a,b)=>a.date.localeCompare(b.date));
+  else if(st.sort==="amt")L=L.slice().sort((a,b)=>(b.amount_usd_m??-1)-(a.amount_usd_m??-1)||b.date.localeCompare(a.date));
+  else L=L.slice().sort((a,b)=>b.date.localeCompare(a.date));
+  return L;
+}
+function amtCell(d){
+  const v=d.amount_usd_m;
+  const main=v==null?`<span class="dim">${esc(tx("undisc"))}</span>`:`<b>${d.amount_est?tx("est"):""}${fm(v)}</b>`;
+  const raw=d.amount_raw&&!/^USD /.test(d.amount_raw)?`<span class="raw">${esc(d.amount_raw)}</span>`:(d.amount_raw&&/[~>]|\(/.test(d.amount_raw)?`<span class="raw">${esc(d.amount_raw)}</span>`:"");
+  return main+raw;
+}
+function valCell(d){
+  if(d.valuation_usd_m==null)return '<span class="dim">—</span>';
+  return `<span class="mono">${d.valuation_raw?tx("est"):""}${fm(d.valuation_usd_m)}</span>${d.valuation_raw?`<span class="raw">${esc(d.valuation_raw)}</span>`:""}`;
+}
+function row(d){
+  return `<tr>
+  <td class="mono" data-l="${tx("l_date")}">${esc(d.date)}</td>
+  <td class="who"><div class="name">${esc(d.company)}</div>${d.zh?`<div class="zh">${esc(d.zh)}</div>`:""}<div class="chips">${flag(d)}<span class="chip cat">${esc(segL(d.segment))}</span>${d.reported?`<span class="chip rep">${tx("rep")}</span>`:""}</div></td>
+  <td data-l="${tx("l_round")}"><span class="rd">${esc(d.round)}</span></td>
+  <td class="amt" data-l="${tx("l_amt")}">${amtCell(d)}</td>
+  <td data-l="${tx("l_val")}">${valCell(d)}</td>
+  <td class="inv" data-l="${tx("l_inv")}">${d.lead?`<span class="ld">${tx("lead")}${esc(d.lead)}</span>`:""}${d.lead&&d.investors?"<br>":""}${d.investors?esc(d.investors):""}${!d.lead&&!d.investors?'<span class="dim">—</span>':""}${d.note?`<span class="note">${esc(d.note)}</span>`:""}</td>
+  <td data-l="${tx("l_hw")}">${hwLinks(d)}</td>
+  <td data-l="${tx("l_src")}"><div class="links"><a href="${esc(d.source)}" target="_blank" rel="noopener">${tx("src")}</a></div></td></tr>`;
+}
+function companies(L){
+  const m=new Map();
+  for(const d of L){
+    let c=m.get(d.company);if(!c){c={company:d.company,zh:d.zh,country:d.country,cty:d.cty,segment:d.segment,total:0,n:0,last:null,val:null,valDate:"",valRaw:"",hw_names:d.hw_names,ma:false};m.set(d.company,c);}
+    if(counted(d)){c.total+=d.amount_usd_m;}
+    c.n++; if(d.round_type==="ma")c.ma=true;
+    if(!c.last||d.date>c.last.date)c.last=d;
+    if(d.valuation_usd_m!=null&&d.date>=c.valDate){c.val=d.valuation_usd_m;c.valDate=d.date;c.valRaw=d.valuation_raw;}
+    if(!c.zh&&d.zh)c.zh=d.zh;
+  }
+  return [...m.values()].sort((a,b)=>b.total-a.total||b.n-a.n||a.company.localeCompare(b.company));
+}
+function crow(c){
+  return `<tr>
+  <td class="who"><div class="cname">${esc(c.company)}</div>${c.zh?`<div class="zh">${esc(c.zh)}</div>`:""}<div class="chips">${flag(c)}<span class="chip cat">${esc(segL(c.segment))}</span></div></td>
+  <td class="amt" data-l="${tx("l_total")}">${c.total>0?`<b>${fm(Math.round(c.total*10)/10)}</b>`:`<span class="dim">—</span>`}</td>
+  <td data-l="${tx("l_val")}">${c.val!=null?`<span class="mono">${c.valRaw?tx("est"):""}${fm(c.val)}</span><span class="raw">${esc(c.valDate)}</span>`:'<span class="dim">—</span>'}</td>
+  <td class="mono" data-l="${tx("l_n")}">${c.n}</td>
+  <td data-l="${tx("l_last")}"><span class="rd">${esc(c.last.round)}</span> <span class="mono">${esc(c.last.date)}</span></td>
+  <td data-l="${tx("l_hw")}">${hwLinks(c)}</td></tr>`;
+}
+function kpis(L){
+  const C=L.filter(counted);
+  const tot=C.reduce((a,d)=>a+d.amount_usd_m,0);
+  const nonMA=L.filter(d=>d.round_type!=="ma");
+  const cos=new Set(L.map(d=>d.company)).size;
+  const big=C.slice().sort((a,b)=>b.amount_usd_m-a.amount_usd_m)[0];
+  const k=tx("k");
+  document.getElementById("kpis").innerHTML=
+   `<div><b>${tot?"≈"+fm(Math.round(tot)):"—"}</b>${k[0]}</div>`+
+   `<div><b>${nonMA.length}</b>${k[1]}${LANG==="en"?" ("+tx("kn")+")":"（"+tx("kn")+"）"}</div>`+
+   `<div><b>${cos}</b>${k[2]}</div>`+
+   `<div><b class="sm">${big?esc(big.company)+" · "+fm(big.amount_usd_m):"—"}</b>${k[3]}${big?` · <span class="mono">${esc(big.round)} ${esc(big.date.slice(0,7))}</span>`:""}</div>`;
+}
+/* Quarterly bar chart: single hue (--accent), 2px gaps, 4px rounded tops, recessive grid, hover tooltip. */
+function chart(L){
+  const C=L.filter(counted);
+  const qs=[];for(let y=2023;y<=2026;y++)for(let q=1;q<=4;q++)qs.push(y+"Q"+q);
+  const sum=Object.fromEntries(qs.map(q=>[q,{v:0,n:0}]));
+  for(const d of C){const y=d.date.slice(0,4),m=+(d.date.slice(5,7)||6);const k=y+"Q"+Math.ceil(m/3);if(sum[k]){sum[k].v+=d.amount_usd_m;sum[k].n++;}}
+  const W=Math.max(320,Math.min(1290,document.getElementById("chart").clientWidth-28)),H=W<560?190:230,ml=W<560?40:52,mr=6,mt=8,mb=26;
+  const pw=W-ml-mr,ph=H-mt-mb,max=Math.max(1,...qs.map(q=>sum[q].v));
+  const steps=[100,200,250,500,1000,2000,2500,5000,10000,20000];const step=steps.find(s=>max/s<=5)||Math.ceil(max/5);
+  const top=Math.ceil(max/step)*step,bw=pw/qs.length,gap=Math.max(2,bw*0.18);
+  const y=v=>mt+ph-(v/top)*ph;
+  let g='<g class="grid">',ax='<g class="ax">';
+  for(let v=0;v<=top;v+=step){g+=`<line x1="${ml}" x2="${W-mr}" y1="${y(v)}" y2="${y(v)}"/>`;ax+=`<text x="${ml-6}" y="${y(v)+4}" text-anchor="end">${v>=1000?(v/1000)+"B":v+"M"}</text>`;}
+  g+="</g>";
+  let bars='<g class="bars">',hits="";
+  qs.forEach((q,i)=>{const v=sum[q].v,x=ml+i*bw+gap/2,w=bw-gap;
+    if(v>0){const h=Math.max(1.5,ph*v/top),yy=mt+ph-h,r=Math.min(4,w/2,h);
+      bars+=`<path data-q="${q}" d="M${x},${mt+ph}V${yy+r}Q${x},${yy} ${x+r},${yy}H${x+w-r}Q${x+w},${yy} ${x+w},${yy+r}V${mt+ph}Z"/>`;}
+    hits+=`<rect class="hit" data-q="${q}" x="${ml+i*bw}" y="${mt}" width="${bw}" height="${ph}" tabindex="0" aria-label="${q}: ${fm(Math.round(v))}"/>`;
+    const lab=q.slice(4)+"·"+q.slice(2,4);
+    if(W>=700||q.endsWith("Q1"))ax+=`<text x="${ml+i*bw+bw/2}" y="${H-8}" text-anchor="middle">${W>=700?lab:q.slice(0,4)}</text>`;
+  });
+  bars+="</g>";ax+="</g>";
+  const el=document.getElementById("chSvg");
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(tx("ch_t"))}">${g}${bars}${ax}${hits}</svg>`;
+  const tip=document.getElementById("tip"),box=document.getElementById("chart");
+  const show=t=>{const q=t.dataset.q,s=sum[q];const r=t.getBoundingClientRect(),b=box.getBoundingClientRect();
+    tip.innerHTML=tx("ch_tip")(q.replace("Q"," Q"),s.v?"≈"+fm(Math.round(s.v)):"$0",s.n);
+    const bar=el.querySelector(`path[data-q="${q}"]`);const top=bar?bar.getBoundingClientRect().top:r.bottom-4;
+    let x=r.left+r.width/2-b.left;x=Math.max(70,Math.min(b.width-70,x));tip.style.left=x+"px";tip.style.top=(top-b.top)+"px";tip.hidden=false;
+    el.querySelectorAll(".bars path").forEach(p=>p.classList.toggle("dim",p.dataset.q!==q));};
+  const hide=()=>{tip.hidden=true;el.querySelectorAll(".bars path").forEach(p=>p.classList.remove("dim"));};
+  el.querySelectorAll(".hit").forEach(h=>{h.addEventListener("mouseenter",()=>show(h));h.addEventListener("focus",()=>show(h));h.addEventListener("click",()=>show(h));h.addEventListener("mouseleave",hide);h.addEventListener("blur",hide);});
+  document.getElementById("chS").textContent=tx("ch_s");
+}
+function render(){
+  if(!D.length)return;
+  const L=list();kpis(L);chart(L);
+  const isR=st.view==="rounds";
+  document.getElementById("wRounds").hidden=!isR;document.getElementById("wCos").hidden=isR;
+  const m=document.getElementById("more");
+  if(isR){
+    document.getElementById("rows").innerHTML=L.slice(0,limit).map(row).join("");
+    document.getElementById("empty").hidden=L.length>0;
+    m.hidden=L.length<=limit;m.textContent=tx("more")(L.length-limit);
+    document.getElementById("count").textContent=tx("count")(L.length,D.length);
+  }else{
+    const C=companies(L);
+    document.getElementById("crows").innerHTML=C.map(crow).join("");
+    document.getElementById("cempty").hidden=C.length>0;m.hidden=true;
+    document.getElementById("count").textContent=tx("ccount")(C.length);
+  }
+}
+function opts(){
+  const years=[...new Set(D.map(d=>d.date.slice(0,4)))].sort().reverse();
+  const set=(id,all,arr,key)=>{const el=document.getElementById(id);el.innerHTML=`<option value="all">${esc(tx(all))}</option>`+arr.map(([v,l])=>`<option value="${esc(v)}">${esc(l)}</option>`).join("");el.value=st[key];};
+  set("fSeg","seg_all",Object.keys(SEG).map(k=>[k,segL(k)+" ("+D.filter(d=>d.segment===k).length+")"]),"seg");
+  set("fYear","yr_all",years.map(y=>[y,y]),"year");
+  set("fRound","rt_all",Object.keys(RT).map(k=>[k,rtL(k)]),"rt");
+  const so=document.getElementById("fSort");so.innerHTML=["new","old","amt"].map(v=>`<option value="${v}">${esc(tx("s_"+v))}</option>`).join("");so.value=st.sort;
+}
+function seg(id,key){
+  const el=document.getElementById(id);
+  el.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+    el.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false"));
+    st[key]=b.dataset.v;limit=100;render();});
+}
+seg("fView","view");seg("fCountry","country");
+[["fSeg","seg"],["fYear","year"],["fRound","rt"],["fSort","sort"]].forEach(([id,k])=>document.getElementById(id).addEventListener("change",e=>{st[k]=e.target.value;limit=100;render();}));
+document.getElementById("q").addEventListener("input",e=>{st.q=e.target.value;limit=100;render();});
+document.getElementById("more").addEventListener("click",()=>{limit+=100;render();});
+{const q0=new URLSearchParams(location.search).get("q");if(q0){st.q=q0;document.getElementById("q").value=q0;}}
+let rt;window.addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>{if(D.length)chart(list());},150);});
+const foot=document.getElementById("foot"),FOOT_ZH=foot.innerHTML,ledeEl=document.getElementById("lede"),LEDE_ZH=ledeEl.textContent;
+function setLang(l){
+  LANG=l==="en"?"en":"zh";
+  document.documentElement.lang=LANG==="en"?"en":"zh-CN";
+  document.title=tx("doc");
+  document.querySelectorAll("[data-i]").forEach(el=>{const v=T[LANG][el.dataset.i];if(typeof v==="string")el.textContent=v;});
+  ledeEl.textContent=LANG==="en"?LEDE_EN:LEDE_ZH;
+  foot.innerHTML=LANG==="en"?FOOT_EN:FOOT_ZH;
+  document.querySelector(".bar").setAttribute("aria-label",tx("bar"));
+  document.getElementById("q").placeholder=tx("q");
+  document.querySelectorAll("#fLang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===LANG?"true":"false"));
+  if(D.length){opts();render();}
+}
+document.getElementById("fLang").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;try{localStorage.setItem("robot-atlas-lang",b.dataset.v)}catch(x){}
+  const u=new URL(location.href);u.searchParams.set("lang",b.dataset.v);history.replaceState(null,"",u);setLang(b.dataset.v);});
+let L0=new URLSearchParams(location.search).get("lang");
+if(!L0){try{L0=localStorage.getItem("robot-atlas-lang")}catch(x){}}
+if(!L0)L0=/^zh/i.test(navigator.language||"")?"zh":"en";
+setLang(L0);
+fetch("data/funding.json").then(r=>{if(!r.ok)throw new Error(r.status);return r.json();}).then(j=>{D=j;opts();render();})
+ .catch(()=>{document.getElementById("rows").innerHTML=`<tr><td colspan="8" class="state">${esc(tx("err"))}</td></tr>`;});
+</script>
+
+</body>
+</html>

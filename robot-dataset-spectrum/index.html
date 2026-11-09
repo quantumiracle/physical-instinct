@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="训练机器人基础模型所用数据集图谱：真机遥操作、自主采集、UMI 手持夹爪、人类第一人称视频、手物交互、人体动捕与仿真合成数据，2016 年至 2026 年 11 月。">
+<title>机器人数据集图谱</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: spec-sheet catalog. Sticky filter bar, then a dense table that folds into cards on phones. */
+:root{
+  --bg:#f3f5f6; --panel:#ffffff; --ink:#15212b; --muted:#5b6973; --line:#d9e0e4;
+  --accent:#0b6e8a; --accent-ink:#ffffff; --new:#b45309; --new-bg:#fdf1e3;
+  --us:#2f5fb3; --us-bg:#e8eefb; --cn:#b8322a; --cn-bg:#fbeceb; --thumb:#e7ecef;
+  --display:"Archivo","Noto Sans SC",system-ui,sans-serif;
+  --body:"Noto Sans SC",system-ui,-apple-system,"PingFang SC",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1519; --panel:#161e24; --ink:#e6ecef; --muted:#93a1aa; --line:#27333b;
+  --accent:#4fb3cf; --accent-ink:#0b1418; --new:#f0a957; --new-bg:#33240f;
+  --us:#8fb0f0; --us-bg:#1b2740; --cn:#f0918a; --cn-bg:#3a1c1a; --thumb:#1f2930; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1519; --panel:#161e24; --ink:#e6ecef; --muted:#93a1aa; --line:#27333b;
+  --accent:#4fb3cf; --accent-ink:#0b1418; --new:#f0a957; --new-bg:#33240f;
+  --us:#8fb0f0; --us-bg:#1b2740; --cn:#f0918a; --cn-bg:#3a1c1a; --thumb:#1f2930; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:14px/1.55 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1320px;margin:0 auto;padding-block:28px 48px}
+h1{font:700 clamp(26px,4vw,38px)/1.15 var(--display);letter-spacing:-.01em;margin:0 0 8px;text-wrap:balance}
+.lede{color:var(--muted);max-width:72ch;margin:0}
+.kpis{display:flex;flex-wrap:wrap;gap:10px 28px;margin:18px 0 6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.kpis b{display:block;font:500 22px/1.2 var(--mono);color:var(--ink);font-variant-numeric:tabular-nums}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;margin-top:14px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.seg{display:flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--panel)}
+.seg button{border:0;background:none;color:var(--ink);font:500 13px var(--body);padding:6px 11px;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+button:focus-visible,select:focus-visible,#q:focus-visible,a:focus-visible,.tog:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.tog{display:flex;align-items:center;gap:6px;font-size:13px;background:var(--new-bg);color:var(--new);border-radius:6px;padding:6px 10px;cursor:pointer;font-weight:500}
+select{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:6px 8px;font:13px var(--body)}
+#q{flex:1 1 180px;min-width:0;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:7px 10px;font:13px var(--body)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;font:500 12px var(--mono)}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--accent)}
+.lang button{padding:4px 10px;font:500 12px var(--mono)}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+.tablewrap{overflow-x:auto;margin-top:12px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+table{width:100%;border-collapse:collapse;min-width:1120px}
+th{font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.name{font:700 15px/1.3 var(--display)}
+.co{color:var(--muted);font-size:12px}
+.zh{font-size:13px;font-weight:500;color:var(--ink);margin-top:1px}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.chip{font:500 11px/1 var(--body);padding:4px 6px;border-radius:4px;white-space:nowrap}
+.us{background:var(--us-bg);color:var(--us)} .cn{background:var(--cn-bg);color:var(--cn)} .ot{background:var(--thumb);color:var(--ink)}
+.nw{background:var(--new-bg);color:var(--new)} .cat{background:var(--thumb);color:var(--muted)}
+.mono{font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums}
+.spec{font-size:13px;max-width:28ch}
+.ai{font-size:13px;max-width:22ch}
+.links{display:flex;flex-direction:column;gap:3px;white-space:nowrap}
+.links a{color:var(--accent);text-decoration:none;font-size:13px}
+.links a:hover{text-decoration:underline}
+.dim{color:var(--muted)}
+.more{display:block;margin:14px auto 0;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:8px 16px;font:500 13px var(--body);cursor:pointer}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+footer{margin-top:28px;color:var(--muted);font-size:12px;max-width:92ch}
+footer h2{font:700 14px var(--display);color:var(--ink);margin:18px 0 6px}
+footer a{color:var(--accent)} footer ul{padding-left:18px;margin:4px 0}
+@media (max-width:760px){
+  table{min-width:0} thead{display:none}
+  tr{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 12px;padding:12px;border-bottom:1px solid var(--line)}
+  td{border:0;padding:0;min-width:0}
+  td[data-l]::before{content:attr(data-l)"：";color:var(--muted);font-size:12px}
+  td[data-l]{grid-column:1/-1;font-size:13px}
+  .spec,.ai{max-width:none}
+  .links{flex-direction:row;flex-wrap:wrap;gap:12px;grid-column:1/-1}
+  .tablewrap{overflow:visible}
+}
+/* shared section nav */
+.secnav{display:flex;flex-wrap:wrap;gap:4px 16px;margin:-6px 0 18px;font:500 12px var(--mono)}
+.secnav a{color:var(--muted);text-decoration:none;padding:2px 0;border-bottom:1px solid transparent}
+.secnav a:hover{color:var(--accent)} .secnav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--accent)}
+/* dataset page additions */
+.scale{white-space:nowrap;line-height:1.7}
+.scale .u{color:var(--muted);font-size:11px;margin-left:3px}
+.hw{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.hw a{font:500 11px/1 var(--body);padding:4px 6px;border-radius:4px;background:var(--us-bg);color:var(--us);text-decoration:none;white-space:nowrap}
+.hw a:hover{text-decoration:underline}
+.mods{display:flex;flex-wrap:wrap;gap:4px;max-width:18ch}
+.lic{font-size:12px;max-width:16ch}
+.cl{background:var(--thumb);color:var(--muted);border:1px dashed var(--line)}
+.note{font-size:12px;color:var(--muted);margin-top:4px}
+.state{padding:28px;text-align:center;color:var(--muted)}
+.state.err{color:var(--cn)}
+td.nm{min-width:220px}
+@media (max-width:760px){
+  tr{grid-template-columns:minmax(0,1fr)}
+  td.nm{min-width:0}
+  .mods,.lic{max-width:none}
+  .scale{white-space:normal}
+}
+</style>
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top"><a href="../">← Physical Instinct</a>
+    <div class="seg lang" id="fLang" role="group" aria-label="Language / 语言"><button type="button" data-v="zh" aria-pressed="true">中文</button><button type="button" data-v="en" aria-pressed="false">EN</button></div></div>
+  <nav class="secnav" id="secnav" aria-label="Sections">
+    <a href="../robot-hardware-spectrum/" data-zh="硬件" data-en="Hardware">硬件</a>
+    <a href="../robot-model-spectrum/" data-zh="模型" data-en="Models">模型</a>
+    <a href="../robot-dataset-spectrum/" aria-current="page" data-zh="数据集" data-en="Datasets">数据集</a>
+    <a href="../robot-funding-tracker/" data-zh="融资" data-en="Funding">融资</a>
+    <a href="../robot-hardware-insights/" data-zh="洞察" data-en="Insights">洞察</a>
+    <a href="../sim-benchmark-spectrum/" data-zh="仿真与评测" data-en="Sim &amp; Bench">仿真与评测</a>
+  </nav>
+  <h1 data-i="title">机器人数据集图谱</h1>
+  <p class="lede" id="lede">训练机器人基础模型（VLA、世界模型、人形全身控制）所用的数据集：从 2016 年的自主抓取数据，到 Open X-Embodiment、DROID、AgiBot World，再到 2026 年的十万小时级第一人称人类数据。按采集方式分为八类，截至 2026 年 11 月 8 日。规模数字取自论文、数据卡或官方公告，带“≈”的是约数或二手来源。</p>
+  <div class="kpis" id="kpis"></div>
+
+  <div class="bar" role="toolbar" aria-label="筛选">
+    <div class="seg" id="fType" aria-label="类型"></div>
+    <div class="seg" id="fCountry" aria-label="国家">
+      <button type="button" data-i="c_all" data-v="all" aria-pressed="true">全部</button>
+      <button type="button" data-i="c_CN" data-v="CN" aria-pressed="false">中国</button>
+      <button type="button" data-i="c_US" data-v="US" aria-pressed="false">美国</button>
+      <button type="button" data-i="c_OT" data-v="OT" aria-pressed="false">其他国家</button>
+    </div>
+    <label class="tog"><input type="checkbox" id="fOpen"> <span data-i="onlyOpen">只看可公开下载</span></label>
+    <select id="fYear" aria-label="年份"></select>
+    <select id="fSort" aria-label="排序">
+      <option value="new" data-i="s_new">发布时间（新→旧）</option>
+      <option value="old" data-i="s_old">发布时间（旧→新）</option>
+      <option value="h" data-i="s_h">时长（多→少）</option>
+      <option value="ep" data-i="s_ep">条数（多→少）</option>
+      <option value="n" data-i="s_n">按名称</option>
+    </select>
+    <input id="q" type="search" placeholder="搜索数据集、机构、机器人或任务" aria-label="搜索">
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th data-i="h_n">数据集</th><th data-i="h_d">发布</th><th data-i="h_s">规模</th><th data-i="h_e">采集本体 / 机器人</th><th data-i="h_m">模态</th><th data-i="h_t">任务与场景</th><th data-i="h_lic">许可</th><th data-i="h_l">链接</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="state" id="state" data-i="loading">正在加载数据…</div>
+    <div class="empty" id="empty" data-i="empty" hidden>没有符合条件的数据集，换个筛选试试。</div>
+  </div>
+  <button type="button" class="more" id="more" hidden></button>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const TYPES=["teleop","auto","umi","ego","hand","mocap","sim","agg"];
+const TYPE_L={
+ zh:{teleop:"真机遥操作",auto:"真机自主/play",umi:"手持夹爪（UMI）",ego:"人类第一人称视频",hand:"手物交互/灵巧",mocap:"人体动捕（人形）",sim:"仿真/合成",agg:"聚合集合"},
+ en:{teleop:"Real-robot teleop",auto:"Real-robot autonomous / play",umi:"Handheld gripper (UMI)",ego:"Human egocentric video",hand:"Hand-object / dexterous",mocap:"Human mocap (humanoid)",sim:"Simulation / synthetic",agg:"Aggregated collection"}};
+const MOD_L={
+ zh:{rgb:"RGB",depth:"深度",tac:"触觉",ft:"力/力矩",prop:"本体感知",lang:"语言",audio:"声音",hand:"手部姿态",mocap:"动捕",pc:"点云/3D",lidar:"激光雷达"},
+ en:{rgb:"RGB",depth:"Depth",tac:"Tactile",ft:"Force/torque",prop:"Proprio",lang:"Language",audio:"Audio",hand:"Hand pose",mocap:"Mocap",pc:"Point cloud/3D",lidar:"LiDAR"}};
+const CTY_EN={"日本":"Japan","韩国":"South Korea","德国":"Germany","瑞士":"Switzerland","加拿大":"Canada","英国":"UK","新加坡":"Singapore","法国":"France"};
+const T={
+zh:{title:"机器人数据集图谱",doc:"机器人数据集图谱",bar:"筛选",c_all:"全部",c_US:"美国",c_CN:"中国",c_OT:"其他国家",t_all:"全部类型",onlyOpen:"只看可公开下载",y_all:"全部年份",
+ s_new:"发布时间（新→旧）",s_old:"发布时间（旧→新）",s_h:"时长（多→少）",s_ep:"条数（多→少）",s_n:"按名称",q:"搜索数据集、机构、机器人或任务",
+ h_n:"数据集",h_d:"发布",h_s:"规模",h_e:"采集本体 / 机器人",h_m:"模态",h_t:"任务与场景",h_lic:"许可",h_l:"链接",
+ l_d:"发布",l_s:"规模",l_e:"本体",l_m:"模态",l_t:"任务",l_lic:"许可",
+ empty:"没有符合条件的数据集，换个筛选试试。",loading:"正在加载数据…",err:"数据加载失败。请通过 HTTP 服务器打开本页（例如 python3 -m http.server），或直接下载 data/datasets.json。",
+ more:n=>`再显示 50 条（剩余 ${n}）`,count:(a,b)=>`${a} 个 / 共 ${b}`,closed:"未公开",ep:"条",grasp:"抓取",h:"小时",tb:"TB",
+ paper:"论文 ↗",site:"主页 ↗",dl:"下载 ↗",
+ k:["数据集","条数合计","时长合计/小时","真实世界","仿真/合成","聚合集合"],ksub:"（公开，不含聚合/抓取库）"},
+en:{title:"Robot Dataset Spectrum",doc:"Robot Dataset Spectrum",bar:"Filters",c_all:"All",c_US:"US",c_CN:"China",c_OT:"Other",t_all:"All types",onlyOpen:"Openly downloadable only",y_all:"All years",
+ s_new:"Release (newest first)",s_old:"Release (oldest first)",s_h:"Hours (most first)",s_ep:"Episodes (most first)",s_n:"By name",q:"Search dataset, org, robot or task",
+ h_n:"Dataset",h_d:"Release",h_s:"Scale",h_e:"Embodiment / robots",h_m:"Modalities",h_t:"Tasks & scenes",h_lic:"License",h_l:"Links",
+ l_d:"Release",l_s:"Scale",l_e:"Embodiment",l_m:"Modalities",l_t:"Tasks",l_lic:"License",
+ empty:"No datasets match these filters.",loading:"Loading data…",err:"Could not load the data. Open this page through an HTTP server (e.g. python3 -m http.server) or download data/datasets.json directly.",
+ more:n=>`Show 50 more (${n} left)`,count:(a,b)=>`${a} of ${b}`,closed:"Not released",ep:"episodes",grasp:"grasps",h:"hours",tb:"TB",
+ paper:"Paper ↗",site:"Site ↗",dl:"Download ↗",
+ k:["Datasets","Known episodes","Known hours","Real-world","Simulation / synthetic","Aggregated"],ksub:" (open, excl. aggregates & grasp libs)"}};
+const LEDE_EN="Datasets used to train robot foundation models (VLAs, world models, humanoid whole-body control): from 2016 autonomous grasping data through Open X-Embodiment, DROID and AgiBot World to the 100,000-hour egocentric human corpora of 2026. Grouped into eight collection types, as of 8 Nov 2026. Scale figures come from papers, dataset cards or official announcements; “≈” marks approximate or second-hand numbers.";
+const FOOT_ZH=`<h2>分类说明</h2><ul>
+<li><b>真机遥操作</b>：人通过主从臂、VR 或手机遥控真实机器人采集的示教数据（ALOHA、DROID、AgiBot World 等）。</li>
+<li><b>真机自主/play</b>：机器人自主探索、随机动作、自监督抓取，或策略部署与人在环纠正产生的数据（QT-Opt、RoboNet 等）。</li>
+<li><b>手持夹爪（UMI）</b>：人手持与机器人末端一致的夹爪/相机采集，再部署到机械臂上（UMI、FastUMI 等）。</li>
+<li><b>人类第一人称视频</b>：头戴相机或眼镜拍摄的人类日常/劳动视频，常带手部姿态，用于表征、世界模型和人-机迁移（Ego4D、EgoDex 等）。</li>
+<li><b>手物交互/灵巧</b>：用动捕、多视角或可穿戴设备记录的人手-物体交互，服务灵巧手抓取与重定向（DexYCB、ARCTIC、OakInk 等）。</li>
+<li><b>人体动捕（人形）</b>：全身人体运动数据及其到人形机器人的重定向版本，用于全身跟踪与运动控制（AMASS、LAFAN1、PHUMA 等）。</li>
+<li><b>仿真/合成</b>：在仿真器中由人遥操作、脚本或自动生成（MimicGen 等）的轨迹，以及合成抓取库（RoboCasa、GR00T Sim、InternData-A1 等）。</li>
+<li><b>聚合集合</b>：把多个已有数据集统一格式后打包的集合（OXE、ARIO、UniACT 等）。为避免重复计算，顶部条数和时长合计不含这一类。</li></ul>
+<h2>说明</h2><ul>
+<li>“条数”是数据集自己的计数单位：轨迹、示教、视频片段、动作序列，抓取库则是抓取数，不同类型之间不可直接相加比较。顶部合计只统计可公开下载的数据，并排除聚合集合（避免重复）和抓取库（单位是抓取），只是粗略量级，随筛选变化。</li>
+<li>“≈”表示约数、论文的“超过 X”，或只在二手来源中出现的数字。未知的留空（—）。日期为首次公开（论文或数据发布）的年月。</li>
+<li>“可公开下载”指任何人可按公开许可获取（含 CC BY-NC 等非商用许可和需同意条款的 gated 仓库）；π 数据、GEN-0 这类只作规模参考的闭源数据标为“未公开”。</li>
+<li>OXE 收录的子集（Fractal、Bridge、Kuka、TACO-Play、Jaco Play 等）同时单独列出。π、GEN-0 的时长来自公司自述。</li>
+<li>蓝色标签链接到硬件图谱中对应的机器人或采集设备；人类数据集的“本体”是采集设备。</li>
+<li>没有收录：未公开数据的公司（如自变量机器人 Wall-OSS 只开源了模型）、自动驾驶数据，以及大量规模很小的单任务数据集。</li></ul>
+<h2>数据来源</h2><ul>
+<li>各数据集的论文（arXiv、RSS、CoRL、CVPR、ICLR、ICML）与项目主页，每行“论文/主页/下载”链接即出处</li>
+<li>Hugging Face 数据卡与 API（创建时间、许可、条数），如 AgiBot World、NVIDIA Physical AI、LeRobot 社区数据、BEHAVIOR Challenge</li>
+<li>2026 年新发布：智元 AGIBOT WORLD 2026 公告、光轮智能 EgoSuite-Open100K 报道、灵初智能 Psi-R2 发布报道、云深处 LynxScenes 新闻稿、量子位 NeoData 报道</li></ul>
+<p>数据下载：<a href="data/datasets.json">datasets.json</a> · <a href="data/datasets.csv">datasets.csv</a> · 源码：<a href="https://github.com/quantumiracle/physical-instinct">github.com/quantumiracle/physical-instinct</a></p>`;
+const FOOT_EN=`<h2>Types</h2><ul>
+<li><b>Real-robot teleop</b>: demonstrations collected by people driving real robots through leader arms, VR or phones (ALOHA, DROID, AgiBot World…).</li>
+<li><b>Real-robot autonomous / play</b>: data from autonomous exploration, random actions, self-supervised grasping, or policy rollouts with human-in-the-loop corrections (QT-Opt, RoboNet…).</li>
+<li><b>Handheld gripper (UMI)</b>: people carry a gripper/camera that matches the robot's end-effector, and policies are deployed on arms afterwards (UMI, FastUMI…).</li>
+<li><b>Human egocentric video</b>: head-mounted camera or glasses footage of daily life or labour, often with hand pose; used for representations, world models and human-to-robot transfer (Ego4D, EgoDex…).</li>
+<li><b>Hand-object / dexterous</b>: hand–object interaction captured with mocap, multi-view rigs or wearables, for dexterous grasping and retargeting (DexYCB, ARCTIC, OakInk…).</li>
+<li><b>Human mocap (humanoid)</b>: whole-body human motion and its retargeted humanoid versions, for whole-body tracking and locomotion (AMASS, LAFAN1, PHUMA…).</li>
+<li><b>Simulation / synthetic</b>: trajectories teleoperated, scripted or auto-generated (e.g. MimicGen) in simulators, plus synthetic grasp libraries (RoboCasa, GR00T Sim, InternData-A1…).</li>
+<li><b>Aggregated collection</b>: bundles of existing datasets converted to one format (OXE, ARIO, UniACT…). They are left out of the episode and hour totals at the top to avoid double counting.</li></ul>
+<h2>Notes</h2><ul>
+<li>“Episodes” uses each dataset's own unit: trajectories, demos, video clips, motion sequences, or grasps for grasp libraries. They are not comparable across types. The totals at the top count openly downloadable data only and leave out aggregated collections (double counting) and grasp libraries (counted in grasps); they are a rough order of magnitude and follow the filters.</li>
+<li>“≈” marks approximate figures, “over X” claims, or numbers found only in second-hand sources. Unknown values are left blank (—). Dates are the month of first public release (paper or data).</li>
+<li>“Openly downloadable” means anyone can obtain the data under a public licence (including non-commercial CC licences and gated repos with click-through terms). Closed corpora such as the π dataset and GEN-0 are listed for scale only and marked “Not released”.</li>
+<li>OXE constituents (Fractal, Bridge, Kuka, TACO-Play, Jaco Play…) are also listed on their own. π and GEN-0 hours are company claims.</li>
+<li>Blue tags link to the matching robot or capture device in the hardware atlas; for human datasets the “embodiment” is the capture device.</li>
+<li>Not included: companies that have not opened their data (e.g. X Square Robot open-sourced the Wall-OSS model only), driving datasets, and the long tail of small single-task datasets.</li></ul>
+<h2>Sources</h2><ul>
+<li>Each dataset's paper (arXiv, RSS, CoRL, CVPR, ICLR, ICML) and project page; the Paper / Site / Download links on every row are the sources</li>
+<li>Hugging Face dataset cards and API (creation date, licence, counts), e.g. AgiBot World, NVIDIA Physical AI, the LeRobot community dataset, BEHAVIOR Challenge</li>
+<li>2026 releases: AgiBot's AGIBOT WORLD 2026 announcements, coverage of Lightwheel's EgoSuite-Open100K and PsiBot's Psi-R2, DEEP Robotics' LynxScenes press release, QbitAI on NeoData</li></ul>
+<p>Download: <a href="data/datasets.json">datasets.json</a> · <a href="data/datasets.csv">datasets.csv</a> · Source: <a href="https://github.com/quantumiracle/physical-instinct">github.com/quantumiracle/physical-instinct</a></p>`;
+
+let LANG="zh", D=[];
+const tx=k=>T[LANG][k];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl=u=>/^https?:\/\//i.test(u||"")?u:"";
+const dash='<span class="dim">—</span>';
+function fmt(n){
+  if(n==null)return "";
+  if(LANG==="zh"){
+    if(n>=1e8)return +(n/1e8).toFixed(n>=1e9?0:1)+" 亿";
+    if(n>=1e4)return +(n/1e4).toFixed(n>=1e6?0:1)+" 万";
+    return n.toLocaleString("zh-CN");
+  }
+  if(n>=1e9)return +(n/1e9).toFixed(1)+"B";
+  if(n>=1e6)return +(n/1e6).toFixed(n>=1e7?0:1)+"M";
+  if(n>=1e4)return +(n/1e3).toFixed(0)+"k";
+  return n.toLocaleString("en-US");
+}
+const st={type:"all",country:"all",open:false,year:"all",sort:"new",q:""};
+let limit=60;
+const ctyL=d=>d.c==="US"?tx("c_US"):d.c==="CN"?tx("c_CN"):(LANG==="en"?(CTY_EN[d.cty]||d.cty||tx("c_OT")):(d.cty||tx("c_OT")));
+const ccls=c=>c==="US"?"us":c==="CN"?"cn":"ot";
+function scale(d){
+  const ap=k=>d.ap.includes(k)?"≈":"";
+  const out=[];
+  if(d.ep!=null)out.push(`${ap("ep")}${esc(fmt(d.ep))}<span class="u">${tx(d.unit==="grasp"?"grasp":"ep")}</span>`);
+  if(d.h!=null)out.push(`${ap("h")}${esc(fmt(d.h))}<span class="u">${tx("h")}</span>`);
+  if(d.tb!=null)out.push(`${esc(d.tb)}<span class="u">${tx("tb")}</span>`);
+  return out.length?out.join("<br>"):dash;
+}
+function row(d){
+  const zh=LANG==="zh";
+  const hw=d.hwn.length?`<div class="hw">${d.hwn.map(x=>`<a href="../robot-hardware-spectrum/?q=${encodeURIComponent(x.n)}" title="${esc(x.l)}">${esc(x.l)}</a>`).join("")}</div>`:"";
+  const mods=d.mod.map(m=>`<span class="chip cat">${esc(MOD_L[LANG][m]||m)}</span>`).join("");
+  const links=[["paper",d.paper],["site",d.site],["dl",d.dl]].filter(([,u])=>safeUrl(u)).filter(([k,u],i,a)=>a.findIndex(x=>x[1]===u)===i)
+    .map(([k,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${tx(k)}</a>`).join("");
+  const note=zh?d.note_zh:d.note;
+  return `<tr>
+  <td class="nm"><div class="name">${esc(d.n)}</div><div class="co">${esc(d.org)}</div>${d.zh?`<div class="zh">${esc(d.zh)}</div>`:""}<div class="chips"><span class="chip ${ccls(d.c)}">${esc(ctyL(d))}</span><span class="chip cat">${esc(TYPE_L[LANG][d.type])}</span>${d.d>="2026"?`<span class="chip nw">2026</span>`:""}${d.open?"":`<span class="chip cl">${tx("closed")}</span>`}</div>${note?`<div class="note">${esc(note)}</div>`:""}</td>
+  <td class="mono" data-l="${tx("l_d")}">${esc(d.d)}</td>
+  <td class="mono scale" data-l="${tx("l_s")}">${scale(d)}</td>
+  <td class="spec" data-l="${tx("l_e")}">${esc(zh?d.emb_zh:d.emb)||dash}${hw}</td>
+  <td data-l="${tx("l_m")}"><div class="mods">${mods||dash}</div></td>
+  <td class="spec" data-l="${tx("l_t")}">${esc(zh?d.sc_zh:d.sc)||dash}</td>
+  <td class="lic" data-l="${tx("l_lic")}">${esc(d.lic)||dash}</td>
+  <td><div class="links">${links}</div></td></tr>`;
+}
+function hay(d){return [d.n,d.org,d.zh,d.emb,d.emb_zh,d.sc,d.sc_zh,d.note,d.note_zh,d.lic,TYPE_L.zh[d.type],TYPE_L.en[d.type],d.hwn.map(x=>x.l).join(" "),d.mod.map(m=>MOD_L.zh[m]+" "+MOD_L.en[m]).join(" ")].join(" ").toLowerCase();}
+function list(){
+  const q=st.q.trim().toLowerCase();
+  let L=D.filter(d=>(st.type==="all"||d.type===st.type)&&(st.country==="all"||d.c===st.country)&&(!st.open||d.open)&&(st.year==="all"||d.d.slice(0,4)===st.year)&&(!q||d._h.includes(q)));
+  const num=k=>(a,b)=>(b[k]??-1)-(a[k]??-1)||b.d.localeCompare(a.d);
+  if(st.sort==="new")L.sort((a,b)=>b.d.localeCompare(a.d)||a.n.localeCompare(b.n));
+  else if(st.sort==="old")L.sort((a,b)=>a.d.localeCompare(b.d)||a.n.localeCompare(b.n));
+  else if(st.sort==="h")L.sort(num("h"));
+  else if(st.sort==="ep")L.sort(num("ep"));
+  else L.sort((a,b)=>a.n.localeCompare(b.n));
+  return L;
+}
+function kpis(L){
+  const base=L.filter(d=>d.type!=="agg"&&d.open);
+  const ep=base.reduce((s,d)=>s+(d.unit==="grasp"?0:(d.ep||0)),0), h=base.reduce((s,d)=>s+(d.h||0),0);
+  const real=L.filter(d=>d.type!=="sim"&&d.type!=="agg").length, sim=L.filter(d=>d.type==="sim").length, agg=L.filter(d=>d.type==="agg").length;
+  const K=T[LANG].k, sub=tx("ksub");
+  const v=[L.length,"≈"+fmt(ep),"≈"+fmt(Math.round(h)),real,sim,agg];
+  document.getElementById("kpis").innerHTML=v.map((x,i)=>`<div><b>${esc(x)}</b>${esc(K[i])}${i===1||i===2?esc(sub):""}</div>`).join("");
+}
+function render(){
+  if(!D.length)return;
+  const L=list();
+  document.getElementById("rows").innerHTML=L.slice(0,limit).map(row).join("");
+  document.getElementById("empty").hidden=L.length>0;
+  const m=document.getElementById("more"); m.hidden=L.length<=limit; m.textContent=tx("more")(L.length-limit);
+  document.getElementById("count").textContent=tx("count")(L.length,D.length);
+  kpis(L);
+}
+function save(){try{localStorage.setItem("robot-atlas-datasets",JSON.stringify(st))}catch(e){}}
+function pressed(id,v){document.querySelectorAll(`#${id} button`).forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===v?"true":"false"));}
+function seg(id,key){
+  document.getElementById(id).addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;
+    st[key]=b.dataset.v;pressed(id,st[key]);limit=60;save();render();});
+}
+function typeButtons(){
+  const el=document.getElementById("fType");
+  el.innerHTML=`<button type="button" data-v="all">${esc(tx("t_all"))}</button>`+TYPES.map(t=>`<button type="button" data-v="${t}">${esc(TYPE_L[LANG][t])}</button>`).join("");
+  pressed("fType",st.type);
+}
+function yearOpts(){
+  const el=document.getElementById("fYear");
+  const ys=[...new Set(D.map(d=>d.d.slice(0,4)))].sort().reverse();
+  el.innerHTML=`<option value="all">${esc(tx("y_all"))}</option>`+ys.map(y=>`<option value="${y}">${y} (${D.filter(d=>d.d.startsWith(y)).length})</option>`).join("");
+  el.value=ys.includes(st.year)?st.year:"all";
+}
+try{const s=JSON.parse(localStorage.getItem("robot-atlas-datasets")||"null");if(s&&typeof s==="object")for(const k of Object.keys(st))if(k in s&&typeof s[k]===typeof st[k])st[k]=s[k];}catch(e){}
+seg("fType","type");seg("fCountry","country");
+pressed("fCountry",st.country);
+document.getElementById("fOpen").checked=st.open;
+document.getElementById("fSort").value=st.sort;
+document.getElementById("q").value=st.q;
+document.getElementById("fOpen").addEventListener("change",e=>{st.open=e.target.checked;limit=60;save();render();});
+document.getElementById("fYear").addEventListener("change",e=>{st.year=e.target.value;limit=60;save();render();});
+document.getElementById("fSort").addEventListener("change",e=>{st.sort=e.target.value;save();render();});
+document.getElementById("q").addEventListener("input",e=>{st.q=e.target.value;limit=60;save();render();});
+document.getElementById("more").addEventListener("click",()=>{limit+=50;render();});
+const ledeEl=document.getElementById("lede"),LEDE_ZH=ledeEl.textContent;
+function setLang(l){
+  LANG=l==="en"?"en":"zh";
+  document.documentElement.lang=LANG==="en"?"en":"zh-CN";
+  document.title=tx("doc");
+  document.querySelectorAll("[data-i]").forEach(el=>{const v=T[LANG][el.dataset.i];if(typeof v==="string")el.textContent=v;});
+  document.querySelectorAll("#secnav a").forEach(a=>a.textContent=a.dataset[LANG]);
+  ledeEl.textContent=LANG==="en"?LEDE_EN:LEDE_ZH;
+  document.getElementById("foot").innerHTML=LANG==="en"?FOOT_EN:FOOT_ZH;
+  document.querySelector(".bar").setAttribute("aria-label",tx("bar"));
+  document.getElementById("q").placeholder=tx("q");
+  document.getElementById("fLang").querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===LANG?"true":"false"));
+  typeButtons();
+  if(D.length)yearOpts(); else document.getElementById("fYear").innerHTML=`<option value="all">${esc(tx("y_all"))}</option>`;
+  const s=document.getElementById("state"); if(s.classList.contains("err"))s.textContent=tx("err");
+  render();
+}
+document.getElementById("fLang").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;try{localStorage.setItem("robot-atlas-lang",b.dataset.v)}catch(x){}
+  try{const u=new URL(location.href);u.searchParams.set("lang",b.dataset.v);history.replaceState(null,"",u);}catch(x){}setLang(b.dataset.v);});
+let L0=new URLSearchParams(location.search).get("lang");
+if(L0!=="zh"&&L0!=="en"){L0=null;try{L0=localStorage.getItem("robot-atlas-lang")}catch(x){}}
+if(L0!=="zh"&&L0!=="en")L0=/^zh/i.test(navigator.language||"")?"zh":"en";
+setLang(L0);
+fetch("data/datasets.json").then(r=>{if(!r.ok)throw new Error(r.status);return r.json();}).then(j=>{
+  D=j.map(d=>Object.assign({ap:[],hw:[],hwn:[],mod:[]},d));D.forEach(d=>d._h=hay(d));
+  document.getElementById("state").hidden=true;yearOpts();render();
+}).catch(()=>{const s=document.getElementById("state");s.classList.add("err");s.textContent=tx("err");});
+</script>
+
+</body>
+</html>

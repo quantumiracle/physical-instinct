@@ -2,6 +2,19 @@
 
 具身智能与机器人硬件相关的整理和工具。首页：https://quantumiracle.github.io/physical-instinct/
 
+## 栏目
+
+| 栏目 | 内容 | 数据 |
+|---|---|---|
+| [机器人硬件图谱 Robot Hardware Spectrum](https://quantumiracle.github.io/physical-instinct/robot-hardware-spectrum/) | 人形、机械臂、灵巧手、移动操作和数据采集设备，851 款 | [robots.json](robot-hardware-spectrum/data/robots.json) |
+| [机器人基础模型图谱 Robot Foundation Model Spectrum](https://quantumiracle.github.io/physical-instinct/robot-model-spectrum/) | VLA、通用策略、世界模型、具身推理和全身控制模型，141 个 | [models.json](robot-model-spectrum/data/models.json) |
+| [机器人数据集图谱 Robot Dataset Spectrum](https://quantumiracle.github.io/physical-instinct/robot-dataset-spectrum/) | 遥操作、UMI、第一视角视频、动捕和仿真数据集，112 个 | [datasets.json](robot-dataset-spectrum/data/datasets.json) |
+| [机器人融资追踪 Robotics Funding Tracker](https://quantumiracle.github.io/physical-instinct/robot-funding-tracker/) | 2023–2026 年具身智能公司的融资、上市和并购，200 条 | [funding.json](robot-funding-tracker/data/funding.json) |
+| [机器人硬件洞察 Robot Hardware Insights](https://quantumiracle.github.io/physical-instinct/robot-hardware-insights/) | 基于硬件图谱数据的 8 张图表 | [insights.json](robot-hardware-insights/data/insights.json) |
+| [仿真与评测图谱 Simulation & Benchmark Spectrum](https://quantumiracle.github.io/physical-instinct/sim-benchmark-spectrum/) | 物理引擎、仿真平台、世界模型仿真和评测基准，118 个 | [sims.json](sim-benchmark-spectrum/data/sims.json) |
+
+所有页面支持中英文切换，数据截至 2026 年 11 月 8 日，每条记录都附来源链接。
+
 ## 机器人硬件图谱 Robot Hardware Spectrum
 
 人形机器人、轮式/移动操作平台、机械臂、灵巧手和数据采集设备的对比表，以中美为主，也收录 Franka、Sharpa、UR、Kinova 等其他国家常用于机器人学习的设备。

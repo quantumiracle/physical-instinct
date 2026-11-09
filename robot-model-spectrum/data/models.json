@@ -1,0 +1,4239 @@
+[
+{
+"id": "wall-oss-10-lite",
+"name": "WALL-OSS 1.0 Lite",
+"org": "X Square Robot",
+"zh": "自变量机器人",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-10",
+"params": "",
+"open": "weights",
+"arch": "Qwen3.5-based VLA with keyframe memory + residual refiner",
+"action": "continuous EE-pose chunks",
+"data": "RoboDojo demonstrations (benchmark release)",
+"emb": "Dual-arm ARX X5",
+"hw": [
+"70bc38723a"
+],
+"paper": "",
+"code": "https://github.com/X-Square-Robot/wall-x",
+"site": "https://huggingface.co/x-square-robot/wall-oss-1.0-lite-robodojo",
+"note_en": "Released for the RoboDojo benchmark; long-horizon memory.",
+"note_zh": "为 RoboDojo 评测发布，具备长程记忆。",
+"hwl": [
+[
+"ARX Arm X5",
+"ARX Arm X5"
+]
+]
+},
+{
+"id": "abot-er",
+"name": "ABot-ER",
+"org": "AMAP CV Lab (Alibaba)",
+"zh": "阿里巴巴高德",
+"c": "CN",
+"cty": "",
+"type": "er",
+"date": "2026-10",
+"params": "2B-35B",
+"open": "weights",
+"arch": "Embodied-reasoning VLM family with task-conditioned low-rank residuals",
+"action": "n/a (points, plans)",
+"data": "Spatial, temporal, affordance and planning data",
+"emb": "Any (brain for controllers)",
+"hw": [],
+"paper": "https://arxiv.org/abs/2610.18355",
+"code": "",
+"site": "https://huggingface.co/acvlab/ABot-ER-9B",
+"note_en": "Open embodied-reasoning family released Oct 2026.",
+"note_zh": "2026 年 10 月开源的具身推理模型系列。",
+"hwl": []
+},
+{
+"id": "unifolm-wla",
+"name": "UnifoLM-WLA-1.0 / UnifoLM-ER-1",
+"org": "Unitree Robotics",
+"zh": "宇树科技",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-09",
+"params": "4B (ER-1)",
+"open": "weights",
+"arch": "World-language-action model; ER-1 brain on Qwen3-VL-4B",
+"action": "continuous",
+"data": "5M+ embodied reasoning samples (ER-1); robot data",
+"emb": "Unitree G1, H2",
+"hw": [
+"115e3e0388"
+],
+"paper": "",
+"code": "",
+"site": "https://unigen-x.github.io/unifolm-wla.github.io/",
+"note_en": "Partial weights released; more models and data promised.",
+"note_zh": "部分权重已开放，其余模型和数据计划后续开放。",
+"hwl": [
+[
+"Unitree G1+",
+"G1+"
+]
+]
+},
+{
+"id": "magic-w0",
+"name": "Magic-W0",
+"org": "MagicLab",
+"zh": "魔法原子",
+"c": "CN",
+"cty": "",
+"type": "world",
+"date": "2026-09",
+"params": "3.4B",
+"open": "weights",
+"arch": "Structured world transition (3D geometry, 3D motion, future semantics) + layer-aligned action coupling",
+"action": "continuous",
+"data": "Embodied + human data (not fully disclosed)",
+"emb": "MagicBot humanoids",
+"hw": [
+"6868383069"
+],
+"paper": "https://arxiv.org/abs/2609.39870",
+"code": "",
+"site": "https://embodied.magiclab.top/works/wam/magic-w0/index.html",
+"note_en": "Control-oriented 3D world representation for WAMs.",
+"note_zh": "面向控制的 3D 世界表征。",
+"hwl": [
+[
+"MagicLab MagicBot X1",
+"MagicBot X1"
+]
+]
+},
+{
+"id": "tau0-vla",
+"name": "τ0-VLA",
+"org": "Shanghai Innovation Institute (SII)",
+"zh": "上海创智学院",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-08",
+"params": "",
+"open": "weights",
+"arch": "Hierarchical VLA; world-model-guided test-time search over subtasks",
+"action": "continuous (low-level policy)",
+"data": "40,115 h heterogeneous real data + multimodal co-training",
+"emb": "ARX AC One mobile, Franka",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2608.16885",
+"code": "https://github.com/sii-research/tau-0-vla",
+"site": "https://tau0-vla.github.io/",
+"note_en": "Spends extra compute on hard decisions at inference time.",
+"note_zh": "推理时把更多算力花在困难决策上。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "skild-s1",
+"name": "Skild S1",
+"org": "Skild AI",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2026-08",
+"params": "",
+"open": "closed",
+"arch": "Foundation model with in-context learning from one video",
+"action": "continuous",
+"data": "Human video + sim RL (Isaac Lab) + real data",
+"emb": "Arms, humanoids",
+"hw": [],
+"paper": "",
+"code": "",
+"site": "https://skild.ai/blogs/s1",
+"note_en": "Learns 10-minute tasks from a single video without fine-tuning (company claim).",
+"note_zh": "看一段视频即可学会长达 10 分钟的任务，无需微调（公司数据）。",
+"hwl": []
+},
+{
+"id": "galaxea-g05",
+"name": "G0.5",
+"org": "Galaxea Dynamics",
+"zh": "星海图",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-08",
+"params": "",
+"open": "weights",
+"arch": "Single autoregressive decoder for reasoning + action tokens; learned cross-embodiment tokenizer",
+"action": "discrete tokens",
+"data": "Cross-embodiment robot data + native CoT",
+"emb": "Galaxea R1 series, SO-101 (LeRobot)",
+"hw": [
+"2ff6f2d21c",
+"3cd46fa5fe",
+"c6bb2ccaf0"
+],
+"paper": "https://arxiv.org/abs/2608.11739",
+"code": "",
+"site": "https://huggingface.co/OpenGalaxea/G05",
+"note_en": "VLM stays the actor (no separate action expert); gated weights.",
+"note_zh": "VLM 本身直接输出动作（无独立动作专家）；权重需申请。",
+"hwl": [
+[
+"Galaxea R1 Lite",
+"R1 Lite"
+],
+[
+"Galaxea R1 PRO",
+"R1 PRO"
+],
+[
+"SO Arm 101",
+"SO Arm 101"
+]
+]
+},
+{
+"id": "dyna-2",
+"name": "DYNA-2",
+"org": "Dyna Robotics",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2026-08",
+"params": "",
+"open": "closed",
+"arch": "Video-generation world-action model, joint denoising of frames + action chunks",
+"action": "video-diffusion joint actions",
+"data": "1M+ h egocentric human video pretraining (no robot frames) + robot data",
+"emb": "Dyna dual-arm stations",
+"hw": [
+"b7857d7c4d"
+],
+"paper": "",
+"code": "",
+"site": "https://www.robotics247.com/article/dyna-robotics-unveils-dyna-2-world-action-model",
+"note_en": "Moves from VLA to WAM; 1.55x task completion vs DYNA-1 (company claim).",
+"note_zh": "从 VLA 转向世界动作模型；任务完成率为 DYNA-1 的 1.55 倍（公司数据）。",
+"hwl": [
+[
+"DYNA 2.1",
+"DYNA 2.1"
+]
+]
+},
+{
+"id": "xiaomi-robotics-u0",
+"name": "Xiaomi-Robotics-U0",
+"org": "Xiaomi",
+"zh": "小米",
+"c": "CN",
+"cty": "",
+"type": "world",
+"date": "2026-07",
+"params": "38B",
+"open": "weights",
+"arch": "Autoregressive world foundation model initialised from Emu3.5",
+"action": "n/a (embodied synthesis)",
+"data": "Text, images and embodied observations",
+"emb": "Data generation for robots",
+"hw": [],
+"paper": "",
+"code": "",
+"site": "https://huggingface.co/XiaomiRobotics/Xiaomi-Robotics-U0",
+"note_en": "Unified token space for robot scene / video synthesis.",
+"note_zh": "统一 token 空间的机器人场景与视频合成。",
+"hwl": []
+},
+{
+"id": "xiaomi-robotics-1",
+"name": "Xiaomi-Robotics-1",
+"org": "Xiaomi",
+"zh": "小米",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-07",
+"params": "5B",
+"open": "weights",
+"arch": "Mixture-of-Transformers: Qwen3-VL + DiT flow head",
+"action": "flow matching",
+"data": "100k+ h embodiment-free UMI trajectories, auto-labelled",
+"emb": "Mobile manipulators",
+"hw": [],
+"paper": "https://arxiv.org/abs/2607.15330",
+"code": "",
+"site": "https://robotics.xiaomi.com/xiaomi-robotics-1.html",
+"note_en": "Mobile manipulation in unseen environments out of the box.",
+"note_zh": "开箱即可在陌生环境完成移动操作。",
+"hwl": []
+},
+{
+"id": "pelican-vla-05",
+"name": "Pelican-VLA 0.5",
+"org": "Beijing Humanoid Robot Innovation Center (X-Humanoid)",
+"zh": "北京人形机器人创新中心",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-07",
+"params": "",
+"open": "weights",
+"arch": "Unified VLA built on Pelican-VL brain",
+"action": "continuous",
+"data": "Not fully disclosed",
+"emb": "Tien Kung humanoids, RoboTwin sim",
+"hw": [
+"ebdf0d9489"
+],
+"paper": "",
+"code": "",
+"site": "https://huggingface.co/X-Humanoid/Pelican-VLA05",
+"note_en": "Attends to instruction-relevant contact regions before acting.",
+"note_zh": "动作前聚焦与指令相关的接触区域。",
+"hwl": [
+[
+"X-Humanoid Tien Kung 2.0",
+"Tien Kung 2.0"
+]
+]
+},
+{
+"id": "minicpm-robot",
+"name": "MiniCPM-Robot",
+"org": "OpenBMB (ModelBest + Tsinghua)",
+"zh": "面壁智能 / 清华",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-07",
+"params": "1.5B",
+"open": "weights",
+"arch": "On-device VLA with streaming context and 4x visual-token compression",
+"action": "flow matching",
+"data": "Not fully disclosed",
+"emb": "Arms (LIBERO / RoboTwin / real)",
+"hw": [],
+"paper": "",
+"code": "https://github.com/OpenBMB/MiniCPM-Robot",
+"site": "https://huggingface.co/openbmb/MiniCPM-RobotManip",
+"note_en": "Edge-friendly manipulation and tracking models.",
+"note_zh": "面向端侧的操作与跟踪模型。",
+"hwl": []
+},
+{
+"id": "lingbot-vla-2",
+"name": "LingBot-VLA 2.0",
+"org": "Robbyant (Ant Group)",
+"zh": "蚂蚁灵波",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-07",
+"params": "6B",
+"open": "weights",
+"arch": "Qwen3-VL + MoE action expert, 55-D canonical action space",
+"action": "flow matching",
+"data": "~60k h: 50k h robot (20 configs) + 10k h egocentric human video",
+"emb": "Dual-arm, mobile, dexterous-hand platforms",
+"hw": [
+"e7720e062b"
+],
+"paper": "https://arxiv.org/abs/2607.06403",
+"code": "https://github.com/robbyant/lingbot-vla-v2",
+"site": "https://technology.robbyant.com/lingbot-vla-v2",
+"note_en": "Adds head, waist, base and hand DoF plus predictive dynamics.",
+"note_zh": "加入头、腰、底盘和灵巧手自由度及预测动力学。",
+"hwl": [
+[
+"AgileX COBOT Magic",
+"COBOT Magic"
+]
+]
+},
+{
+"id": "rxbrain",
+"name": "Hy-Embodied-RxBrain-1.0",
+"org": "Tencent Robotics X + Hy Team",
+"zh": "腾讯 Robotics X",
+"c": "CN",
+"cty": "",
+"type": "er",
+"date": "2026-07",
+"params": "",
+"open": "weights",
+"arch": "Unified model interleaving text reasoning and flow-matched imagined frames",
+"action": "n/a (language actions + goal images)",
+"data": "Embodied QA, video, planning data",
+"emb": "Any (embodied brain)",
+"hw": [],
+"paper": "",
+"code": "",
+"site": "https://huggingface.co/tencent/Hy-Embodied-RxBrain-1.0",
+"note_en": "Plans by both describing and imagining each subgoal.",
+"note_zh": "规划时同时给出文字步骤和想象的目标画面。",
+"hwl": []
+},
+{
+"id": "gemini-robotics-er-2",
+"name": "Gemini Robotics-ER 2",
+"org": "Google DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "er",
+"date": "2026-07",
+"params": "",
+"open": "api",
+"arch": "Gemini embodied-reasoning model",
+"action": "n/a (plans, points, tool calls)",
+"data": "Not disclosed",
+"emb": "Any (orchestrator)",
+"hw": [],
+"paper": "",
+"code": "",
+"site": "https://www.therobotreport.com/google-deepmind-says-gemini-robotics-2-enables-full-body-control/",
+"note_en": "On Google AI Studio; DeepMind calls it its safest robotics model (ASIMOV benchmark).",
+"note_zh": "已在 Google AI Studio 提供；官方称在 ASIMOV 安全评测上表现最好。",
+"hwl": []
+},
+{
+"id": "gemini-robotics-od-2",
+"name": "Gemini Robotics On-Device 2",
+"org": "Google DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2026-07",
+"params": "",
+"open": "closed",
+"arch": "On-robot Gemini Robotics VLA",
+"action": "continuous action chunks",
+"data": "Not disclosed; reported to adapt with <200 examples",
+"emb": "Humanoids and bi-arm robots",
+"hw": [
+"fa614b2bd3"
+],
+"paper": "",
+"code": "",
+"site": "https://www.therobotreport.com/google-deepmind-says-gemini-robotics-2-enables-full-body-control/",
+"note_en": "Local model of the Gemini Robotics 2 suite (early access).",
+"note_zh": "Gemini Robotics 2 套件中的本地版（早期合作方）。",
+"hwl": [
+[
+"Apptronik Apollo 2",
+"Apollo 2"
+]
+]
+},
+{
+"id": "gemini-robotics-2",
+"name": "Gemini Robotics 2",
+"org": "Google DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2026-07",
+"params": "",
+"open": "closed",
+"arch": "Gemini VLA with whole-body (legs, torso, arms, fingers) control",
+"action": "continuous action chunks",
+"data": "Not disclosed",
+"emb": "Apptronik Apollo 2 with SharpaWave hands; bi-arm robots",
+"hw": [
+"fa614b2bd3"
+],
+"paper": "",
+"code": "",
+"site": "https://www.therobotreport.com/google-deepmind-says-gemini-robotics-2-enables-full-body-control/",
+"note_en": "Whole-body humanoid control and multi-robot collaboration; early-access partners only.",
+"note_zh": "人形全身控制与多机协作；仅向早期合作方开放。",
+"hwl": [
+[
+"Apptronik Apollo 2",
+"Apollo 2"
+]
+]
+},
+{
+"id": "hy-vla-05",
+"name": "Hy-Embodied-0.5-VLA",
+"org": "Tencent Hunyuan / Robotics X",
+"zh": "腾讯混元 / Robotics X",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-06",
+"params": "",
+"open": "weights",
+"arch": "Mixture-of-Transformers VLA with RL post-training",
+"action": "flow matching",
+"data": "250k+ episodes / 10k+ h dual-arm teleop (~2k h released)",
+"emb": "Dual-arm platforms, UMI",
+"hw": [],
+"paper": "https://arxiv.org/abs/2606.14409",
+"code": "",
+"site": "https://huggingface.co/tencent/Hy-Embodied-0.5-VLA-UMI",
+"note_en": "Full robot-learning stack from data to deployment.",
+"note_zh": "覆盖数据到部署的完整机器人学习栈。",
+"hwl": []
+},
+{
+"id": "cosmos3",
+"name": "Cosmos 3 (incl. Cosmos3 Policy)",
+"org": "NVIDIA",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2026-06",
+"params": "Nano / Super (reported 8B / 32B+)",
+"open": "weights",
+"arch": "Omnimodal world model: video, image, audio and action generation; Super / Nano / Edge",
+"action": "actions from world model (policy variants)",
+"data": "Not fully disclosed",
+"emb": "Post-trained policies for DROID Franka, LIBERO",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "",
+"code": "https://github.com/nvidia/cosmos",
+"site": "https://research.nvidia.com/labs/cosmos-lab/cosmos3/",
+"note_en": "Open (OpenMDW) world model that doubles as a world-action backbone.",
+"note_zh": "开放许可（OpenMDW）的世界模型，也可作为世界动作模型骨干。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "wall-oss-05",
+"name": "WALL-OSS 0.5",
+"org": "X Square Robot",
+"zh": "自变量机器人",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-05",
+"params": "",
+"open": "weights",
+"arch": "WALL-OSS successor; full training stack released",
+"action": "flow matching",
+"data": "20+ embodiments, ~1M trajectories, 90M multimodal samples",
+"emb": "X Square Quanta, others",
+"hw": [
+"f78acc4941"
+],
+"paper": "",
+"code": "https://github.com/X-Square-Robot/wall-x",
+"site": "https://huggingface.co/x-square-robot/wall-oss-0.5",
+"note_en": "Zero-shot deployment without task fine-tuning (company claim).",
+"note_zh": "无需任务微调即可零样本部署（公司说法）。",
+"hwl": [
+[
+"X Square QUANTA X2",
+"QUANTA X2"
+]
+]
+},
+{
+"id": "qwen-vla",
+"name": "Qwen-VLA",
+"org": "Alibaba Qwen",
+"zh": "阿里通义千问",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-05",
+"params": "",
+"open": "paper",
+"arch": "Qwen3.5 VLM + DiT flow-matching action decoder",
+"action": "flow matching",
+"data": "Manipulation, egocentric human demos, sim, VLN, trajectories",
+"emb": "Arms, mobile robots, navigation",
+"hw": [],
+"paper": "https://arxiv.org/abs/2605.30280",
+"code": "",
+"site": "",
+"note_en": "Unifies manipulation, navigation and trajectory prediction in one VLA.",
+"note_zh": "在一个 VLA 中统一操作、导航和轨迹预测。",
+"hwl": []
+},
+{
+"id": "molmoact2",
+"name": "MolmoAct2",
+"org": "Allen Institute for AI (Ai2)",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2026-05",
+"params": "",
+"open": "weights",
+"arch": "MolmoER VLM + flow-matching action expert via per-layer KV cache, OpenFAST tokenizer",
+"action": "flow matching",
+"data": "MolmoAct2-BimanualYAM (720 h) + DROID + SO-100/101 data",
+"emb": "i2rt YAM bimanual, Franka (DROID), SO-101",
+"hw": [
+"85516d60fd",
+"9d8879b0c2",
+"c6bb2ccaf0"
+],
+"paper": "https://arxiv.org/abs/2605.02881",
+"code": "https://github.com/allenai/MolmoAct2",
+"site": "https://allenai.org/blog/molmoact2",
+"note_en": "Fully open; targets low-cost hardware.",
+"note_zh": "完全开放，面向低成本硬件。",
+"hwl": [
+[
+"i2rt YAM",
+"YAM"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+],
+[
+"SO Arm 101",
+"SO Arm 101"
+]
+]
+},
+{
+"id": "pi07",
+"name": "π0.7",
+"org": "Physical Intelligence",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2026-04",
+"params": "",
+"open": "api",
+"arch": "Steerable generalist VLA (language coaching, metadata prompts)",
+"action": "flow matching",
+"data": "Not disclosed",
+"emb": "Multiple robot platforms",
+"hw": [],
+"paper": "",
+"code": "",
+"site": "https://www.pi.website/blog/pi07",
+"note_en": "One model matches earlier RL specialists; offered via Pi API beta from Oct 2026.",
+"note_zh": "单一模型达到此前 RL 专用模型的水平；2026 年 10 月起通过 Pi API 测试版开放。",
+"hwl": []
+},
+{
+"id": "vla-foundry",
+"name": "VLA Foundry",
+"org": "Toyota Research Institute",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2026-04",
+"params": "1.7B / 2.1B",
+"open": "weights",
+"arch": "LLM→VLM→VLA in one stack; Foundry-VLA-1.7B and Foundry-Qwen3VLA-2.1B",
+"action": "flow matching",
+"data": "TRI LBM data; evaluated in LBM Eval sim",
+"emb": "Bimanual Franka (sim + real)",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2604.19728",
+"code": "",
+"site": "https://huggingface.co/TRI-ML",
+"note_en": "Fully open from-scratch recipe, not just fine-tuning scripts.",
+"note_zh": "完全开放的从零训练流程，不只是微调脚本。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "genie-envisioner-2",
+"name": "Genie Envisioner 2.0 (GE-2)",
+"org": "AgiBot",
+"zh": "智元机器人",
+"c": "CN",
+"cty": "",
+"type": "world",
+"date": "2026-04",
+"params": "",
+"open": "weights",
+"arch": "Interactive action-conditioned world model with built-in reward model",
+"action": "n/a (simulation for RL)",
+"data": "AgiBot World + more",
+"emb": "AgiBot robots",
+"hw": [
+"6979d35b90"
+],
+"paper": "",
+"code": "",
+"site": "https://cntechpost.com/2026/04/10/agibot-releases-genie-envisioner-2-0-build-interactive-model-worlds-humanoid-robots/",
+"note_en": "Minute-long stable rollouts; closed-loop RL inside the model (GE-Sim 2.0 weights on HF).",
+"note_zh": "分钟级稳定推演，可在模型内闭环强化学习（GE-Sim 2.0 已上 HF）。",
+"hwl": [
+[
+"AgiBot G2",
+"G2"
+]
+]
+},
+{
+"id": "gr00t-n17",
+"name": "GR00T N1.7",
+"org": "NVIDIA",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2026-04",
+"params": "3B",
+"open": "weights",
+"arch": "Cosmos-Reason2-2B VLM + DiT flow head, reasoning policy",
+"action": "flow matching",
+"data": "Robot data + ~20k h EgoScale human ego video",
+"emb": "Unitree G1, GR-1, Franka (DROID)",
+"hw": [
+"115e3e0388",
+"37f590a35d",
+"9d8879b0c2"
+],
+"paper": "",
+"code": "https://github.com/NVIDIA/Isaac-GR00T",
+"site": "https://huggingface.co/nvidia/GR00T-N1.7-3B",
+"note_en": "Commercially licensable open humanoid VLA (early access).",
+"note_zh": "可商用的开放权重人形 VLA（早期访问）。",
+"hwl": [
+[
+"Unitree G1+",
+"G1+"
+],
+[
+"Fourier GR-1",
+"GR-1"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "agibot-go2",
+"name": "GO-2 (Genie Operator-2)",
+"org": "AgiBot",
+"zh": "智元机器人",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-04",
+"params": "",
+"open": "closed",
+"arch": "Action chain-of-thought + asynchronous dual system",
+"action": "continuous",
+"data": "AgiBot World + deployment data",
+"emb": "AgiBot G2",
+"hw": [
+"6979d35b90"
+],
+"paper": "",
+"code": "",
+"site": "https://agibot.com/article/231/detail/56.html",
+"note_en": "Plans a high-level action sequence before control; LIBERO 98.5% (company).",
+"note_zh": "先生成高层动作序列再执行；LIBERO 98.5%（公司数据）。",
+"hwl": [
+[
+"AgiBot G2",
+"G2"
+]
+]
+},
+{
+"id": "gen-1",
+"name": "GEN-1",
+"org": "Generalist AI",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2026-04",
+"params": "",
+"open": "closed",
+"arch": "Multimodal model emitting real-time actions, trained from scratch",
+"action": "continuous",
+"data": "~500k h human wearable data; base model uses no robot data",
+"emb": "Arms with grippers, five-finger hands",
+"hw": [],
+"paper": "",
+"code": "",
+"site": "https://generalistai.com/blog/gen-1",
+"note_en": "Claims 99% avg success on tasks where earlier models hit 64% (company claim).",
+"note_zh": "称在此前模型 64% 成功率的任务上达到 99%（公司数据）。",
+"hwl": []
+},
+{
+"id": "being-h07",
+"name": "Being-H0.7",
+"org": "BeingBeyond",
+"zh": "智在无界",
+"c": "CN",
+"cty": "",
+"type": "world",
+"date": "2026-04",
+"params": "",
+"open": "paper",
+"arch": "Latent world-action model: learnable latent queries, prior/posterior branches",
+"action": "flow matching",
+"data": "Egocentric human video + robot data",
+"emb": "Dexterous arms",
+"hw": [],
+"paper": "https://arxiv.org/abs/2605.00078",
+"code": "",
+"site": "",
+"note_en": "Future-aware reasoning without generating pixels.",
+"note_zh": "不生成画面也能进行面向未来的推理。",
+"hwl": []
+},
+{
+"id": "v-jepa21",
+"name": "V-JEPA 2.1",
+"org": "Meta FAIR",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2026-03",
+"params": "80M-2B",
+"open": "weights",
+"arch": "V-JEPA with dense predictive loss + deep self-supervision",
+"action": "planning in latent space",
+"data": "Internet video",
+"emb": "Franka (grasping), navigation robots",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2603.14482",
+"code": "https://github.com/facebookresearch/vjepa2",
+"site": "",
+"note_en": "Denser features; +20% real-robot grasp success over V-JEPA 2-AC.",
+"note_zh": "更稠密的特征，真机抓取成功率比 V-JEPA 2-AC 高 20%。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "pi-mem",
+"name": "MEM (Multi-Scale Embodied Memory)",
+"org": "Physical Intelligence",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2026-03",
+"params": "",
+"open": "paper",
+"arch": "π VLA with short-term visual + long-term language memory",
+"action": "flow matching",
+"data": "Not disclosed",
+"emb": "Mobile manipulators",
+"hw": [],
+"paper": "",
+"code": "",
+"site": "https://www.pi.website/research/memory",
+"note_en": "Adds long/short-term memory for tasks lasting many minutes.",
+"note_zh": "为持续数分钟的任务加入长短期记忆。",
+"hwl": []
+},
+{
+"id": "gr00t-n2",
+"name": "GR00T N2 (preview)",
+"org": "NVIDIA",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2026-03",
+"params": "",
+"open": "closed",
+"arch": "World action model architecture (DreamZero line)",
+"action": "video-diffusion joint actions",
+"data": "Not disclosed",
+"emb": "Humanoids and arms",
+"hw": [],
+"paper": "",
+"code": "",
+"site": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Global-Robotics-Leaders-Take-Physical-AI-to-the-Real-World",
+"note_en": "Previewed at GTC 2026; NVIDIA says available by end of 2026.",
+"note_zh": "GTC 2026 预览，官方称 2026 年底前上线。",
+"hwl": []
+},
+{
+"id": "xiaomi-robotics-0",
+"name": "Xiaomi-Robotics-0",
+"org": "Xiaomi",
+"zh": "小米",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-02",
+"params": "4.7B",
+"open": "weights",
+"arch": "VLM + DiT flow-matching action head, async execution",
+"action": "flow matching",
+"data": "Cross-embodiment robot trajectories + VL data",
+"emb": "Bimanual arms; Xiaomi robots",
+"hw": [
+"c977272098"
+],
+"paper": "https://arxiv.org/abs/2602.12684",
+"code": "https://github.com/XiaomiRobotics/Xiaomi-Robotics-0",
+"site": "https://xiaomi-robotics-0.github.io/",
+"note_en": "Open VLA tuned for smooth real-time execution.",
+"note_zh": "针对实时流畅执行优化的开源 VLA。",
+"hwl": [
+[
+"Xiaomi Tieda",
+"Tieda"
+]
+]
+},
+{
+"id": "rdt2",
+"name": "RDT2",
+"org": "Tsinghua University (TSAIL)",
+"zh": "清华大学",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-02",
+"params": "7B",
+"open": "weights",
+"arch": "7B VLM + RVQ tokens, flow matching, distilled for real time",
+"action": "discrete RVQ + flow",
+"data": "10k+ h UMI demos across diverse families",
+"emb": "Unseen embodiments zero-shot (UR5e, Franka, ...)",
+"hw": [
+"3ba40953a8",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2602.03310",
+"code": "https://github.com/thu-ml/RDT2",
+"site": "https://rdt-robotics.github.io/rdt2/",
+"note_en": "Zero-shot deployment on new embodiments via UMI data scale.",
+"note_zh": "依靠 UMI 数据规模实现新本体零样本部署。",
+"hwl": [
+[
+"Universal Robots UR7e-920 (formerly UR5e)",
+"Universal Robots UR7e-920 (formerly UR5e)"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "dreamzero",
+"name": "DreamZero",
+"org": "NVIDIA GEAR",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2026-02",
+"params": "14B",
+"open": "weights",
+"arch": "World action model on Wan2.1-I2V-14B, joint video + action denoising",
+"action": "video-diffusion joint actions",
+"data": "Robot data (DROID, AgiBot) + video-only demos",
+"emb": "Franka (DROID), AgiBot",
+"hw": [
+"9d8879b0c2",
+"252bdba578"
+],
+"paper": "https://arxiv.org/abs/2602.15922",
+"code": "https://github.com/dreamzero0/dreamzero",
+"site": "https://dreamzero0.github.io/",
+"note_en": "'World action models are zero-shot policies'; 7 Hz real-time; basis of GR00T N2.",
+"note_zh": "“世界动作模型即零样本策略”，7 Hz 实时；GR00T N2 的研究基础。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+],
+[
+"AgiBot G1",
+"G1"
+]
+]
+},
+{
+"id": "abot-m0",
+"name": "ABot-M0",
+"org": "AMAP CV Lab (Alibaba)",
+"zh": "阿里巴巴高德",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-02",
+"params": "",
+"open": "weights",
+"arch": "Qwen3-VL + DiT action expert with action-manifold learning",
+"action": "flow matching (manifold projection)",
+"data": "UniACT: 6M+ trajectories / 9.5k h from 6 public datasets",
+"emb": "Sim + public-dataset robots",
+"hw": [],
+"paper": "https://arxiv.org/abs/2602.11236",
+"code": "https://github.com/amap-cvlab/ABot-Manipulation",
+"site": "https://amap-cvlab.github.io/ABot-Manipulation/",
+"note_en": "Open data pipeline + model; M0.5/M0.6 checkpoints followed.",
+"note_zh": "开放数据管线与模型；后续发布 M0.5/M0.6。",
+"hwl": []
+},
+{
+"id": "unifolm-vla-0",
+"name": "UnifoLM-VLA-0",
+"org": "Unitree Robotics",
+"zh": "宇树科技",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-01",
+"params": "~7B",
+"open": "weights",
+"arch": "Qwen2.5-VL-7B continued pretraining + action head",
+"action": "continuous",
+"data": "~340 h real robot data",
+"emb": "Unitree G1 humanoid",
+"hw": [
+"115e3e0388"
+],
+"paper": "",
+"code": "https://github.com/unitreerobotics/unifolm-vla",
+"site": "https://huggingface.co/unitreerobotics/UnifoLM-VLA-Base",
+"note_en": "Humanoid manipulation VLA with spatial reasoning.",
+"note_zh": "强化空间推理的人形操作 VLA。",
+"hwl": [
+[
+"Unitree G1+",
+"G1+"
+]
+]
+},
+{
+"id": "spirit-v15",
+"name": "Spirit v1.5",
+"org": "Spirit AI",
+"zh": "千寻智能",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-01",
+"params": "",
+"open": "weights",
+"arch": "Unified end-to-end VLA",
+"action": "flow matching (reported)",
+"data": "Open-ended, goal-driven diverse data (not scripted demos)",
+"emb": "Moz1 humanoid, Franka",
+"hw": [
+"ac7f49eaff",
+"9d8879b0c2"
+],
+"paper": "",
+"code": "",
+"site": "https://huggingface.co/Spirit-AI-robotics/Spirit-v1.5",
+"note_en": "Topped RoboChallenge Table30 (66.09), above π0.5, at release.",
+"note_zh": "发布时在 RoboChallenge Table30 排名第一（66.09 分），超过 π0.5。",
+"hwl": [
+[
+"Spirit AI Moz1",
+"Moz1"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "lingbot-vla",
+"name": "LingBot-VLA",
+"org": "Robbyant (Ant Group)",
+"zh": "蚂蚁灵波",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2026-01",
+"params": "4B",
+"open": "weights",
+"arch": "Qwen2.5-VL + flow-matching action expert (MoT)",
+"action": "flow matching",
+"data": "~20k h real data from 9 dual-arm configurations",
+"emb": "AgileX, Galaxea R1, AgiBot G1 and others",
+"hw": [
+"e7720e062b",
+"2ff6f2d21c",
+"252bdba578"
+],
+"paper": "https://arxiv.org/abs/2601.18692",
+"code": "https://github.com/Robbyant/lingbot-vla",
+"site": "https://technology.robbyant.com/lingbot-vla/",
+"note_en": "Pragmatic, cost-efficient open VLA with fast training codebase.",
+"note_zh": "务实、低成本的开源 VLA，训练代码高效。",
+"hwl": [
+[
+"AgileX COBOT Magic",
+"COBOT Magic"
+],
+[
+"Galaxea R1 Lite",
+"R1 Lite"
+],
+[
+"AgiBot G1",
+"G1"
+]
+]
+},
+{
+"id": "helix-02",
+"name": "Helix 02",
+"org": "Figure AI",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2026-01",
+"params": "",
+"open": "closed",
+"arch": "S2 + S1 + new S0 learned whole-body controller",
+"action": "continuous (whole body)",
+"data": "Teleop + human video + sim RL for S0",
+"emb": "Figure 03",
+"hw": [
+"0c62208b86"
+],
+"paper": "",
+"code": "",
+"site": "https://www.figure.ai/news/helix-02",
+"note_en": "Full-body autonomy; S0 replaced >100k lines of hand-written C++ control.",
+"note_zh": "全身自主，S0 取代了 10 万多行手写 C++ 控制代码。",
+"hwl": [
+[
+"Figure 03",
+"Figure 03"
+]
+]
+},
+{
+"id": "cosmos-policy",
+"name": "Cosmos Policy",
+"org": "NVIDIA + Stanford",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2026-01",
+"params": "2B",
+"open": "weights",
+"arch": "Cosmos-Predict2-2B video model post-trained to output actions, future states, values",
+"action": "video-diffusion latent actions",
+"data": "Robot demos (LIBERO, RoboCasa, ALOHA)",
+"emb": "ALOHA bimanual",
+"hw": [
+"7b2b7f3974"
+],
+"paper": "https://arxiv.org/abs/2601.16163",
+"code": "",
+"site": "https://research.nvidia.com/labs/dir/cosmos-policy/",
+"note_en": "Video model as policy + planner; 93.6% on real ALOHA tasks (non-commercial license).",
+"note_zh": "视频模型直接做策略和规划；真机 ALOHA 平均成功率 93.6%（非商用许可）。",
+"hwl": [
+[
+"Trossen ALOHA Stationary",
+"ALOHA Stationary"
+]
+]
+},
+{
+"id": "1x-wm",
+"name": "1X World Model (1XWM)",
+"org": "1X Technologies",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2026-01",
+"params": "",
+"open": "closed",
+"arch": "Physics-grounded video model used as video-to-action policy",
+"action": "video-conditioned actions",
+"data": "Internet + egocentric video + NEO data",
+"emb": "1X NEO",
+"hw": [
+"379fd8219a"
+],
+"paper": "",
+"code": "",
+"site": "https://www.1x.tech/discover/redwood-ai-world-model",
+"note_en": "NEO predicts outcomes before acting; aims at tasks it never trained on.",
+"note_zh": "NEO 先预测动作后果再执行，目标是完成未训练过的任务。",
+"hwl": [
+[
+"1X NEO",
+"1X NEO"
+]
+]
+},
+{
+"id": "xr-1",
+"name": "XR-1",
+"org": "Beijing Humanoid Robot Innovation Center (X-Humanoid)",
+"zh": "北京人形机器人创新中心",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-12",
+"params": "",
+"open": "weights",
+"arch": "VLA with unified vision-motion codes (UVMC)",
+"action": "continuous",
+"data": "RoboMIND 2.0 + 1M+ samples",
+"emb": "Tien Kung 2.0, UR, Franka",
+"hw": [
+"ebdf0d9489",
+"3ba40953a8",
+"9d8879b0c2"
+],
+"paper": "",
+"code": "",
+"site": "https://huggingface.co/X-Humanoid",
+"note_en": "Passed China's embodied-AI national standard test (per media).",
+"note_zh": "据报道为首个通过具身智能国标测试的 VLA。",
+"hwl": [
+[
+"X-Humanoid Tien Kung 2.0",
+"Tien Kung 2.0"
+],
+[
+"Universal Robots UR7e-920 (formerly UR5e)",
+"Universal Robots UR7e-920 (formerly UR5e)"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "gr-rl",
+"name": "GR-RL",
+"org": "ByteDance Seed",
+"zh": "字节跳动 Seed",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-12",
+"params": "",
+"open": "closed",
+"arch": "GR-3 VLA + critic transformer, offline filtering + online RL",
+"action": "flow matching",
+"data": "Demos + RL rollouts",
+"emb": "Bimanual arms",
+"hw": [],
+"paper": "https://arxiv.org/abs/2512.01801",
+"code": "",
+"site": "https://seed.bytedance.com/en/public_papers/gr-rl-going-dexterous-and-precise-for-long-horizon-robotic-manipulation",
+"note_en": "First real-robot shoe lacing via RL fine-tuning.",
+"note_zh": "通过强化学习首次实现真机系鞋带。",
+"hwl": []
+},
+{
+"id": "gr-dexter",
+"name": "GR-Dexter",
+"org": "ByteDance Seed",
+"zh": "字节跳动 Seed",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-12",
+"params": "4B",
+"open": "closed",
+"arch": "GR-3-style MoT VLA for bimanual dexterous hands",
+"action": "flow matching",
+"data": "Teleop + human hand data",
+"emb": "ByteDexter hands on bimanual arms",
+"hw": [
+"96c23a6457"
+],
+"paper": "https://arxiv.org/abs/2512.24210",
+"code": "",
+"site": "",
+"note_en": "High-DoF dexterous-hand VLA (0.97 success in basic settings).",
+"note_zh": "高自由度灵巧手 VLA（基础场景成功率 0.97）。",
+"hwl": [
+[
+"ByteDexter",
+"ByteDexter"
+]
+]
+},
+{
+"id": "pi-star-06",
+"name": "π*0.6",
+"org": "Physical Intelligence",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-11",
+"params": "",
+"open": "closed",
+"arch": "π0.6 VLA + RECAP (advantage-conditioned RL from experience)",
+"action": "flow matching",
+"data": "Demos + expert corrections + autonomous rollouts",
+"emb": "Bimanual arms (espresso, laundry, box assembly)",
+"hw": [],
+"paper": "https://arxiv.org/abs/2511.14759",
+"code": "",
+"site": "https://www.pi.website/blog/pistar06",
+"note_en": "RL from experience more than doubles throughput on hard real tasks.",
+"note_zh": "从经验中强化学习，难任务吞吐量提升一倍以上。",
+"hwl": []
+},
+{
+"id": "xpeng-vla2",
+"name": "XPeng VLA 2.0",
+"org": "XPeng",
+"zh": "小鹏汽车",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-11",
+"params": "",
+"open": "closed",
+"arch": "Vision-to-action 'physical world model' without language bottleneck",
+"action": "continuous",
+"data": "Driving + robot data (not disclosed)",
+"emb": "XPeng IRON humanoid, cars",
+"hw": [
+"493b330757",
+"7b78245b03"
+],
+"paper": "",
+"code": "",
+"site": "https://www.news.cn/auto/20251106/a49e7e6cdd38419ab363605c1c528ae4/c.html",
+"note_en": "Shared across cars, IRON humanoid and flying cars; open-sourcing announced.",
+"note_zh": "汽车、IRON 人形机器人和飞行汽车共用；已宣布将开源。",
+"hwl": [
+[
+"XPeng IRON",
+"IRON"
+],
+[
+"XPeng Iron 2",
+"Iron 2"
+]
+]
+},
+{
+"id": "sonic",
+"name": "SONIC",
+"org": "NVIDIA GEAR",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "wbc",
+"date": "2025-11",
+"params": "1.2M-42M",
+"open": "weights",
+"arch": "Scaled motion-tracking transformer controller",
+"action": "continuous joint targets",
+"data": "100M+ frames / 700 h mocap, 21k GPU-hours",
+"emb": "Unitree G1",
+"hw": [
+"115e3e0388"
+],
+"paper": "https://arxiv.org/abs/2511.07820",
+"code": "",
+"site": "https://nvlabs.github.io/SONIC/",
+"note_en": "Scaling laws for humanoid whole-body control; used as GR00T's lower body.",
+"note_zh": "人形全身控制的规模化实验；后作为 GR00T 的下肢控制器。",
+"hwl": [
+[
+"Unitree G1+",
+"G1+"
+]
+]
+},
+{
+"id": "pelican-vl",
+"name": "Pelican-VL 1.0",
+"org": "Beijing Humanoid Robot Innovation Center (X-Humanoid)",
+"zh": "北京人形机器人创新中心",
+"c": "CN",
+"cty": "",
+"type": "er",
+"date": "2025-11",
+"params": "7B / 72B",
+"open": "weights",
+"arch": "Embodied brain VLM (Qwen-based)",
+"action": "n/a (planning, reasoning)",
+"data": "Curated embodied multimodal data",
+"emb": "Tien Kung humanoids (as brain)",
+"hw": [
+"ebdf0d9489"
+],
+"paper": "https://arxiv.org/abs/2511.00108",
+"code": "",
+"site": "https://huggingface.co/X-Humanoid",
+"note_en": "Large open embodied brain model; part of 'Huisi Kaiwu'.",
+"note_zh": "开源具身大脑模型，“慧思开物”平台的一部分。",
+"hwl": [
+[
+"X-Humanoid Tien Kung 2.0",
+"Tien Kung 2.0"
+]
+]
+},
+{
+"id": "mimo-embodied",
+"name": "MiMo-Embodied",
+"org": "Xiaomi",
+"zh": "小米",
+"c": "CN",
+"cty": "",
+"type": "er",
+"date": "2025-11",
+"params": "7B",
+"open": "weights",
+"arch": "Cross-embodied VLM for embodied AI and autonomous driving",
+"action": "n/a (reasoning, planning)",
+"data": "Embodied + driving multimodal data",
+"emb": "Robots and vehicles (as brain)",
+"hw": [],
+"paper": "https://arxiv.org/abs/2511.16518",
+"code": "https://github.com/XiaomiMiMo/MiMo-Embodied",
+"site": "https://huggingface.co/XiaomiMiMo/MiMo-Embodied-7B",
+"note_en": "One model for embodied reasoning and driving benchmarks.",
+"note_zh": "一个模型同时覆盖具身推理与自动驾驶评测。",
+"hwl": []
+},
+{
+"id": "gen-0",
+"name": "GEN-0",
+"org": "Generalist AI",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-11",
+"params": "1B-10B+ (scaling study)",
+"open": "closed",
+"arch": "Embodied foundation model with 'Harmonic Reasoning' (think and act concurrently)",
+"action": "continuous",
+"data": "270k h real manipulation (UMI-style wearables), +10k h/week",
+"emb": "Multiple arms / grippers",
+"hw": [],
+"paper": "",
+"code": "",
+"site": "https://generalistai.com/blog/gen-0",
+"note_en": "Shows scaling laws with physical-interaction data.",
+"note_zh": "展示了物理交互数据的规模定律。",
+"hwl": []
+},
+{
+"id": "bfm-zero",
+"name": "BFM-Zero",
+"org": "CMU (LeCAR Lab)",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "wbc",
+"date": "2025-11",
+"params": "",
+"open": "weights",
+"arch": "Promptable behavioral foundation model, unsupervised RL latent space",
+"action": "continuous joint targets",
+"data": "Motion data + off-policy unsupervised RL in sim",
+"emb": "Unitree G1",
+"hw": [
+"115e3e0388"
+],
+"paper": "https://arxiv.org/abs/2511.04131",
+"code": "https://github.com/LeCAR-Lab/BFM-Zero",
+"site": "https://huggingface.co/LeCAR-Lab/BFM-Zero",
+"note_en": "One policy prompted for tracking, goal reaching or reward optimisation.",
+"note_zh": "一个策略可被提示完成跟踪、到达目标或奖励优化。",
+"hwl": [
+[
+"Unitree G1+",
+"G1+"
+]
+]
+},
+{
+"id": "sunday-act1",
+"name": "ACT-1",
+"org": "Sunday Robotics",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-11",
+"params": "",
+"open": "closed",
+"arch": "End-to-end model: long-horizon manipulation + map-conditioned navigation",
+"action": "continuous",
+"data": "Skill Capture Glove data from 500+ homes, zero robot data",
+"emb": "Sunday Memo",
+"hw": [
+"be11b5ef04"
+],
+"paper": "",
+"code": "",
+"site": "https://www.sunday.ai/journal/no-robot-data",
+"note_en": "Trained without robot data; table-to-dishwasher in unseen homes.",
+"note_zh": "不用机器人数据训练；在陌生家庭完成收桌到洗碗机全流程。",
+"hwl": [
+[
+"Sunday MEMO",
+"MEMO"
+]
+]
+},
+{
+"id": "x-vla",
+"name": "X-VLA",
+"org": "Tsinghua AIR",
+"zh": "清华大学智能产业研究院",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-10",
+"params": "0.9B",
+"open": "weights",
+"arch": "Soft-prompted transformer encoder, flow matching",
+"action": "flow matching",
+"data": "290k episodes across 7 platforms",
+"emb": "Franka, WidowX, AgileX, UR",
+"hw": [
+"9d8879b0c2",
+"f783102089",
+"e7720e062b"
+],
+"paper": "https://arxiv.org/abs/2510.10274",
+"code": "https://github.com/2toinf/X-VLA",
+"site": "https://thu-air-dream.github.io/X-VLA/",
+"note_en": "SOTA on LIBERO / Simpler / RoboTwin with 0.9B params.",
+"note_zh": "0.9B 参数在多个仿真评测上领先。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+],
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+],
+[
+"AgileX COBOT Magic",
+"COBOT Magic"
+]
+]
+},
+{
+"id": "internvla-m1",
+"name": "InternVLA-M1",
+"org": "Shanghai AI Lab",
+"zh": "上海人工智能实验室",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-10",
+"params": "~4B",
+"open": "weights",
+"arch": "Spatial-grounding VLM (Qwen2.5-VL) + diffusion action expert",
+"action": "diffusion",
+"data": "3M+ spatial grounding samples + sim (InternData-M1)",
+"emb": "Franka, sim",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2510.13778",
+"code": "https://github.com/InternRobotics/InternVLA-M1",
+"site": "",
+"note_en": "Spatial grounding pretraining then action post-training.",
+"note_zh": "先做空间定位预训练，再做动作后训练。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "wall-oss",
+"name": "WALL-OSS",
+"org": "X Square Robot",
+"zh": "自变量机器人",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-09",
+"params": "4.2B",
+"open": "weights",
+"arch": "Qwen2.5-VL-based unified cross-level CoT, MoE flow / FAST heads",
+"action": "flow matching or FAST tokens",
+"data": "Large-scale embodied VQA + robot data",
+"emb": "X Square Quanta X1/X2",
+"hw": [
+"f78acc4941"
+],
+"paper": "https://arxiv.org/abs/2509.11766",
+"code": "https://github.com/X-Square-Robot/wall-x",
+"site": "https://x2robot.com/en/research/68bc2cde8497d7f238dde690",
+"note_en": "Language, vision and action output from one embodied model.",
+"note_zh": "一个具身模型统一输出语言、视觉和动作。",
+"hwl": [
+[
+"X Square QUANTA X2",
+"QUANTA X2"
+]
+]
+},
+{
+"id": "unifolm-wma-0",
+"name": "UnifoLM-WMA-0",
+"org": "Unitree Robotics",
+"zh": "宇树科技",
+"c": "CN",
+"cty": "",
+"type": "world",
+"date": "2025-09",
+"params": "",
+"open": "weights",
+"arch": "World-model-action architecture (video world model + action head)",
+"action": "diffusion",
+"data": "Open-X + Unitree datasets",
+"emb": "Unitree G1, Z1 arm",
+"hw": [
+"115e3e0388"
+],
+"paper": "",
+"code": "https://github.com/unitreerobotics/unifolm-world-model-action",
+"site": "https://unigen-x.github.io/unifolm-world-model-action.github.io/",
+"note_en": "World model doubles as simulator and policy enhancer.",
+"note_zh": "世界模型兼做仿真引擎和策略增强。",
+"hwl": [
+[
+"Unitree G1+",
+"G1+"
+]
+]
+},
+{
+"id": "gemini-robotics-er-15",
+"name": "Gemini Robotics-ER 1.5",
+"org": "Google DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "er",
+"date": "2025-09",
+"params": "",
+"open": "api",
+"arch": "Gemini embodied-reasoning model with tool calling",
+"action": "n/a (plans, points, tool calls)",
+"data": "Embodied reasoning + web data",
+"emb": "Orchestrates VLAs / any robot API",
+"hw": [],
+"paper": "https://arxiv.org/abs/2510.03342",
+"code": "",
+"site": "https://deepmind.google/models/gemini-robotics/",
+"note_en": "High-level orchestrator; available via Gemini API.",
+"note_zh": "高层编排模型，通过 Gemini API 开放。",
+"hwl": []
+},
+{
+"id": "gemini-robotics-15",
+"name": "Gemini Robotics 1.5",
+"org": "Google DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-09",
+"params": "",
+"open": "closed",
+"arch": "Gemini VLA that 'thinks before acting' + Motion Transfer across bodies",
+"action": "continuous action chunks",
+"data": "Multi-embodiment robot data + web data",
+"emb": "ALOHA, bi-arm Franka, Apptronik Apollo",
+"hw": [
+"7b2b7f3974",
+"9d8879b0c2",
+"c05f64e435"
+],
+"paper": "https://arxiv.org/abs/2510.03342",
+"code": "",
+"site": "https://deepmind.google/models/gemini-robotics/",
+"note_en": "Interleaves natural-language reasoning with actions; one checkpoint for 3 robots.",
+"note_zh": "动作前先用自然语言推理；一个模型控制三种机器人。",
+"hwl": [
+[
+"Trossen ALOHA Stationary",
+"ALOHA Stationary"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+],
+[
+"Apptronik Apollo",
+"Apollo"
+]
+]
+},
+{
+"id": "gr00t-n16",
+"name": "GR00T N1.6",
+"org": "NVIDIA",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-09",
+"params": "3B",
+"open": "weights",
+"arch": "Cosmos-Reason-2B VLM variant + larger DiT action head",
+"action": "flow matching",
+"data": "N1.5 mix + more humanoid loco-manipulation data",
+"emb": "Unitree G1, GR-1, bimanual arms",
+"hw": [
+"115e3e0388",
+"37f590a35d"
+],
+"paper": "",
+"code": "https://github.com/NVIDIA/Isaac-GR00T",
+"site": "https://developer.nvidia.com/blog/building-generalist-humanoid-capabilities-with-nvidia-isaac-gr00t-n1-6-using-a-sim-to-real-workflow/",
+"note_en": "Announced at CoRL 2025; native-resolution VLM, whole-body loco-manipulation.",
+"note_zh": "CoRL 2025 发布；原生分辨率 VLM，支持全身移动操作。",
+"hwl": [
+[
+"Unitree G1+",
+"G1+"
+],
+[
+"Fourier GR-1",
+"GR-1"
+]
+]
+},
+{
+"id": "galaxea-g0",
+"name": "G0",
+"org": "Galaxea Dynamics",
+"zh": "星海图",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-09",
+"params": "",
+"open": "weights",
+"arch": "Dual system: G0-VLM planner + G0-VLA executor",
+"action": "flow matching",
+"data": "Galaxea Open-World Dataset: 500 h, 150 tasks, 50 scenes",
+"emb": "Galaxea R1 Lite",
+"hw": [
+"2ff6f2d21c",
+"3cd46fa5fe"
+],
+"paper": "https://arxiv.org/abs/2509.00576",
+"code": "https://github.com/OpenGalaxea/G0",
+"site": "https://opengalaxea.github.io/G0/",
+"note_en": "Open dual-system VLA plus single-embodiment open dataset.",
+"note_zh": "开源双系统 VLA 及单一本体开放数据集。",
+"hwl": [
+[
+"Galaxea R1 Lite",
+"R1 Lite"
+],
+[
+"Galaxea R1 PRO",
+"R1 PRO"
+]
+]
+},
+{
+"id": "molmoact",
+"name": "MolmoAct",
+"org": "Allen Institute for AI (Ai2)",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-08",
+"params": "7B",
+"open": "weights",
+"arch": "Molmo VLM; depth tokens → visual trace → actions (action reasoning)",
+"action": "discrete tokens",
+"data": "MolmoAct dataset (10k+ trajectories) + OXE",
+"emb": "Franka",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2508.07917",
+"code": "https://github.com/allenai/MolmoAct",
+"site": "https://allenai.org/blog/molmoact",
+"note_en": "Fully open (weights, code, data) action reasoning model.",
+"note_zh": "权重、代码、数据全部开放的动作推理模型。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "genie-envisioner",
+"name": "Genie Envisioner (GE)",
+"org": "AgiBot",
+"zh": "智元机器人",
+"c": "CN",
+"cty": "",
+"type": "world",
+"date": "2025-08",
+"params": "",
+"open": "weights",
+"arch": "GE-Base video diffusion world model + GE-Act flow decoder + GE-Sim",
+"action": "video-conditioned flow actions",
+"data": "AgiBot World (~3,000 h video-action data)",
+"emb": "AgiBot G1, other dual-arm robots",
+"hw": [
+"252bdba578"
+],
+"paper": "https://arxiv.org/abs/2508.05635",
+"code": "https://github.com/AgibotTech/Genie-Envisioner",
+"site": "https://genie-envisioner.github.io/",
+"note_en": "World model as policy, simulator and evaluator in one platform.",
+"note_zh": "一个平台中世界模型同时做策略、模拟器和评测器。",
+"hwl": [
+[
+"AgiBot G1",
+"G1"
+]
+]
+},
+{
+"id": "eo-1",
+"name": "EO-1",
+"org": "EO-Robotics (Shanghai AI Lab, AgiBot et al.)",
+"zh": "上海人工智能实验室等",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-08",
+"params": "3B",
+"open": "weights",
+"arch": "Unified decoder interleaving vision-text-action, AR + flow",
+"action": "flow matching + text",
+"data": "EO-Data1.5M interleaved embodied data",
+"emb": "Franka, AgiBot G1, WidowX, Piper",
+"hw": [
+"9d8879b0c2",
+"252bdba578",
+"f783102089",
+"30b5336f92"
+],
+"paper": "https://arxiv.org/abs/2508.21112",
+"code": "https://github.com/EO-Robotics/EO1",
+"site": "https://eo-robotics.ai/eo-1",
+"note_en": "Interleaved embodied pretraining for reasoning + acting.",
+"note_zh": "交错式具身预训练，兼顾推理与动作。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+],
+[
+"AgiBot G1",
+"G1"
+],
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+],
+[
+"AgileX PiPER",
+"PiPER"
+]
+]
+},
+{
+"id": "beyondmimic",
+"name": "BeyondMimic",
+"org": "UC Berkeley (Hybrid Robotics)",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "wbc",
+"date": "2025-08",
+"params": "",
+"open": "code",
+"arch": "Motion tracking + guided diffusion for task control",
+"action": "continuous joint targets",
+"data": "Human mocap (LAFAN1 etc.)",
+"emb": "Unitree G1",
+"hw": [
+"115e3e0388"
+],
+"paper": "https://arxiv.org/abs/2508.08241",
+"code": "https://github.com/HybridRobotics/whole_body_tracking",
+"site": "https://beyondmimic.github.io/",
+"note_en": "Highly dynamic motion tracking (cartwheels, sprints) with zero-shot task guidance.",
+"note_zh": "高动态动作跟踪（侧手翻、冲刺），并可零样本引导到新任务。",
+"hwl": [
+[
+"Unitree G1+",
+"G1+"
+]
+]
+},
+{
+"id": "atlas-lbm",
+"name": "Atlas LBM",
+"org": "Boston Dynamics + TRI",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-08",
+"params": "",
+"open": "closed",
+"arch": "TRI-style diffusion transformer LBM, whole-body",
+"action": "diffusion (flow)",
+"data": "Teleop in VR + sim",
+"emb": "Boston Dynamics Atlas (electric)",
+"hw": [
+"493a1a6590"
+],
+"paper": "",
+"code": "",
+"site": "https://bostondynamics.com/blog/large-behavior-models-atlas-find-new-footing/",
+"note_en": "One language-conditioned policy for locomotion + manipulation on Atlas.",
+"note_zh": "在 Atlas 上用一个语言条件策略同时完成移动和操作。",
+"hwl": [
+[
+"Boston Dynamics Atlas",
+"Atlas"
+]
+]
+},
+{
+"id": "vidar",
+"name": "Vidar",
+"org": "ShengShu Technology + Tsinghua",
+"zh": "生数科技 / 清华",
+"c": "CN",
+"cty": "",
+"type": "world",
+"date": "2025-07",
+"params": "",
+"open": "paper",
+"arch": "Video diffusion model (Vidu) + masked inverse dynamics",
+"action": "video → inverse dynamics",
+"data": "750k multi-view bimanual videos + 20 min target-robot data",
+"emb": "Bimanual AgileX",
+"hw": [
+"e7720e062b"
+],
+"paper": "https://arxiv.org/abs/2507.12898",
+"code": "",
+"site": "",
+"note_en": "Few-shot generalist manipulation from a video foundation model.",
+"note_zh": "基于视频基础模型的少样本通用操作。",
+"hwl": [
+[
+"AgileX COBOT Magic",
+"COBOT Magic"
+]
+]
+},
+{
+"id": "tri-lbm",
+"name": "TRI Large Behavior Model (LBM)",
+"org": "Toyota Research Institute",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-07",
+"params": "",
+"open": "paper",
+"arch": "Language-conditioned diffusion transformer",
+"action": "diffusion",
+"data": "~1,700 h of bimanual demos (TRI + OXE)",
+"emb": "Bimanual Franka stations",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2507.05331",
+"code": "",
+"site": "https://toyotaresearchinstitute.github.io/lbm1/",
+"note_en": "Careful study: pretraining helps after fine-tuning, needs 3-5x less task data.",
+"note_zh": "严谨的对照实验：预训练后再微调可减少 3-5 倍任务数据。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "skild-brain",
+"name": "Skild Brain",
+"org": "Skild AI",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-07",
+"params": "",
+"open": "closed",
+"arch": "Omni-bodied hierarchical brain (high-level manipulation + low-level locomotion)",
+"action": "continuous",
+"data": "Large-scale sim + human video + real data",
+"emb": "Quadrupeds, humanoids, arms",
+"hw": [],
+"paper": "",
+"code": "",
+"site": "https://technical.ly/entrepreneurship/skild-brain-unveiled-ai-human-robot/",
+"note_en": "One brain for many bodies; partnerships with ABB and Universal Robots (2026).",
+"note_zh": "一个大脑控制多种本体；2026 年与 ABB、优傲合作。",
+"hwl": []
+},
+{
+"id": "robobrain2",
+"name": "RoboBrain 2.0",
+"org": "BAAI",
+"zh": "北京智源人工智能研究院",
+"c": "CN",
+"cty": "",
+"type": "er",
+"date": "2025-07",
+"params": "7B / 32B",
+"open": "weights",
+"arch": "Embodied VLM (Qwen2.5-VL based) for planning, affordance, trajectories",
+"action": "n/a (points, traces, plans)",
+"data": "Spatial/temporal embodied reasoning data",
+"emb": "Any (brain for VLAs)",
+"hw": [],
+"paper": "https://arxiv.org/abs/2507.02029",
+"code": "https://github.com/FlagOpen/RoboBrain2.0",
+"site": "https://superrobobrain.github.io/",
+"note_en": "Open embodied brain; RoboBrain 2.5 followed in Jan 2026.",
+"note_zh": "开放的具身大脑模型；2026 年 1 月推出 RoboBrain 2.5。",
+"hwl": []
+},
+{
+"id": "gr-3",
+"name": "GR-3",
+"org": "ByteDance Seed",
+"zh": "字节跳动 Seed",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-07",
+"params": "4B",
+"open": "closed",
+"arch": "Qwen2.5-VL + flow-matching DiT action head (MoT)",
+"action": "flow matching",
+"data": "Robot trajectories + VR human data + web VL co-training",
+"emb": "ByteMini mobile bimanual robot",
+"hw": [],
+"paper": "https://arxiv.org/abs/2507.15493",
+"code": "",
+"site": "https://seed.bytedance.com/GR3/",
+"note_en": "Strong long-horizon and deformable (clothes) manipulation.",
+"note_zh": "擅长长程任务和衣物等柔性物体操作。",
+"hwl": []
+},
+{
+"id": "being-h0",
+"name": "Being-H0",
+"org": "BeingBeyond",
+"zh": "智在无界",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-07",
+"params": "1B-14B",
+"open": "weights",
+"arch": "Dexterous VLA pretrained on human hand video (physical instruction tuning)",
+"action": "discrete hand-motion tokens + continuous",
+"data": "Large-scale human hand videos (UniHand)",
+"emb": "Dexterous hands on arms",
+"hw": [],
+"paper": "https://arxiv.org/abs/2507.15597",
+"code": "https://github.com/BeingBeyond/Being-H0",
+"site": "https://beingbeyond.github.io/Being-H0/",
+"note_en": "Human hand motion as pretraining signal; Being-H0.5 followed (Jan 2026).",
+"note_zh": "以人手动作作为预训练信号；2026 年 1 月推出 Being-H0.5。",
+"hwl": []
+},
+{
+"id": "worldvla",
+"name": "WorldVLA",
+"org": "Alibaba DAMO Academy",
+"zh": "阿里巴巴达摩院",
+"c": "CN",
+"cty": "",
+"type": "world",
+"date": "2025-06",
+"params": "7B",
+"open": "weights",
+"arch": "Chameleon-based autoregressive action + image world model",
+"action": "discrete tokens",
+"data": "LIBERO",
+"emb": "Sim (LIBERO)",
+"hw": [],
+"paper": "https://arxiv.org/abs/2506.21539",
+"code": "https://github.com/alibaba-damo-academy/WorldVLA",
+"site": "",
+"note_en": "Action model and world model trained jointly and help each other.",
+"note_zh": "动作模型与世界模型联合训练、互相增益。",
+"hwl": []
+},
+{
+"id": "v-jepa2",
+"name": "V-JEPA 2 / V-JEPA 2-AC",
+"org": "Meta FAIR",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2025-06",
+"params": "1B+",
+"open": "weights",
+"arch": "Self-supervised video encoder + action-conditioned latent predictor",
+"action": "planning in latent space (MPC)",
+"data": "1M+ h internet video; <62 h DROID robot video for AC",
+"emb": "Franka (zero-shot pick-and-place)",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2506.09985",
+"code": "https://github.com/facebookresearch/vjepa2",
+"site": "https://ai.meta.com/vjepa/",
+"note_en": "Latent world model used for zero-shot planning on new labs' robots.",
+"note_zh": "隐空间世界模型，在新环境机器人上零样本规划。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "smolvla",
+"name": "SmolVLA",
+"org": "Hugging Face",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-06",
+"params": "450M",
+"open": "weights",
+"arch": "SmolVLM-2 (layer-skipped) + flow-matching action expert, async inference",
+"action": "flow matching",
+"data": "10M frames from 487 LeRobot community datasets",
+"emb": "SO-100 / SO-101, Koch",
+"hw": [
+"c6bb2ccaf0"
+],
+"paper": "https://arxiv.org/abs/2506.01844",
+"code": "https://github.com/huggingface/lerobot",
+"site": "https://huggingface.co/blog/smolvla",
+"note_en": "Runs on consumer GPUs / CPU; trained only on community data.",
+"note_zh": "消费级 GPU 甚至 CPU 可运行，只用社区数据训练。",
+"hwl": [
+[
+"SO Arm 101",
+"SO Arm 101"
+]
+]
+},
+{
+"id": "redwood",
+"name": "Redwood AI",
+"org": "1X Technologies",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-06",
+"params": "160M",
+"open": "closed",
+"arch": "Vision-language transformer policy on NEO's onboard GPU",
+"action": "continuous",
+"data": "Teleop + autonomous rollouts incl. failures",
+"emb": "1X NEO Gamma",
+"hw": [
+"1471792194",
+"379fd8219a"
+],
+"paper": "",
+"code": "",
+"site": "https://www.1x.tech/discover/redwood-ai",
+"note_en": "Mobile manipulation + whole-body for home tasks, ~5 Hz on-device.",
+"note_zh": "家庭任务的移动操作与全身控制，机载约 5 Hz。",
+"hwl": [
+[
+"1X NEO Gamma",
+"NEO Gamma"
+],
+[
+"1X NEO",
+"1X NEO"
+]
+]
+},
+{
+"id": "gemini-robotics-od",
+"name": "Gemini Robotics On-Device",
+"org": "Google DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-06",
+"params": "",
+"open": "closed",
+"arch": "Compact Gemini Robotics VLA running on the robot",
+"action": "continuous action chunks",
+"data": "Gemini Robotics data; adapts with 50-100 demos",
+"emb": "ALOHA, bi-arm Franka FR3, Apollo",
+"hw": [
+"7b2b7f3974",
+"9d8879b0c2",
+"c05f64e435"
+],
+"paper": "",
+"code": "",
+"site": "https://deepmind.google/discover/blog/gemini-robotics-on-device-brings-ai-to-local-robotic-devices/",
+"note_en": "Runs locally without network; SDK for trusted testers.",
+"note_zh": "无需联网在本地运行，SDK 面向受邀测试者。",
+"hwl": [
+[
+"Trossen ALOHA Stationary",
+"ALOHA Stationary"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+],
+[
+"Apptronik Apollo",
+"Apollo"
+]
+]
+},
+{
+"id": "gmt",
+"name": "GMT (General Motion Tracking)",
+"org": "UC San Diego",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "wbc",
+"date": "2025-06",
+"params": "",
+"open": "code",
+"arch": "Adaptive-sampling MoE motion-tracking policy",
+"action": "continuous joint targets",
+"data": "AMASS / LAFAN1 retargeted",
+"emb": "Unitree G1",
+"hw": [
+"115e3e0388"
+],
+"paper": "https://arxiv.org/abs/2506.14770",
+"code": "https://github.com/zixuan417/humanoid-general-motion-tracking",
+"site": "https://gmt-humanoid.github.io/",
+"note_en": "One policy tracks a wide range of human motions.",
+"note_zh": "一个策略跟踪多种人类动作。",
+"hwl": [
+[
+"Unitree G1+",
+"G1+"
+]
+]
+},
+{
+"id": "fis-vla",
+"name": "Fast-in-Slow (FiS-VLA)",
+"org": "Peking Univ. + BAAI + AI² Robotics",
+"zh": "北京大学 / 智源 / 智平方",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-06",
+"params": "",
+"open": "code",
+"arch": "Fast diffusion executor embedded inside slow VLM layers",
+"action": "diffusion",
+"data": "OXE + in-house robot data",
+"emb": "AgileX, Franka",
+"hw": [
+"e7720e062b",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2506.01953",
+"code": "https://github.com/CHEN-H01/Fast-in-Slow",
+"site": "",
+"note_en": "Dual-system in one model; 117 Hz control.",
+"note_zh": "在单一模型中实现双系统，控制频率 117 Hz。",
+"hwl": [
+[
+"AgileX COBOT Magic",
+"COBOT Magic"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "univla",
+"name": "UniVLA",
+"org": "HKU + OpenDriveLab (Shanghai AI Lab)",
+"zh": "香港大学 / 上海人工智能实验室",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-05",
+"params": "~7B",
+"open": "weights",
+"arch": "Task-centric latent actions from video + VLA (Prismatic)",
+"action": "latent → continuous",
+"data": "OXE + Ego4D human video",
+"emb": "AgileX Piper, WidowX",
+"hw": [
+"30b5336f92",
+"f783102089"
+],
+"paper": "https://arxiv.org/abs/2505.06111",
+"code": "https://github.com/OpenDriveLab/UniVLA",
+"site": "",
+"note_en": "Learns cross-embodiment latent actions; low pretraining compute.",
+"note_zh": "学习跨本体的隐动作，预训练算力需求低。",
+"hwl": [
+[
+"AgileX PiPER",
+"PiPER"
+],
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+]
+]
+},
+{
+"id": "optimus",
+"name": "Optimus end-to-end policy",
+"org": "Tesla",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-05",
+"params": "",
+"open": "closed",
+"arch": "Single end-to-end neural net ('video in, controls out'), FSD-derived",
+"action": "continuous",
+"data": "Teleop, then first-person human video from camera rigs",
+"emb": "Tesla Optimus",
+"hw": [
+"b317adc76f",
+"f3877c2e88"
+],
+"paper": "",
+"code": "",
+"site": "https://www.eweek.com/news/tesla-optimus-robot-training/",
+"note_en": "No paper; details from Tesla videos and press. Low confidence on specifics.",
+"note_zh": "无论文，细节来自特斯拉视频和媒体报道，可信度较低。",
+"hwl": [
+[
+"Tesla Optimus Gen2",
+"Optimus Gen2"
+],
+[
+"Tesla OPTIMUS GEN 3",
+"OPTIMUS GEN 3"
+]
+]
+},
+{
+"id": "gr00t-n15",
+"name": "GR00T N1.5",
+"org": "NVIDIA",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-05",
+"params": "3B",
+"open": "weights",
+"arch": "Frozen Eagle 2.5 VLM + DiT flow head, FLARE objective",
+"action": "flow matching",
+"data": "N1 mix + DreamGen synthetic data + human video",
+"emb": "Unitree G1, Fourier GR-1, Franka",
+"hw": [
+"115e3e0388",
+"37f590a35d",
+"9d8879b0c2"
+],
+"paper": "",
+"code": "https://github.com/NVIDIA/Isaac-GR00T",
+"site": "https://research.nvidia.com/labs/gear/gr00t-n1_5/",
+"note_en": "Better language following; learns from human ego video via FLARE.",
+"note_zh": "更好的语言跟随，并通过 FLARE 从人类第一视角视频学习。",
+"hwl": [
+[
+"Unitree G1+",
+"G1+"
+],
+[
+"Fourier GR-1",
+"GR-1"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "dreamgen",
+"name": "DreamGen (GR00T-Dreams)",
+"org": "NVIDIA GEAR",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2025-05",
+"params": "",
+"open": "code",
+"arch": "Video world model fine-tuned on robot data + inverse dynamics for pseudo-actions",
+"action": "latent / pseudo-actions",
+"data": "Generated 'neural trajectories'",
+"emb": "GR1, Franka, SO-100",
+"hw": [
+"37f590a35d",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2505.12705",
+"code": "https://github.com/NVIDIA/GR00T-Dreams",
+"site": "https://research.nvidia.com/labs/gear/dreamgen",
+"note_en": "Synthetic robot data from video world models; 22 new verbs from one teleop task.",
+"note_zh": "用视频世界模型合成机器人数据，从单一遥操作任务泛化出 22 种新动作。",
+"hwl": [
+[
+"Fourier GR-1",
+"GR-1"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "pi05",
+"name": "π0.5",
+"org": "Physical Intelligence",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-04",
+"params": "",
+"open": "weights",
+"arch": "PaliGemma VLM + flow action expert; predicts subtasks then actions",
+"action": "flow matching (+ FAST in pretraining)",
+"data": "Heterogeneous: multi-robot, mobile manipulators in ~100 homes, web data, verbal instructions",
+"emb": "Mobile manipulators, static arms",
+"hw": [
+"3ba40953a8",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2504.16054",
+"code": "https://github.com/Physical-Intelligence/openpi",
+"site": "https://www.pi.website/blog/pi05",
+"note_en": "Cleans kitchens and bedrooms in unseen homes; weights added to openpi (Sep 2025).",
+"note_zh": "可在没见过的家中整理厨房卧室；2025 年 9 月加入 openpi 开源。",
+"hwl": [
+[
+"Universal Robots UR7e-920 (formerly UR5e)",
+"Universal Robots UR7e-920 (formerly UR5e)"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "nora",
+"name": "NORA",
+"org": "SUTD (DeCLaRe Lab)",
+"zh": "",
+"c": "OT",
+"cty": "新加坡",
+"type": "vla",
+"date": "2025-04",
+"params": "3B",
+"open": "weights",
+"arch": "Qwen2.5-VL-3B + FAST tokenizer",
+"action": "discrete tokens (FAST)",
+"data": "970k OXE demos",
+"emb": "WidowX",
+"hw": [
+"f783102089"
+],
+"paper": "https://arxiv.org/abs/2504.19854",
+"code": "https://github.com/declare-lab/nora",
+"site": "https://declare-lab.github.io/nora",
+"note_en": "Small open generalist VLA.",
+"note_zh": "小规模开源通用 VLA。",
+"hwl": [
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+]
+]
+},
+{
+"id": "dyna-1",
+"name": "DYNA-1",
+"org": "Dyna Robotics",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-04",
+"params": "",
+"open": "closed",
+"arch": "VLA with reward model for autonomous improvement",
+"action": "continuous",
+"data": "Real deployment data",
+"emb": "Dyna dual-arm stations",
+"hw": [
+"b7857d7c4d"
+],
+"paper": "",
+"code": "",
+"site": "https://siliconangle.com/2025/04/29/dyna-robotics-debuts-dyna-1-foundation-model-powering-robots",
+"note_en": "24 h napkin folding at >99% success; commercial deployments.",
+"note_zh": "连续 24 小时叠餐巾成功率超 99%，已商用部署。",
+"hwl": [
+[
+"DYNA 2.1",
+"DYNA 2.1"
+]
+]
+},
+{
+"id": "gemini-robotics-er",
+"name": "Gemini Robotics-ER",
+"org": "Google DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "er",
+"date": "2025-03",
+"params": "",
+"open": "closed",
+"arch": "Gemini 2.0 Flash with enhanced spatial/embodied reasoning",
+"action": "n/a (points, boxes, trajectories, code)",
+"data": "Embodied reasoning data (pointing, 3D, grasp prediction)",
+"emb": "Any (via code generation / VLA)",
+"hw": [],
+"paper": "https://arxiv.org/abs/2503.20020",
+"code": "",
+"site": "https://deepmind.google/models/gemini-robotics/",
+"note_en": "Embodied-reasoning VLM; introduced the ERQA benchmark.",
+"note_zh": "具身推理 VLM，同时提出 ERQA 评测。",
+"hwl": []
+},
+{
+"id": "gemini-robotics",
+"name": "Gemini Robotics",
+"org": "Google DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-03",
+"params": "",
+"open": "closed",
+"arch": "Gemini 2.0 VLA backbone (cloud) + local action decoder",
+"action": "continuous action chunks",
+"data": "Large ALOHA 2 teleop dataset + web multimodal data",
+"emb": "ALOHA 2, bi-arm Franka, Apptronik Apollo",
+"hw": [
+"7b2b7f3974",
+"9d8879b0c2",
+"c05f64e435"
+],
+"paper": "https://arxiv.org/abs/2503.20020",
+"code": "",
+"site": "https://deepmind.google/models/gemini-robotics/",
+"note_en": "Gemini-based VLA; dexterous tasks such as origami folding.",
+"note_zh": "基于 Gemini 的 VLA，可完成折纸等灵巧任务。",
+"hwl": [
+[
+"Trossen ALOHA Stationary",
+"ALOHA Stationary"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+],
+[
+"Apptronik Apollo",
+"Apollo"
+]
+]
+},
+{
+"id": "gr00t-n1",
+"name": "GR00T N1",
+"org": "NVIDIA",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-03",
+"params": "2.2B",
+"open": "weights",
+"arch": "Eagle-2 VLM (System 2) + DiT flow-matching action head (System 1)",
+"action": "flow matching",
+"data": "Real teleop + sim + human video + neural (generated) trajectories",
+"emb": "Fourier GR-1, Unitree G1, Franka",
+"hw": [
+"37f590a35d",
+"115e3e0388",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2503.14734",
+"code": "https://github.com/NVIDIA/Isaac-GR00T",
+"site": "https://developer.nvidia.com/isaac/gr00t",
+"note_en": "First open humanoid foundation model.",
+"note_zh": "首个开放权重的人形机器人基础模型。",
+"hwl": [
+[
+"Fourier GR-1",
+"GR-1"
+],
+[
+"Unitree G1+",
+"G1+"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "agibot-go1",
+"name": "GO-1 (Genie Operator-1)",
+"org": "AgiBot",
+"zh": "智元机器人",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-03",
+"params": "",
+"open": "weights",
+"arch": "ViLLA: InternVL VLM + latent planner + action expert",
+"action": "latent + diffusion",
+"data": "AgiBot World: 1M+ trajectories, 217 tasks",
+"emb": "AgiBot G1 (Genie G1)",
+"hw": [
+"252bdba578"
+],
+"paper": "https://arxiv.org/abs/2503.06669",
+"code": "https://github.com/OpenDriveLab/AgiBot-World",
+"site": "https://agibot-world.com/",
+"note_en": "Latent actions from human video bridge to robot actions; weights opened Sep 2025.",
+"note_zh": "用隐动作衔接人类视频与机器人动作；2025 年 9 月开源权重。",
+"hwl": [
+[
+"AgiBot G1",
+"G1"
+]
+]
+},
+{
+"id": "cosmos-reason1",
+"name": "Cosmos-Reason1",
+"org": "NVIDIA",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "er",
+"date": "2025-03",
+"params": "7B / 56B",
+"open": "weights",
+"arch": "Multimodal LLM (ViT + LLM) trained for physical common sense",
+"action": "n/a (text reasoning)",
+"data": "Physical common-sense + embodied reasoning SFT and RL",
+"emb": "Robots, AVs (as planner / critic)",
+"hw": [],
+"paper": "https://arxiv.org/abs/2503.15558",
+"code": "https://github.com/nvidia-cosmos/cosmos-reason1",
+"site": "",
+"note_en": "Physical-AI reasoning VLM; later the VLM inside GR00T N1.6/N1.7.",
+"note_zh": "物理常识推理 VLM，后来成为 GR00T N1.6/N1.7 的视觉语言骨干。",
+"hwl": []
+},
+{
+"id": "uva",
+"name": "UVA (Unified Video Action)",
+"org": "Stanford + Columbia",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2025-02",
+"params": "",
+"open": "code",
+"arch": "Joint video-action latent with decoupled diffusion heads",
+"action": "diffusion",
+"data": "Robot demos + action-free video",
+"emb": "UR5e, sim",
+"hw": [
+"3ba40953a8"
+],
+"paper": "https://arxiv.org/abs/2503.00200",
+"code": "https://github.com/ShuangLI59/unified_video_action",
+"site": "https://unified-video-action-model.github.io/",
+"note_en": "One model = policy, forward/inverse dynamics and video generator.",
+"note_zh": "一个模型兼做策略、正逆动力学和视频生成。",
+"hwl": [
+[
+"Universal Robots UR7e-920 (formerly UR5e)",
+"Universal Robots UR7e-920 (formerly UR5e)"
+]
+]
+},
+{
+"id": "openvla-oft",
+"name": "OpenVLA-OFT",
+"org": "Stanford",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-02",
+"params": "7B",
+"open": "weights",
+"arch": "OpenVLA + parallel decoding, action chunking, FiLM",
+"action": "continuous (L1 regression)",
+"data": "LIBERO / ALOHA fine-tuning",
+"emb": "ALOHA bimanual",
+"hw": [
+"7b2b7f3974"
+],
+"paper": "https://arxiv.org/abs/2502.19645",
+"code": "https://github.com/moojink/openvla-oft",
+"site": "https://openvla-oft.github.io/",
+"note_en": "Fine-tuning recipe: 26x throughput, 97.1% LIBERO.",
+"note_zh": "微调方案：吞吐提升 26 倍，LIBERO 97.1%。",
+"hwl": [
+[
+"Trossen ALOHA Stationary",
+"ALOHA Stationary"
+]
+]
+},
+{
+"id": "magma",
+"name": "Magma",
+"org": "Microsoft Research",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-02",
+"params": "8B",
+"open": "weights",
+"arch": "Multimodal agent model with Set-of-Mark / Trace-of-Mark pretraining",
+"action": "discrete tokens",
+"data": "UI navigation + robot (OXE) + instructional video",
+"emb": "WidowX, Franka",
+"hw": [
+"f783102089",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2502.13130",
+"code": "https://github.com/microsoft/Magma",
+"site": "https://microsoft.github.io/Magma/",
+"note_en": "One model for digital (UI) and physical agents.",
+"note_zh": "同时面向数字界面和物理机器人的智能体模型。",
+"hwl": [
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "hi-robot",
+"name": "Hi Robot",
+"org": "Physical Intelligence",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "er",
+"date": "2025-02",
+"params": "",
+"open": "paper",
+"arch": "High-level VLM (PaliGemma) issuing language commands to π0",
+"action": "n/a (language subtasks)",
+"data": "Synthetic user interactions + robot data",
+"emb": "UR5e, bimanual ARX, mobile ARX",
+"hw": [
+"3ba40953a8"
+],
+"paper": "https://arxiv.org/abs/2502.19417",
+"code": "",
+"site": "https://www.pi.website/research/hirobot",
+"note_en": "Hierarchical System-2 planner that handles interjections and feedback.",
+"note_zh": "分层的 System 2 规划器，可处理用户中途插话和反馈。",
+"hwl": [
+[
+"Universal Robots UR7e-920 (formerly UR5e)",
+"Universal Robots UR7e-920 (formerly UR5e)"
+]
+]
+},
+{
+"id": "helix",
+"name": "Helix",
+"org": "Figure AI",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-02",
+"params": "",
+"open": "closed",
+"arch": "S2: 7B VLM (~7-9 Hz) + S1: 80M visuomotor transformer (200 Hz)",
+"action": "continuous (upper body, 35 DoF)",
+"data": "~500 h teleop, auto-labelled with VLM",
+"emb": "Figure 02",
+"hw": [
+"eaca57669c"
+],
+"paper": "",
+"code": "",
+"site": "https://www.figure.ai/news/helix",
+"note_en": "Dual-system humanoid VLA; ran two robots collaboratively on embedded GPUs.",
+"note_zh": "双系统人形 VLA，在机载 GPU 上控制两台机器人协作。",
+"hwl": [
+[
+"Figure 02",
+"Figure 02"
+]
+]
+},
+{
+"id": "dexvla",
+"name": "DexVLA",
+"org": "Midea Group + East China Normal Univ.",
+"zh": "美的集团 / 华东师大",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-02",
+"params": "",
+"open": "code",
+"arch": "Qwen2-VL-2B + ~1B ScaleDP diffusion expert, 3-stage curriculum",
+"action": "diffusion",
+"data": "Cross-embodiment robot data",
+"emb": "Bimanual UR5e, AgileX, dexterous hand",
+"hw": [
+"3ba40953a8",
+"e7720e062b"
+],
+"paper": "https://arxiv.org/abs/2502.05855",
+"code": "https://github.com/juruobenruo/DexVLA",
+"site": "https://dex-vla.github.io/",
+"note_en": "Plug-in diffusion expert; laundry folding without task-specific data.",
+"note_zh": "插件式扩散专家，无需任务数据即可叠衣。",
+"hwl": [
+[
+"Universal Robots UR7e-920 (formerly UR5e)",
+"Universal Robots UR7e-920 (formerly UR5e)"
+],
+[
+"AgileX COBOT Magic",
+"COBOT Magic"
+]
+]
+},
+{
+"id": "pi0-fast",
+"name": "π0-FAST",
+"org": "Physical Intelligence",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2025-01",
+"params": "3B",
+"open": "weights",
+"arch": "π0 backbone, autoregressive over FAST tokens (DCT + BPE)",
+"action": "discrete tokens (FAST)",
+"data": "π0 mixture; FAST+ tokenizer trained on 1M trajectories",
+"emb": "Same as π0; DROID Franka",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2501.09747",
+"code": "https://github.com/Physical-Intelligence/openpi",
+"site": "https://www.pi.website/research/fast",
+"note_en": "Frequency-space action tokenizer; 5x faster training than diffusion π0.",
+"note_zh": "频域动作分词器，训练速度约为扩散版 π0 的 5 倍。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "spatialvla",
+"name": "SpatialVLA",
+"org": "Shanghai AI Lab + ShanghaiTech",
+"zh": "上海人工智能实验室",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-01",
+"params": "~4B",
+"open": "weights",
+"arch": "PaliGemma 2 + Ego3D position encoding + adaptive action grids",
+"action": "discrete spatial tokens",
+"data": "1.1M real trajectories (OXE + RH20T)",
+"emb": "WidowX, Franka, Google robot",
+"hw": [
+"f783102089",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2501.15830",
+"code": "https://github.com/SpatialVLA/SpatialVLA",
+"site": "https://spatialvla.github.io/",
+"note_en": "3D-aware spatial action tokenisation.",
+"note_zh": "具备 3D 感知的空间动作分词。",
+"hwl": [
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "graspvla",
+"name": "GraspVLA",
+"org": "Galbot",
+"zh": "银河通用",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2025-01",
+"params": "",
+"open": "weights",
+"arch": "VLM + flow-matching action expert, progressive action generation",
+"action": "flow matching",
+"data": "SynGrasp-1B: billion-frame synthetic grasping data",
+"emb": "Galbot G1, Franka",
+"hw": [
+"7bf274218d",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2505.03233",
+"code": "https://github.com/PKU-EPIC/GraspVLA",
+"site": "https://pku-epic.github.io/GraspVLA-web/",
+"note_en": "Zero-shot sim-to-real grasping foundation model; part of AstraBrain.",
+"note_zh": "零样本仿真到真机的抓取基础模型，银河星脑的一部分。",
+"hwl": [
+[
+"Galbot G1",
+"G1"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "cosmos",
+"name": "Cosmos WFM (Predict 1)",
+"org": "NVIDIA",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2025-01",
+"params": "4B-14B",
+"open": "weights",
+"arch": "Diffusion and autoregressive video world models + tokenizers",
+"action": "n/a (video; action-conditioned variants)",
+"data": "20M h of curated video",
+"emb": "Post-trained for robots and AVs",
+"hw": [],
+"paper": "https://arxiv.org/abs/2501.03575",
+"code": "https://github.com/nvidia-cosmos",
+"site": "https://www.nvidia.com/en-us/ai/cosmos/",
+"note_en": "Open world foundation models for synthetic data and policy evaluation.",
+"note_zh": "开放的世界基础模型，用于合成数据和策略评测。",
+"hwl": []
+},
+{
+"id": "meta-motivo",
+"name": "Meta Motivo",
+"org": "Meta FAIR",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "wbc",
+"date": "2024-12",
+"params": "",
+"open": "weights",
+"arch": "Behavioral foundation model (forward-backward representations)",
+"action": "continuous",
+"data": "Unlabelled motion data + online RL in sim",
+"emb": "Simulated SMPL humanoid",
+"hw": [],
+"paper": "https://arxiv.org/abs/2504.11054",
+"code": "https://github.com/facebookresearch/metamotivo",
+"site": "",
+"note_en": "Zero-shot promptable whole-body control; simulation only.",
+"note_zh": "零样本可提示的全身控制，仅仿真。",
+"hwl": []
+},
+{
+"id": "exbody2",
+"name": "ExBody2",
+"org": "UC San Diego",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "wbc",
+"date": "2024-12",
+"params": "",
+"open": "paper",
+"arch": "Teacher-student RL expressive whole-body tracking",
+"action": "continuous joint targets",
+"data": "Curated human motion data",
+"emb": "Unitree G1, H1",
+"hw": [
+"115e3e0388",
+"41752e6807"
+],
+"paper": "https://arxiv.org/abs/2412.13196",
+"code": "",
+"site": "https://exbody2.github.io/",
+"note_en": "Expressive, robust humanoid motion imitation.",
+"note_zh": "高表现力、鲁棒的人形动作模仿。",
+"hwl": [
+[
+"Unitree G1+",
+"G1+"
+],
+[
+"Unitree H1",
+"H1"
+]
+]
+},
+{
+"id": "emma-x",
+"name": "Emma-X",
+"org": "SUTD (DeCLaRe Lab)",
+"zh": "",
+"c": "OT",
+"cty": "新加坡",
+"type": "vla",
+"date": "2024-12",
+"params": "7B",
+"open": "weights",
+"arch": "OpenVLA-based, grounded chain-of-thought + look-ahead spatial reasoning",
+"action": "discrete tokens",
+"data": "60k BridgeV2 trajectories auto-annotated",
+"emb": "WidowX",
+"hw": [
+"f783102089"
+],
+"paper": "https://arxiv.org/abs/2412.11974",
+"code": "https://github.com/declare-lab/Emma-X",
+"site": "https://huggingface.co/declare-lab/Emma-X",
+"note_en": "Grounded CoT reasoning for VLAs.",
+"note_zh": "为 VLA 加入可定位的思维链推理。",
+"hwl": [
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+]
+]
+},
+{
+"id": "era-42",
+"name": "ERA-42",
+"org": "Robotera",
+"zh": "星动纪元",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2024-12",
+"params": "",
+"open": "closed",
+"arch": "End-to-end native robot model fusing vision, language, touch, pose",
+"action": "continuous",
+"data": "Not disclosed",
+"emb": "Star1 humanoid, XHAND1 dexterous hand",
+"hw": [
+"8ac980ff59",
+"992e527cf7"
+],
+"paper": "",
+"code": "",
+"site": "https://www.qbitai.com/2024/12/237697.html",
+"note_en": "Controls 5-finger hands across 100+ tasks; based on Tsinghua work.",
+"note_zh": "控制五指灵巧手完成 100 多种任务，源于清华团队。",
+"hwl": [
+[
+"Robotera Star1",
+"Star1"
+],
+[
+"Robotera XHAND1",
+"XHAND1"
+]
+]
+},
+{
+"id": "cogact",
+"name": "CogACT",
+"org": "Microsoft Research Asia + Tsinghua",
+"zh": "微软亚洲研究院 / 清华",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2024-11",
+"params": "~7.6B",
+"open": "weights",
+"arch": "Prismatic VLM (cognition) + diffusion action transformer",
+"action": "diffusion",
+"data": "OXE subset",
+"emb": "Franka, Realman, Google robot (sim)",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2411.19650",
+"code": "https://github.com/microsoft/CogACT",
+"site": "https://cogact.github.io/",
+"note_en": "VLM + separate diffusion action module; common later template.",
+"note_zh": "VLM 与独立扩散动作模块解耦，后来成为常见模板。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "pi0",
+"name": "π0",
+"org": "Physical Intelligence",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2024-10",
+"params": "3.3B",
+"open": "weights",
+"arch": "PaliGemma 3B VLM + 300M flow-matching action expert",
+"action": "flow matching",
+"data": "~10k h on 7 robot configs (68 tasks) + OXE",
+"emb": "UR5e, Franka, bimanual ARX / AgileX / Trossen, mobile manipulators",
+"hw": [
+"3ba40953a8",
+"9d8879b0c2",
+"30b5336f92",
+"3619d0f0d7"
+],
+"paper": "https://arxiv.org/abs/2410.24164",
+"code": "https://github.com/Physical-Intelligence/openpi",
+"site": "https://www.pi.website/blog/pi0",
+"note_en": "Weights released in openpi (Feb 2025); de facto baseline for open VLAs.",
+"note_zh": "2025 年 2 月在 openpi 开源权重，成为开源 VLA 的通用基线。",
+"hwl": [
+[
+"Universal Robots UR7e-920 (formerly UR5e)",
+"Universal Robots UR7e-920 (formerly UR5e)"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+],
+[
+"AgileX PiPER",
+"PiPER"
+],
+[
+"Trossen WidowX AI",
+"WidowX AI"
+]
+]
+},
+{
+"id": "idp3",
+"name": "iDP3 (Improved 3D Diffusion Policy)",
+"org": "Stanford + Tsinghua + others",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "policy",
+"date": "2024-10",
+"params": "",
+"open": "code",
+"arch": "Egocentric 3D point-cloud diffusion policy",
+"action": "diffusion",
+"data": "Humanoid teleop demos in one scene",
+"emb": "Fourier GR-1 humanoid",
+"hw": [
+"37f590a35d"
+],
+"paper": "https://arxiv.org/abs/2410.10803",
+"code": "https://github.com/YanjieZe/Improved-3D-Diffusion-Policy",
+"site": "https://humanoid-manipulation.github.io/",
+"note_en": "Humanoid manipulation that generalises to unseen scenes from one-scene data.",
+"note_zh": "只用单一场景数据，人形操作即可泛化到新场景。",
+"hwl": [
+[
+"Fourier GR-1",
+"GR-1"
+]
+]
+},
+{
+"id": "rdt-1b",
+"name": "RDT-1B",
+"org": "Tsinghua University (TSAIL)",
+"zh": "清华大学",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2024-10",
+"params": "1.2B",
+"open": "weights",
+"arch": "Diffusion transformer with unified action space; SigLIP + T5",
+"action": "diffusion",
+"data": "46 datasets / 1M+ episodes + 6k bimanual episodes",
+"emb": "AgileX ALOHA (Cobot Magic)",
+"hw": [
+"e7720e062b",
+"30b5336f92"
+],
+"paper": "https://arxiv.org/abs/2410.07864",
+"code": "https://github.com/thu-ml/RoboticsDiffusionTransformer",
+"site": "https://rdt-robotics.github.io/rdt-robotics/",
+"note_en": "Largest open diffusion foundation model for bimanual manipulation (2024).",
+"note_zh": "2024 年最大的开源双臂扩散基础模型。",
+"hwl": [
+[
+"AgileX COBOT Magic",
+"COBOT Magic"
+],
+[
+"AgileX PiPER",
+"PiPER"
+]
+]
+},
+{
+"id": "lapa",
+"name": "LAPA",
+"org": "KAIST + UW + Microsoft + NVIDIA",
+"zh": "",
+"c": "OT",
+"cty": "韩国",
+"type": "vla",
+"date": "2024-10",
+"params": "7B",
+"open": "weights",
+"arch": "VQ-VAE latent actions from video + VLA pretraining",
+"action": "latent → continuous",
+"data": "Action-free human / robot video",
+"emb": "Franka, WidowX",
+"hw": [
+"9d8879b0c2",
+"f783102089"
+],
+"paper": "https://arxiv.org/abs/2410.11758",
+"code": "https://github.com/LatentActionPretraining/LAPA",
+"site": "https://latentactionpretraining.github.io/",
+"note_en": "Pretrains VLAs on video without action labels.",
+"note_zh": "在无动作标注的视频上预训练 VLA。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+],
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+]
+]
+},
+{
+"id": "hover",
+"name": "HOVER",
+"org": "NVIDIA GEAR + CMU",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "wbc",
+"date": "2024-10",
+"params": "",
+"open": "code",
+"arch": "Multi-mode policy distilled from motion-imitation oracle",
+"action": "continuous joint targets",
+"data": "AMASS human motion retargeted, trained in Isaac",
+"emb": "Unitree H1",
+"hw": [
+"41752e6807"
+],
+"paper": "https://arxiv.org/abs/2410.21229",
+"code": "https://github.com/NVlabs/HOVER",
+"site": "https://hover-versatile-humanoid.github.io/",
+"note_en": "One controller unifies many humanoid control modes (root, joints, keypoints).",
+"note_zh": "一个控制器统一多种人形控制模式。",
+"hwl": [
+[
+"Unitree H1",
+"H1"
+]
+]
+},
+{
+"id": "gr-2",
+"name": "GR-2",
+"org": "ByteDance Research",
+"zh": "字节跳动",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2024-10",
+"params": "",
+"open": "closed",
+"arch": "Video-language-action GPT, web-scale video pretraining",
+"action": "continuous + future frames",
+"data": "38M video clips (50B tokens) + robot trajectories",
+"emb": "Arms, bimanual",
+"hw": [],
+"paper": "https://arxiv.org/abs/2410.06158",
+"code": "",
+"site": "https://gr2-manipulation.github.io/",
+"note_en": "Generative video-language-action model; 100+ tasks.",
+"note_zh": "视频-语言-动作生成模型，覆盖 100 多个任务。",
+"hwl": []
+},
+{
+"id": "aloha-unleashed",
+"name": "ALOHA Unleashed",
+"org": "Google DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "policy",
+"date": "2024-10",
+"params": "",
+"open": "paper",
+"arch": "Transformer-based diffusion policy (task-specific)",
+"action": "diffusion",
+"data": "~26k demos across 5 hard tasks on ALOHA 2",
+"emb": "ALOHA 2 bimanual",
+"hw": [
+"7b2b7f3974"
+],
+"paper": "https://arxiv.org/abs/2410.13126",
+"code": "",
+"site": "https://aloha-unleashed.github.io/",
+"note_en": "Shoe lacing, shirt hanging with scaled data + diffusion.",
+"note_zh": "靠数据规模加扩散策略完成系鞋带、挂衣服。",
+"hwl": [
+[
+"Trossen ALOHA Stationary",
+"ALOHA Stationary"
+]
+]
+},
+{
+"id": "tinyvla",
+"name": "TinyVLA",
+"org": "Midea Group + East China Normal Univ.",
+"zh": "美的集团 / 华东师大",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2024-09",
+"params": "",
+"open": "code",
+"arch": "Small VLM (<1.4B) + diffusion policy head",
+"action": "diffusion",
+"data": "No large robot pretraining; task fine-tuning",
+"emb": "Franka, bimanual UR5",
+"hw": [
+"9d8879b0c2",
+"3ba40953a8"
+],
+"paper": "https://arxiv.org/abs/2409.12514",
+"code": "",
+"site": "https://tiny-vla.github.io/",
+"note_en": "Fast, data-efficient VLA without OXE pretraining.",
+"note_zh": "无需 OXE 预训练、快速且数据高效。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+],
+[
+"Universal Robots UR7e-920 (formerly UR5e)",
+"Universal Robots UR7e-920 (formerly UR5e)"
+]
+]
+},
+{
+"id": "hpt",
+"name": "HPT",
+"org": "MIT (Kaiming He's group) + Meta",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2024-09",
+"params": "up to 1B",
+"open": "weights",
+"arch": "Heterogeneous Pre-trained Transformer: embodiment stems + shared trunk",
+"action": "continuous (regression)",
+"data": "52 datasets: real, sim, human video",
+"emb": "Franka, others",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2409.20537",
+"code": "https://github.com/liruiw/HPT",
+"site": "https://liruiw.github.io/hpt/",
+"note_en": "Scaling study of proprioception + vision pretraining across bodies.",
+"note_zh": "跨本体本体感知+视觉预训练的规模研究。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "1x-wm-2024",
+"name": "1X World Model (v0)",
+"org": "1X Technologies",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "world",
+"date": "2024-09",
+"params": "",
+"open": "code",
+"arch": "Action-conditioned video generation model",
+"action": "n/a (evaluation / simulation)",
+"data": "EVE / NEO robot logs; open challenge dataset",
+"emb": "1X EVE, NEO",
+"hw": [
+"379fd8219a"
+],
+"paper": "",
+"code": "https://github.com/1x-technologies/1xgpt",
+"site": "https://www.1x.tech/discover/1x-world-model",
+"note_en": "Learned simulator for policy evaluation; public world-model challenge.",
+"note_zh": "用于策略评测的学习型模拟器，并举办公开挑战赛。",
+"hwl": [
+[
+"1X NEO",
+"1X NEO"
+]
+]
+},
+{
+"id": "crossformer",
+"name": "CrossFormer",
+"org": "UC Berkeley + CMU",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2024-08",
+"params": "130M",
+"open": "weights",
+"arch": "Transformer policy with embodiment-specific readout heads",
+"action": "continuous chunks",
+"data": "900k trajectories across 20 embodiments",
+"emb": "Arms, bimanual, wheeled, quadruped, drone",
+"hw": [
+"f783102089"
+],
+"paper": "https://arxiv.org/abs/2408.11812",
+"code": "https://github.com/rail-berkeley/crossformer",
+"site": "https://crossformer-model.github.io/",
+"note_en": "One policy for manipulation, navigation, locomotion and flight.",
+"note_zh": "一个策略同时覆盖操作、导航、行走和飞行。",
+"hwl": [
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+]
+]
+},
+{
+"id": "rvt2",
+"name": "RVT-2",
+"org": "NVIDIA",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "policy",
+"date": "2024-06",
+"params": "",
+"open": "code",
+"arch": "Multi-view virtual-image transformer, coarse-to-fine",
+"action": "keyframe heatmaps + rotation bins",
+"data": "Few demos per task (RLBench + real)",
+"emb": "Franka",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2406.08545",
+"code": "https://github.com/nvlabs/rvt",
+"site": "https://robotic-view-transformer-2.github.io/",
+"note_en": "High-precision manipulation from ~10 demos.",
+"note_zh": "约 10 次示教即可完成高精度操作。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "openvla",
+"name": "OpenVLA",
+"org": "Stanford + UC Berkeley + TRI",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2024-06",
+"params": "7B",
+"open": "weights",
+"arch": "Prismatic VLM (DINOv2 + SigLIP → Llama 2 7B)",
+"action": "discrete tokens (256 bins)",
+"data": "970k OXE trajectories",
+"emb": "WidowX (Bridge), Franka",
+"hw": [
+"f783102089",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2406.09246",
+"code": "https://github.com/openvla/openvla",
+"site": "https://openvla.github.io/",
+"note_en": "Open 7B VLA that beat 55B RT-2-X; the field's fine-tuning baseline.",
+"note_zh": "7B 开源 VLA，超过 55B 的 RT-2-X，成为微调基线。",
+"hwl": [
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "omnih2o",
+"name": "OmniH2O",
+"org": "CMU",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "wbc",
+"date": "2024-06",
+"params": "",
+"open": "code",
+"arch": "Teacher-student RL whole-body tracking policy",
+"action": "continuous joint targets",
+"data": "AMASS mocap retargeted; OmniH2O-6 dataset",
+"emb": "Unitree H1",
+"hw": [
+"41752e6807"
+],
+"paper": "https://arxiv.org/abs/2406.08858",
+"code": "https://github.com/LeCAR-Lab/human2humanoid",
+"site": "https://omni.human2humanoid.com/",
+"note_en": "Universal whole-body teleop + learning interface for humanoids.",
+"note_zh": "通用的人形全身遥操作与学习接口。",
+"hwl": [
+[
+"Unitree H1",
+"H1"
+]
+]
+},
+{
+"id": "humanplus",
+"name": "HumanPlus",
+"org": "Stanford",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "wbc",
+"date": "2024-06",
+"params": "",
+"open": "code",
+"arch": "Humanoid Shadowing Transformer (RL, low level) + Humanoid Imitation Transformer",
+"action": "continuous joint targets",
+"data": "AMASS (40 h) for shadowing + ~40 demos per skill",
+"emb": "Custom humanoid on Unitree H1 base",
+"hw": [
+"41752e6807"
+],
+"paper": "https://arxiv.org/abs/2406.10454",
+"code": "https://github.com/MarkFzp/humanplus",
+"site": "https://humanoid-ai.github.io/",
+"note_en": "Real-time human shadowing to collect and learn humanoid skills.",
+"note_zh": "实时模仿人体动作，用于人形技能采集与学习。",
+"hwl": [
+[
+"Unitree H1",
+"H1"
+]
+]
+},
+{
+"id": "baku",
+"name": "BAKU",
+"org": "New York University",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "policy",
+"date": "2024-06",
+"params": "",
+"open": "code",
+"arch": "Transformer trunk with FiLM + action chunking head",
+"action": "continuous chunks",
+"data": "LIBERO, Meta-World, real xArm demos",
+"emb": "UFACTORY xArm",
+"hw": [],
+"paper": "https://arxiv.org/abs/2406.07539",
+"code": "https://github.com/siddhanthaldar/BAKU",
+"site": "https://baku-robot.github.io/",
+"note_en": "Efficient multi-task imitation architecture.",
+"note_zh": "高效的多任务模仿学习架构。",
+"hwl": []
+},
+{
+"id": "octo",
+"name": "Octo",
+"org": "UC Berkeley + Stanford + CMU + DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2024-05",
+"params": "27M / 93M",
+"open": "weights",
+"arch": "Transformer with diffusion head; language or goal-image conditioning",
+"action": "diffusion",
+"data": "800k OXE trajectories",
+"emb": "WidowX, Franka, UR5, ...",
+"hw": [
+"f783102089",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2405.12213",
+"code": "https://github.com/octo-models/octo",
+"site": "https://octo-models.github.io/",
+"note_en": "Small, fine-tunable open generalist policy.",
+"note_zh": "小巧、易微调的开源通用策略。",
+"hwl": [
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "covariant-rfm1",
+"name": "RFM-1",
+"org": "Covariant",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2024-03",
+"params": "8B",
+"open": "closed",
+"arch": "Multimodal any-to-any autoregressive transformer (text, image, video, actions)",
+"action": "discrete tokens",
+"data": "Years of warehouse pick-and-place fleet data + internet data",
+"emb": "Industrial picking arms",
+"hw": [
+"6ff1b0b438"
+],
+"paper": "",
+"code": "",
+"site": "https://businesswire.com/news/home/20240311948570/en",
+"note_en": "Warehouse robotics foundation model; can predict video of action outcomes.",
+"note_zh": "仓储机器人基础模型，可生成动作后果的预测视频。",
+"hwl": [
+[
+"Covariant Robotic Depalletization",
+"Robotic Depalletization"
+]
+]
+},
+{
+"id": "dp3",
+"name": "DP3 (3D Diffusion Policy)",
+"org": "Shanghai Qi Zhi Institute + Tsinghua",
+"zh": "上海期智研究院 / 清华",
+"c": "CN",
+"cty": "",
+"type": "policy",
+"date": "2024-03",
+"params": "",
+"open": "code",
+"arch": "Point-cloud encoder + diffusion policy",
+"action": "diffusion",
+"data": "10-40 demos per task",
+"emb": "Franka, Allegro hand, sim",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2403.03954",
+"code": "https://github.com/YanjieZe/3D-Diffusion-Policy",
+"site": "https://3d-diffusion-policy.github.io/",
+"note_en": "3D point clouds make diffusion policies far more data-efficient.",
+"note_zh": "点云输入让扩散策略的数据效率大幅提升。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "umi",
+"name": "UMI (Universal Manipulation Interface)",
+"org": "Stanford + Columbia + TRI",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "policy",
+"date": "2024-02",
+"params": "",
+"open": "code",
+"arch": "Diffusion Policy trained from hand-held gripper data",
+"action": "diffusion",
+"data": "In-the-wild demos with GoPro hand-held gripper",
+"emb": "UR5e, Franka",
+"hw": [
+"3ba40953a8",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2402.10329",
+"code": "https://github.com/real-stanford/universal_manipulation_interface",
+"site": "https://umi-gripper.github.io/",
+"note_en": "Robot-free data collection that later scaled to RDT2, GEN-0, Xiaomi-Robotics-1.",
+"note_zh": "无需机器人的数据采集方式，后被 RDT2、GEN-0 等放大使用。",
+"hwl": [
+[
+"Universal Robots UR7e-920 (formerly UR5e)",
+"Universal Robots UR7e-920 (formerly UR5e)"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "3d-diffuser-actor",
+"name": "3D Diffuser Actor",
+"org": "Carnegie Mellon University",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "policy",
+"date": "2024-02",
+"params": "",
+"open": "code",
+"arch": "3D scene tokens + diffusion over end-effector trajectories",
+"action": "diffusion",
+"data": "RLBench / CALVIN + real demos",
+"emb": "Franka",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2402.10885",
+"code": "https://github.com/nickgkan/3d_diffuser_actor",
+"site": "https://3d-diffuser-actor.github.io/",
+"note_en": "Combines 3D scene representations with diffusion policies.",
+"note_zh": "把 3D 场景表征与扩散策略结合。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "mobile-aloha",
+"name": "Mobile ALOHA",
+"org": "Stanford",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "policy",
+"date": "2024-01",
+"params": "",
+"open": "code",
+"arch": "ACT / Diffusion Policy co-trained with static ALOHA data",
+"action": "continuous chunks",
+"data": "50 demos per task + static ALOHA co-training",
+"emb": "Mobile ALOHA",
+"hw": [
+"8f20e30e42"
+],
+"paper": "https://arxiv.org/abs/2401.02117",
+"code": "https://github.com/MarkFzp/mobile-aloha",
+"site": "https://mobile-aloha.github.io/",
+"note_en": "Whole-body teleop for mobile bimanual chores (cooking, cleaning).",
+"note_zh": "移动双臂全身遥操作，完成做饭、清洁等家务。",
+"hwl": [
+[
+"Trossen ALOHA Mobile",
+"ALOHA Mobile"
+]
+]
+},
+{
+"id": "gr-1",
+"name": "GR-1",
+"org": "ByteDance Research",
+"zh": "字节跳动",
+"c": "CN",
+"cty": "",
+"type": "vla",
+"date": "2023-12",
+"params": "195M",
+"open": "code",
+"arch": "GPT-style transformer pretrained on video prediction (Ego4D)",
+"action": "continuous + future frames",
+"data": "Ego4D video pretraining + robot fine-tuning",
+"emb": "Kinova / custom arms, CALVIN sim",
+"hw": [],
+"paper": "https://arxiv.org/abs/2312.13139",
+"code": "https://github.com/bytedance/GR-1",
+"site": "https://gr1-manipulation.github.io/",
+"note_en": "Showed large-scale video generative pretraining helps manipulation.",
+"note_zh": "证明大规模视频生成预训练有助于操作。",
+"hwl": []
+},
+{
+"id": "rtx",
+"name": "RT-1-X / RT-2-X",
+"org": "Open X-Embodiment (Google DeepMind + 30+ labs)",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2023-10",
+"params": "",
+"open": "weights",
+"arch": "RT-1 / RT-2 architectures trained on pooled data",
+"action": "discrete tokens",
+"data": "Open X-Embodiment: 1M+ trajectories, 22 embodiments, 60 datasets",
+"emb": "22 embodiments (WidowX, Franka, Google robot, ...)",
+"hw": [
+"f783102089",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2310.08864",
+"code": "https://github.com/google-deepmind/open_x_embodiment",
+"site": "https://robotics-transformer-x.github.io/",
+"note_en": "RT-1-X checkpoint released; the OXE dataset underpins Octo, OpenVLA and most later VLAs.",
+"note_zh": "发布了 RT-1-X 权重；OXE 数据集是 Octo、OpenVLA 等后续模型的基础。",
+"hwl": [
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "voxposer",
+"name": "VoxPoser",
+"org": "Stanford",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "er",
+"date": "2023-07",
+"params": "",
+"open": "code",
+"arch": "LLM writes code composing 3D value maps with VLM perception",
+"action": "n/a (motion planner on value maps)",
+"data": "Zero-shot (no robot training data)",
+"emb": "Franka",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2307.05973",
+"code": "https://github.com/huangwl18/VoxPoser",
+"site": "https://voxposer.github.io/",
+"note_en": "Training-free LLM/VLM planning via 3D affordance maps.",
+"note_zh": "无需训练，用 3D 可供性地图做大模型规划。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "rt2",
+"name": "RT-2",
+"org": "Google DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2023-07",
+"params": "55B",
+"open": "closed",
+"arch": "PaLI-X 55B / PaLM-E 12B VLM co-fine-tuned to emit actions as text",
+"action": "discrete tokens",
+"data": "Web VQA + RT-1 robot data (co-fine-tuning)",
+"emb": "Everyday Robots mobile manipulator",
+"hw": [],
+"paper": "https://arxiv.org/abs/2307.15818",
+"code": "",
+"site": "https://robotics-transformer2.github.io/",
+"note_en": "Coined 'VLA': web knowledge transfers to unseen objects and instructions.",
+"note_zh": "提出 VLA 概念：互联网知识迁移到新物体和新指令。",
+"hwl": []
+},
+{
+"id": "robocat",
+"name": "RoboCat",
+"org": "Google DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2023-06",
+"params": "",
+"open": "closed",
+"arch": "Gato-style decoder transformer with VQ-GAN image tokens",
+"action": "discrete tokens",
+"data": "Multi-embodiment demos + self-generated data (self-improvement loop)",
+"emb": "Sawyer, Panda, KUKA arms",
+"hw": [],
+"paper": "https://arxiv.org/abs/2306.11706",
+"code": "",
+"site": "https://deepmind.google/discover/blog/robocat-a-self-improving-robotic-agent/",
+"note_en": "Self-improving: fine-tunes, collects its own data, retrains.",
+"note_zh": "自我改进：微调后自己采数据再训练。",
+"hwl": []
+},
+{
+"id": "act",
+"name": "ACT (ALOHA)",
+"org": "Stanford",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "policy",
+"date": "2023-04",
+"params": "~80M",
+"open": "code",
+"arch": "CVAE transformer with action chunking",
+"action": "continuous chunks (regression)",
+"data": "~50 demos per task on low-cost bimanual rig",
+"emb": "ALOHA (ViperX / WidowX)",
+"hw": [
+"7b2b7f3974",
+"973b5f7afd",
+"f783102089"
+],
+"paper": "https://arxiv.org/abs/2304.13705",
+"code": "https://github.com/tonyzhaozh/act",
+"site": "https://tonyzhaozh.github.io/aloha/",
+"note_en": "Action chunking + $20k ALOHA rig popularised bimanual imitation learning.",
+"note_zh": "动作分块加低成本 ALOHA 平台，带火了双臂模仿学习。",
+"hwl": [
+[
+"Trossen ALOHA Stationary",
+"ALOHA Stationary"
+],
+[
+"Trossen ViperX 300 S",
+"ViperX 300 S"
+],
+[
+"Trossen WidowX 250 S",
+"WidowX 250 S"
+]
+]
+},
+{
+"id": "palme",
+"name": "PaLM-E",
+"org": "Google",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "er",
+"date": "2023-03",
+"params": "562B",
+"open": "closed",
+"arch": "PaLM + ViT-22B, multimodal sentence embedding",
+"action": "n/a (language plans)",
+"data": "Web VQA + robot planning data",
+"emb": "Everyday Robots, tabletop arm (Language-Table)",
+"hw": [],
+"paper": "https://arxiv.org/abs/2303.03378",
+"code": "",
+"site": "https://palm-e.github.io/",
+"note_en": "Embodied multimodal LLM that outputs plans for low-level policies.",
+"note_zh": "具身多模态大模型，输出交给底层策略执行的计划。",
+"hwl": []
+},
+{
+"id": "diffusion-policy",
+"name": "Diffusion Policy",
+"org": "Columbia + TRI + MIT",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "policy",
+"date": "2023-03",
+"params": "",
+"open": "code",
+"arch": "CNN / transformer denoiser over action sequences",
+"action": "diffusion",
+"data": "Task-specific demos (~100-200 per task)",
+"emb": "UR5, Franka",
+"hw": [
+"3ba40953a8",
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2303.04137",
+"code": "https://github.com/real-stanford/diffusion_policy",
+"site": "https://diffusion-policy.cs.columbia.edu/",
+"note_en": "Made diffusion the default action head for imitation learning.",
+"note_zh": "让扩散成为模仿学习的默认动作头。",
+"hwl": [
+[
+"Universal Robots UR7e-920 (formerly UR5e)",
+"Universal Robots UR7e-920 (formerly UR5e)"
+],
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "rt1",
+"name": "RT-1",
+"org": "Google (Robotics at Google, Everyday Robots)",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2022-12",
+"params": "35M",
+"open": "code",
+"arch": "EfficientNet-B3 + FiLM + TokenLearner + Transformer",
+"action": "discrete tokens (256 bins)",
+"data": "130k episodes, 700+ instructions, 13 robots over 17 months",
+"emb": "Everyday Robots mobile manipulator",
+"hw": [],
+"paper": "https://arxiv.org/abs/2212.06817",
+"code": "https://github.com/google-research/robotics_transformer",
+"site": "https://robotics-transformer1.github.io/",
+"note_en": "First large-scale multi-task real-robot transformer; anchor of the current wave.",
+"note_zh": "首个大规模多任务真机 Transformer 策略，这一轮浪潮的起点。",
+"hwl": []
+},
+{
+"id": "vima",
+"name": "VIMA",
+"org": "Stanford + NVIDIA",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2022-10",
+"params": "2M-200M",
+"open": "weights",
+"arch": "Encoder-decoder transformer with multimodal prompts",
+"action": "discrete action primitives",
+"data": "VIMA-Bench sim (650k trajectories)",
+"emb": "Simulated UR5 tabletop",
+"hw": [],
+"paper": "https://arxiv.org/abs/2210.03094",
+"code": "https://github.com/vimalabs/VIMA",
+"site": "https://vimalabs.github.io/",
+"note_en": "Multimodal (text + image) prompting for manipulation; sim only.",
+"note_zh": "图文混合提示的操作策略，仅仿真。",
+"hwl": []
+},
+{
+"id": "peract",
+"name": "PerAct",
+"org": "Univ. of Washington + NVIDIA",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "policy",
+"date": "2022-09",
+"params": "",
+"open": "code",
+"arch": "Perceiver transformer over voxelised RGB-D, predicts next keyframe",
+"action": "discrete voxel + rotation bins",
+"data": "18 RLBench tasks; few real demos",
+"emb": "Franka",
+"hw": [
+"9d8879b0c2"
+],
+"paper": "https://arxiv.org/abs/2209.05451",
+"code": "https://github.com/peract/peract",
+"site": "https://peract.github.io/",
+"note_en": "Multi-task keyframe policy in 3D voxel space.",
+"note_zh": "在 3D 体素空间预测关键帧的多任务策略。",
+"hwl": [
+[
+"Franka Research 3",
+"Franka Research 3"
+]
+]
+},
+{
+"id": "gato",
+"name": "Gato",
+"org": "DeepMind",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "vla",
+"date": "2022-05",
+"params": "1.2B",
+"open": "closed",
+"arch": "Decoder-only transformer over tokenised text, images, joints",
+"action": "discrete tokens",
+"data": "604 tasks: games, VQA, captioning, real & sim robot stacking",
+"emb": "Sawyer arm (block stacking)",
+"hw": [],
+"paper": "https://arxiv.org/abs/2205.06175",
+"code": "",
+"site": "https://deepmind.google/discover/blog/a-generalist-agent/",
+"note_en": "One set of weights for Atari, chat and robot block stacking.",
+"note_zh": "同一套权重同时玩 Atari、聊天和机械臂堆积木。",
+"hwl": []
+},
+{
+"id": "saycan",
+"name": "SayCan",
+"org": "Google (Robotics at Google, Everyday Robots)",
+"zh": "",
+"c": "US",
+"cty": "",
+"type": "er",
+"date": "2022-04",
+"params": "540B (PaLM)",
+"open": "code",
+"arch": "PaLM LLM scores skills x learned affordance value functions",
+"action": "n/a (selects skills)",
+"data": "Skill library trained on Everyday Robots data",
+"emb": "Everyday Robots mobile manipulator",
+"hw": [],
+"paper": "https://arxiv.org/abs/2204.01691",
+"code": "https://github.com/google-research/google-research/tree/master/saycan",
+"site": "https://say-can.github.io/",
+"note_en": "LLM planner grounded by skill affordances; early high-level planner.",
+"note_zh": "用技能可行性值函数约束大语言模型的规划，早期的高层规划方案。",
+"hwl": []
+}
+]

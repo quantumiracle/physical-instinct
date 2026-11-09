@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="基于机器人硬件图谱 851 条记录的统计图：发布节奏、类别、人形价格与自由度、尺寸、灵巧手自由度、状态、厂商与国别。Charts from the Robot Hardware Spectrum: releases, categories, humanoid price vs DoF, size, hand DoF, status, makers and countries.">
+<title>机器人硬件洞察</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: spec-sheet catalog. Sticky filter bar, then a dense table that folds into cards on phones. */
+:root{
+  --bg:#f3f5f6; --panel:#ffffff; --ink:#15212b; --muted:#5b6973; --line:#d9e0e4;
+  --accent:#0b6e8a; --accent-ink:#ffffff; --new:#b45309; --new-bg:#fdf1e3;
+  --us:#2f5fb3; --us-bg:#e8eefb; --cn:#b8322a; --cn-bg:#fbeceb; --thumb:#e7ecef;
+  --display:"Archivo","Noto Sans SC",system-ui,sans-serif;
+  --body:"Noto Sans SC",system-ui,-apple-system,"PingFang SC",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1519; --panel:#161e24; --ink:#e6ecef; --muted:#93a1aa; --line:#27333b;
+  --accent:#4fb3cf; --accent-ink:#0b1418; --new:#f0a957; --new-bg:#33240f;
+  --us:#8fb0f0; --us-bg:#1b2740; --cn:#f0918a; --cn-bg:#3a1c1a; --thumb:#1f2930; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1519; --panel:#161e24; --ink:#e6ecef; --muted:#93a1aa; --line:#27333b;
+  --accent:#4fb3cf; --accent-ink:#0b1418; --new:#f0a957; --new-bg:#33240f;
+  --us:#8fb0f0; --us-bg:#1b2740; --cn:#f0918a; --cn-bg:#3a1c1a; --thumb:#1f2930; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:14px/1.55 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1320px;margin:0 auto;padding-block:28px 48px}
+h1{font:700 clamp(26px,4vw,38px)/1.15 var(--display);letter-spacing:-.01em;margin:0 0 8px;text-wrap:balance}
+.lede{color:var(--muted);max-width:72ch;margin:0}
+.kpis{display:flex;flex-wrap:wrap;gap:10px 28px;margin:18px 0 6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.kpis b{display:block;font:500 22px/1.2 var(--mono);color:var(--ink);font-variant-numeric:tabular-nums}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;margin-top:14px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.seg{display:flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:6px;overflow:hidden;background:var(--panel)}
+.seg button{border:0;background:none;color:var(--ink);font:500 13px var(--body);padding:6px 11px;cursor:pointer;border-right:1px solid var(--line)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+button:focus-visible,select:focus-visible,#q:focus-visible,a:focus-visible,.tog:focus-within{outline:2px solid var(--accent);outline-offset:2px}
+.tog{display:flex;align-items:center;gap:6px;font-size:13px;background:var(--new-bg);color:var(--new);border-radius:6px;padding:6px 10px;cursor:pointer;font-weight:500}
+select{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:6px 8px;font:13px var(--body)}
+#q{flex:1 1 180px;min-width:0;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:7px 10px;font:13px var(--body)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;font:500 12px var(--mono)}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--accent)}
+.secnav{display:flex;flex-wrap:wrap;gap:4px 16px;margin:-6px 0 18px;font:500 12px var(--mono)}
+.secnav a{color:var(--muted);text-decoration:none;padding:2px 0;border-bottom:1px solid transparent}
+.secnav a:hover{color:var(--accent)} .secnav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--accent)}
+.lang button{padding:4px 10px;font:500 12px var(--mono)}
+.count{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:auto}
+.tablewrap{overflow-x:auto;margin-top:12px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+table{width:100%;border-collapse:collapse;min-width:1120px}
+th{font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+.thumb{width:128px;height:104px;border-radius:6px;background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.thumb.noimg{background:var(--thumb)}
+.thumb img{width:100%;height:100%;object-fit:contain;padding:3px}
+.thumb svg{width:36px;height:36px;color:var(--muted);opacity:.7}
+.name{font:700 15px/1.3 var(--display)}
+.co{color:var(--muted);font-size:12px}
+.zh{font-size:13px;font-weight:500;color:var(--ink);margin-top:1px}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.chip{font:500 11px/1 var(--body);padding:4px 6px;border-radius:4px;white-space:nowrap}
+.us{background:var(--us-bg);color:var(--us)} .cn{background:var(--cn-bg);color:var(--cn)} .ot{background:var(--thumb);color:var(--ink)}
+.nw{background:var(--new-bg);color:var(--new)} .cat{background:var(--thumb);color:var(--muted)}
+.mono{font-family:var(--mono);font-size:12px;font-variant-numeric:tabular-nums}
+.spec{font-size:13px;max-width:28ch}
+.ai{font-size:13px;max-width:22ch}
+.links{display:flex;flex-direction:column;gap:3px;white-space:nowrap}
+.links a{color:var(--accent);text-decoration:none;font-size:13px}
+.links a:hover{text-decoration:underline}
+.dim{color:var(--muted)}
+.more{display:block;margin:14px auto 0;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:8px 16px;font:500 13px var(--body);cursor:pointer}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+footer{margin-top:28px;color:var(--muted);font-size:12px;max-width:92ch}
+footer h2{font:700 14px var(--display);color:var(--ink);margin:18px 0 6px}
+footer a{color:var(--accent)} footer ul{padding-left:18px;margin:4px 0}
+@media (max-width:760px){
+  table{min-width:0} thead{display:none}
+  tr{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 12px;padding:12px;border-bottom:1px solid var(--line)}
+  td{border:0;padding:0;min-width:0}
+  td.ti{grid-row:span 3} .thumb{width:96px;height:80px}
+  td[data-l]::before{content:attr(data-l)"：";color:var(--muted);font-size:12px}
+  td[data-l]{grid-column:1/-1;font-size:13px}
+  .spec,.ai{max-width:none}
+  .links{flex-direction:row;flex-wrap:wrap;gap:12px;grid-column:1/-1}
+  .tablewrap{overflow:visible}
+}
+</style>
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>
+/* Insights page additions. Chart colours validated with the dataviz palette validator:
+   country groups all-pairs (scatter) on #fff / #161e24; categories + status = reference slots 1-4, adjacent pairs. */
+:root{
+  --g-cn:#b8322a; --g-us:#2f5fb3; --g-ot:#1a9690;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s-unk:#b9c2c8;
+  --grid:#e8edf0; --axis:#c5ced3;
+  --on1:#ffffff; --on2:#15212b; --on3:#15212b; --on4:#15212b; --on5:#15212b; --onu:#15212b;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --g-cn:#e05a52; --g-us:#3987e5; --g-ot:#20a7a0;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s-unk:#4a5862;
+  --grid:#1f2930; --axis:#34424b;
+  --on1:#0b1418; --on2:#0b1418; --on3:#0b1418; --on4:#0b1418; --on5:#0b1418; --onu:#e6ecef}}
+:root[data-theme="dark"]{
+  --g-cn:#e05a52; --g-us:#3987e5; --g-ot:#20a7a0;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s-unk:#4a5862;
+  --grid:#1f2930; --axis:#34424b;
+  --on1:#0b1418; --on2:#0b1418; --on3:#0b1418; --on4:#0b1418; --on5:#0b1418; --onu:#e6ecef}
+.jump{display:flex;flex-wrap:wrap;gap:6px}
+.jump a{font:500 12px var(--body);color:var(--muted);text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:4px 7px;white-space:nowrap}
+.jump a:hover{color:var(--accent);border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,560px),1fr));gap:16px;margin-top:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;min-width:0;scroll-margin-top:72px}
+.card.wide{grid-column:1/-1}
+.card h2{font:700 16px/1.3 var(--display);margin:0 0 4px}
+.card h2 .no{font:500 12px var(--mono);color:var(--muted);margin-right:6px}
+.take{margin:0 0 10px;font-size:13px;color:var(--ink);max-width:80ch}
+.take::before{content:"→ ";color:var(--accent);font-family:var(--mono)}
+.sub{margin:-6px 0 10px;font-size:12px;color:var(--muted)}
+.ctrl{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:0 0 8px}
+.ctrl .seg button{padding:4px 9px;font-size:12px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--muted);margin:0 0 6px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend svg{flex:none}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;flex:none}
+.chart{position:relative;width:100%}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.chart text.ink{fill:var(--ink)}
+.chart text.lbl{font-family:var(--body);font-size:12px;fill:var(--ink)}
+.chart text.in{font-size:11px;font-weight:500}
+.chart .gl{stroke:var(--grid);stroke-width:1;shape-rendering:crispEdges}
+.chart .ax{stroke:var(--axis);stroke-width:1;shape-rendering:crispEdges}
+.chart [data-tip]{cursor:default}
+.chart a[data-tip]{cursor:pointer}
+.chart a:focus-visible{outline:none}
+.chart a:focus-visible .mk{stroke:var(--ink);stroke-width:2}
+.chart .mk{stroke:var(--panel);stroke-width:1.5}
+.chart .dim{opacity:.13}
+.chart .hit{fill:transparent;stroke:none}
+.chart g.hov rect.bar,.chart rect.bar:hover{filter:brightness(1.08)}
+#tip{position:fixed;z-index:20;pointer-events:none;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:7px 9px;font:12px/1.45 var(--body);box-shadow:0 4px 16px rgba(0,0,0,.14);max-width:260px}
+#tip b{font-family:var(--display)}
+#tip .tm{color:var(--muted)}
+#tip .tk{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px;vertical-align:0}
+details.dt{margin-top:8px;font-size:12px}
+details.dt summary{cursor:pointer;color:var(--accent);font:500 12px var(--mono)}
+.tablewrap.mini{margin-top:6px;max-height:320px;overflow:auto}
+.mini table{min-width:0;font-size:12px}
+.mini th{padding:6px 8px;position:sticky;top:0;background:var(--panel)}
+.mini td{padding:5px 8px}
+.mini td.r,.mini th.r{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums}
+.mini a{color:var(--accent);text-decoration:none}
+.state{padding:40px 0;text-align:center;color:var(--muted);font-family:var(--mono);font-size:13px}
+.kpis .kn{font-size:11px;opacity:.85}
+@media (max-width:760px){
+  .mini table{min-width:0} .mini thead{display:table-header-group}
+  .mini tr{display:table-row;padding:0;border:0}
+  .mini td{display:table-cell;padding:5px 8px;border-bottom:1px solid var(--line)}
+  .mini td[data-l]::before{content:none}
+  .tablewrap.mini{overflow:auto}
+  .card{padding:12px}
+  .bar .jump{display:none}
+}
+@media (forced-colors:active){.chart .mk,.chart rect.bar{forced-color-adjust:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <pattern id="h-CN" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)"><rect width="5" height="5" style="fill:var(--g-cn)" opacity=".28"/><rect width="2.2" height="5" style="fill:var(--g-cn)"/></pattern>
+  <pattern id="h-US" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)"><rect width="5" height="5" style="fill:var(--g-us)" opacity=".28"/><rect width="2.2" height="5" style="fill:var(--g-us)"/></pattern>
+  <pattern id="h-OT" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)"><rect width="5" height="5" style="fill:var(--g-ot)" opacity=".28"/><rect width="2.2" height="5" style="fill:var(--g-ot)"/></pattern>
+</defs></svg>
+
+<div class="wrap">
+  <div class="top"><a href="../">← Physical Instinct</a>
+    <div class="seg lang" id="fLang" role="group" aria-label="Language / 语言"><button type="button" data-v="zh" aria-pressed="true">中文</button><button type="button" data-v="en" aria-pressed="false">EN</button></div></div>
+  <nav class="secnav" aria-label="Sections">
+    <a href="../robot-hardware-spectrum/" data-i="n_hw">硬件</a>
+    <a href="../robot-model-spectrum/" data-i="n_md">模型</a>
+    <a href="../robot-dataset-spectrum/" data-i="n_ds">数据集</a>
+    <a href="../robot-funding-tracker/" data-i="n_fd">融资</a>
+    <a href="../robot-hardware-insights/" aria-current="page" data-i="n_in">洞察</a>
+    <a href="../sim-benchmark-spectrum/" data-i="n_sb">仿真与评测</a>
+  </nav>
+  <h1 data-i="title">机器人硬件洞察</h1>
+  <p class="lede" data-i="lede">基于机器人硬件图谱的统计图。</p>
+  <div class="kpis" id="kpis"></div>
+
+  <div class="bar" role="toolbar" id="bar" aria-label="筛选">
+    <div class="seg" id="fGrp" aria-label="国家">
+      <button type="button" data-i="g_all" data-v="all" aria-pressed="true">全部</button>
+      <button type="button" data-i="g_CN" data-v="CN" aria-pressed="false">中国</button>
+      <button type="button" data-i="g_US" data-v="US" aria-pressed="false">美国</button>
+      <button type="button" data-i="g_OT" data-v="OT" aria-pressed="false">其他国家</button>
+    </div>
+    <input id="q" type="search" placeholder="高亮型号或公司" aria-label="搜索">
+    <nav class="jump" id="jump" aria-label="图表"></nav>
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="state" id="state" data-i="loading" role="status">正在加载数据…</div>
+  <div class="grid" id="grid" hidden></div>
+
+  <footer id="foot"></footer>
+</div>
+<div id="tip" role="tooltip" hidden></div>
+<script>
+"use strict";
+const T={
+zh:{n_hw:"硬件",n_md:"模型",n_ds:"数据集",n_fd:"融资",n_in:"洞察",n_sb:"仿真与评测",title:"机器人硬件洞察",doc:"机器人硬件洞察",
+ lede:"用硬件图谱里的 851 条记录画的统计图：发布节奏、类别结构、人形机器人的价格、自由度和尺寸、灵巧手自由度、产品状态、主要厂商和国别。所有数字都由脚本从 robots.json 解析得出，没有新增调研；解析不出来的字段不进入对应图表，规则见页脚。数据截至 2026 年 11 月 8 日。",
+ loading:"正在加载数据…",err:"数据加载失败，请刷新重试，或直接下载 data/insights.json。",bar:"筛选",
+ g_all:"全部",g_CN:"中国",g_US:"美国",g_OT:"其他国家",q:"高亮型号或公司（中英文）",
+ count:(a,b)=>`${a} / ${b} 条`,match:(m)=>`${m} 条匹配`,
+ grp:{CN:"中国",US:"美国",OT:"其他国家"},
+ cat:{humanoid:"人形",mobile:"轮式/移动操作",arm:"机械臂",hand:"灵巧手",data:"数据采集"},
+ st:{on_sale:"在售/已部署",pilot:"试点/小批量/预订",prototype:"原型",research_other:"科研/开源/停产等",unknown:"未知"},
+ k:["收录条目","中国","美国","其他国家","人形机器人","人形中位价","人形中位全身自由度","灵巧手中位自由度","有确切发布日期"],kn:n=>`n=${n}`,
+ c1:"每年新品数量（按国家）",c2:"类别结构（按国家）",c3:"人形机器人：价格 vs 全身自由度",c4:"人形机器人：身高 vs 体重",c5:"灵巧手自由度",c6:"产品状态（按国家）",c7:"产品最多的公司（前 15）",c8:"其他国家条目的国别分布",
+ j:["发布","类别","价格","尺寸","灵巧手","状态","公司","国别"],
+ d_all:"发布 + 收录日期",d_rel:"只看发布日期",lg_rel:"发布日期",lg_list:"收录日期（近似）",
+ s1:(a,b)=>`未画出：无日期 ${a} 条、2015 年以前 ${b} 条。斜线部分只有数据库收录日期，实际发布可能更早。`,
+ s3:n=>`${n} 款同时有价格和全身自由度；两轴均为对数刻度，横向有轻微抖动。点击圆点打开硬件条目。`,
+ s4:n=>`${n} 款同时有单一数值的身高和体重；两轴均为对数刻度。点击圆点打开硬件条目。`,
+ s5a:n=>`总自由度分布（${n} 款）`,s5b:n=>`主动 vs 总自由度（${n} 款有主动自由度数据）`,
+ s7:"按 co 字段计数，筛选国家后在该国内重新排名。",s8:"不受上方国家筛选影响。",
+ lg_act:"主动自由度",lg_tot:"总自由度",
+ x_dof:"全身自由度（对数）",y_price:"价格，美元（对数）",x_w:"体重 kg（对数）",y_h:"身高 cm（对数）",x_hdof:"自由度",y_n:"数量",x_n:"产品数",
+ tbl:"数据表",th_year:"年份",th_rel:"发布",th_list:"收录",th_total:"合计",th_grp:"国家",th_model:"型号",th_co:"公司",th_price:"价格",th_dof:"全身自由度",th_h:"身高 cm",th_w:"体重 kg",th_bin:"自由度",th_n:"数量",th_share:"占比",th_cty:"国家/地区",th_act:"主动",th_tot:"总计",
+ open:"点击打开硬件条目 ↗",tapagain:"再点一次打开硬件条目 ↗",from:"起",others:n=>`其他 ${n} 个国家/地区`,other1:"其他",
+ t1:s=>`按确切发布日期，2025–2026 年共 ${s.rel2526} 款新品，其中中国 ${s.rel2526cn} 款（${s.rel2526cnp}%）。2024 年以前每年只有个位数到十几款；只有收录日期的 ${s.listed} 条集中在 2025–2026 年，只能当作近似。`,
+ t2:s=>`人形机器人在中国（${s.catp.CN.humanoid}%）和美国（${s.catp.US.humanoid}%）都是最大类别；其他国家的机械臂占 ${s.catp.OT.arm}%，中国的灵巧手占 ${s.catp.CN.hand}%。`,
+ t3:s=>`价格和自由度只有弱相关（log 价格与自由度 r = ${s.r3}）。人形中位价 ${s.medP}（${s.nP} 款），${s.under20}款低于 2 万美元；自由度相近的机型价格可以相差 10 倍以上。`,
+ t4:s=>`${s.nHW} 款里 ${s.full} 款身高 ≥ 150 cm，中位 ${s.medH} cm / ${s.medW} kg；桌面级小型人形和 2 米以上的大型机体拉开了尺寸两端。`,
+ t5:s=>`${s.nHand} 款灵巧手中位 ${s.medHand} 个自由度；最常见的是 20 自由度（${s.h20} 款）和 6 自由度（${s.h6} 款，其中中国 ${s.h6cn} 款）。已知主动自由度的 ${s.nAct} 款中，${s.fullAct} 款是全驱动（主动 = 总数）。`,
+ t6:s=>`在售/已部署占比：其他国家 ${s.stp.OT.on_sale}%、中国 ${s.stp.CN.on_sale}%、美国 ${s.stp.US.on_sale}%；美国试点/小批量/预订占 ${s.stp.US.pilot}%，高于中国（${s.stp.CN.pilot}%）。`,
+ t7:s=>`前 15 家中有 ${s.topCN} 家中国公司；${s.top1}以 ${s.top1n} 款居首，之后是 ${s.top2}（${s.top2n}）和 ${s.top3}（${s.top3n}）。`,
+ t8:s=>`${s.otN} 条其他国家条目里，日本（${s.ctyN.Japan}）、韩国（${s.ctyN["South Korea"]}）和德国（${s.ctyN.Germany}）合计占 ${s.top3cp}%，来自 ${s.nCty} 个国家/地区。`
+},
+en:{n_hw:"Hardware",n_md:"Models",n_ds:"Datasets",n_fd:"Funding",n_in:"Insights",n_sb:"Sim & Bench",title:"Robot Hardware Insights",doc:"Robot Hardware Insights",
+ lede:"Charts built from the 851 entries in the Robot Hardware Spectrum: release pace, category mix, humanoid price, DoF and size, dexterous-hand DoF, product status, leading makers and countries. Every number is parsed by a script from robots.json with no new research; fields that cannot be parsed are left out of the relevant chart (rules in the footer). Data as of 8 Nov 2026.",
+ loading:"Loading data…",err:"Could not load the data. Refresh to retry, or download data/insights.json directly.",bar:"Filters",
+ g_all:"All",g_CN:"China",g_US:"US",g_OT:"Other",q:"Highlight a model or company",
+ count:(a,b)=>`${a} of ${b}`,match:(m)=>`${m} matches`,
+ grp:{CN:"China",US:"US",OT:"Other countries"},
+ cat:{humanoid:"Humanoid",mobile:"Wheeled / mobile",arm:"Arm",hand:"Hand",data:"Data collection"},
+ st:{on_sale:"On sale / deployed",pilot:"Pilot / low volume / pre-order",prototype:"Prototype",research_other:"Research / open / discontinued",unknown:"Unknown"},
+ k:["Entries","China","US","Other countries","Humanoids","Median humanoid price","Median humanoid body DoF","Median hand DoF","Exact release date"],kn:n=>`n=${n}`,
+ c1:"New products per year, by country",c2:"Category mix by country",c3:"Humanoids: price vs whole-body DoF",c4:"Humanoids: height vs weight",c5:"Dexterous-hand DoF",c6:"Product status by country",c7:"Companies with the most products (top 15)",c8:"Where the non-CN/US entries come from",
+ j:["Releases","Categories","Price","Size","Hands","Status","Companies","Countries"],
+ d_all:"Release + listing date",d_rel:"Release date only",lg_rel:"Release date",lg_list:"Listing date (approx.)",
+ s1:(a,b)=>`Not shown: ${a} undated entries and ${b} before 2015. Hatched parts only have the catalog listing date; the real release may be earlier.`,
+ s3:n=>`${n} humanoids with both a price and a whole-body DoF. Both axes log scale, slight horizontal jitter. Click a dot to open its hardware entry.`,
+ s4:n=>`${n} humanoids with a single-value height and weight. Both axes log scale. Click a dot to open its hardware entry.`,
+ s5a:n=>`Total DoF distribution (${n} hands)`,s5b:n=>`Active vs total DoF (${n} hands report active DoF)`,
+ s7:"Counted by the co field; filtering a country re-ranks within it.",s8:"Not affected by the country filter above.",
+ lg_act:"Active DoF",lg_tot:"Total DoF",
+ x_dof:"Whole-body DoF (log)",y_price:"Price, USD (log)",x_w:"Weight kg (log)",y_h:"Height cm (log)",x_hdof:"DoF",y_n:"Count",x_n:"Products",
+ tbl:"Data table",th_year:"Year",th_rel:"release",th_list:"listed",th_total:"Total",th_grp:"Country",th_model:"Model",th_co:"Company",th_price:"Price",th_dof:"Body DoF",th_h:"Height cm",th_w:"Weight kg",th_bin:"DoF",th_n:"Count",th_share:"Share",th_cty:"Country / region",th_act:"Active",th_tot:"Total",
+ open:"Click to open the hardware entry ↗",tapagain:"Tap again to open the hardware entry ↗",from:"from",others:n=>`${n} other countries / regions`,other1:"Other",
+ t1:s=>`By exact release date, ${s.rel2526} products launched in 2025–2026, ${s.rel2526cn} of them (${s.rel2526cnp}%) from China. Before 2024 most years saw a handful to a dozen; the ${s.listed} listing-date-only entries cluster in 2025–2026 and are approximate.`,
+ t2:s=>`Humanoids are the largest category in both China (${s.catp.CN.humanoid}%) and the US (${s.catp.US.humanoid}%); arms make up ${s.catp.OT.arm}% of other countries' entries, and hands ${s.catp.CN.hand}% of China's.`,
+ t3:s=>`Price tracks DoF only weakly (log price vs DoF, r = ${s.r3}). The median humanoid lists at ${s.medP} (${s.nP} priced), ${s.under20} sit under $20K, and machines with similar DoF can differ more than 10× in price.`,
+ t4:s=>`Of ${s.nHW} humanoids, ${s.full} stand 150 cm or taller; the median is ${s.medH} cm / ${s.medW} kg, with desktop-size bots and 2 m+ machines at the extremes.`,
+ t5:s=>`The median of ${s.nHand} dexterous hands is ${s.medHand} DoF. The most common counts are 20 DoF (${s.h20} hands) and 6 DoF (${s.h6}, ${s.h6cn} of them from China). Of the ${s.nAct} hands that report active DoF, ${s.fullAct} are fully actuated (active = total).`,
+ t6:s=>`Share on sale or deployed: other countries ${s.stp.OT.on_sale}%, China ${s.stp.CN.on_sale}%, US ${s.stp.US.on_sale}%. Pilot / low-volume / pre-order is ${s.stp.US.pilot}% for the US versus ${s.stp.CN.pilot}% for China.`,
+ t7:s=>`${s.topCN} of the top 15 are Chinese companies; ${s.top1} leads with ${s.top1n} products, followed by ${s.top2} (${s.top2n}) and ${s.top3} (${s.top3n}).`,
+ t8:s=>`Japan (${s.ctyN.Japan}), South Korea (${s.ctyN["South Korea"]}) and Germany (${s.ctyN.Germany}) account for ${s.top3cp}% of the ${s.otN} entries from outside China and the US, which span ${s.nCty} countries / regions.`
+}};
+const FOOT={zh:`<h2>说明：解析规则与排除项</h2><ul>
+<li>本页只使用 <a href="../robot-hardware-spectrum/">机器人硬件图谱</a> 的 <a href="../robot-hardware-spectrum/data/robots.json">robots.json</a>（{N} 条），没有新增调研，也没有修改硬件数据。<a href="data/build_insights.py">build_insights.py</a> 把它解析成 <code>insights.json</code>，每行的 <code>src_id</code> 对应硬件条目的 <code>id</code>，原始字段（<code>y_raw</code>、<code>p_raw</code>、<code>s_raw</code>、<code>st_raw</code>）一并保留。</li>
+<li>国家分组：c = CN 计为中国，US 为美国，其余为“其他国家”。唯一标为 CN/US 的条目（诺亦腾 Perception Neuron 3）计入中国。</li>
+<li>发布年份：<code>y</code> 为“YYYY”或“YYYY-MM”的视为发布日期；带“（收录）”的是数据库收录日期，只是近似，图 1 用斜线表示，可切换隐藏。无日期 {NODATE} 条、2015 年以前 {PRE} 条不在图 1 中。</li>
+<li>价格：取“N 美元”或“$N”中的数字，全部按美元；“起”按起价计；“$ 0”（{ZERO} 条）视为未知；按小时计费的 {HOURLY} 条不计。价格多为数据库标价或估计值，渠道之间差异很大。</li>
+<li>身高、体重：只取单一数值（允许“~”约数）；范围（如 130–180 cm）、N/A 和夹带说明文字的不计。全身自由度：取“全身 N DoF”，或 robo2u 三段格式“cm，kg，N DoF”中的 N；“N+”“&gt;N”、范围和“N/A”不计。</li>
+<li>灵巧手：总自由度取“N DoF”，主动自由度取“N 主动”（只有 {ACT} 款有）。手的重量和传感器未统计。</li>
+<li>状态归并：在售/已部署 = 量产/在售、在售、已部署、商用按小时计费；试点/小批量/预订 = 小批量、试点/小批量、预订；科研/开源/停产等 = 科研、开源、已停产、不单独销售；空白为未知。</li>
+<li>公司：按 <code>co</code> 字段计数，合并了两组拼写变体（NeodraDynamics、RoboParty）；同一集团的不同品牌不合并。</li>
+<li>图中颜色经过色觉缺陷模拟校验；散点同时用形状（圆 = 中国，方 = 美国，三角 = 其他）区分国家。每张图下方都有数据表。</li></ul>
+<h2>数据来源</h2><ul>
+<li><a href="../robot-hardware-spectrum/">机器人硬件图谱</a>，其数据汇总自 <a href="https://humanoid.guide/">humanoid.guide</a>、<a href="https://www.roboticscenter.ai/store">Robotics Center 商店</a> 和 <a href="https://data.robo2u.com/">Robo2u Data</a>；每行的原始来源链接保存在 <code>src</code> 字段。</li></ul>
+<p>数据下载：<a href="data/insights.json">insights.json</a> · <a href="data/insights.csv">insights.csv</a> · <a href="data/build_insights.py">build_insights.py</a> · 源码：<a href="https://github.com/quantumiracle/physical-instinct">github.com/quantumiracle/physical-instinct</a></p>`,
+en:`<h2>Notes: parsing rules and exclusions</h2><ul>
+<li>This page uses only <a href="../robot-hardware-spectrum/data/robots.json">robots.json</a> from the <a href="../robot-hardware-spectrum/">Robot Hardware Spectrum</a> ({N} entries); no new research, and the hardware data is not modified. <a href="data/build_insights.py">build_insights.py</a> parses it into <code>insights.json</code>; each row's <code>src_id</code> is the hardware <code>id</code>, and the raw fields (<code>y_raw</code>, <code>p_raw</code>, <code>s_raw</code>, <code>st_raw</code>) are kept.</li>
+<li>Country groups: c = CN counts as China, US as US, everything else as “other countries”. The single CN/US entry (Noitom Perception Neuron 3) is counted as China.</li>
+<li>Release year: <code>y</code> of the form “YYYY” or “YYYY-MM” is a release date; values marked “（收录）” are the catalog listing date and only approximate — hatched in chart 1, and can be hidden. {NODATE} undated entries and {PRE} from before 2015 are not in chart 1.</li>
+<li>Price: the number in “N 美元” or “$N”, all USD; “from” prices count at the starting price; “$ 0” ({ZERO} entries) is treated as unknown; {HOURLY} hourly-billed entry is excluded. Prices are mostly catalog list prices or estimates and vary widely by channel.</li>
+<li>Height and weight: single values only (“~” approximations allowed); ranges (e.g. 130–180 cm), N/A and values with extra text are excluded. Whole-body DoF: “全身 N DoF”, or N in the robo2u three-part form “cm, kg, N DoF”; “N+”, “&gt;N”, ranges and N/A are excluded.</li>
+<li>Dexterous hands: total DoF from “N DoF”, active DoF from “N 主动” (only {ACT} hands report it). Hand weight and sensors are not charted.</li>
+<li>Status groups: on sale / deployed = 量产/在售, 在售, 已部署, commercial hourly; pilot / low volume / pre-order = 小批量, 试点/小批量, 预订; research / open / discontinued = 科研, 开源, 已停产, 不单独销售; blank = unknown.</li>
+<li>Companies: counted by the <code>co</code> field, with two spelling variants merged (NeodraDynamics, RoboParty); brands within one group are not merged.</li>
+<li>Chart colours were checked with colour-vision-deficiency simulation; scatter plots also use shape (circle = China, square = US, triangle = other). Every chart has a data table underneath.</li></ul>
+<h2>Sources</h2><ul>
+<li><a href="../robot-hardware-spectrum/">Robot Hardware Spectrum</a>, compiled from <a href="https://humanoid.guide/">humanoid.guide</a>, the <a href="https://www.roboticscenter.ai/store">Robotics Center store</a> and <a href="https://data.robo2u.com/">Robo2u Data</a>; each row's original source link is kept in the <code>src</code> field.</li></ul>
+<p>Download: <a href="data/insights.json">insights.json</a> · <a href="data/insights.csv">insights.csv</a> · <a href="data/build_insights.py">build_insights.py</a> · Source: <a href="https://github.com/quantumiracle/physical-instinct">github.com/quantumiracle/physical-instinct</a></p>`};
+
+const GRP=["CN","US","OT"], GV={CN:"--g-cn",US:"--g-us",OT:"--g-ot"};
+const CATS=["humanoid","mobile","arm","hand","data"], CV=["--s1","--s2","--s3","--s4","--s5"];
+const STS=["on_sale","pilot","prototype","research_other","unknown"], SV=["--s1","--s2","--s3","--s4","--s-unk"];
+const ON={"--s1":"--on1","--s2":"--on2","--s3":"--on3","--s4":"--on4","--s5":"--on5","--s-unk":"--onu"};
+const CARDS=[["c1",1],["c2",0],["c6",0],["c3",0],["c4",0],["c5",1],["c7",0],["c8",0]];
+const JUMP=["c1","c2","c3","c4","c5","c6","c7","c8"];
+let LANG="zh", D=[], S={}, st={grp:"all",q:"",date:"all"};
+const tx=k=>T[LANG][k];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const col=v=>`var(${v})`;
+const fmtN=n=>Number(n).toLocaleString("en-US");
+const fmtUSD=n=>n>=1e6?`$${+(n/1e6).toFixed(n%1e6?1:0)}M`:n>=1e3?`$${+(n/1e3).toFixed(n%1e3&&n<1e4?1:0)}K`:`$${n}`;
+const pct=(a,b)=>b?Math.round(100*a/b):0;
+const median=a=>{const s=a.slice().sort((x,y)=>x-y),m=s.length>>1;return s.length?(s.length%2?s[m]:(s[m-1]+s[m])/2):null};
+const hwURL=d=>`../robot-hardware-spectrum/?q=${encodeURIComponent(d.n)}`;
+const coL=d=>LANG==="zh"&&d.zh?d.zh:d.co_norm;
+const hash=s=>{let h=2166136261;for(const c of s){h^=c.charCodeAt(0);h=Math.imul(h,16777619)}return ((h>>>0)%1000)/1000};
+const grpOK=d=>st.grp==="all"||d.grp===st.grp;
+const qm=d=>{const q=st.q.trim().toLowerCase();return !q||(d.n+" "+d.co+" "+(d.zh||"")).toLowerCase().includes(q)};
+
+/* ---------- stats (full dataset, for KPIs and takeaways) ---------- */
+function stats(){
+  const s={};const by=(f)=>D.filter(f);
+  const hu=by(d=>d.cat==="humanoid");
+  const rel=by(d=>d.date_kind==="release"&&d.year>=2025);
+  s.rel2526=rel.length;s.rel2526cn=rel.filter(d=>d.grp==="CN").length;s.rel2526cnp=pct(s.rel2526cn,s.rel2526);
+  s.listed=by(d=>d.date_kind==="listed").length;
+  s.nodate=by(d=>!d.year).length;s.pre=by(d=>d.year&&d.year<2015).length;
+  s.release=by(d=>d.date_kind==="release").length;
+  s.gn={};s.catp={};s.stp={};
+  GRP.forEach(g=>{const r=by(d=>d.grp===g);s.gn[g]=r.length;s.catp[g]={};s.stp[g]={};
+    CATS.forEach(c=>s.catp[g][c]=pct(r.filter(d=>d.cat===c).length,r.length));
+    STS.forEach(c=>s.stp[g][c]=pct(r.filter(d=>d.status===c).length,r.length));});
+  const P=hu.filter(d=>d.price_usd).map(d=>d.price_usd);s.nP=P.length;s.medP=fmtUSD(median(P));s.under20=P.filter(x=>x<20000).length;
+  const F=hu.filter(d=>d.dof_body).map(d=>d.dof_body);s.nF=F.length;s.medF=median(F);
+  const both=hu.filter(d=>d.price_usd&&d.dof_body);s.nPF=both.length;
+  {const xs=both.map(d=>Math.log10(d.dof_body)),ys=both.map(d=>Math.log10(d.price_usd));
+   const xs2=both.map(d=>d.dof_body);const mx=xs2.reduce((a,b)=>a+b,0)/xs2.length,my=ys.reduce((a,b)=>a+b,0)/ys.length;
+   let c=0,vx=0,vy=0;xs2.forEach((x,i)=>{c+=(x-mx)*(ys[i]-my);vx+=(x-mx)**2;vy+=(ys[i]-my)**2});s.r3=(c/Math.sqrt(vx*vy)).toFixed(2);}
+  const hw=hu.filter(d=>d.height_cm&&d.weight_kg);s.nHW=hw.length;s.full=hw.filter(d=>d.height_cm>=150).length;
+  s.medH=Math.round(median(hw.map(d=>d.height_cm)));s.medW=Math.round(median(hw.map(d=>d.weight_kg)));
+  const ha=by(d=>d.cat==="hand"&&d.hand_dof_total);s.nHand=ha.length;s.medHand=median(ha.map(d=>d.hand_dof_total));
+  s.h6=ha.filter(d=>d.hand_dof_total===6).length;s.h6cn=ha.filter(d=>d.hand_dof_total===6&&d.grp==="CN").length;s.h20=ha.filter(d=>d.hand_dof_total===20).length;
+  const ac=by(d=>d.hand_dof_active);s.nAct=ac.length;s.fullAct=ac.filter(d=>d.hand_dof_active===d.hand_dof_total).length;
+  const top=companies("all");s.topCN=top.filter(c=>c.grp==="CN").length;
+  [1,2,3].forEach(i=>{s["top"+i+"d"]=top[i-1];s["top"+i+"n"]=top[i-1].n});
+  const ot=by(d=>d.grp==="OT");s.otN=ot.length;s.ctyN={};ot.forEach(d=>s.ctyN[d.cty_en]=(s.ctyN[d.cty_en]||0)+1);
+  s.nCty=Object.keys(s.ctyN).length;s.top3cp=pct((s.ctyN.Japan||0)+(s.ctyN["South Korea"]||0)+(s.ctyN.Germany||0),s.otN);
+  return s;
+}
+function companies(g){
+  const m=new Map();
+  D.filter(d=>g==="all"||d.grp===g).forEach(d=>{const k=d.co_norm;if(!m.has(k))m.set(k,{co:k,zh:d.zh,grp:d.grp,n:0,co_norm:k});const o=m.get(k);o.n++;if(!o.zh&&d.zh)o.zh=d.zh});
+  return [...m.values()].sort((a,b)=>b.n-a.n||a.co.localeCompare(b.co)).slice(0,15);
+}
+
+/* ---------- small SVG helpers ---------- */
+const lin=(d0,d1,r0,r1)=>v=>r0+(v-d0)/(d1-d0)*(r1-r0);
+const lg=(d0,d1,r0,r1)=>{const a=Math.log10(d0),b=Math.log10(d1);return v=>r0+(Math.log10(v)-a)/(b-a)*(r1-r0)};
+function nice(max,n){const raw=max/n,p=10**Math.floor(Math.log10(raw)),f=raw/p,st=(f<=1?1:f<=2?2:f<=5?5:10)*p;const t=[];for(let v=0;v<=max+st*.001;v+=st)t.push(Math.round(v*1e6)/1e6);if(t[t.length-1]<max)t.push(t[t.length-1]+st);return t}
+const svg=(W,H,label,inner)=>`<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(label)}">${inner}</svg>`;
+// column with rounded top (data end), square at baseline
+function colP(x,y,w,h,r){if(h<=0)return"";r=Math.min(r,w/2,h);return `M${x},${y+h}V${y+r}Q${x},${y} ${x+r},${y}H${x+w-r}Q${x+w},${y} ${x+w},${y+r}V${y+h}Z`}
+// bar with rounded right end
+function barP(x,y,w,h,r){if(w<=0)return"";r=Math.min(r,h/2,w);return `M${x},${y}H${x+w-r}Q${x+w},${y} ${x+w},${y+r}V${y+h-r}Q${x+w},${y+h} ${x+w-r},${y+h}H${x}Z`}
+function shape(g,x,y,s,cls,extra){const c=`style="fill:${col(GV[g])}" class="mk ${cls||""}" ${extra||""}`;
+  if(g==="CN")return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${s}" ${c}/>`;
+  if(g==="US")return `<rect x="${(x-s*.9).toFixed(1)}" y="${(y-s*.9).toFixed(1)}" width="${(s*1.8).toFixed(1)}" height="${(s*1.8).toFixed(1)}" rx="1" ${c}/>`;
+  const h=s*1.25;return `<path d="M${x.toFixed(1)},${(y-h).toFixed(1)}L${(x+h).toFixed(1)},${(y+h*.8).toFixed(1)}L${(x-h).toFixed(1)},${(y+h*.8).toFixed(1)}Z" ${c}/>`}
+const keyShape=g=>`<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">${shape(g,6,6.3,4.2)}</svg>`;
+const legend=items=>items.map(([k,label])=>`<span>${k}${esc(label)}</span>`).join("");
+const sw=v=>`<span class="sw" style="background:${col(v)}"></span>`;
+const swH=g=>`<svg width="12" height="12" aria-hidden="true"><rect width="12" height="12" rx="2" fill="url(#h-${g})"/></svg>`;
+const TIPS=new Map();let tipSeq=0;
+const tipA=html=>{const id="t"+(++tipSeq);TIPS.set(id,html);return `data-tip="${id}"`};
+function axisY(ticks,y,x0,x1,fmt){return ticks.map(t=>`<line class="gl" x1="${x0}" x2="${x1}" y1="${y(t).toFixed(1)}" y2="${y(t).toFixed(1)}"/><text x="${x0-6}" y="${(y(t)+3.5).toFixed(1)}" text-anchor="end">${fmt(t)}</text>`).join("")}
+function axisX(ticks,x,y0,y1,fmt){return ticks.map(t=>`<line class="gl" x1="${x(t).toFixed(1)}" x2="${x(t).toFixed(1)}" y1="${y0}" y2="${y1}"/><text x="${x(t).toFixed(1)}" y="${y1+15}" text-anchor="middle">${fmt(t)}</text>`).join("")}
+function table(head,rows,numCols){const nc=new Set(numCols||[]);return `<details class="dt"><summary>${tx("tbl")}</summary><div class="tablewrap mini"><table><thead><tr>${head.map((h,i)=>`<th${nc.has(i)?' class="r"':""}>${esc(h)}</th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map((c,i)=>`<td${nc.has(i)?' class="r"':""}>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div></details>`}
+const cell=v=>v==null||v===""?'<span class="dim">—</span>':esc(v);
+const rowLink=d=>`<a href="${esc(hwURL(d))}">${esc(d.n)}</a>`;
+function robotTip(d,extra){return `<b>${esc(d.n)}</b><br><span class="tm">${esc(d.co)}${d.zh?" · "+esc(d.zh):""} · ${esc(tx("grp")[d.grp])}</span><br>${extra}<br><span class="tm" data-open>${esc(tx("open"))}</span>`}
+const W=el=>Math.max(280,Math.floor(el.clientWidth));
+
+/* ---------- 1. releases per year ---------- */
+function c1(card){
+  const el=card.querySelector(".chart"),w=W(el),H=w<500?240:280,m={t:16,r:8,b:26,l:36};
+  const years=[];for(let y=2015;y<=2026;y++)years.push(y);
+  const cnt={};years.forEach(y=>{cnt[y]={};GRP.forEach(g=>{cnt[y][g]={r:0,l:0}})});
+  D.forEach(d=>{if(d.year>=2015&&d.year<=2026)cnt[d.year][d.grp][d.date_kind==="listed"?"l":"r"]++});
+  const showL=st.date==="all";
+  const tot=y=>GRP.reduce((a,g)=>a+cnt[y][g].r+(showL?cnt[y][g].l:0),0);
+  const max=Math.max(...years.map(tot)),ticks=nice(max,4),Y=lin(0,ticks[ticks.length-1],H-m.b,m.t);
+  const band=(w-m.l-m.r)/years.length,cw=Math.min(24,band*.62);
+  let g=axisY(ticks,Y,m.l,w-m.r,fmtN);
+  years.forEach((yr,i)=>{
+    const x=m.l+band*i+(band-cw)/2;let base=H-m.b;const segs=[];
+    GRP.forEach(gr=>{[["r",col(GV[gr])],["l",`url(#h-${gr})`]].forEach(([k,fill])=>{const v=cnt[yr][gr][k];if(!v||(k==="l"&&!showL))return;segs.push({v,fill})})});
+    let out="";segs.forEach((s,j)=>{const h=Y(0)-Y(s.v);const top=j===segs.length-1;const y0=base-h;const hh=Math.max(0,h-(j?2:0));
+      out+=top?`<path class="bar" d="${colP(x,y0,cw,hh,4)}" style="fill:${s.fill}"/>`:`<rect class="bar" x="${x}" y="${y0.toFixed(1)}" width="${cw}" height="${hh.toFixed(1)}" style="fill:${s.fill}"/>`;base=y0;});
+    const t=tot(yr);
+    const tip=`<b>${yr}</b><br>`+GRP.map(gr=>`<span class="tk" style="background:${col(GV[gr])}"></span>${esc(tx("grp")[gr])}: ${cnt[yr][gr].r} ${esc(tx("th_rel"))}${showL?` + ${cnt[yr][gr].l} ${esc(tx("th_list"))}`:""}`).join("<br>")+`<br><span class="tm">${esc(tx("th_total"))}: ${t}</span>`;
+    g+=`<g ${tipA(tip)}><rect class="hit" x="${m.l+band*i}" y="${m.t}" width="${band}" height="${H-m.b-m.t}"/>${out}${t?`<text class="ink" x="${x+cw/2}" y="${(Y(t)-4).toFixed(1)}" text-anchor="middle">${t}</text>`:""}</g>`;
+    if(w>=520||i%2===0||yr===2026)g+=`<text x="${x+cw/2}" y="${H-m.b+15}" text-anchor="middle">${w<520?"’"+String(yr).slice(2):yr}</text>`;
+  });
+  g+=`<line class="ax" x1="${m.l}" x2="${w-m.r}" y1="${H-m.b}" y2="${H-m.b}"/>`;
+  el.innerHTML=svg(w,H,tx("c1"),g);
+  card.querySelector(".legend").innerHTML=legend([...GRP.map(gr=>[sw(GV[gr]),tx("grp")[gr]+" · "+tx("lg_rel")]),...(showL?[[swH("CN")+swH("US")+swH("OT"),tx("lg_list")]]:[])]);
+  card.querySelector(".tbl").innerHTML=table([tx("th_year"),...GRP.flatMap(gr=>[`${tx("grp")[gr]} ${tx("th_rel")}`,`${tx("grp")[gr]} ${tx("th_list")}`]),tx("th_total")],
+    years.map(y=>[y,...GRP.flatMap(gr=>[cnt[y][gr].r,cnt[y][gr].l]),GRP.reduce((a,gr)=>a+cnt[y][gr].r+cnt[y][gr].l,0)]),[1,2,3,4,5,6,7]);
+}
+/* ---------- 2 & 6. 100% stacked bars by country ---------- */
+function stack100(card,key,keys,vars,labels,title){
+  const el=card.querySelector(".chart"),w=W(el),lw=w<420?64:96,rowH=46,bh=24,H=GRP.length*rowH+4,x0=lw,x1=w-4;
+  let g="";
+  GRP.forEach((gr,i)=>{
+    const r=D.filter(d=>d.grp===gr),n=r.length,y=i*rowH+8;let x=x0;
+    g+=`<text class="lbl" x="0" y="${y+bh/2-1}">${esc(w<420?tx("g_"+gr):tx("grp")[gr])}</text><text x="0" y="${y+bh/2+13}">n=${n}</text>`;
+    keys.forEach((k,j)=>{const v=r.filter(d=>d[key]===k).length;if(!v)return;const segW=(x1-x0)*v/n;const last=keys.slice(j+1).every(k2=>!r.some(d=>d[key]===k2));
+      const ww=Math.max(0,segW-(last?0:2));const p=pct(v,n);
+      const shape_=last?`<path class="bar" d="${barP(x,y,ww,bh,4)}" style="fill:${col(vars[j])}"/>`:`<rect class="bar" x="${x.toFixed(1)}" y="${y}" width="${ww.toFixed(1)}" height="${bh}" style="fill:${col(vars[j])}"/>`;
+      const lab=`${p}%`;const fits=ww>=lab.length*6.7+8;
+      g+=`<g ${tipA(`<b>${esc(tx("grp")[gr])}</b> · ${esc(labels[k])}<br>${v} / ${n} (${p}%)`)}>${shape_}${fits?`<text class="in" x="${(x+ww/2).toFixed(1)}" y="${y+bh/2+4}" text-anchor="middle" style="fill:${col(ON[vars[j]])}">${lab}</text>`:""}</g>`;
+      x+=segW;});
+  });
+  el.innerHTML=svg(w,H,title,g);
+  card.querySelector(".legend").innerHTML=legend(keys.map((k,j)=>[sw(vars[j]),labels[k]]));
+  card.querySelector(".tbl").innerHTML=table([tx("th_grp"),...keys.map(k=>labels[k]),tx("th_total")],
+    GRP.map(gr=>{const r=D.filter(d=>d.grp===gr);return [esc(tx("grp")[gr]),...keys.map(k=>{const v=r.filter(d=>d[key]===k).length;return `${v} (${pct(v,r.length)}%)`}),r.length]}),[...keys.map((_,i)=>i+1),keys.length+1]);
+}
+/* ---------- scatter (3, 4) ---------- */
+function scatter(card,o){
+  const el=card.querySelector(".chart"),w=W(el),H=w<500?300:360,m={t:10,r:12,b:40,l:50};
+  const X=lg(o.xd[0],o.xd[1],m.l,w-m.r),Y=lg(o.yd[0],o.yd[1],H-m.b,m.t);
+  const xt=o.xt.filter(t=>w>=520||!o.xtSkip||!o.xtSkip.includes(t));
+  let g=axisY(o.yt,Y,m.l,w-m.r,o.yf)+axisX(xt,X,m.t,H-m.b,o.xf);
+  g+=`<line class="ax" x1="${m.l}" x2="${w-m.r}" y1="${H-m.b}" y2="${H-m.b}"/><line class="ax" x1="${m.l}" x2="${m.l}" y1="${m.t}" y2="${H-m.b}"/>`;
+  g+=`<text x="${w-m.r}" y="${H-4}" text-anchor="end">${esc(o.xl)}</text><text x="${m.l+6}" y="${m.t+11}" style="paint-order:stroke;stroke:var(--panel);stroke-width:3">${esc(o.yl)}</text>`;
+  const rows=o.rows.filter(grpOK);const q=st.q.trim();
+  const order=["CN","OT","US"];
+  order.forEach(gr=>rows.filter(d=>d.grp===gr).forEach(d=>{
+    const xv=o.x(d),yv=o.y(d),x=X(xv),y=Y(yv),hit=qm(d);
+    g+=`<a href="${esc(hwURL(d))}" ${tipA(robotTip(d,o.tip(d)))} aria-label="${esc(d.n+" · "+d.co)}"${q&&!hit?' class="dim"':""}><circle class="hit" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="9"/>${shape(gr,x,y,q&&hit?5.5:4)}</a>`;
+  }));
+  if(q)g+=rows.filter(qm).map(d=>`<text class="ink" x="${(X(o.x(d))+8).toFixed(1)}" y="${(Y(o.y(d))-6).toFixed(1)}" style="paint-order:stroke;stroke:var(--panel);stroke-width:3">${esc(d.n)}</text>`).slice(0,8).join("");
+  el.innerHTML=svg(w,H,o.title,g);
+  card.querySelector(".legend").innerHTML=legend(GRP.map(gr=>[keyShape(gr),`${tx("grp")[gr]} (${o.rows.filter(d=>d.grp===gr).length})`]));
+  card.querySelector(".tbl").innerHTML=table([tx("th_model"),tx("th_co"),tx("th_grp"),...o.cols.map(c=>c[0])],
+    rows.slice().sort(o.sort).map(d=>[rowLink(d),esc(d.co),esc(tx("grp")[d.grp]),...o.cols.map(c=>cell(c[1](d)))]),[3,4]);
+}
+function c3(card){
+  const rows=D.filter(d=>d.cat==="humanoid"&&d.price_usd&&d.dof_body);
+  card.querySelector(".sub").textContent=tx("s3")(rows.length);
+  scatter(card,{rows,title:tx("c3"),xd:[2.6,240],yd:[200,1.2e6],xt:[3,6,12,25,50,100,200],yt:[300,1e3,3e3,1e4,3e4,1e5,3e5,1e6],
+    x:d=>d.dof_body*(1+(hash(d.src_id)-.5)*.035),y:d=>d.price_usd,xf:String,yf:fmtUSD,xl:tx("x_dof"),yl:tx("y_price"),
+    tip:d=>`${fmtUSD(d.price_usd)}${d.price_from?" "+tx("from"):""} · ${d.dof_body} DoF`,
+    cols:[[tx("th_price"),d=>"$"+fmtN(d.price_usd)+(d.price_from?" "+tx("from"):"")],[tx("th_dof"),d=>d.dof_body]],sort:(a,b)=>a.price_usd-b.price_usd});
+}
+function c4(card){
+  const rows=D.filter(d=>d.cat==="humanoid"&&d.height_cm&&d.weight_kg);
+  card.querySelector(".sub").textContent=tx("s4")(rows.length);
+  scatter(card,{rows,title:tx("c4"),xd:[1,1600],yd:[22,480],xt:[1,3,10,30,100,300,1000],yt:[25,50,100,150,200,300,400],xtSkip:[3,300],
+    x:d=>d.weight_kg,y:d=>d.height_cm,xf:String,yf:String,xl:tx("x_w"),yl:tx("y_h"),
+    tip:d=>`${d.height_approx?"~":""}${d.height_cm} cm · ${d.weight_approx?"~":""}${d.weight_kg} kg`,
+    cols:[[tx("th_h"),d=>(d.height_approx?"~":"")+d.height_cm],[tx("th_w"),d=>(d.weight_approx?"~":"")+d.weight_kg]],sort:(a,b)=>a.height_cm-b.height_cm});
+}
+/* ---------- 5. hands ---------- */
+function c5(card){
+  const hands=D.filter(d=>d.cat==="hand"&&d.hand_dof_total),vis=hands.filter(grpOK);
+  const [elA,elB]=card.querySelectorAll(".chart");
+  card.querySelector(".subA").textContent=tx("s5a")(hands.length);
+  // histogram 1..25 + 26+
+  {const w=W(elA),H=w<500?220:250,m={t:16,r:6,b:28,l:30};const bins=[];for(let i=1;i<=26;i++)bins.push(i);
+   const bk=d=>Math.min(26,d.hand_dof_total);const cnt=bins.map(b=>GRP.map(gr=>vis.filter(d=>bk(d)===b&&d.grp===gr).length));
+   const max=Math.max(1,...cnt.map(c=>c.reduce((a,b)=>a+b,0))),ticks=nice(max,4),Y=lin(0,ticks[ticks.length-1],H-m.b,m.t);
+   const band=(w-m.l-m.r)/bins.length,cw=Math.min(24,Math.max(3,band-2));
+   let g=axisY(ticks,Y,m.l,w-m.r,fmtN);
+   bins.forEach((b,i)=>{const x=m.l+band*i+(band-cw)/2;let base=H-m.b;const segs=GRP.map((gr,j)=>({gr,v:cnt[i][j]})).filter(s=>s.v);let out="";
+     segs.forEach((s,j)=>{const h=Y(0)-Y(s.v),y0=base-h,hh=Math.max(0,h-(j?2:0));out+=j===segs.length-1?`<path class="bar" d="${colP(x,y0,cw,hh,Math.min(4,cw/2))}" style="fill:${col(GV[s.gr])}"/>`:`<rect class="bar" x="${x.toFixed(1)}" y="${y0.toFixed(1)}" width="${cw.toFixed(1)}" height="${hh.toFixed(1)}" style="fill:${col(GV[s.gr])}"/>`;base=y0});
+     const t=segs.reduce((a,s)=>a+s.v,0),lab=b===26?"26+":String(b);
+     g+=`<g ${tipA(`<b>${lab} DoF</b><br>`+GRP.map((gr,j)=>`<span class="tk" style="background:${col(GV[gr])}"></span>${esc(tx("grp")[gr])}: ${cnt[i][j]}`).join("<br>"))}><rect class="hit" x="${m.l+band*i}" y="${m.t}" width="${band}" height="${H-m.b-m.t}"/>${out}${t>=Math.max(3,max*.3)?`<text class="ink" x="${x+cw/2}" y="${(Y(t)-4).toFixed(1)}" text-anchor="middle">${t}</text>`:""}</g>`;
+     if([1,6,11,16,20,26].includes(b))g+=`<text x="${x+cw/2}" y="${H-m.b+14}" text-anchor="middle">${lab}</text>`;});
+   g+=`<line class="ax" x1="${m.l}" x2="${w-m.r}" y1="${H-m.b}" y2="${H-m.b}"/><text x="${w-m.r}" y="${H-1}" text-anchor="end">${esc(tx("x_hdof"))}</text>`;
+   elA.innerHTML=svg(w,H,tx("s5a")(hands.length),g);
+   card.querySelector(".tblA").innerHTML=table([tx("th_bin"),...GRP.map(gr=>tx("grp")[gr]),tx("th_total")],bins.map((b,i)=>[b===26?"26+":b,...cnt[i],cnt[i].reduce((a,c)=>a+c,0)]).filter(r=>r[4]),[1,2,3,4]);}
+  // dumbbell active vs total
+  {const all=D.filter(d=>d.hand_dof_active&&d.hand_dof_total),rows=all.filter(grpOK).sort((a,b)=>b.hand_dof_total-a.hand_dof_total||b.hand_dof_active-a.hand_dof_active);
+   card.querySelector(".subB").textContent=tx("s5b")(all.length);
+   const w=W(elB),lw=w<420?112:150,rh=19,m={t:6,b:26},H=m.t+rows.length*rh+m.b,X=lin(0,22,lw,w-10);
+   const name=s=>s.length>(w<420?16:22)?s.slice(0,(w<420?15:21))+"…":s;
+   let g=axisX([0,5,10,15,20],X,m.t,H-m.b,String);
+   rows.forEach((d,i)=>{const y=m.t+i*rh+rh/2,xa=X(d.hand_dof_active),xt=X(d.hand_dof_total),q=st.q.trim(),hit=qm(d);
+     g+=`<a href="${esc(hwURL(d))}" ${tipA(robotTip(d,`${d.hand_dof_active} ${esc(tx("th_act"))} / ${d.hand_dof_total} ${esc(tx("th_tot"))}`))} aria-label="${esc(d.n)}"${q&&!hit?' class="dim"':""}><rect class="hit" x="0" y="${y-rh/2}" width="${w}" height="${rh}"/>
+     <text class="lbl" x="0" y="${y+4}" style="font-size:11px">${esc(name(d.n))}</text>
+     <line x1="${xa}" x2="${xt}" y1="${y}" y2="${y}" style="stroke:${col(GV[d.grp])}" stroke-width="2" stroke-linecap="round"/>
+     <circle cx="${xt}" cy="${y}" r="4.5" style="fill:var(--panel);stroke:${col(GV[d.grp])}" stroke-width="2"/>
+     <circle cx="${xa}" cy="${y}" r="4.5" class="mk" style="fill:${col(GV[d.grp])}"/></a>`;});
+   g+=`<line class="ax" x1="${lw}" x2="${w-10}" y1="${H-m.b}" y2="${H-m.b}"/>`;
+   elB.innerHTML=svg(w,H,tx("s5b")(all.length),g);
+   card.querySelector(".legB").innerHTML=legend([[`<svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" style="fill:var(--muted)"/></svg>`,tx("lg_act")],[`<svg width="12" height="12" aria-hidden="true"><circle cx="6" cy="6" r="4" style="fill:none;stroke:var(--muted)" stroke-width="2"/></svg>`,tx("lg_tot")]]);
+   card.querySelector(".tblB").innerHTML=table([tx("th_model"),tx("th_co"),tx("th_grp"),tx("th_act"),tx("th_tot")],rows.map(d=>[rowLink(d),esc(d.co),esc(tx("grp")[d.grp]),d.hand_dof_active,d.hand_dof_total]),[3,4]);}
+  card.querySelector(".legend").innerHTML=legend(GRP.map(gr=>[sw(GV[gr]),tx("grp")[gr]]));
+}
+/* ---------- horizontal bars (7, 8) ---------- */
+function hbars(card,items,title,valLab){
+  const el=card.querySelector(".chart"),w=W(el),lw=w<420?112:150,rh=24,bh=14,m={t:4,b:24},H=m.t+items.length*rh+m.b;
+  const max=Math.max(...items.map(i=>i.v)),ticks=nice(max,w<420?3:5),X=lin(0,ticks[ticks.length-1],lw,w-40);
+  let g=axisX(ticks,X,m.t,H-m.b,fmtN);
+  items.forEach((it,i)=>{const y=m.t+i*rh+(rh-bh)/2,bw=X(it.v)-lw;const lab=it.label.length>(w<420?15:21)?it.label.slice(0,w<420?14:20)+"…":it.label;
+    g+=`<g ${tipA(it.tip)}><rect class="hit" x="0" y="${m.t+i*rh}" width="${w}" height="${rh}"/><text class="lbl" x="0" y="${y+bh/2+4}">${esc(lab)}</text><path class="bar" d="${barP(lw,y,bw,bh,4)}" style="fill:${col(it.c)}"/><text class="ink" x="${(lw+bw+5).toFixed(1)}" y="${y+bh/2+4}">${esc(valLab(it))}</text></g>`;});
+  g+=`<line class="ax" x1="${lw}" x2="${lw}" y1="${m.t}" y2="${H-m.b}"/>`;
+  el.innerHTML=svg(w,H,title,g);
+}
+function c7(card){
+  const top=companies(st.grp);
+  hbars(card,top.map(c=>({v:c.n,c:GV[c.grp],label:LANG==="zh"&&c.zh?c.zh:c.co,tip:`<b>${esc(c.co)}</b>${c.zh?"<br>"+esc(c.zh):""}<br><span class="tm">${esc(tx("grp")[c.grp])}</span><br>${c.n} ${esc(tx("x_n"))}`})),tx("c7"),it=>it.v);
+  card.querySelector(".legend").innerHTML=legend(GRP.filter(gr=>top.some(c=>c.grp===gr)).map(gr=>[sw(GV[gr]),tx("grp")[gr]]));
+  card.querySelector(".tbl").innerHTML=table(["#",tx("th_co"),tx("th_grp"),tx("th_n")],top.map((c,i)=>[i+1,esc(c.co)+(c.zh?` <span class="dim">${esc(c.zh)}</span>`:""),esc(tx("grp")[c.grp]),c.n]),[0,3]);
+}
+function c8(card){
+  const ot=D.filter(d=>d.grp==="OT"),m=new Map();ot.forEach(d=>{const k=d.cty_en;if(!m.has(k))m.set(k,{en:k,zh:d.cty,n:0});m.get(k).n++});
+  const all=[...m.values()].sort((a,b)=>b.n-a.n||a.en.localeCompare(b.en)),K=12,head=all.slice(0,K),rest=all.slice(K);
+  const items=head.map(c=>({v:c.n,c:"--g-ot",label:LANG==="zh"?c.zh:c.en,tip:`<b>${esc(LANG==="zh"?c.zh:c.en)}</b><br>${c.n} (${pct(c.n,ot.length)}%)`}));
+  if(rest.length){const n=rest.reduce((a,c)=>a+c.n,0);items.push({v:n,c:"--s-unk",label:tx("others")(rest.length),tip:`<b>${esc(tx("others")(rest.length))}</b><br>${esc(rest.map(c=>`${LANG==="zh"?c.zh:c.en} ${c.n}`).join(", "))}`})}
+  hbars(card,items,tx("c8"),it=>`${it.v} · ${pct(it.v,ot.length)}%`);
+  card.querySelector(".legend").innerHTML="";
+  card.querySelector(".tbl").innerHTML=table([tx("th_cty"),tx("th_n"),tx("th_share")],all.map(c=>[esc(LANG==="zh"?c.zh:c.en),c.n,pct(c.n,ot.length)+"%"]),[1,2]);
+}
+
+/* ---------- page assembly ---------- */
+function buildCards(){
+  const grid=document.getElementById("grid");
+  grid.innerHTML=CARDS.map(([id,wide])=>{const n=id.slice(1);
+    if(id==="c5")return `<section class="card wide" id="${id}"><h2><span class="no">0${n}</span><span data-h></span></h2><p class="take"></p><div class="legend"></div>
+      <div class="grid" style="margin-top:4px"><div><p class="sub subA" style="margin:0 0 6px"></p><div class="chart"></div><div class="tblA"></div></div>
+      <div><p class="sub subB" style="margin:0 0 6px"></p><div class="legend legB"></div><div class="chart"></div><div class="tblB"></div></div></div></section>`;
+    return `<section class="card${wide?" wide":""}" id="${id}"><h2><span class="no">0${n}</span><span data-h></span></h2><p class="take"></p>${id==="c1"?`<div class="ctrl"><div class="seg" id="fDate"><button type="button" data-v="all" aria-pressed="true"></button><button type="button" data-v="rel" aria-pressed="false"></button></div></div>`:""}<p class="sub"></p><div class="legend"></div><div class="chart"></div><div class="tbl"></div></section>`}).join("");
+  document.getElementById("fDate").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;st.date=b.dataset.v;document.querySelectorAll("#fDate button").forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false"));c1(document.getElementById("c1"))});
+}
+const RENDER={c1,c2:c=>stack100(c,"cat",CATS,CV,tx("cat"),tx("c2")),c6:c=>stack100(c,"status",STS,SV,tx("st"),tx("c6")),c3,c4,c5,c7,c8};
+function renderAll(){TIPS.clear();hideTip();Object.keys(RENDER).forEach(id=>RENDER[id](document.getElementById(id)));count()}
+function count(){
+  const vis=D.filter(grpOK),q=st.q.trim();
+  document.getElementById("count").textContent=q?tx("match")(vis.filter(qm).length):tx("count")(vis.length,D.length);
+}
+function texts(){
+  document.querySelectorAll(".card").forEach(c=>{const id=c.id;c.querySelector("[data-h]").textContent=tx(id);c.querySelector(".take").textContent=tx("t"+id.slice(1))(S)});
+  const c1c=document.getElementById("c1");c1c.querySelector(".sub").textContent=tx("s1")(S.nodate,S.pre);
+  const [a,b]=document.querySelectorAll("#fDate button");a.textContent=tx("d_all");b.textContent=tx("d_rel");
+  document.querySelector("#c7 .sub").textContent=tx("s7");document.querySelector("#c8 .sub").textContent=tx("s8");
+  ["c2","c6"].forEach(id=>document.querySelector(`#${id} .sub`).hidden=true);
+  document.getElementById("jump").innerHTML=JUMP.map((id,i)=>`<a href="#${id}">${esc(tx("j")[i])}</a>`).join("");
+  const KV=[[fmtN(D.length)],[`${S.gn.CN}`,`${pct(S.gn.CN,D.length)}%`],[`${S.gn.US}`,`${pct(S.gn.US,D.length)}%`],[`${S.gn.OT}`,`${pct(S.gn.OT,D.length)}%`],[`${D.filter(d=>d.cat==="humanoid").length}`],[S.medP,tx("kn")(S.nP)],[`${S.medF}`,tx("kn")(S.nF)],[`${S.medHand}`,tx("kn")(S.nHand)],[`${S.release}`,`${pct(S.release,D.length)}%`]];
+  document.getElementById("kpis").innerHTML=T[LANG].k.map((k,i)=>`<div><b>${esc(KV[i][0])}</b>${esc(k)}${KV[i][1]?` <span class="kn">${esc(KV[i][1])}</span>`:""}</div>`).join("");
+  const rep={N:D.length,NODATE:S.nodate,PRE:S.pre,ZERO:D.filter(d=>d.price_note==="zero").length,HOURLY:D.filter(d=>d.price_note==="hourly").length,ACT:S.nAct};
+  document.getElementById("foot").innerHTML=FOOT[LANG].replace(/\{(\w+)\}/g,(m,k)=>k in rep?rep[k]:m);
+}
+function setLang(l){
+  LANG=l==="en"?"en":"zh";
+  document.documentElement.lang=LANG==="en"?"en":"zh-CN";document.title=tx("doc");
+  document.querySelectorAll("[data-i]").forEach(el=>{const v=T[LANG][el.dataset.i];if(typeof v==="string")el.textContent=v;});
+  document.getElementById("bar").setAttribute("aria-label",tx("bar"));document.getElementById("q").placeholder=tx("q");
+  document.querySelectorAll("#fLang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===LANG?"true":"false"));
+  if(D.length){S.top1=coL(S.top1d);S.top2=coL(S.top2d);S.top3=coL(S.top3d);texts();renderAll();}
+}
+
+/* ---------- tooltip ---------- */
+const tip=document.getElementById("tip");let tipEl=null,touchArmed=null,lastPT="mouse";
+function showTip(t,x,y){const h=TIPS.get(t.dataset.tip);if(!h)return;tipEl=t;tip.innerHTML=h;
+  const o=tip.querySelector("[data-open]");if(o&&lastPT!=="mouse")o.textContent=tx("tapagain");
+  if(!t.matches("a"))tip.querySelectorAll("[data-open]").forEach(e=>e.remove());
+  tip.hidden=false;posTip(x,y);document.querySelectorAll(".chart .hov").forEach(e=>e.classList.remove("hov"));t.classList.add("hov")}
+function posTip(x,y){const r=tip.getBoundingClientRect(),vw=innerWidth,vh=innerHeight;let L=x+14,Tp=y+14;if(L+r.width>vw-8)L=Math.max(8,x-r.width-14);if(Tp+r.height>vh-8)Tp=Math.max(8,y-r.height-14);tip.style.left=L+"px";tip.style.top=Tp+"px"}
+function hideTip(){tip.hidden=true;if(tipEl)tipEl.classList.remove("hov");tipEl=null}
+function wireTips(){
+  const grid=document.getElementById("grid");
+  document.addEventListener("pointerdown",e=>{lastPT=e.pointerType||"mouse";const t=e.target.closest&&e.target.closest("[data-tip]");touchArmed=(lastPT!=="mouse"&&t&&t===tipEl)?t:null;if(!t)hideTip()},true);
+  grid.addEventListener("pointerover",e=>{const t=e.target.closest("[data-tip]");if(t&&e.pointerType==="mouse")showTip(t,e.clientX,e.clientY)});
+  grid.addEventListener("pointermove",e=>{if(tipEl&&e.pointerType==="mouse")posTip(e.clientX,e.clientY)});
+  grid.addEventListener("pointerout",e=>{if(e.pointerType!=="mouse")return;const t=e.target.closest("[data-tip]");if(t&&!t.contains(e.relatedTarget))hideTip()});
+  grid.addEventListener("click",e=>{const t=e.target.closest("[data-tip]");if(!t)return;
+    if(lastPT!=="mouse"){if(t.matches("a")&&touchArmed===t)return;e.preventDefault();showTip(t,e.clientX,e.clientY)}});
+  grid.addEventListener("focusin",e=>{const t=e.target.closest("[data-tip]");if(t){const r=t.getBoundingClientRect();showTip(t,r.right,r.top)}});
+  grid.addEventListener("focusout",e=>{if(e.target.closest("[data-tip]"))hideTip()});
+  addEventListener("scroll",()=>{if(lastPT==="mouse")hideTip()},{passive:true});
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")hideTip()});
+}
+
+/* ---------- controls ---------- */
+document.getElementById("fGrp").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;st.grp=b.dataset.v;
+  document.querySelectorAll("#fGrp button").forEach(x=>x.setAttribute("aria-pressed",x===b?"true":"false"));if(D.length)renderAll()});
+let qT;document.getElementById("q").addEventListener("input",e=>{st.q=e.target.value;clearTimeout(qT);qT=setTimeout(()=>{if(D.length)renderAll()},120)});
+document.getElementById("fLang").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;try{localStorage.setItem("robot-atlas-lang",b.dataset.v)}catch(x){}
+  const u=new URL(location.href);u.searchParams.set("lang",b.dataset.v);history.replaceState(null,"",u);setLang(b.dataset.v)});
+let L0=new URLSearchParams(location.search).get("lang");
+if(!L0){try{L0=localStorage.getItem("robot-atlas-lang")}catch(x){}}
+if(!L0)L0=/^zh/i.test(navigator.language||"")?"zh":"en";
+setLang(L0);
+
+fetch("data/insights.json").then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(rows=>{
+  D=rows;S=stats();buildCards();wireTips();
+  document.getElementById("state").hidden=true;document.getElementById("grid").hidden=false;
+  setLang(LANG);
+  let lastW=innerWidth,rT;addEventListener("resize",()=>{if(innerWidth===lastW)return;lastW=innerWidth;clearTimeout(rT);rT=setTimeout(renderAll,150)});
+}).catch(()=>{const s=document.getElementById("state");s.dataset.i="err";s.textContent=tx("err")});
+</script>
+</body>
+</html>
