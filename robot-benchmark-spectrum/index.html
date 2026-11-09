@@ -116,6 +116,41 @@ table{min-width:1180px}
   .note,.rob,.tm{max-width:none}
   .links{grid-column:auto}
 }
+<style>
+/* RoboArena leaderboard panel */
+.arena{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px 12px;margin:18px 0 6px}
+.arena .ahd{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px}
+.arena h2{font:700 17px/1.3 var(--display);margin:0}
+.arena .asub{color:var(--muted);font-size:13px;margin:6px 0 10px;max-width:96ch}
+.arena .seg button{padding:5px 10px;font-size:12px}
+.arow{display:grid;grid-template-columns:28px minmax(150px,1.1fr) minmax(160px,2fr) 112px 64px;gap:4px 14px;align-items:center;padding:7px 4px;border-top:1px solid var(--line)}
+.arow.h{font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-top:0;padding-bottom:4px}
+.arow:not(.h):hover{background:var(--bg)}
+.arow .rk{font:500 13px var(--mono);color:var(--muted);text-align:right}
+.arow .pn{font:700 14px/1.3 var(--display);overflow-wrap:anywhere}
+.arow .po{font-size:12px;color:var(--muted);font-weight:400;font-family:var(--body)}
+.arow .po code{font:11px var(--mono)}
+.arow .sc{font:500 13px var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.arow .sc small{color:var(--muted);font-weight:400}
+.arow .ev{font:12px var(--mono);color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.ivl{position:relative;height:18px}
+.ivl .tr{position:absolute;left:0;right:0;top:8px;height:2px;background:var(--line);border-radius:1px}
+.ivl .wk{position:absolute;top:5px;height:8px;border-left:2px solid var(--accent);border-right:2px solid var(--accent)}
+.ivl .wk::after{content:"";position:absolute;left:0;right:0;top:3px;height:2px;background:var(--accent)}
+.ivl .dt{position:absolute;top:3px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 2px var(--panel)}
+.arow.thin .wk{border-color:var(--muted)} .arow.thin .wk::after,.arow.thin .dt{background:var(--muted)}
+.arow .chip{margin-left:6px;vertical-align:1px}
+.ev .u{display:none;font-style:normal}
+.anote{color:var(--muted);font-size:12px;margin:10px 0 0}
+.anote a{color:var(--accent)}
+@media (max-width:760px){
+  .arow{grid-template-columns:24px minmax(0,1fr) auto;gap:4px 10px}
+  .arow.h{display:none}
+  .arow .ivl{grid-column:2/-1;grid-row:2}
+  .arow .ev{grid-column:3;grid-row:1;align-self:start}
+  .arow .sc{grid-column:2/-1;grid-row:3}
+  .ev .u{display:inline}
+}
 </style>
 </head>
 <body>
@@ -135,6 +170,14 @@ table{min-width:1180px}
   <h1 data-i="title">机器人评测图谱</h1>
   <p class="lede" id="lede"></p>
   <div class="kpis" id="kpis"></div>
+
+  <section class="arena" id="arena" aria-labelledby="aTitle">
+    <div class="ahd"><h2 id="aTitle">RoboArena 真机排行榜</h2>
+      <div class="seg" id="aView" role="group"><button type="button" data-v="off" aria-pressed="true">官方榜</button><button type="button" data-v="all" aria-pressed="false">全部策略</button></div></div>
+    <p class="asub" id="aSub"></p>
+    <div id="aRows" role="table"></div>
+    <p class="anote" id="aNote"></p>
+  </section>
 
   <div class="bar" role="toolbar" aria-label="筛选">
     <div class="seg" id="fType" aria-label="type"></div>
@@ -211,6 +254,61 @@ const TYPES={sim:["physics","framework","world","asset"],bench:["manip","mobile"
 const TYPE_L={};
 const CTY_EN={"英国":"UK","瑞士":"Switzerland","德国":"Germany","法国":"France","韩国":"South Korea","新加坡":"Singapore","澳大利亚":"Australia","中国香港":"Hong Kong","日本":"Japan","加拿大":"Canada"};
 let LANG="zh",D=[];
+/* RoboArena leaderboard: live API when reachable, else the archived snapshot in data/roboarena.json */
+const AR_ALIAS={dreaming_zebra:"DreamZero","cosmos3-nano-policy":"balsomsoc","j2-vla":"Spirit v1.6",yckmtchl:"Cosmos3-Nano-Policy"};  // same display names as robo-arena.github.io
+const AR_ORG={pi0_droid:["Physical Intelligence",""],pi0_fast_droid:["Physical Intelligence",""],pi05_droid:["Physical Intelligence",""],
+ "allenai/MolmoAct2-DROID":["Ai2",""],"G0.5-Droid-AR":["Galaxea","星海图"],"j2-vla":["Spirit AI","千寻智能"]};
+const AR_T={
+ zh:{title:"RoboArena 真机排行榜",off:"官方榜（≥100 次评测）",all:"全部策略",
+  sub:"各实验室志愿者在 DROID 平台（Franka 机械臂）上做双盲 A/B 对比：同一任务、同一场景下比较两个策略，汇总成 Bradley-Terry 分数（类似 Elo，越高越好）。横线是 ±1 标准差，评测次数少的策略区间很宽，排名不稳定。",
+  h:["#","策略","分数区间（±1σ）","分数","评测次数"],base:"RoboArena 基线",open:"开源",
+  live:d=>`实时数据，RoboArena 官方 API，更新于 ${d}。`,
+  snap:d=>`数据快照：RoboArena 官方 API，更新于 ${d}，取自 Wayback Machine 存档（官方 API 当前无法访问）。`,
+  more:"官方排行榜"},
+ en:{title:"RoboArena real-robot leaderboard",off:"Official (≥100 evals)",all:"All policies",
+  sub:"Volunteer evaluators across labs run double-blind A/B comparisons on the DROID platform (Franka arm): two policies on the same task and scene, aggregated into a Bradley-Terry score (Elo-like, higher is better). Whiskers show ±1 std; policies with few evaluations have wide intervals and unstable ranks.",
+  h:["#","Policy","Score interval (±1σ)","Score","Evals"],base:"RoboArena baseline",open:"Open",
+  live:d=>`Live data from the RoboArena API, updated ${d}.`,
+  snap:d=>`Snapshot of the RoboArena API, updated ${d}, from the Wayback Machine archive (the official API is currently unreachable).`,
+  more:"Official leaderboard"}};
+let AR=null,AR_LIVE=false,AR_VIEW="off";
+const arName=p=>AR_ALIAS[String(p).trim().toLowerCase()]??p;
+function arena(){
+  const A=AR_T[LANG];
+  document.getElementById("aTitle").textContent=A.title;
+  document.getElementById("aSub").textContent=A.sub;
+  document.querySelectorAll("#aView button").forEach(b=>{b.textContent=A[b.dataset.v];b.setAttribute("aria-pressed",b.dataset.v===AR_VIEW?"true":"false")});
+  const rowsEl=document.getElementById("aRows"),note=document.getElementById("aNote");
+  if(!AR){rowsEl.innerHTML=`<div class="status">${esc(tx("loading"))}</div>`;note.textContent="";return}
+  const min=AR.official_min_evals||100;
+  const B=AR.board.filter(r=>AR_VIEW==="all"||r.num_evals>=min).slice().sort((a,b)=>b.score-a.score);
+  const lo=Math.min(...B.map(r=>r.score-r.std)),hi=Math.max(...B.map(r=>r.score+r.std)),pad=(hi-lo)*.04,x0=lo-pad,x1=hi+pad;
+  const pc=v=>((v-x0)/(x1-x0)*100).toFixed(2)+"%";
+  rowsEl.innerHTML=`<div class="arow h" role="row">${A.h.map((h,i)=>`<span role="columnheader"${i===0||i===4?' style="text-align:right"':""}>${esc(i===2?`${h} · ${Math.round(x0)}–${Math.round(x1)}`:h)}</span>`).join("")}</div>`+
+   B.map((r,i)=>{const nm=arName(r.policy),org=AR_ORG[r.policy]||(/^paligemma_/.test(r.policy)?[A.base,""]:null);
+    const sub=[org?(LANG==="zh"&&org[1]?org[1]:org[0]):"",nm!==r.policy?`<code>${esc(r.policy)}</code>`:""].filter(Boolean);
+    return `<div class="arow${r.num_evals<min?" thin":""}" role="row" title="${esc(nm)}: ${r.score} ± ${r.std} · ${r.num_evals}">
+<span class="rk" role="cell">${i+1}</span>
+<span class="pn" role="cell">${esc(nm)}${r.open_source?`<span class="chip cat">${A.open}</span>`:""}${sub.length?`<div class="po">${sub.map(s=>s.startsWith("<code>")?s:esc(s)).join(" · ")}</div>`:""}</span>
+<span class="ivl" role="cell" aria-label="${r.score-r.std}–${r.score+r.std}"><span class="tr"></span><span class="wk" style="left:${pc(r.score-r.std)};right:calc(100% - ${pc(r.score+r.std)})"></span><span class="dt" style="left:${pc(r.score)}"></span></span>
+<span class="sc" role="cell">${r.score} <small>± ${Math.round(r.std)}</small></span>
+<span class="ev" role="cell">${r.num_evals.toLocaleString()}<i class="u">${LANG==="en"?" evals":" 次"}</i></span></div>`}).join("");
+  const d=String(AR.last_updated||"").slice(0,10);
+  note.innerHTML=`${esc(AR_LIVE?A.live(d):A.snap(d))} <a href="https://robo-arena.github.io/leaderboard" target="_blank" rel="noopener">${A.more} ↗</a>${AR_LIVE?"":` · <a href="${esc(AR.archived)}" target="_blank" rel="noopener">Wayback ↗</a> · <a href="data/roboarena.json">roboarena.json</a>`}`;
+}
+document.getElementById("aView").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;AR_VIEW=b.dataset.v;arena();});
+(async()=>{
+  let snap=null;try{snap=await fetch("data/roboarena.json").then(r=>r.json())}catch(e){}
+  if(snap){AR=snap;arena();}
+  try{const c=new AbortController();const tm=setTimeout(()=>c.abort(),6000);
+    const j=await fetch("https://roboarena-api-domain-name.online/api/leaderboard",{signal:c.signal}).then(r=>{if(!r.ok)throw 0;return r.json()});clearTimeout(tm);
+    if(Array.isArray(j.board)&&j.board.length&&j.board.every(r=>typeof r.score==="number"&&typeof r.num_evals==="number")){
+      AR={...(snap||{}),last_updated:j.last_updated,board:j.board.map(r=>({policy:r.policy,score:r.score,std:+r.std||0,num_evals:r.num_evals,open_source:!!r.open_source}))};AR_LIVE=true;}
+  }catch(e){}
+  if(!AR){document.getElementById("arena").hidden=true;return}
+  if(AR_LIVE)arena();
+})();
+
 const tx=k=>T[LANG][k];
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const dash='<span class="dim">—</span>';
@@ -298,7 +396,7 @@ function setLang(l){
   document.querySelector(".bar").setAttribute("aria-label",LANG==="en"?"Filters":"筛选");
   document.getElementById("q").placeholder=tx("q");
   press("fLang",LANG);
-  typeSeg();kpis();render();
+  typeSeg();kpis();render();arena();
 }
 document.getElementById("fLang").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;try{localStorage.setItem("robot-atlas-lang",b.dataset.v)}catch(x){}
   try{const u=new URL(location.href);u.searchParams.set("lang",b.dataset.v);history.replaceState(null,"",u);}catch(x){}setLang(b.dataset.v);});
