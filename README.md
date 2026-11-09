@@ -1,4 +1,4 @@
-# 机器人硬件图谱 Robot Atlas
+# 机器人硬件图谱 Robot Hardware Spectrum
 
 人形机器人、轮式/移动操作平台、机械臂、灵巧手和数据采集设备的对比表，以中美为主，也收录 Franka、Sharpa、UR、Kinova 等其他国家常用于机器人学习的设备。
 
