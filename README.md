@@ -11,7 +11,8 @@
 | [机器人数据集图谱 Robot Dataset Spectrum](https://quantumiracle.github.io/physical-instinct/robot-dataset-spectrum/) | 遥操作、UMI、第一视角视频、动捕和仿真数据集，112 个 | [datasets.json](robot-dataset-spectrum/data/datasets.json) |
 | [机器人融资追踪 Robotics Funding Tracker](https://quantumiracle.github.io/physical-instinct/robot-funding-tracker/) | 2023–2026 年具身智能公司的融资、上市和并购，282 条 | [funding.json](robot-funding-tracker/data/funding.json) |
 | [机器人硬件洞察 Robot Hardware Insights](https://quantumiracle.github.io/physical-instinct/robot-hardware-insights/) | 基于硬件图谱数据的 8 张图表 | [insights.json](robot-hardware-insights/data/insights.json) |
-| [仿真与评测图谱 Simulation & Benchmark Spectrum](https://quantumiracle.github.io/physical-instinct/sim-benchmark-spectrum/) | 物理引擎、仿真平台、世界模型仿真和评测基准，118 个 | [sims.json](sim-benchmark-spectrum/data/sims.json) |
+| [机器人仿真图谱 Robot Simulation Spectrum](https://quantumiracle.github.io/physical-instinct/robot-sim-spectrum/) | 物理引擎、仿真与学习平台、世界模型仿真和资产库，57 个 | [sims.json](robot-sim-spectrum/data/sims.json) |
+| [机器人评测图谱 Robot Benchmark Spectrum](https://quantumiracle.github.io/physical-instinct/robot-benchmark-spectrum/) | 操作、导航、人形、灵巧手、具身推理和真机评测基准，61 个 | [benchmarks.json](robot-benchmark-spectrum/data/benchmarks.json) |
 
 所有页面支持中英文切换，数据截至 2026 年 11 月 8 日，每条记录都附来源链接。
 

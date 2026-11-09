@@ -144,7 +144,8 @@ td.amt{white-space:nowrap}
     <a href="../robot-dataset-spectrum/" data-i="n_ds">数据集</a>
     <a href="../robot-funding-tracker/" aria-current="page" data-i="n_fd">融资</a>
     <a href="../robot-hardware-insights/" data-i="n_in">洞察</a>
-    <a href="../sim-benchmark-spectrum/" data-i="n_sb">仿真与评测</a>
+    <a href="../robot-sim-spectrum/" data-i="n_sim">仿真</a>
+    <a href="../robot-benchmark-spectrum/" data-i="n_bm">评测</a>
   </nav>
   <h1 data-i="title">机器人融资追踪</h1>
   <p class="lede" id="lede">2023 年 1 月至 2026 年 11 月，具身智能与机器人公司的融资轮次、上市和重要并购，覆盖中国、美国和其他国家：人形机器人、机器人大模型、机械臂与移动操作、灵巧手与零部件、数据与仿真、垂直应用和四足等。每条记录都附原始报道链接，截至 2026 年 11 月 8 日。</p>
@@ -216,7 +217,7 @@ td.amt{white-space:nowrap}
 
 <script>
 const T={
-zh:{n_hw:"硬件",n_md:"模型",n_ds:"数据集",n_fd:"融资",n_in:"洞察",n_sb:"仿真与评测",title:"机器人融资追踪",doc:"机器人融资追踪",bar:"筛选",
+zh:{n_hw:"硬件",n_md:"模型",n_ds:"数据集",n_fd:"融资",n_in:"洞察",n_sim:"仿真",n_bm:"评测",title:"机器人融资追踪",doc:"机器人融资追踪",bar:"筛选",
  v_rounds:"按轮次",v_cos:"按公司汇总",c_all:"全部",c_US:"美国",c_CN:"中国",c_OT:"其他国家",seg_all:"全部赛道",yr_all:"全部年份",rt_all:"全部轮次",
  s_new:"日期（新→旧）",s_old:"日期（旧→新）",s_amt:"金额（大→小）",q:"搜索公司（中英文）、投资方或备注",
  h_date:"日期",h_co:"公司",h_round:"轮次",h_amt:"金额",h_val:"投后估值",h_inv:"投资方",h_hw:"相关硬件",h_src:"来源",
@@ -227,7 +228,7 @@ zh:{n_hw:"硬件",n_md:"模型",n_ds:"数据集",n_fd:"融资",n_in:"洞察",n_s
  ch_t:"每季度融资总额",ch_s:"按当前筛选，单位百万美元；不含并购和未披露金额的轮次。悬停或点按柱子查看明细。",ch_tip:(q,v,n)=>`${q}<br><b>${v}</b> · ${n} 笔`,
  k:["区间内合计融资","融资事件","公司","最大单笔"],kn:"不含并购",
  l_date:"日期",l_round:"轮次",l_amt:"金额",l_val:"估值",l_inv:"投资方",l_hw:"硬件",l_src:"来源",l_total:"累计",l_n:"轮次",l_last:"最近"},
-en:{n_hw:"Hardware",n_md:"Models",n_ds:"Datasets",n_fd:"Funding",n_in:"Insights",n_sb:"Sim & Bench",title:"Robotics Funding Tracker",doc:"Robotics Funding Tracker",bar:"Filters",
+en:{n_hw:"Hardware",n_md:"Models",n_ds:"Datasets",n_fd:"Funding",n_in:"Insights",n_sim:"Simulation",n_bm:"Benchmarks",title:"Robotics Funding Tracker",doc:"Robotics Funding Tracker",bar:"Filters",
  v_rounds:"Rounds",v_cos:"By company",c_all:"All",c_US:"US",c_CN:"China",c_OT:"Other",seg_all:"All segments",yr_all:"All years",rt_all:"All round types",
  s_new:"Date (newest first)",s_old:"Date (oldest first)",s_amt:"Amount (largest first)",q:"Search company (EN/中文), investor or note",
  h_date:"Date",h_co:"Company",h_round:"Round",h_amt:"Amount",h_val:"Post-money",h_inv:"Investors",h_hw:"Hardware",h_src:"Source",
