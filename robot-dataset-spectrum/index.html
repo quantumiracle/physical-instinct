@@ -86,6 +86,30 @@ footer a{color:var(--accent)} footer ul{padding-left:18px;margin:4px 0}
 .secnav{display:flex;flex-wrap:wrap;gap:4px 16px;margin:-6px 0 18px;font:500 12px var(--mono)}
 .secnav a{color:var(--muted);text-decoration:none;padding:2px 0;border-bottom:1px solid transparent}
 .secnav a:hover{color:var(--accent)} .secnav a[aria-current=page]{color:var(--ink);border-bottom-color:var(--accent)}
+
+/* category distribution donuts */
+.pies{--p1:#2a78d6;--p2:#eb6834;--p3:#1baf7a;--p4:#eda100;--pcn:#b8322a;--pus:#2f5fb3;--pot:#1a9690;--punk:#b9c2c8;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:18px 0 4px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pies{--p1:#3987e5;--p2:#d95926;--p3:#199e70;--p4:#c98500;--pcn:#e05a52;--pus:#3987e5;--pot:#20a7a0;--punk:#4a5862}}
+:root[data-theme="dark"] .pies{--p1:#3987e5;--p2:#d95926;--p3:#199e70;--p4:#c98500;--pcn:#e05a52;--pus:#3987e5;--pot:#20a7a0;--punk:#4a5862}
+.pie{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px 14px 10px;min-width:0}
+.pie h3{font:700 13px/1.3 var(--display);margin:0}
+.pie .sub{font-size:11px;color:var(--muted);margin:2px 0 8px}
+.pie .body{display:flex;align-items:center;gap:14px}
+.pie svg{flex:0 0 112px;width:112px;height:112px;overflow:visible}
+.pie path{stroke:var(--panel);stroke-width:2;transition:opacity .15s;cursor:default}
+.pie .ct{font:500 17px var(--mono);fill:var(--ink)} .pie .cu{font:11px var(--body);fill:var(--muted)}
+.pie ul{list-style:none;margin:0;padding:0;flex:1;min-width:0;font-size:12px}
+.pie li{display:grid;grid-template-columns:10px minmax(0,1fr) auto;gap:2px 7px;align-items:baseline;padding:2px 3px;border-radius:4px;outline:none}
+.pie li:focus-visible{box-shadow:0 0 0 2px var(--accent)}
+.pie li i{width:10px;height:10px;border-radius:2px;align-self:center}
+.pie li span{color:var(--ink);overflow-wrap:anywhere}
+.pie li b{font:500 12px var(--mono);color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pie li b small{color:var(--muted);font-weight:400;margin-left:4px}
+.pie.hl path:not(.on){opacity:.3} .pie.hl li:not(.on){opacity:.45}
+.ptip{position:fixed;z-index:20;pointer-events:none;background:var(--ink);color:var(--bg);font:12px/1.4 var(--body);padding:6px 8px;border-radius:6px;max-width:240px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.ptip b{font-family:var(--mono)}
+@media (max-width:760px){.pies{grid-template-columns:minmax(0,1fr)}}
 /* dataset page additions */
 .scale{white-space:nowrap;line-height:1.7}
 .scale .u{color:var(--muted);font-size:11px;margin-left:3px}
@@ -124,6 +148,8 @@ td.nm{min-width:220px}
   <h1 data-i="title">机器人数据集图谱</h1>
   <p class="lede" id="lede">训练机器人基础模型（VLA、世界模型、人形全身控制）所用的数据集：从 2016 年的自主抓取数据，到 Open X-Embodiment、DROID、AgiBot World，再到 2026 年的十万小时级第一人称人类数据。按采集方式分为八类，截至 2026 年 11 月 8 日。规模数字取自论文、数据卡或官方公告，带“≈”的是约数或二手来源。</p>
   <div class="kpis" id="kpis"></div>
+  <section class="pies" id="pies" aria-label="分类分布"></section>
+  <div class="ptip" id="ptip" hidden></div>
 
   <div class="bar" role="toolbar" aria-label="筛选">
     <div class="seg" id="fType" aria-label="类型"></div>
@@ -295,7 +321,71 @@ function kpis(L){
   const v=[L.length,"≈"+fmt(ep),"≈"+fmt(Math.round(h)),real,sim,agg];
   document.getElementById("kpis").innerHTML=v.map((x,i)=>`<div><b>${esc(x)}</b>${esc(K[i])}${i===1||i===2?esc(sub):""}</div>`).join("");
 }
+
+/* category distribution donuts — whole dataset, independent of filters */
+const PIE_T={
+ zh:{aria:"分类分布",all:"全部 112 个数据集",n:"个",h:"小时",
+  c1:"数据来源", s1:n=>`按采集对象分，共 ${n} 个数据集`,
+  c2:"真机数据怎么采", s2:n=>`真机类 ${n} 个数据集的采集方式`,
+  c3:"时长在哪", s3:n=>`公开数据已知时长合计 ≈${n} 小时（不含聚合集合）`,
+  c4:"来自哪里", s4:n=>`机构所在国家，${n} 个数据集`,
+  c5:"能不能商用", s5:n=>`按许可证粗分，${n} 个数据集`,
+  real:"真机",human:"人类",sim:"仿真/合成",agg:"聚合集合",CN:"中国",US:"美国",OT:"其他国家",perm:"宽松许可（可商用）",nc:"非商用 / 仅研究",unk:"未注明 / 专有 / 其他"},
+ en:{aria:"Category breakdown",n:"",h:"h",
+  c1:"Where the data comes from", s1:n=>`By what is recorded, ${n} datasets`,
+  c2:"How real-robot data is collected", s2:n=>`Collection method of the ${n} real-robot datasets`,
+  c3:"Where the hours are", s3:n=>`Known hours of open data ≈${n} h (aggregates excluded)`,
+  c4:"Where it comes from", s4:n=>`Country of the releasing org, ${n} datasets`,
+  c5:"Can you use it commercially", s5:n=>`Rough licence class, ${n} datasets`,
+  real:"Real robot",human:"Human",sim:"Simulation / synthetic",agg:"Aggregated",CN:"China",US:"US",OT:"Other",perm:"Permissive (commercial OK)",nc:"Non-commercial / research",unk:"Unstated / proprietary / other"}};
+const GRP={teleop:"real",auto:"real",umi:"real",ego:"human",hand:"human",mocap:"human",sim:"sim",agg:"agg"};
+const licC=l=>{l=String(l||"").replace(/MIT \(code\)/g,"");if(/inherits/i.test(l))return"unk";if(/-NC|non-?commercial|research/i.test(l))return"nc";if(/CC BY|CC0|MIT|Apache|CDLA|BSD|ODC|GPL/i.test(l))return"perm";return"unk";};
+const nf=x=>Math.round(x).toLocaleString(LANG==="en"?"en-US":"zh-CN");
+function donut(id,title,sub,segs,center,unit){
+  const tot=segs.reduce((s,x)=>s+x.v,0)||1,R0=54,R1=34,C=56;let a=-Math.PI/2;
+  const pt=(r,t)=>`${(C+r*Math.cos(t)).toFixed(2)} ${(C+r*Math.sin(t)).toFixed(2)}`;
+  const paths=segs.map((x,i)=>{const f=x.v/tot,b=a+f*2*Math.PI,lg=f>.5?1:0;
+    const d=f>=.9999?`M${pt(R0,a)}A${R0} ${R0} 0 1 1 ${pt(R0,a+Math.PI)}A${R0} ${R0} 0 1 1 ${pt(R0,a)}M${pt(R1,a)}A${R1} ${R1} 0 1 0 ${pt(R1,a+Math.PI)}A${R1} ${R1} 0 1 0 ${pt(R1,a)}Z`
+      :`M${pt(R0,a)}A${R0} ${R0} 0 ${lg} 1 ${pt(R0,b)}L${pt(R1,b)}A${R1} ${R1} 0 ${lg} 0 ${pt(R1,a)}Z`;a=b;
+    return `<path d="${d}" fill="var(${x.c})" data-k="${i}" fill-rule="evenodd"></path>`;}).join("");
+  const pc=v=>{const p=v/tot*100;return p>0&&p<1?"<1%":Math.round(p)+"%";};
+  const li=segs.map((x,i)=>`<li tabindex="0" data-k="${i}"><i style="background:var(${x.c})"></i><span>${esc(x.l)}</span><b>${nf(x.v)}<small>${pc(x.v)}</small></b></li>`).join("");
+  return `<figure class="pie" id="${id}" style="margin:0"><h3>${esc(title)}</h3><p class="sub">${esc(sub)}</p><div class="body">
+<svg viewBox="0 0 112 112" role="img" aria-label="${esc(title)}">${paths}<text class="ct" x="56" y="58" text-anchor="middle">${esc(center)}</text><text class="cu" x="56" y="73" text-anchor="middle">${esc(unit)}</text></svg>
+<ul>${li}</ul></div></figure>`;
+}
+let PIES=[];
+function pies(){
+  const el=document.getElementById("pies"),P=PIE_T[LANG];if(!D.length){el.innerHTML="";return;}
+  el.setAttribute("aria-label",P.aria);
+  const cnt=f=>D.filter(f).length,u=P.n;
+  const real=D.filter(d=>GRP[d.type]==="real");
+  const hb={real:0,human:0,sim:0};D.forEach(d=>{if(d.open&&d.type!=="agg"&&d.h)hb[GRP[d.type]]+=d.h;});
+  const htot=hb.real+hb.human+hb.sim;
+  const lc={perm:0,nc:0,unk:0};D.forEach(d=>lc[licC(d.lic)]++);
+  PIES=[
+   ["pie1",P.c1,P.s1(D.length),[{l:P.real,v:cnt(d=>GRP[d.type]==="real"),c:"--p1"},{l:P.human,v:cnt(d=>GRP[d.type]==="human"),c:"--p2"},{l:P.sim,v:cnt(d=>d.type==="sim"),c:"--p3"},{l:P.agg,v:cnt(d=>d.type==="agg"),c:"--p4"}],D.length,LANG==="en"?"datasets":"个数据集"],
+   ["pie2",P.c2,P.s2(real.length),[{l:TYPE_L[LANG].teleop,v:real.filter(d=>d.type==="teleop").length,c:"--p1"},{l:TYPE_L[LANG].auto,v:real.filter(d=>d.type==="auto").length,c:"--p2"},{l:TYPE_L[LANG].umi,v:real.filter(d=>d.type==="umi").length,c:"--p3"}],real.length,LANG==="en"?"datasets":"个数据集"],
+   ["pie3",P.c3,P.s3(nf(htot)),[{l:P.real,v:hb.real,c:"--p1"},{l:P.human,v:hb.human,c:"--p2"},{l:P.sim,v:hb.sim,c:"--p3"}],(htot>=1e4?nf(htot/1e3)+"k":nf(htot)),LANG==="en"?"hours":"小时"],
+   ["pie4",P.c4,P.s4(D.length),[{l:P.CN,v:cnt(d=>d.c==="CN"),c:"--pcn"},{l:P.US,v:cnt(d=>d.c==="US"),c:"--pus"},{l:P.OT,v:cnt(d=>d.c!=="CN"&&d.c!=="US"),c:"--pot"}],D.length,LANG==="en"?"datasets":"个数据集"],
+   ["pie5",P.c5,P.s5(D.length),[{l:P.perm,v:lc.perm,c:"--p1"},{l:P.nc,v:lc.nc,c:"--p2"},{l:P.unk,v:lc.unk,c:"--punk"}],D.length,LANG==="en"?"datasets":"个数据集"]];
+  el.innerHTML=PIES.map(x=>donut(...x)).join("");
+}
+(()=>{const el=document.getElementById("pies"),tip=document.getElementById("ptip");
+  const hit=e=>{const n=e.target.closest("[data-k]"),f=e.target.closest(".pie");return n&&f?[f,+n.dataset.k]:null;};
+  const on=(f,k,x,y)=>{const P=PIES.find(p=>p[0]===f.id);if(!P)return;const s=P[3][k],tot=P[3].reduce((a,b)=>a+b.v,0)||1;
+    f.classList.add("hl");f.querySelectorAll("[data-k]").forEach(n=>n.classList.toggle("on",+n.dataset.k===k));
+    tip.innerHTML=`${esc(P[1])}<br>${esc(s.l)}: <b>${nf(s.v)}</b> (${(s.v/tot*100).toFixed(1)}%)`;tip.hidden=false;
+    const w=tip.offsetWidth,h=tip.offsetHeight;tip.style.left=Math.max(8,Math.min(innerWidth-w-8,x+12))+"px";tip.style.top=Math.max(8,y-h-12)+"px";};
+  const off=()=>{tip.hidden=true;el.querySelectorAll(".pie.hl").forEach(f=>f.classList.remove("hl"));};
+  el.addEventListener("pointermove",e=>{const h=hit(e);if(h)on(h[0],h[1],e.clientX,e.clientY);else off();});
+  el.addEventListener("pointerleave",off);
+  el.addEventListener("focusin",e=>{const h=hit(e);if(h){const r=e.target.getBoundingClientRect();on(h[0],h[1],r.left,r.top);}});
+  el.addEventListener("focusout",off);
+  addEventListener("scroll",()=>{if(!tip.hidden)off();},{passive:true});
+})();
 function render(){
+  pies();
   if(!D.length)return;
   const L=list();
   document.getElementById("rows").innerHTML=L.slice(0,limit).map(row).join("");
