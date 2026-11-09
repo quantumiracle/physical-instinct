@@ -292,7 +292,7 @@ document.getElementById("fLang").addEventListener("click",e=>{const b=e.target.c
   const u=new URL(location.href);u.searchParams.set("lang",b.dataset.v);history.replaceState(null,"",u);setLang(b.dataset.v);});
 let L0=new URLSearchParams(location.search).get("lang");
 if(!L0){try{L0=localStorage.getItem("robot-atlas-lang")}catch(x){}}
-if(!L0)L0=/^zh/i.test(navigator.language||"")?"zh":"en";
+if(!L0)L0="en";
 setLang(L0);
 </script>
 
