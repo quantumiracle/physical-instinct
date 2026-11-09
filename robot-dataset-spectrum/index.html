@@ -325,16 +325,16 @@ function kpis(L){
 /* category distribution donuts — whole dataset, independent of filters */
 const PIE_T={
  zh:{aria:"分类分布",all:"全部 112 个数据集",n:"个",h:"小时",
-  c1:"数据来源", s1:n=>`按采集对象分，共 ${n} 个数据集`,
+  c1:"数据来源（按时长）", s1:n=>`公开数据已知时长合计 ≈${n} 小时，不含聚合集合（避免重复计算）`,
   c2:"真机数据怎么采", s2:n=>`真机类 ${n} 个数据集的采集方式`,
-  c3:"时长在哪", s3:n=>`公开数据已知时长合计 ≈${n} 小时（不含聚合集合）`,
+  c3:"数据集个数", s3:n=>`按采集对象分，共 ${n} 个数据集（含聚合集合）`,
   c4:"来自哪里", s4:n=>`机构所在国家，${n} 个数据集`,
   c5:"能不能商用", s5:n=>`按许可证粗分，${n} 个数据集`,
   real:"真机",human:"人类",sim:"仿真/合成",agg:"聚合集合",CN:"中国",US:"美国",OT:"其他国家",perm:"宽松许可（可商用）",nc:"非商用 / 仅研究",unk:"未注明 / 专有 / 其他"},
  en:{aria:"Category breakdown",n:"",h:"h",
-  c1:"Where the data comes from", s1:n=>`By what is recorded, ${n} datasets`,
+  c1:"Where the data comes from (by hours)", s1:n=>`Known hours of open data ≈${n} h, aggregates excluded to avoid double counting`,
   c2:"How real-robot data is collected", s2:n=>`Collection method of the ${n} real-robot datasets`,
-  c3:"Where the hours are", s3:n=>`Known hours of open data ≈${n} h (aggregates excluded)`,
+  c3:"Dataset count", s3:n=>`By what is recorded, ${n} datasets incl. aggregates`,
   c4:"Where it comes from", s4:n=>`Country of the releasing org, ${n} datasets`,
   c5:"Can you use it commercially", s5:n=>`Rough licence class, ${n} datasets`,
   real:"Real robot",human:"Human",sim:"Simulation / synthetic",agg:"Aggregated",CN:"China",US:"US",OT:"Other",perm:"Permissive (commercial OK)",nc:"Non-commercial / research",unk:"Unstated / proprietary / other"}};
@@ -364,9 +364,9 @@ function pies(){
   const htot=hb.real+hb.human+hb.sim;
   const lc={perm:0,nc:0,unk:0};D.forEach(d=>lc[licC(d.lic)]++);
   PIES=[
-   ["pie1",P.c1,P.s1(D.length),[{l:P.real,v:cnt(d=>GRP[d.type]==="real"),c:"--p1"},{l:P.human,v:cnt(d=>GRP[d.type]==="human"),c:"--p2"},{l:P.sim,v:cnt(d=>d.type==="sim"),c:"--p3"},{l:P.agg,v:cnt(d=>d.type==="agg"),c:"--p4"}],D.length,LANG==="en"?"datasets":"个数据集"],
+   ["pie1",P.c1,P.s1(nf(htot)),[{l:P.real,v:hb.real,c:"--p1"},{l:P.human,v:hb.human,c:"--p2"},{l:P.sim,v:hb.sim,c:"--p3"}],(htot>=1e4?nf(htot/1e3)+"k":nf(htot)),LANG==="en"?"hours":"小时"],
    ["pie2",P.c2,P.s2(real.length),[{l:TYPE_L[LANG].teleop,v:real.filter(d=>d.type==="teleop").length,c:"--p1"},{l:TYPE_L[LANG].auto,v:real.filter(d=>d.type==="auto").length,c:"--p2"},{l:TYPE_L[LANG].umi,v:real.filter(d=>d.type==="umi").length,c:"--p3"}],real.length,LANG==="en"?"datasets":"个数据集"],
-   ["pie3",P.c3,P.s3(nf(htot)),[{l:P.real,v:hb.real,c:"--p1"},{l:P.human,v:hb.human,c:"--p2"},{l:P.sim,v:hb.sim,c:"--p3"}],(htot>=1e4?nf(htot/1e3)+"k":nf(htot)),LANG==="en"?"hours":"小时"],
+   ["pie3",P.c3,P.s3(D.length),[{l:P.real,v:cnt(d=>GRP[d.type]==="real"),c:"--p1"},{l:P.human,v:cnt(d=>GRP[d.type]==="human"),c:"--p2"},{l:P.sim,v:cnt(d=>d.type==="sim"),c:"--p3"},{l:P.agg,v:cnt(d=>d.type==="agg"),c:"--p4"}],D.length,LANG==="en"?"datasets":"个数据集"],
    ["pie4",P.c4,P.s4(D.length),[{l:P.CN,v:cnt(d=>d.c==="CN"),c:"--pcn"},{l:P.US,v:cnt(d=>d.c==="US"),c:"--pus"},{l:P.OT,v:cnt(d=>d.c!=="CN"&&d.c!=="US"),c:"--pot"}],D.length,LANG==="en"?"datasets":"个数据集"],
    ["pie5",P.c5,P.s5(D.length),[{l:P.perm,v:lc.perm,c:"--p1"},{l:P.nc,v:lc.nc,c:"--p2"},{l:P.unk,v:lc.unk,c:"--punk"}],D.length,LANG==="en"?"datasets":"个数据集"]];
   el.innerHTML=PIES.map(x=>donut(...x)).join("");
