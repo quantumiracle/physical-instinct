@@ -1,0 +1,2318 @@
+{
+ "source": "https://robodojo-benchmark.com/leaderboard",
+ "updated": "2026-11-03",
+ "fetched": "2026-11-14",
+ "note": "RoboDojo-Sim leaderboard (42 Isaac Sim tasks). Each cell is [score, success rate %]. Agent-track entries are unranked on the official board.",
+ "rows": [
+  {
+   "model": "Q0-Preview",
+   "type": "AGENT",
+   "contributor": "Qoo Tech",
+   "agent": true,
+   "rank": null,
+   "avg": [
+    74.2,
+    68.87
+   ],
+   "avg_wo_open": [
+    73.2,
+    67.34
+   ],
+   "gen": [
+    64.0,
+    58.67
+   ],
+   "prec": [
+    65.3,
+    58.5
+   ],
+   "long": [
+    69.8,
+    58.5
+   ],
+   "mem": [
+    93.68,
+    93.67
+   ],
+   "open": [
+    78.2,
+    75.0
+   ]
+  },
+  {
+   "model": "GO-3 Nano Preview",
+   "type": "AGENT + WAM",
+   "contributor": "AGIBOT",
+   "agent": true,
+   "rank": null,
+   "avg": [
+    61.9,
+    56.42
+   ],
+   "avg_wo_open": [
+    61.95,
+    56.71
+   ],
+   "gen": [
+    36.45,
+    33.66
+   ],
+   "prec": [
+    78.65,
+    76.0
+   ],
+   "long": [
+    68.21,
+    53.5
+   ],
+   "mem": [
+    64.5,
+    63.67
+   ],
+   "open": [
+    61.71,
+    55.25
+   ]
+  },
+  {
+   "model": "PyRUA-Lean",
+   "type": "AGENT",
+   "contributor": "PKU DAGroup",
+   "agent": true,
+   "rank": null,
+   "avg": [
+    55.26,
+    50.35
+   ],
+   "avg_wo_open": [
+    53.93,
+    48.37
+   ],
+   "gen": [
+    48.27,
+    43.17
+   ],
+   "prec": [
+    44.77,
+    38.25
+   ],
+   "long": [
+    54.3,
+    43.75
+   ],
+   "mem": [
+    68.4,
+    68.33
+   ],
+   "open": [
+    60.56,
+    58.25
+   ]
+  },
+  {
+   "model": "HexaShell-Preview",
+   "type": "AGENT",
+   "contributor": "HexaFuture",
+   "agent": true,
+   "rank": null,
+   "avg": [
+    53.18,
+    46.85
+   ],
+   "avg_wo_open": [
+    51.98,
+    44.75
+   ],
+   "gen": [
+    39.22,
+    34.5
+   ],
+   "prec": [
+    41.25,
+    32.0
+   ],
+   "long": [
+    42.91,
+    31.5
+   ],
+   "mem": [
+    84.53,
+    81.0
+   ],
+   "open": [
+    57.97,
+    55.25
+   ]
+  },
+  {
+   "model": "WorldScape-R²SI",
+   "type": "AGENT + WAM",
+   "contributor": "Manifold AI",
+   "agent": true,
+   "rank": null,
+   "avg": [
+    46.58,
+    39.35
+   ],
+   "avg_wo_open": [
+    45.93,
+    37.31
+   ],
+   "gen": [
+    42.95,
+    35.83
+   ],
+   "prec": [
+    23.51,
+    15.5
+   ],
+   "long": [
+    51.48,
+    34.25
+   ],
+   "mem": [
+    65.78,
+    63.67
+   ],
+   "open": [
+    49.16,
+    47.5
+   ]
+  },
+  {
+   "model": "EmbodiedEvo",
+   "type": "AGENT",
+   "contributor": "Einsia.AI",
+   "agent": true,
+   "rank": null,
+   "avg": [
+    45.08,
+    38.95
+   ],
+   "avg_wo_open": [
+    43.4,
+    36.38
+   ],
+   "gen": [
+    35.22,
+    30.83
+   ],
+   "prec": [
+    25.15,
+    16.25
+   ],
+   "long": [
+    33.83,
+    21.75
+   ],
+   "mem": [
+    79.4,
+    76.67
+   ],
+   "open": [
+    51.81,
+    49.25
+   ]
+  },
+  {
+   "model": "WALL-OSS-1.0-lite",
+   "type": "VLA",
+   "contributor": "X Square Robot",
+   "agent": false,
+   "rank": 1,
+   "avg": [
+    42.59,
+    34.97
+   ],
+   "avg_wo_open": [
+    48.05,
+    38.82
+   ],
+   "gen": [
+    46.66,
+    37.94
+   ],
+   "prec": [
+    38.16,
+    29.08
+   ],
+   "long": [
+    49.94,
+    32.25
+   ],
+   "mem": [
+    57.42,
+    56.0
+   ],
+   "open": [
+    20.76,
+    19.58
+   ]
+  },
+  {
+   "model": "VPP2",
+   "type": "WAM",
+   "contributor": "RobotEra",
+   "agent": false,
+   "rank": 2,
+   "avg": [
+    39.26,
+    32.26
+   ],
+   "avg_wo_open": [
+    47.93,
+    39.31
+   ],
+   "gen": [
+    36.38,
+    29.5
+   ],
+   "prec": [
+    43.03,
+    35.17
+   ],
+   "long": [
+    56.28,
+    37.0
+   ],
+   "mem": [
+    56.01,
+    55.56
+   ],
+   "open": [
+    4.61,
+    4.08
+   ]
+  },
+  {
+   "model": "PhysicalRSI",
+   "type": "AGENT + VLA",
+   "contributor": "HKU MMLab & KAI",
+   "agent": true,
+   "rank": null,
+   "avg": [
+    36.27,
+    31.38
+   ],
+   "avg_wo_open": [
+    38.12,
+    33.0
+   ],
+   "gen": [
+    21.3,
+    15.62
+   ],
+   "prec": [
+    38.05,
+    32.5
+   ],
+   "long": [
+    46.37,
+    37.33
+   ],
+   "mem": [
+    46.74,
+    46.56
+   ],
+   "open": [
+    28.88,
+    24.92
+   ]
+  },
+  {
+   "model": "Awomo-0.5",
+   "type": "WAM",
+   "contributor": "Awomo",
+   "agent": false,
+   "rank": 3,
+   "avg": [
+    35.34,
+    29.64
+   ],
+   "avg_wo_open": [
+    38.15,
+    31.33
+   ],
+   "gen": [
+    30.31,
+    23.84
+   ],
+   "prec": [
+    39.65,
+    33.5
+   ],
+   "long": [
+    40.36,
+    26.75
+   ],
+   "mem": [
+    42.27,
+    41.22
+   ],
+   "open": [
+    24.09,
+    22.92
+   ]
+  },
+  {
+   "model": "Simate-beta",
+   "type": "VLA",
+   "contributor": "Simate",
+   "agent": false,
+   "rank": 4,
+   "avg": [
+    33.95,
+    27.96
+   ],
+   "avg_wo_open": [
+    40.15,
+    32.82
+   ],
+   "gen": [
+    35.09,
+    27.95
+   ],
+   "prec": [
+    34.35,
+    26.92
+   ],
+   "long": [
+    57.84,
+    43.42
+   ],
+   "mem": [
+    33.33,
+    33.0
+   ],
+   "open": [
+    9.12,
+    8.5
+   ]
+  },
+  {
+   "model": "Rex-M1 Preview",
+   "type": "VLA",
+   "contributor": "FT Lab & VisIncept",
+   "agent": false,
+   "rank": 5,
+   "avg": [
+    33.79,
+    27.44
+   ],
+   "avg_wo_open": [
+    40.57,
+    32.78
+   ],
+   "gen": [
+    34.05,
+    26.05
+   ],
+   "prec": [
+    32.82,
+    23.83
+   ],
+   "long": [
+    46.89,
+    33.0
+   ],
+   "mem": [
+    48.53,
+    48.22
+   ],
+   "open": [
+    6.67,
+    6.08
+   ]
+  },
+  {
+   "model": "HWM-0 Preview",
+   "type": "VLM + WAM",
+   "contributor": "Horizon Robotics",
+   "agent": false,
+   "rank": 6,
+   "avg": [
+    32.81,
+    27.17
+   ],
+   "avg_wo_open": [
+    39.38,
+    32.45
+   ],
+   "gen": [
+    26.99,
+    21.11
+   ],
+   "prec": [
+    37.6,
+    29.92
+   ],
+   "long": [
+    46.02,
+    32.08
+   ],
+   "mem": [
+    46.91,
+    46.67
+   ],
+   "open": [
+    6.55,
+    6.08
+   ]
+  },
+  {
+   "model": "VPP2-Preview",
+   "type": "WAM",
+   "contributor": "RobotEra",
+   "agent": false,
+   "rank": 7,
+   "avg": [
+    31.4,
+    25.62
+   ],
+   "avg_wo_open": [
+    37.79,
+    30.67
+   ],
+   "gen": [
+    31.34,
+    24.62
+   ],
+   "prec": [
+    33.75,
+    25.58
+   ],
+   "long": [
+    35.31,
+    22.17
+   ],
+   "mem": [
+    50.78,
+    50.33
+   ],
+   "open": [
+    5.83,
+    5.42
+   ]
+  },
+  {
+   "model": "InternW0-Δ",
+   "type": "WAM",
+   "contributor": "Shanghai AI Lab",
+   "agent": false,
+   "rank": 8,
+   "avg": [
+    30.77,
+    23.91
+   ],
+   "avg_wo_open": [
+    35.76,
+    27.34
+   ],
+   "gen": [
+    30.09,
+    22.78
+   ],
+   "prec": [
+    31.98,
+    23.25
+   ],
+   "long": [
+    46.29,
+    29.33
+   ],
+   "mem": [
+    34.67,
+    34.0
+   ],
+   "open": [
+    10.84,
+    10.17
+   ]
+  },
+  {
+   "model": "Liber-0 Preview",
+   "type": "VLM + WAM",
+   "contributor": "LiberAI",
+   "agent": false,
+   "rank": 9,
+   "avg": [
+    30.74,
+    25.52
+   ],
+   "avg_wo_open": [
+    36.76,
+    30.57
+   ],
+   "gen": [
+    24.99,
+    18.61
+   ],
+   "prec": [
+    38.28,
+    33.17
+   ],
+   "long": [
+    45.98,
+    33.17
+   ],
+   "mem": [
+    37.77,
+    37.33
+   ],
+   "open": [
+    6.68,
+    5.33
+   ]
+  },
+  {
+   "model": "Liber-0 Lite",
+   "type": "WAM",
+   "contributor": "LiberAI",
+   "agent": false,
+   "rank": 10,
+   "avg": [
+    29.24,
+    24.23
+   ],
+   "avg_wo_open": [
+    35.78,
+    29.64
+   ],
+   "gen": [
+    25.36,
+    19.11
+   ],
+   "prec": [
+    36.6,
+    31.08
+   ],
+   "long": [
+    45.5,
+    32.92
+   ],
+   "mem": [
+    35.68,
+    35.44
+   ],
+   "open": [
+    3.06,
+    2.58
+   ]
+  },
+  {
+   "model": "GPT-6-Astra",
+   "type": "AGENT",
+   "contributor": "RoboDojo Team",
+   "agent": true,
+   "rank": null,
+   "avg": [
+    28.97,
+    22.48
+   ],
+   "avg_wo_open": [
+    27.63,
+    20.36
+   ],
+   "gen": [
+    33.36,
+    30.5
+   ],
+   "prec": [
+    12.65,
+    4.0
+   ],
+   "long": [
+    21.45,
+    8.25
+   ],
+   "mem": [
+    43.04,
+    38.67
+   ],
+   "open": [
+    34.36,
+    31.0
+   ]
+  },
+  {
+   "model": "DM0.5",
+   "type": "VLA",
+   "contributor": "Dexmal",
+   "agent": false,
+   "rank": 11,
+   "avg": [
+    24.9,
+    19.34
+   ],
+   "avg_wo_open": [
+    30.51,
+    23.66
+   ],
+   "gen": [
+    15.77,
+    10.95
+   ],
+   "prec": [
+    24.82,
+    16.75
+   ],
+   "long": [
+    33.7,
+    19.5
+   ],
+   "mem": [
+    47.74,
+    47.44
+   ],
+   "open": [
+    2.43,
+    2.08
+   ]
+  },
+  {
+   "model": "ME-Brain-1.0",
+   "type": "VLA + WAM",
+   "contributor": "Li Auto Inc.",
+   "agent": false,
+   "rank": 12,
+   "avg": [
+    21.67,
+    15.99
+   ],
+   "avg_wo_open": [
+    25.63,
+    18.65
+   ],
+   "gen": [
+    21.81,
+    15.34
+   ],
+   "prec": [
+    24.23,
+    15.92
+   ],
+   "long": [
+    32.96,
+    20.58
+   ],
+   "mem": [
+    23.53,
+    22.78
+   ],
+   "open": [
+    5.83,
+    5.33
+   ]
+  },
+  {
+   "model": "GalaxeaVLA (G0.5)",
+   "type": "VLA",
+   "contributor": "Galaxea AI",
+   "agent": false,
+   "rank": 13,
+   "avg": [
+    20.23,
+    14.88
+   ],
+   "avg_wo_open": [
+    24.86,
+    18.21
+   ],
+   "gen": [
+    18.46,
+    12.83
+   ],
+   "prec": [
+    28.25,
+    20.42
+   ],
+   "long": [
+    44.12,
+    32.25
+   ],
+   "mem": [
+    8.61,
+    7.33
+   ],
+   "open": [
+    1.73,
+    1.58
+   ]
+  },
+  {
+   "model": "Xiaomi-Robotics-1",
+   "type": "VLA",
+   "contributor": "Xiaomi Robotics",
+   "agent": false,
+   "rank": 14,
+   "avg": [
+    20.07,
+    13.93
+   ],
+   "avg_wo_open": [
+    24.11,
+    16.52
+   ],
+   "gen": [
+    23.54,
+    17.0
+   ],
+   "prec": [
+    26.69,
+    18.83
+   ],
+   "long": [
+    38.39,
+    23.67
+   ],
+   "mem": [
+    7.81,
+    6.56
+   ],
+   "open": [
+    3.94,
+    3.58
+   ]
+  },
+  {
+   "model": "MachEmbodied-U0",
+   "type": "WAM",
+   "contributor": "Li Auto Inc.",
+   "agent": false,
+   "rank": 15,
+   "avg": [
+    17.78,
+    11.51
+   ],
+   "avg_wo_open": [
+    21.27,
+    13.59
+   ],
+   "gen": [
+    16.07,
+    8.78
+   ],
+   "prec": [
+    24.2,
+    16.67
+   ],
+   "long": [
+    36.66,
+    22.25
+   ],
+   "mem": [
+    8.16,
+    6.67
+   ],
+   "open": [
+    3.78,
+    3.17
+   ]
+  },
+  {
+   "model": "OpenWAM-α",
+   "type": "WAM",
+   "contributor": "OpenWAM Team",
+   "agent": false,
+   "rank": 16,
+   "avg": [
+    17.18,
+    11.92
+   ],
+   "avg_wo_open": [
+    21.13,
+    14.63
+   ],
+   "gen": [
+    20.71,
+    14.83
+   ],
+   "prec": [
+    18.45,
+    9.25
+   ],
+   "long": [
+    34.93,
+    25.33
+   ],
+   "mem": [
+    10.41,
+    9.11
+   ],
+   "open": [
+    1.41,
+    1.08
+   ]
+  },
+  {
+   "model": "EWAM",
+   "type": "WAM",
+   "contributor": "EWAM Team",
+   "agent": false,
+   "rank": 17,
+   "avg": [
+    15.2,
+    9.37
+   ],
+   "avg_wo_open": [
+    18.72,
+    11.52
+   ],
+   "gen": [
+    15.12,
+    9.67
+   ],
+   "prec": [
+    22.15,
+    12.33
+   ],
+   "long": [
+    30.23,
+    18.08
+   ],
+   "mem": [
+    7.39,
+    6.0
+   ],
+   "open": [
+    1.12,
+    0.75
+   ]
+  },
+  {
+   "model": "Meituan-Robotics-0",
+   "type": "VLA",
+   "contributor": "Meituan Robotics",
+   "agent": false,
+   "rank": 18,
+   "avg": [
+    14.95,
+    9.53
+   ],
+   "avg_wo_open": [
+    17.55,
+    10.85
+   ],
+   "gen": [
+    13.75,
+    8.17
+   ],
+   "prec": [
+    16.77,
+    7.75
+   ],
+   "long": [
+    29.61,
+    18.58
+   ],
+   "mem": [
+    10.06,
+    8.89
+   ],
+   "open": [
+    4.54,
+    4.25
+   ]
+  },
+  {
+   "model": "HWM-CogWAM",
+   "type": "WAM",
+   "contributor": "Horizon Robotics",
+   "agent": false,
+   "rank": 19,
+   "avg": [
+    14.34,
+    10.34
+   ],
+   "avg_wo_open": [
+    17.21,
+    12.26
+   ],
+   "gen": [
+    12.78,
+    9.28
+   ],
+   "prec": [
+    20.54,
+    14.58
+   ],
+   "long": [
+    27.35,
+    18.17
+   ],
+   "mem": [
+    8.18,
+    7.0
+   ],
+   "open": [
+    2.86,
+    2.67
+   ]
+  },
+  {
+   "model": "Hy-Embodied-0.5-VLA",
+   "type": "VLA",
+   "contributor": "Tencent Robotics X",
+   "agent": false,
+   "rank": 20,
+   "avg": [
+    13.07,
+    8.8
+   ],
+   "avg_wo_open": [
+    16.17,
+    10.86
+   ],
+   "gen": [
+    11.78,
+    8.39
+   ],
+   "prec": [
+    13.81,
+    8.0
+   ],
+   "long": [
+    25.74,
+    14.92
+   ],
+   "mem": [
+    13.37,
+    12.11
+   ],
+   "open": [
+    0.65,
+    0.58
+   ]
+  },
+  {
+   "model": "KinRT",
+   "type": "VLA",
+   "contributor": "IIGroup",
+   "agent": false,
+   "rank": 21,
+   "avg": [
+    13.02,
+    8.8
+   ],
+   "avg_wo_open": [
+    15.22,
+    10.04
+   ],
+   "gen": [
+    14.02,
+    8.61
+   ],
+   "prec": [
+    15.65,
+    9.92
+   ],
+   "long": [
+    26.4,
+    18.08
+   ],
+   "mem": [
+    4.82,
+    3.56
+   ],
+   "open": [
+    4.23,
+    3.83
+   ]
+  },
+  {
+   "model": "SimpleMemVLA",
+   "type": "VLA",
+   "contributor": "SimpleMemVLA Team",
+   "agent": false,
+   "rank": 22,
+   "avg": [
+    12.58,
+    9.27
+   ],
+   "avg_wo_open": [
+    15.52,
+    11.4
+   ],
+   "gen": [
+    6.36,
+    3.95
+   ],
+   "prec": [
+    7.42,
+    2.92
+   ],
+   "long": [
+    14.58,
+    5.5
+   ],
+   "mem": [
+    33.71,
+    33.22
+   ],
+   "open": [
+    0.85,
+    0.75
+   ]
+  },
+  {
+   "model": "Spatial Forcing",
+   "type": "VLA",
+   "contributor": "OpenHelix Robotics",
+   "agent": false,
+   "rank": 23,
+   "avg": [
+    12.38,
+    8.04
+   ],
+   "avg_wo_open": [
+    15.03,
+    9.65
+   ],
+   "gen": [
+    14.12,
+    9.34
+   ],
+   "prec": [
+    17.32,
+    10.58
+   ],
+   "long": [
+    23.26,
+    14.58
+   ],
+   "mem": [
+    5.43,
+    4.11
+   ],
+   "open": [
+    1.78,
+    1.58
+   ]
+  },
+  {
+   "model": "Pi-05",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 24,
+   "avg": [
+    11.44,
+    6.93
+   ],
+   "avg_wo_open": [
+    13.8,
+    8.25
+   ],
+   "gen": [
+    13.38,
+    8.17
+   ],
+   "prec": [
+    12.4,
+    5.5
+   ],
+   "long": [
+    23.54,
+    14.67
+   ],
+   "mem": [
+    5.89,
+    4.67
+   ],
+   "open": [
+    1.98,
+    1.67
+   ]
+  },
+  {
+   "model": "InternVLA-A1.5",
+   "type": "VLA",
+   "contributor": "InternVLA Team",
+   "agent": false,
+   "rank": 25,
+   "avg": [
+    11.15,
+    7.14
+   ],
+   "avg_wo_open": [
+    13.58,
+    8.58
+   ],
+   "gen": [
+    10.35,
+    6.83
+   ],
+   "prec": [
+    15.23,
+    10.17
+   ],
+   "long": [
+    23.8,
+    13.75
+   ],
+   "mem": [
+    4.93,
+    3.56
+   ],
+   "open": [
+    1.43,
+    1.42
+   ]
+  },
+  {
+   "model": "StarVLA-PI_v3",
+   "type": "VLA",
+   "contributor": "StarVLA Team",
+   "agent": false,
+   "rank": 26,
+   "avg": [
+    10.81,
+    7.51
+   ],
+   "avg_wo_open": [
+    13.01,
+    8.89
+   ],
+   "gen": [
+    11.22,
+    8.05
+   ],
+   "prec": [
+    17.77,
+    12.5
+   ],
+   "long": [
+    18.46,
+    11.0
+   ],
+   "mem": [
+    4.59,
+    4.0
+   ],
+   "open": [
+    2.03,
+    2.0
+   ]
+  },
+  {
+   "model": "VLAct",
+   "type": "VLA",
+   "contributor": "StarVLA Team",
+   "agent": false,
+   "rank": 27,
+   "avg": [
+    10.65,
+    7.58
+   ],
+   "avg_wo_open": [
+    12.72,
+    8.92
+   ],
+   "gen": [
+    9.54,
+    6.28
+   ],
+   "prec": [
+    20.57,
+    15.17
+   ],
+   "long": [
+    20.12,
+    13.67
+   ],
+   "mem": [
+    0.66,
+    0.56
+   ],
+   "open": [
+    2.37,
+    2.25
+   ]
+  },
+  {
+   "model": "X-VLA",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 28,
+   "avg": [
+    10.13,
+    6.52
+   ],
+   "avg_wo_open": [
+    12.52,
+    8.02
+   ],
+   "gen": [
+    10.47,
+    6.78
+   ],
+   "prec": [
+    18.32,
+    12.0
+   ],
+   "long": [
+    16.53,
+    9.75
+   ],
+   "mem": [
+    4.76,
+    3.56
+   ],
+   "open": [
+    0.55,
+    0.5
+   ]
+  },
+  {
+   "model": "MolmoAct2",
+   "type": "VLA",
+   "contributor": "MolmoAct2 Team",
+   "agent": false,
+   "rank": 29,
+   "avg": [
+    8.99,
+    5.03
+   ],
+   "avg_wo_open": [
+    10.04,
+    5.18
+   ],
+   "gen": [
+    8.53,
+    4.67
+   ],
+   "prec": [
+    10.92,
+    4.5
+   ],
+   "long": [
+    15.2,
+    7.0
+   ],
+   "mem": [
+    5.53,
+    4.56
+   ],
+   "open": [
+    4.75,
+    4.42
+   ]
+  },
+  {
+   "model": "StarVLA-GR00T",
+   "type": "VLA",
+   "contributor": "StarVLA Team",
+   "agent": false,
+   "rank": 30,
+   "avg": [
+    8.25,
+    4.67
+   ],
+   "avg_wo_open": [
+    9.82,
+    5.36
+   ],
+   "gen": [
+    7.96,
+    5.28
+   ],
+   "prec": [
+    9.56,
+    4.67
+   ],
+   "long": [
+    16.18,
+    7.17
+   ],
+   "mem": [
+    5.6,
+    4.33
+   ],
+   "open": [
+    1.95,
+    1.92
+   ]
+  },
+  {
+   "model": "StarVLA-OFT",
+   "type": "VLA",
+   "contributor": "StarVLA Team",
+   "agent": false,
+   "rank": 31,
+   "avg": [
+    8.18,
+    4.82
+   ],
+   "avg_wo_open": [
+    9.88,
+    5.7
+   ],
+   "gen": [
+    7.41,
+    4.78
+   ],
+   "prec": [
+    16.08,
+    10.17
+   ],
+   "long": [
+    14.28,
+    6.17
+   ],
+   "mem": [
+    1.74,
+    1.67
+   ],
+   "open": [
+    1.41,
+    1.33
+   ]
+  },
+  {
+   "model": "X-WAM",
+   "type": "WAM",
+   "contributor": "X-WAM Team",
+   "agent": false,
+   "rank": 32,
+   "avg": [
+    7.69,
+    3.83
+   ],
+   "avg_wo_open": [
+    9.47,
+    4.73
+   ],
+   "gen": [
+    7.39,
+    3.33
+   ],
+   "prec": [
+    6.72,
+    1.83
+   ],
+   "long": [
+    17.47,
+    9.08
+   ],
+   "mem": [
+    6.32,
+    4.67
+   ],
+   "open": [
+    0.57,
+    0.25
+   ]
+  },
+  {
+   "model": "Xiaomi-Robotics-0",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 33,
+   "avg": [
+    6.93,
+    4.18
+   ],
+   "avg_wo_open": [
+    8.61,
+    5.18
+   ],
+   "gen": [
+    7.43,
+    5.55
+   ],
+   "prec": [
+    8.42,
+    4.58
+   ],
+   "long": [
+    13.51,
+    6.92
+   ],
+   "mem": [
+    5.07,
+    3.67
+   ],
+   "open": [
+    0.22,
+    0.17
+   ]
+  },
+  {
+   "model": "StarVLA",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 34,
+   "avg": [
+    6.4,
+    3.24
+   ],
+   "avg_wo_open": [
+    7.83,
+    3.9
+   ],
+   "gen": [
+    3.94,
+    2.33
+   ],
+   "prec": [
+    9.9,
+    4.33
+   ],
+   "long": [
+    14.15,
+    6.5
+   ],
+   "mem": [
+    3.34,
+    2.44
+   ],
+   "open": [
+    0.67,
+    0.58
+   ]
+  },
+  {
+   "model": "GigaWorld-Policy-0",
+   "type": "WAM",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 35,
+   "avg": [
+    6.2,
+    3.27
+   ],
+   "avg_wo_open": [
+    7.62,
+    3.97
+   ],
+   "gen": [
+    5.34,
+    2.89
+   ],
+   "prec": [
+    6.15,
+    1.83
+   ],
+   "long": [
+    15.51,
+    8.92
+   ],
+   "mem": [
+    3.46,
+    2.22
+   ],
+   "open": [
+    0.54,
+    0.5
+   ]
+  },
+  {
+   "model": "GalaxeaVLA (G0)",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 36,
+   "avg": [
+    5.82,
+    2.96
+   ],
+   "avg_wo_open": [
+    7.1,
+    3.53
+   ],
+   "gen": [
+    4.54,
+    2.83
+   ],
+   "prec": [
+    8.1,
+    3.83
+   ],
+   "long": [
+    12.6,
+    5.58
+   ],
+   "mem": [
+    3.17,
+    1.89
+   ],
+   "open": [
+    0.7,
+    0.67
+   ]
+  },
+  {
+   "model": "LingBot-VLA",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 37,
+   "avg": [
+    5.5,
+    2.96
+   ],
+   "avg_wo_open": [
+    6.69,
+    3.53
+   ],
+   "gen": [
+    6.71,
+    4.28
+   ],
+   "prec": [
+    5.33,
+    1.83
+   ],
+   "long": [
+    10.89,
+    5.25
+   ],
+   "mem": [
+    3.82,
+    2.78
+   ],
+   "open": [
+    0.72,
+    0.67
+   ]
+  },
+  {
+   "model": "EventVLA",
+   "type": "VLA",
+   "contributor": "SJTU ScaleLab",
+   "agent": false,
+   "rank": 38,
+   "avg": [
+    4.97,
+    2.81
+   ],
+   "avg_wo_open": [
+    6.01,
+    3.33
+   ],
+   "gen": [
+    3.95,
+    1.94
+   ],
+   "prec": [
+    10.13,
+    5.75
+   ],
+   "long": [
+    5.05,
+    0.83
+   ],
+   "mem": [
+    4.92,
+    4.78
+   ],
+   "open": [
+    0.8,
+    0.75
+   ]
+  },
+  {
+   "model": "AHA-WAM",
+   "type": "WAM",
+   "contributor": "SJTU ScaleLab",
+   "agent": false,
+   "rank": 39,
+   "avg": [
+    4.82,
+    2.39
+   ],
+   "avg_wo_open": [
+    5.81,
+    2.79
+   ],
+   "gen": [
+    5.79,
+    3.27
+   ],
+   "prec": [
+    5.86,
+    2.42
+   ],
+   "long": [
+    8.61,
+    2.67
+   ],
+   "mem": [
+    2.97,
+    2.78
+   ],
+   "open": [
+    0.88,
+    0.83
+   ]
+  },
+  {
+   "model": "ABot-M0",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 40,
+   "avg": [
+    3.67,
+    1.73
+   ],
+   "avg_wo_open": [
+    4.41,
+    1.99
+   ],
+   "gen": [
+    5.73,
+    3.5
+   ],
+   "prec": [
+    5.5,
+    1.75
+   ],
+   "long": [
+    3.96,
+    0.5
+   ],
+   "mem": [
+    2.44,
+    2.22
+   ],
+   "open": [
+    0.72,
+    0.67
+   ]
+  },
+  {
+   "model": "Fast-WAM",
+   "type": "WAM",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 41,
+   "avg": [
+    3.48,
+    2.03
+   ],
+   "avg_wo_open": [
+    4.25,
+    2.43
+   ],
+   "gen": [
+    2.33,
+    1.11
+   ],
+   "prec": [
+    1.96,
+    0.0
+   ],
+   "long": [
+    9.14,
+    5.17
+   ],
+   "mem": [
+    3.55,
+    3.44
+   ],
+   "open": [
+    0.42,
+    0.42
+   ]
+  },
+  {
+   "model": "Pi-0",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 42,
+   "avg": [
+    3.48,
+    1.53
+   ],
+   "avg_wo_open": [
+    4.29,
+    1.85
+   ],
+   "gen": [
+    3.94,
+    2.55
+   ],
+   "prec": [
+    3.56,
+    0.75
+   ],
+   "long": [
+    6.19,
+    2.0
+   ],
+   "mem": [
+    3.47,
+    2.11
+   ],
+   "open": [
+    0.25,
+    0.25
+   ]
+  },
+  {
+   "model": "DeepSeek-Flash",
+   "type": "AGENT",
+   "contributor": "RoboDojo Team",
+   "agent": true,
+   "rank": null,
+   "avg": [
+    2.99,
+    1.92
+   ],
+   "avg_wo_open": [
+    2.12,
+    0.83
+   ],
+   "gen": [
+    2.42,
+    1.67
+   ],
+   "prec": [
+    1.75,
+    0.0
+   ],
+   "long": [
+    2.12,
+    0.0
+   ],
+   "mem": [
+    2.17,
+    1.67
+   ],
+   "open": [
+    6.5,
+    6.25
+   ]
+  },
+  {
+   "model": "GROOT-N1.7",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 43,
+   "avg": [
+    2.85,
+    1.31
+   ],
+   "avg_wo_open": [
+    3.52,
+    1.59
+   ],
+   "gen": [
+    2.16,
+    1.22
+   ],
+   "prec": [
+    2.54,
+    0.67
+   ],
+   "long": [
+    8.3,
+    3.58
+   ],
+   "mem": [
+    1.06,
+    0.89
+   ],
+   "open": [
+    0.18,
+    0.17
+   ]
+  },
+  {
+   "model": "InternVLA-A1",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 44,
+   "avg": [
+    2.48,
+    1.08
+   ],
+   "avg_wo_open": [
+    3.06,
+    1.31
+   ],
+   "gen": [
+    2.86,
+    1.83
+   ],
+   "prec": [
+    3.0,
+    0.92
+   ],
+   "long": [
+    4.79,
+    1.17
+   ],
+   "mem": [
+    1.58,
+    1.33
+   ],
+   "open": [
+    0.17,
+    0.17
+   ]
+  },
+  {
+   "model": "SmolVLA (Single Task)",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 45,
+   "avg": [
+    1.82,
+    0.85
+   ],
+   "avg_wo_open": [
+    2.28,
+    1.06
+   ],
+   "gen": [
+    1.68,
+    1.22
+   ],
+   "prec": [
+    2.87,
+    0.33
+   ],
+   "long": [
+    1.22,
+    0.25
+   ],
+   "mem": [
+    3.35,
+    2.44
+   ],
+   "open": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "model": "LDA-1B",
+   "type": "WAM",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 46,
+   "avg": [
+    1.66,
+    0.54
+   ],
+   "avg_wo_open": [
+    2.06,
+    0.66
+   ],
+   "gen": [
+    0.81,
+    0.11
+   ],
+   "prec": [
+    3.33,
+    0.67
+   ],
+   "long": [
+    1.98,
+    0.08
+   ],
+   "mem": [
+    2.11,
+    1.78
+   ],
+   "open": [
+    0.08,
+    0.08
+   ]
+  },
+  {
+   "model": "GPT-5.5",
+   "type": "AGENT",
+   "contributor": "RoboDojo Team",
+   "agent": true,
+   "rank": null,
+   "avg": [
+    1.13,
+    0.88
+   ],
+   "avg_wo_open": [
+    0.7,
+    0.42
+   ],
+   "gen": [
+    0.2,
+    0.0
+   ],
+   "prec": [
+    0.42,
+    0.0
+   ],
+   "long": [
+    0.51,
+    0.0
+   ],
+   "mem": [
+    1.67,
+    1.67
+   ],
+   "open": [
+    2.87,
+    2.75
+   ]
+  },
+  {
+   "model": "ACT (Single Task)",
+   "type": "IL",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 47,
+   "avg": [
+    1.08,
+    0.47
+   ],
+   "avg_wo_open": [
+    1.35,
+    0.59
+   ],
+   "gen": [
+    0.69,
+    0.56
+   ],
+   "prec": [
+    0.85,
+    0.0
+   ],
+   "long": [
+    1.73,
+    0.92
+   ],
+   "mem": [
+    2.15,
+    0.89
+   ],
+   "open": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "model": "GO-1",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 48,
+   "avg": [
+    0.99,
+    0.53
+   ],
+   "avg_wo_open": [
+    1.22,
+    0.64
+   ],
+   "gen": [
+    1.58,
+    1.22
+   ],
+   "prec": [
+    1.45,
+    0.42
+   ],
+   "long": [
+    1.13,
+    0.25
+   ],
+   "mem": [
+    0.7,
+    0.67
+   ],
+   "open": [
+    0.08,
+    0.08
+   ]
+  },
+  {
+   "model": "H-RDT",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 49,
+   "avg": [
+    0.67,
+    0.12
+   ],
+   "avg_wo_open": [
+    0.81,
+    0.13
+   ],
+   "gen": [
+    0.49,
+    0.22
+   ],
+   "prec": [
+    0.41,
+    0.0
+   ],
+   "long": [
+    2.23,
+    0.17
+   ],
+   "mem": [
+    0.12,
+    0.11
+   ],
+   "open": [
+    0.08,
+    0.08
+   ]
+  },
+  {
+   "model": "RDT",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 50,
+   "avg": [
+    0.51,
+    0.13
+   ],
+   "avg_wo_open": [
+    0.64,
+    0.17
+   ],
+   "gen": [
+    0.55,
+    0.33
+   ],
+   "prec": [
+    0.38,
+    0.0
+   ],
+   "long": [
+    1.13,
+    0.0
+   ],
+   "mem": [
+    0.49,
+    0.33
+   ],
+   "open": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "model": "DM0",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 51,
+   "avg": [
+    0.45,
+    0.05
+   ],
+   "avg_wo_open": [
+    0.57,
+    0.06
+   ],
+   "gen": [
+    0.49,
+    0.06
+   ],
+   "prec": [
+    0.61,
+    0.0
+   ],
+   "long": [
+    0.97,
+    0.08
+   ],
+   "mem": [
+    0.2,
+    0.11
+   ],
+   "open": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "model": "Dexora-1B",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 52,
+   "avg": [
+    0.38,
+    0.02
+   ],
+   "avg_wo_open": [
+    0.48,
+    0.03
+   ],
+   "gen": [
+    0.49,
+    0.11
+   ],
+   "prec": [
+    0.49,
+    0.0
+   ],
+   "long": [
+    0.82,
+    0.0
+   ],
+   "mem": [
+    0.12,
+    0.0
+   ],
+   "open": [
+    0.01,
+    0.0
+   ]
+  },
+  {
+   "model": "A1",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 53,
+   "avg": [
+    0.28,
+    0.02
+   ],
+   "avg_wo_open": [
+    0.33,
+    0.0
+   ],
+   "gen": [
+    0.16,
+    0.0
+   ],
+   "prec": [
+    0.09,
+    0.0
+   ],
+   "long": [
+    1.07,
+    0.0
+   ],
+   "mem": [
+    0.0,
+    0.0
+   ],
+   "open": [
+    0.08,
+    0.08
+   ]
+  },
+  {
+   "model": "Spirit v1.5",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 54,
+   "avg": [
+    0.23,
+    0.14
+   ],
+   "avg_wo_open": [
+    0.29,
+    0.18
+   ],
+   "gen": [
+    0.8,
+    0.5
+   ],
+   "prec": [
+    0.03,
+    0.0
+   ],
+   "long": [
+    0.11,
+    0.0
+   ],
+   "mem": [
+    0.22,
+    0.22
+   ],
+   "open": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "model": "TinyVLA",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 55,
+   "avg": [
+    0.22,
+    0.07
+   ],
+   "avg_wo_open": [
+    0.22,
+    0.03
+   ],
+   "gen": [
+    0.03,
+    0.0
+   ],
+   "prec": [
+    0.05,
+    0.0
+   ],
+   "long": [
+    0.67,
+    0.0
+   ],
+   "mem": [
+    0.11,
+    0.11
+   ],
+   "open": [
+    0.25,
+    0.25
+   ]
+  },
+  {
+   "model": "OpenVLA-OFT",
+   "type": "VLA",
+   "contributor": "RoboDojo Team",
+   "agent": false,
+   "rank": 56,
+   "avg": [
+    0.21,
+    0.02
+   ],
+   "avg_wo_open": [
+    0.24,
+    0.0
+   ],
+   "gen": [
+    0.04,
+    0.0
+   ],
+   "prec": [
+    0.2,
+    0.0
+   ],
+   "long": [
+    0.7,
+    0.0
+   ],
+   "mem": [
+    0.0,
+    0.0
+   ],
+   "open": [
+    0.08,
+    0.08
+   ]
+  }
+ ]
+}

@@ -116,7 +116,30 @@ table{min-width:1180px}
   .note,.rob,.tm{max-width:none}
   .links{grid-column:auto}
 }
+</style>
 <style>
+/* RoboDojo sim leaderboard panel */
+.dojo .dt{width:100%;border-collapse:collapse;min-width:0;font-size:13px}
+.dojo .dt th{font:500 11px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);text-align:left;padding:6px 6px;border-bottom:1px solid var(--line);white-space:nowrap}
+.dojo .dt td{padding:6px 6px;border-bottom:1px solid var(--line);vertical-align:middle}
+.dojo .dt tr:last-child td{border-bottom:0}
+.dojo .dt tr.ag td{opacity:.62}
+.dojo .dt tbody tr:hover td{background:var(--bg)}
+.dojo .rk{font:500 13px var(--mono);color:var(--muted);text-align:right;width:28px}
+.dojo .mn{font:700 14px/1.3 var(--display)}
+.dojo .mc{font-size:12px;color:var(--muted)}
+.dojo .ty{font:500 10px/1 var(--mono);padding:3px 5px;border-radius:3px;background:var(--thumb);color:var(--muted);margin-left:6px;vertical-align:2px;white-space:nowrap}
+.dojo .ty.ag{background:var(--new-bg);color:var(--new)}
+.dojo .avg{min-width:150px}
+.dojo .ab{display:flex;align-items:center;gap:8px}
+.dojo .ab i{display:block;height:8px;border-radius:0 4px 4px 0;background:var(--accent);flex:none}
+.dojo .ab b{font:500 13px var(--mono);font-variant-numeric:tabular-nums}
+.dojo .sr{font:12px var(--mono);color:var(--muted);text-align:right;white-space:nowrap}
+.dojo .hm{font:12px var(--mono);text-align:center;font-variant-numeric:tabular-nums;border-left:2px solid var(--panel)}
+.dojo .scroll{overflow-x:auto}
+.dojo .ctl{display:flex;flex-wrap:wrap;gap:8px}
+@media (max-width:760px){.dojo .hm,.dojo .dt th.hmh{display:none}.dojo .avg{min-width:110px}
+  .dojo .dt thead{display:table-header-group}.dojo .dt tr{display:table-row;padding:0;border:0}.dojo .dt td,.dojo .dt th{display:table-cell;padding:6px 4px;border-bottom:1px solid var(--line)}.dojo .dt td.hm{display:none}}
 /* RoboArena leaderboard panel */
 .arena{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:14px 16px 12px;margin:18px 0 6px}
 .arena .ahd{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px}
@@ -176,6 +199,15 @@ table{min-width:1180px}
     <p class="asub" id="aSub"></p>
     <div id="aRows" role="table"></div>
     <p class="anote" id="aNote"></p>
+  </section>
+
+  <section class="arena dojo" id="dojo" aria-labelledby="dTitle">
+    <div class="ahd"><h2 id="dTitle">RoboDojo 仿真排行榜</h2>
+      <div class="ctl"><div class="seg" id="dTrack" role="group"><button type="button" data-v="std" aria-pressed="true"></button><button type="button" data-v="all" aria-pressed="false"></button></div>
+      <div class="seg" id="dView" role="group"><button type="button" data-v="15" aria-pressed="true"></button><button type="button" data-v="all" aria-pressed="false"></button></div></div></div>
+    <p class="asub" id="dSub"></p>
+    <div class="scroll"><table class="dt" id="dTable"></table></div>
+    <p class="anote" id="dNote"></p>
   </section>
 
   <div class="bar" role="toolbar" aria-label="筛选">
@@ -253,6 +285,41 @@ const TYPES={sim:["physics","framework","world","asset"],bench:["manip","mobile"
 const TYPE_L={};
 const CTY_EN={"英国":"UK","瑞士":"Switzerland","德国":"Germany","法国":"France","韩国":"South Korea","新加坡":"Singapore","澳大利亚":"Australia","中国香港":"Hong Kong","日本":"Japan","加拿大":"Canada"};
 let LANG="zh",D=[];
+
+/* RoboDojo-Sim leaderboard snapshot (data/robodojo_sim.json) */
+const DJ_T={
+ zh:{title:"RoboDojo 仿真排行榜",std:"标准榜",all:"含 Agent 赛道",top:"前 15",full:"全部",
+  sub:"RoboDojo 在 Isaac Sim 里用 42 个任务测通用操作策略，按五个能力维度打分：泛化、精度、长程、记忆、开放指令。“得分”给部分完成计分，“成功率”只算完整完成，都是 0–100、越高越好。Agent 赛道允许调用大模型规划等外部模块，官方不参与排名，这里用橙色标签区分。",
+  h:["#","模型","平均得分","成功率","泛化","精度","长程","记忆","开放"],
+  note:(u,f)=>`数据：RoboDojo 官方仿真排行榜，更新于 ${u}，${f} 抓取的快照。`,more:"官方排行榜"},
+ en:{title:"RoboDojo simulation leaderboard",std:"Standard",all:"Incl. agent track",top:"Top 15",full:"All",
+  sub:"RoboDojo tests generalist manipulation policies on 42 Isaac Sim tasks, scored on five capabilities: generalization, precision, long-horizon, memory and open instructions. “Score” gives partial credit, “SR” counts full successes only; both are 0–100, higher is better. The agent track allows external modules such as LLM planners and is unranked on the official board; it is tagged orange here.",
+  h:["#","Model","Avg. score","SR","Gen.","Prec.","Long","Mem.","Open"],
+  note:(u,f)=>`Data: official RoboDojo simulation leaderboard, updated ${u}; snapshot taken ${f}.`,more:"Official leaderboard"}};
+let DJ=null,DJ_TRACK="std",DJ_VIEW="15";
+function dojo(){
+  const T=DJ_T[LANG];
+  document.getElementById("dTitle").textContent=T.title;
+  document.getElementById("dSub").textContent=T.sub;
+  document.querySelectorAll("#dTrack button").forEach(b=>{b.textContent=T[b.dataset.v];b.setAttribute("aria-pressed",b.dataset.v===DJ_TRACK?"true":"false")});
+  document.querySelectorAll("#dView button").forEach(b=>{b.textContent=b.dataset.v==="15"?T.top:T.full;b.setAttribute("aria-pressed",b.dataset.v===DJ_VIEW?"true":"false")});
+  const tb=document.getElementById("dTable");
+  if(!DJ){tb.innerHTML="";return}
+  let L=DJ.rows.filter(r=>DJ_TRACK==="all"||!r.agent).sort((a,b)=>b.avg[0]-a.avg[0]);
+  if(DJ_VIEW==="15")L=L.slice(0,15);
+  const mx=Math.max(...L.map(r=>r.avg[0]),1);
+  const hm=v=>{const p=Math.max(0,Math.min(100,v));return `style="background:color-mix(in oklab,#2a78d6 ${p.toFixed(0)}%,var(--panel));color:${p>55?"#fff":"var(--ink)"}"`};
+  tb.innerHTML=`<thead><tr>${T.h.map((h,i)=>`<th${i===0||i===3?' style="text-align:right"':""}${i>=4?' class="hmh" style="text-align:center"':""}>${esc(h)}</th>`).join("")}</tr></thead><tbody>`+
+   L.map(r=>`<tr${r.agent?' class="ag"':""}><td class="rk">${r.rank??"—"}</td>
+<td><span class="mn">${esc(r.model)}</span><span class="ty${r.agent?" ag":""}">${esc(r.type)}</span><div class="mc">${esc(r.contributor)}</div></td>
+<td class="avg"><div class="ab"><i style="width:${(r.avg[0]/mx*100).toFixed(1)}px;max-width:100px"></i><b>${r.avg[0].toFixed(2)}</b></div></td>
+<td class="sr">${r.avg[1].toFixed(1)}%</td>
+${["gen","prec","long","mem","open"].map(k=>`<td class="hm" ${hm(r[k][0])} title="${esc(r.model)} · ${T.h[["gen","prec","long","mem","open"].indexOf(k)+4]}: ${r[k][0]} / ${r[k][1]}%">${r[k][0].toFixed(0)}</td>`).join("")}</tr>`).join("")+"</tbody>";
+  document.getElementById("dNote").innerHTML=`${esc(T.note(DJ.updated,DJ.fetched))} <a href="${esc(DJ.source)}" target="_blank" rel="noopener">${T.more} ↗</a> · <a href="data/robodojo_sim.json">robodojo_sim.json</a>`;
+}
+document.getElementById("dTrack").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;DJ_TRACK=b.dataset.v;dojo();});
+document.getElementById("dView").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;DJ_VIEW=b.dataset.v;dojo();});
+fetch("data/robodojo_sim.json").then(r=>r.json()).then(j=>{DJ=j;dojo();}).catch(()=>{document.getElementById("dojo").hidden=true;});
 /* RoboArena leaderboard: live API when reachable, else the archived snapshot in data/roboarena.json */
 const AR_ALIAS={dreaming_zebra:"DreamZero","cosmos3-nano-policy":"balsomsoc","j2-vla":"Spirit v1.6",yckmtchl:"Cosmos3-Nano-Policy"};  // same display names as robo-arena.github.io
 const AR_ORG={pi0_droid:["Physical Intelligence",""],pi0_fast_droid:["Physical Intelligence",""],pi05_droid:["Physical Intelligence",""],
@@ -395,7 +462,7 @@ function setLang(l){
   document.querySelector(".bar").setAttribute("aria-label",LANG==="en"?"Filters":"筛选");
   document.getElementById("q").placeholder=tx("q");
   press("fLang",LANG);
-  typeSeg();kpis();render();arena();
+  typeSeg();kpis();render();arena();dojo();
 }
 document.getElementById("fLang").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;try{localStorage.setItem("robot-atlas-lang",b.dataset.v)}catch(x){}
   try{const u=new URL(location.href);u.searchParams.set("lang",b.dataset.v);history.replaceState(null,"",u);}catch(x){}setLang(b.dataset.v);});
