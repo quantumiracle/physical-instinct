@@ -130,6 +130,7 @@ table{min-width:1180px}
     <a href="../robot-funding-tracker/" data-zh="融资" data-en="Funding">融资</a>
     <a href="../robot-sim-spectrum/" aria-current="page" data-zh="仿真" data-en="Simulation">仿真</a>
     <a href="../robot-benchmark-spectrum/" data-zh="评测" data-en="Benchmarks">评测</a>
+    <a href="../robot-tech-routes/" data-zh="技术路线" data-en="Tech Routes">技术路线</a>
   </nav>
   <h1 data-i="title">机器人仿真图谱</h1>
   <p class="lede" id="lede"></p>
@@ -272,6 +273,7 @@ function seg(id,key,after){
   el.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;st[key]=b.dataset.v;press(id,st[key]);if(after)after();save();render();});
 }
 try{const s=JSON.parse(localStorage.getItem("robot-sim-spectrum")||"null");if(s&&typeof s==="object")for(const k in st)if(k in s&&typeof s[k]===typeof st[k])st[k]=s[k];}catch(e){}
+{const q0=new URLSearchParams(location.search).get("q");if(q0){st.q=q0;st.type="all";st.country="all";st.act=false;}}
 st.kind="sim";press("fCountry",st.country);
 document.getElementById("fAct").checked=st.act;document.getElementById("q").value=st.q;document.getElementById("fSort").value=st.sort;
 seg("fType","type");seg("fCountry","country");

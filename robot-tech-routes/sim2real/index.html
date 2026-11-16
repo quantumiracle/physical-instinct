@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-title-en="Sim2Real · Robot Tech Routes" data-title-zh="Sim2Real · 机器人技术路线">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sim2Real · Robot Tech Routes</title>
+<meta name="description" content="Sim-to-real route: RL in GPU-parallel simulation with zero-shot transfer. Timeline, engineering levers, capability boundaries and notes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/routes.css?v=2">
+<style>body{--rc:var(--r3)}</style>
+</head>
+<body>
+<div class="wrap narrow">
+  <div class="sitebar"><a href="../../">← Physical Instinct</a>
+    <div class="seg" id="fLang" role="group" aria-label="Language / 语言"><button type="button" data-v="zh" aria-pressed="false">中文</button><button type="button" data-v="en" aria-pressed="true">EN</button></div></div>
+  <nav class="secnav" aria-label="Sections">
+    <a href="../../robot-hardware-spectrum/" data-zh="硬件" data-en="Hardware">Hardware</a>
+    <a href="../../robot-model-spectrum/" data-zh="模型" data-en="Models">Models</a>
+    <a href="../../robot-dataset-spectrum/" data-zh="数据集" data-en="Datasets">Datasets</a>
+    <a href="../../robot-funding-tracker/" data-zh="融资" data-en="Funding">Funding</a>
+    <a href="../../robot-sim-spectrum/" data-zh="仿真" data-en="Simulation">Simulation</a>
+    <a href="../../robot-benchmark-spectrum/" data-zh="评测" data-en="Benchmarks">Benchmarks</a>
+    <a href="../" aria-current="page" data-zh="技术路线" data-en="Tech Routes">Tech Routes</a>
+  </nav>
+
+  <p class="crumb"><a href="../"><span class="en">Tech Routes</span><span class="zh">技术路线</span></a> / Route 03</p>
+  <h1>Sim2Real</h1>
+  <p class="lede"><span class="en">Train with reinforcement learning in GPU-parallel simulation, then run the policy on the real robot with no real-robot training data.</span><span class="zh">在 GPU 并行仿真里用强化学习训练，再把策略直接放到真机上运行，不用任何真机训练数据。</span></p>
+  <div class="hero">
+    <p><span class="en">Parallel RL training stopped being the bottleneck around 2022, and the RL algorithm itself (PPO) has barely changed since. What moved the field is engineering that makes simulation and reality agree closely enough for a policy to transfer: accurate contact simulation, system identification of the real actuators, reset distributions that cover every task stage, and distilling a privileged teacher into an RGB-only student.</span><span class="zh">并行 RL 训练大约在 2022 年就不再是瓶颈，RL 算法本身（PPO）此后也几乎没变。推动这条路线的是让仿真与现实对得足够准、策略能迁移过去的工程：精确的接触仿真、对真实执行器的系统辨识、覆盖任务各阶段的 reset 分布，以及把看得到一切的教师策略蒸馏成只看 RGB 的学生策略。</span></p>
+  </div>
+
+  <h2><span class="en">Sub-tracks</span><span class="zh">细分方向</span></h2>
+  <p class="sub"><span class="en">Maturity on a four-step scale: lab / sim only → real-robot demos → pilot deployments → in production.</span><span class="zh">成熟度四档：实验室 / 仅仿真 → 真机演示 → 小规模试点 → 量产在用。</span></p>
+  <div class="trackgrid">
+    <div class="tcard">
+      <div class="row"><h3><span class="en">Legged locomotion</span><span class="zh">足式运动</span></h3><span class="meter" data-s="4" aria-label="4/4"><i></i><i></i><i></i><i></i></span></div>
+      <span class="st"><span class="en">4 · In production</span><span class="zh">4 · 量产在用</span></span>
+      <p><span class="en">Sim-trained RL controllers run on commercial quadrupeds and humanoids. Note pending.</span><span class="zh">仿真训练的 RL 控制器已经跑在商用四足和人形机器人上。笔记待补。</span></p>
+    </div>
+    <div class="tcard">
+      <div class="row"><h3><span class="en">Contact-rich assembly</span><span class="zh">接触式装配</span></h3><span class="meter" data-s="2" aria-label="2/4"><i></i><i></i><i></i><i></i></span></div>
+      <span class="st"><span class="en">2 · Real-robot demos, near pilot</span><span class="zh">2 · 真机演示，接近试点</span></span>
+      <p><span class="en">Single-step insertion is reliable at fixed stations; multi-step tasks are not. <a href="../notes/sim2real-assembly/">Read the note</a>.</span><span class="zh">固定工位的单步插入已经可靠，多步任务还不行。<a href="../notes/sim2real-assembly/">阅读笔记</a>。</span></p>
+    </div>
+    <div class="tcard">
+      <div class="row"><h3><span class="en">Dexterous in-hand</span><span class="zh">灵巧手在手操作</span></h3><span class="meter" data-s="2" aria-label="2/4"><i></i><i></i><i></i><i></i></span></div>
+      <span class="st"><span class="en">2 · Real-robot demos</span><span class="zh">2 · 真机演示</span></span>
+      <p><span class="en">In-hand reorientation has been shown on real hands; deployment is not in sight. Note pending.</span><span class="zh">在手重定向已有真机演示，落地还看不到。笔记待补。</span></p>
+    </div>
+  </div>
+
+  <h2><span class="en">Timeline: contact-rich assembly</span><span class="zh">时间线：接触式装配</span></h2>
+  <p class="sub"><span class="en">Real-robot numbers are zero-shot. Task difficulty and trial counting differ between papers, so compare the trend, not the digits.</span><span class="zh">真机数字均为零样本。各论文任务难度和计数方式不同，看趋势，不要逐位比较。</span></p>
+  <ol class="tl">
+    <li><span class="y">2022</span><div><div class="t"><b>Factory</b><span class="tag">NVIDIA</span></div>
+      <p><span class="en">Fast SDF-based contact simulation for assembly in Isaac Gym: the simulator step the rest builds on.</span><span class="zh">在 Isaac Gym 里实现快速的 SDF 接触仿真，后面所有工作都建立在这一步上。</span></p></div></li>
+    <li><span class="y">2023</span><div><div class="t"><b>IndustReal</b><span class="tag"><span class="en">State input</span><span class="zh">状态输入</span></span><span class="k">83–99%</span></div>
+      <p><span class="en">First zero-shot RL transfer for millimetre-scale insertion (pegs, gears, plugs; 600 trials). Leans on impedance-control compliance; needs pose estimation; no system identification.</span><span class="zh">首次把毫米级插入的 RL 策略零样本迁移到真机（销、齿轮、插头，600 次试验）。依赖阻抗控制的柔顺性，需要位姿估计，没有系统辨识。</span></p></div></li>
+    <li><span class="y">2024</span><div><div class="t"><b>AutoMate</b><span class="tag"><span class="en">State + geometry</span><span class="zh">状态 + 几何特征</span></span><span class="k"><span class="en">generalist</span><span class="zh">通才</span> 84.5%</span></div>
+      <p><span class="en">Generalizes across 100 two-part assemblies by distilling specialists into one geometry-conditioned policy. Still needs CAD and 6D pose; the plug is placed in the gripper by hand.</span><span class="zh">把专才策略蒸馏成一个以几何为条件的通才，覆盖 100 种两件式装配。仍需 CAD 和 6D 位姿，插件由人放进夹爪。</span></p></div></li>
+    <li><span class="y">2025</span><div><div class="t"><b>PACE</b><span class="tag">SysID</span></div>
+      <p><span class="en">Actuator system identification: run the same chirp trajectory on robot and simulator, fit friction, armature and delay with CMA-ES. Adopted by the 2026 works.</span><span class="zh">执行器系统辨识：真机和仿真跑同一条 chirp 轨迹，用 CMA-ES 拟合摩擦、电枢惯量和延迟。2026 年的工作都沿用了它。</span></p></div></li>
+    <li><span class="y">2026</span><div><div class="t"><b>OmniReset</b><span class="tag rgb"><span class="en">3-view RGB</span><span class="zh">3 视角 RGB</span></span><span class="k">peg 85.4%</span><span class="k"><span class="en">drawer</span><span class="zh">抽屉</span> 15.4%</span></div>
+      <p><span class="en">Policies act from pixels. Diverse reset states let one sparse reward learn long-horizon contact skills, including regrasping. Multi-step tasks remain weak.</span><span class="zh">策略直接看像素。多样化的 reset 状态让单一稀疏奖励学会长程接触技能，包括重新抓取。多步任务仍然偏弱。</span></p></div></li>
+    <li><span class="y">2026</span><div><div class="t"><b>RebarSim</b><span class="tag rgb"><span class="en">8-view RGB</span><span class="zh">8 视角 RGB</span></span><span class="k">91.3%</span></div>
+      <p><span class="en">Takes the recipe to real factory rebar with real fabrication error (137/150 at 1.4 mm clearance). Still assumes the bar is already grasped.</span><span class="zh">把这套配方用到带真实制造误差的工厂钢筋上（1.4 mm 间隙，137/150）。仍假设钢筋已经抓在手里。</span></p></div></li>
+  </ol>
+
+  <h2><span class="en">Four engineering levers</span><span class="zh">四个工程杠杆</span></h2>
+  <p class="sub"><span class="en">What separates 2023 from 2026. The first two act on the action side, the last two on vision.</span><span class="zh">2023 与 2026 的差别就在这里。前两个作用在动作侧，后两个作用在视觉侧。</span></p>
+  <div class="levers">
+    <div class="lever"><div class="n">01</div><h3><span class="en">SDF contact simulation</span><span class="zh">SDF 接触仿真</span></h3>
+      <p><span class="en">Fast, stable contact between detailed meshes, so tight-clearance insertion can be simulated at scale.</span><span class="zh">复杂网格之间快速稳定的接触，让小间隙插入可以大规模仿真。</span></p><div class="w">Factory 2022 →</div></div>
+    <div class="lever"><div class="n">02</div><h3><span class="en">System identification</span><span class="zh">系统辨识</span></h3>
+      <p><span class="en">Measure the real actuators first, then randomize only ±20% around the fitted values instead of guessing wide ranges.</span><span class="zh">先测真实执行器，再只在拟合值附近 ±20% 随机化，而不是凭感觉设很宽的范围。</span></p><div class="w">PACE · OmniReset · RebarSim</div></div>
+    <div class="lever"><div class="n">03</div><h3><span class="en">Reset distributions</span><span class="zh">Reset 分布</span></h3>
+      <p><span class="en">Start episodes from every stage of the task, including half-inserted states, so a single sparse reward is enough.</span><span class="zh">让每个 episode 从任务的各个阶段开始，包括半插入状态，于是一个稀疏奖励就够了。</span></p><div class="w">OmniReset · RebarSim</div></div>
+    <div class="lever"><div class="n">04</div><h3><span class="en">Teacher → RGB student</span><span class="zh">教师 → RGB 学生</span></h3>
+      <p><span class="en">Distil a state-based teacher into an image policy with DAgger and heavy appearance randomization. Without the randomization, RebarSim's sim success falls from 96.1% to 2.8%.</span><span class="zh">用 DAgger 加大量外观随机化，把基于状态的教师蒸馏成图像策略。去掉外观随机化，RebarSim 的仿真成功率从 96.1% 掉到 2.8%。</span></p><div class="w">OmniReset · RebarSim</div></div>
+  </div>
+
+  <h2><span class="en">What can be demoed today</span><span class="zh">今天能演示什么</span></h2>
+  <p class="sub"><span class="en">Contact-rich assembly only. Full evidence and videos are in the note.</span><span class="zh">仅限接触式装配。完整证据和视频见笔记。</span></p>
+  <div class="tiers">
+    <div class="tier ok"><div class="head"><b><span class="en">Reliable</span><span class="zh">可靠</span></b><span class="rate"><span class="en">zero-shot</span><span class="zh">零样本</span> &gt;85%</span></div>
+      <ul><li><span class="en">Single-step insertion with the part already in hand: pegs, gears, connectors, rebar into slots, at 0.5–1.4 mm clearance.</span><span class="zh">零件已在手中的单步插入：销、齿轮、接插件、钢筋入槽，间隙 0.5–1.4 mm。</span></li>
+        <li><span class="en">Backing out and retrying after a collision; moderate lighting and background changes.</span><span class="zh">碰撞后自主退出重试；中等程度的光照和背景变化。</span></li></ul></div>
+    <div class="tier mid"><div class="head"><b><span class="en">Demoable, not usable</span><span class="zh">能演示，不能用</span></b><span class="rate">15–60%</span></div>
+      <ul><li><span class="en">Multi-stage tasks with regrasping or flipping: table-leg screwing 56%, drawer assembly 15%.</span><span class="zh">需要重新抓取或翻转的多阶段任务：桌腿拧装 56%，抽屉组装 15%。</span></li>
+        <li><span class="en">Throughput around 1.5 successes per minute, far from production cycle times.</span><span class="zh">节拍约每分钟 1.5 次成功，离产线节拍很远。</span></li></ul></div>
+    <div class="tier"><div class="head"><b><span class="en">Not shown yet</span><span class="zh">尚未展示</span></b><span class="rate">—</span></div>
+      <ul><li><span class="en">One vision policy that grasps and inserts end to end; multi-part sequences; cables and hoses; force- or tactile-dependent fits; arbitrary viewpoints or a mobile base.</span><span class="zh">一个视觉策略端到端完成抓取加插入；多零件装配序列；线缆和软管；依赖力觉或触觉的配合；任意视角或移动底盘。</span></li></ul></div>
+  </div>
+
+  <h2><span class="en">What to watch</span><span class="zh">接下来看什么</span></h2>
+  <ul class="watch">
+    <li><span class="en"><b>Grasp + insert trained jointly.</b> Every group's failure videos end in in-hand slip, which current SysID does not model.</span><span class="zh"><b>抓取与插入联合训练。</b>各家的失败视频最后都是在手滑移，而现在的系统辨识没有覆盖它。</span></li>
+    <li><span class="en"><b>Closing the distillation gap.</b> In OmniReset the RGB student reaches about 50% in sim against a 90–95% teacher.</span><span class="zh"><b>缩小蒸馏损失。</b>OmniReset 里 RGB 学生在仿真中约 50%，教师是 90–95%。</span></li>
+    <li><span class="en"><b>Toolchains, not algorithms.</b> PPO plus teacher-student is a public recipe; the edge is in SysID pipelines, part generators, reset banks and rendering randomization.</span><span class="zh"><b>工具链而不是算法。</b>PPO 加师生蒸馏已是公开配方，差异在系统辨识流程、零件生成器、reset 库和渲染随机化。</span></li>
+  </ul>
+
+  <h2><span class="en">Elsewhere in the atlas</span><span class="zh">站内相关</span></h2>
+  <div class="xlinks">
+    <a href="../../robot-sim-spectrum/?q=Isaac"><span>Isaac Gym / Sim / Lab</span><small data-en="Simulation" data-zh="仿真">Simulation</small></a>
+    <a href="../../robot-sim-spectrum/?q=MuJoCo"><span>MuJoCo</span><small data-en="Simulation" data-zh="仿真">Simulation</small></a>
+    <a href="../../robot-benchmark-spectrum/"><span>Isaac Lab-Arena</span><small data-en="Benchmarks" data-zh="评测">Benchmarks</small></a>
+    <a href="../../robot-hardware-spectrum/?q=UR7e"><span>UR7e</span><small data-en="Hardware · OmniReset" data-zh="硬件 · OmniReset">Hardware · OmniReset</small></a>
+    <a href="../../robot-hardware-spectrum/?q=Franka%20Research%203"><span>Franka</span><small data-en="Hardware · IndustReal, AutoMate" data-zh="硬件 · IndustReal、AutoMate">Hardware · IndustReal, AutoMate</small></a>
+  </div>
+
+  <h2><span class="en">Notes</span><span class="zh">笔记</span></h2>
+  <div class="notes">
+    <a class="notecard" href="../notes/sim2real-assembly/">
+      <b><span class="en">From IndustReal to RebarSim: where sim-to-real contact-rich assembly stands</span><span class="zh">从 IndustReal 到 RebarSim：Sim2Real 接触式装配这条路走到哪了</span></b>
+      <p><span class="en">Nov 2026 · five papers, real-robot success and failure videos, capability boundaries, outlook for industrial assembly</span><span class="zh">2026.11 · 五篇论文、真机成功与失败视频、能力边界、工业装配落地判断</span></p>
+      <span class="go"><span class="en">Read →</span><span class="zh">阅读 →</span></span>
+    </a>
+  </div>
+
+  <footer class="page"><p><span class="en">Figures on this page come from the linked note and the papers it cites.</span><span class="zh">本页数字来自所链接的笔记及其引用的论文。</span> <a href="../"><span class="en">← All routes</span><span class="zh">← 全部路线</span></a></p></footer>
+</div>
+<script src="../assets/routes.js?v=2"></script>
+</body>
+</html>

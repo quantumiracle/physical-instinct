@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" data-title-en="Robot Tech Routes" data-title-zh="机器人技术路线">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Robot Tech Routes</title>
+<meta name="description" content="Where the main technical routes in robot learning stand: VLM agents, VLA / world-action models, sim-to-real, and skill policies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/routes.css?v=2">
+</head>
+<body>
+<div class="wrap">
+  <div class="sitebar"><a href="../">← Physical Instinct</a>
+    <div class="seg" id="fLang" role="group" aria-label="Language / 语言"><button type="button" data-v="zh" aria-pressed="false">中文</button><button type="button" data-v="en" aria-pressed="true">EN</button></div></div>
+  <nav class="secnav" aria-label="Sections">
+    <a href="../robot-hardware-spectrum/" data-zh="硬件" data-en="Hardware">Hardware</a>
+    <a href="../robot-model-spectrum/" data-zh="模型" data-en="Models">Models</a>
+    <a href="../robot-dataset-spectrum/" data-zh="数据集" data-en="Datasets">Datasets</a>
+    <a href="../robot-funding-tracker/" data-zh="融资" data-en="Funding">Funding</a>
+    <a href="../robot-sim-spectrum/" data-zh="仿真" data-en="Simulation">Simulation</a>
+    <a href="../robot-benchmark-spectrum/" data-zh="评测" data-en="Benchmarks">Benchmarks</a>
+    <a href="./" aria-current="page" data-zh="技术路线" data-en="Tech Routes">Tech Routes</a>
+  </nav>
+
+  <h1><span class="en">Robot Tech Routes</span><span class="zh">机器人技术路线</span></h1>
+  <p class="lede"><span class="en">Four routes to getting robots to do useful work, compared on the same terms: what the model outputs, where its data comes from, how far real-robot evidence goes, and what still blocks deployment. Each route has a page with a timeline, and in-depth notes sit under the route they belong to.</span><span class="zh">让机器人干活的四条主流路线，用同一组维度对比：模型输出什么、数据从哪来、真机证据到哪一步、离落地还差什么。每条路线有自己的页面和时间线，深度笔记挂在所属路线下面。</span></p>
+
+  <div class="scale" aria-label="Maturity scale">
+    <span><b class="en">Maturity</b><b class="zh">成熟度</b></span>
+    <span><span class="meter" data-s="1"><i></i><i></i><i></i><i></i></span><span class="en">1 Lab / sim only</span><span class="zh">1 实验室 / 仅仿真</span></span>
+    <span><span class="meter" data-s="2"><i></i><i></i><i></i><i></i></span><span class="en">2 Real-robot demos</span><span class="zh">2 真机演示</span></span>
+    <span><span class="meter" data-s="3"><i></i><i></i><i></i><i></i></span><span class="en">3 Pilot deployments</span><span class="zh">3 小规模试点</span></span>
+    <span><span class="meter" data-s="4"><i></i><i></i><i></i><i></i></span><span class="en">4 In production</span><span class="zh">4 量产在用</span></span>
+  </div>
+
+  <section class="cards" aria-label="Routes">
+    <article class="card r1 todo">
+      <div><div class="no">Route 01</div>
+        <h3><span class="en">VLM brain &amp; agents</span><span class="zh">VLM 大脑 / Agent</span></h3>
+        <p class="eg"><span class="en">e.g. Astra-style assistants, Claude-driven agents</span><span class="zh">例：Astra 类助手、Claude 驱动的 Agent</span></p></div>
+      <p class="thesis"><span class="en">A general vision-language model understands the scene and the instruction, plans, and calls skills or writes code. It does not emit motor commands itself.</span><span class="zh">通用视觉语言模型负责理解场景和指令、做规划，再调用技能或写代码；它本身不直接输出电机指令。</span></p>
+      <p class="stub"><span class="en">Timeline and notes coming. Maturity not rated yet.</span><span class="zh">时间线和笔记待补，成熟度暂不评级。</span></p>
+      <div class="foot"><span class="pill"><span class="en">Notes: 0</span><span class="zh">笔记：0</span></span><span class="dim"><span class="en">Coming soon</span><span class="zh">即将上线</span></span></div>
+    </article>
+
+    <article class="card r2 todo">
+      <div><div class="no">Route 02</div>
+        <h3><span class="en">VLA &amp; world-action models</span><span class="zh">VLA / WAM</span></h3>
+        <p class="eg"><span class="en">Vision-language-action models; world-action models that predict the future and the action together</span><span class="zh">视觉-语言-动作模型；同时预测未来画面和动作的世界-动作模型</span></p></div>
+      <p class="thesis"><span class="en">One model maps pixels and language straight to actions, trained on large teleoperation datasets on top of web-scale pretraining. WAMs add video or world prediction to the same model.</span><span class="zh">一个模型从图像和语言直接输出动作，在大规模遥操作数据和互联网预训练的基础上训练；WAM 在同一个模型里再加上视频或世界预测。</span></p>
+      <p class="stub"><span class="en">Timeline and notes coming. For individual models see the <a href="../robot-model-spectrum/">Models</a> section.</span><span class="zh">时间线和笔记待补。具体模型见「<a href="../robot-model-spectrum/">模型</a>」板块。</span></p>
+      <div class="foot"><span class="pill"><span class="en">Notes: 0</span><span class="zh">笔记：0</span></span><span class="dim"><span class="en">Coming soon</span><span class="zh">即将上线</span></span></div>
+    </article>
+
+    <article class="card r3">
+      <div><div class="no">Route 03</div>
+        <h3>Sim2Real</h3>
+        <p class="eg"><span class="en">RL in GPU-parallel simulation, zero-shot transfer to the real robot</span><span class="zh">在 GPU 并行仿真里做强化学习，零样本迁移到真机</span></p></div>
+      <p class="thesis"><span class="en">The RL algorithm has barely changed since 2023. Progress came from engineering that aligns sim with reality: contact simulation, system identification, reset distributions and teacher→RGB-student distillation.</span><span class="zh">2023 年以来 RL 算法本身几乎没变，进展来自让仿真对齐现实的工程：接触仿真、系统辨识、reset 分布、教师→RGB 学生蒸馏。</span></p>
+      <div><p class="lbl"><span class="en">Sub-tracks</span><span class="zh">细分方向</span></p>
+        <div class="tracks">
+          <div><span><span class="en">Legged locomotion</span><span class="zh">足式运动</span></span><span><span class="meter" data-s="4"><i></i><i></i><i></i><i></i></span></span></div>
+          <div><span><span class="en">Contact-rich assembly</span><span class="zh">接触式装配</span></span><span><span class="meter" data-s="2"><i></i><i></i><i></i><i></i></span></span></div>
+          <div><span><span class="en">Dexterous in-hand</span><span class="zh">灵巧手在手操作</span></span><span><span class="meter" data-s="2"><i></i><i></i><i></i><i></i></span></span></div>
+        </div></div>
+      <div><p class="lbl"><span class="en">Latest</span><span class="zh">最新进展</span></p>
+        <ul class="ms">
+          <li><span class="y">2026</span><span><span class="en">RebarSim: 91.3% on real factory rebar from 8-view RGB</span><span class="zh">RebarSim：8 视角 RGB，真实工厂钢筋 91.3%</span></span></li>
+          <li><span class="y">2026</span><span><span class="en">OmniReset: RGB policies, peg 85.4%, drawer 15.4%</span><span class="zh">OmniReset：RGB 策略，插销 85.4%，抽屉 15.4%</span></span></li>
+          <li><span class="y">2024</span><span><span class="en">AutoMate: 20 assemblies, generalist 84.5%</span><span class="zh">AutoMate：20 种装配体，通才策略 84.5%</span></span></li>
+        </ul></div>
+      <p class="bn"><b class="en">Bottleneck:</b><b class="zh">瓶颈：</b> <span class="en">grasping and in-hand slip. No vision policy yet does grasp + insert end to end.</span><span class="zh">抓取与在手滑移。还没有视觉策略能端到端完成抓取加插入。</span></p>
+      <div class="foot"><span class="pill live"><span class="en">Notes: 1</span><span class="zh">笔记：1</span></span><a href="sim2real/"><span class="en">Open route →</span><span class="zh">进入路线 →</span></a></div>
+    </article>
+
+    <article class="card r4 todo">
+      <div><div class="no">Route 04</div>
+        <h3><span class="en">Skill policies</span><span class="zh">技能策略</span></h3>
+        <p class="eg"><span class="en">Grasping, pick-and-place and other single skills</span><span class="zh">抓取、pick-place 等单项技能</span></p></div>
+      <p class="thesis"><span class="en">A specialist model per skill, tuned for reliability rather than breadth, usually wrapped in classical planning. Defined by method and goal, not by task: a VLA that also picks things up belongs to Route 02.</span><span class="zh">每个技能一个专用模型，追求可靠性而不是广度，通常外面套经典规划。按方法和定位划分而不是按任务：同样会抓取的 VLA 归第 02 条。</span></p>
+      <p class="stub"><span class="en">Timeline and notes coming. Maturity not rated yet.</span><span class="zh">时间线和笔记待补，成熟度暂不评级。</span></p>
+      <div class="foot"><span class="pill"><span class="en">Notes: 0</span><span class="zh">笔记：0</span></span><span class="dim"><span class="en">Coming soon</span><span class="zh">即将上线</span></span></div>
+    </article>
+  </section>
+
+  <h2><span class="en">Side by side</span><span class="zh">横向对比</span></h2>
+  <p class="sub"><span class="en">The first four rows describe how each route works. The rows below them need evidence and are filled in as each route's notes land.</span><span class="zh">前四行描述各路线的做法；下面几行需要证据支撑，随各路线的笔记补齐。</span></p>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th scope="col"><span class="en">Dimension</span><span class="zh">维度</span></th>
+      <th scope="col"><span class="sw" style="background:var(--r1)"></span><span class="en">VLM brain</span><span class="zh">VLM 大脑</span></th>
+      <th scope="col"><span class="sw" style="background:var(--r2)"></span>VLA / WAM</th>
+      <th scope="col"><span class="sw" style="background:var(--r3)"></span>Sim2Real</th>
+      <th scope="col"><span class="sw" style="background:var(--r4)"></span><span class="en">Skill policies</span><span class="zh">技能策略</span></th></tr></thead>
+    <tbody>
+      <tr><th scope="row"><span class="en">What outputs actions</span><span class="zh">谁输出动作</span></th>
+        <td><span class="en">Skill APIs or generated code; low-level control is a separate controller</span><span class="zh">调用技能 API 或生成代码，底层控制由独立控制器负责</span></td>
+        <td><span class="en">The model itself: action tokens or action chunks</span><span class="zh">模型本身：动作 token 或动作块</span></td>
+        <td><span class="en">An RL policy (state or RGB in, joint or end-effector commands out)</span><span class="zh">RL 策略（输入状态或 RGB，输出关节或末端指令）</span></td>
+        <td><span class="en">A skill model (grasp poses, short action sequences) plus a planner</span><span class="zh">技能模型（抓取位姿、短动作序列）加规划器</span></td></tr>
+      <tr><th scope="row"><span class="en">Main data</span><span class="zh">主要数据</span></th>
+        <td><span class="en">Web-scale vision-language data plus embodied-reasoning data</span><span class="zh">互联网规模视觉语言数据，加具身推理数据</span></td>
+        <td><span class="en">Teleoperation datasets; video for WAMs</span><span class="zh">遥操作数据集；WAM 另加视频</span></td>
+        <td><span class="en">Simulation only, plus real-robot trajectory measurements for system identification</span><span class="zh">只用仿真，外加真机轨迹测量做系统辨识</span></td>
+        <td><span class="en">Task-specific: synthetic grasp sets, small demo sets</span><span class="zh">任务专用：合成抓取数据、小规模示教</span></td></tr>
+      <tr><th scope="row"><span class="en">Generalization comes from</span><span class="zh">泛化来源</span></th>
+        <td><span class="en">World and language knowledge in the VLM</span><span class="zh">VLM 里的世界知识和语言知识</span></td>
+        <td><span class="en">Scale of robot data and pretrained priors</span><span class="zh">机器人数据规模和预训练先验</span></td>
+        <td><span class="en">Randomization over geometry, dynamics and appearance</span><span class="zh">对几何、动力学、外观做随机化</span></td>
+        <td><span class="en">Object coverage within one skill</span><span class="zh">单一技能内的物体覆盖面</span></td></tr>
+      <tr><th scope="row"><span class="en">Typical strength</span><span class="zh">典型长处</span></th>
+        <td><span class="en">Open-ended instructions, long-horizon planning</span><span class="zh">开放指令、长程规划</span></td>
+        <td><span class="en">Many everyday tasks in one model</span><span class="zh">一个模型覆盖大量日常任务</span></td>
+        <td><span class="en">Precise contact, robust recovery behaviour</span><span class="zh">精确接触、稳健的恢复行为</span></td>
+        <td><span class="en">High reliability on a narrow skill</span><span class="zh">单项技能可靠性高</span></td></tr>
+      <tr><th scope="row"><span class="en">Real-robot evidence</span><span class="zh">真机证据</span></th>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td>
+        <td><span class="en">Zero-shot, no real training data: 85–91% single-step insertion; 15–56% multi-step</span><span class="zh">零样本、不用真机训练数据：单步插入 85–91%；多步 15–56%</span></td>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td></tr>
+      <tr><th scope="row"><span class="en">Distance to deployment</span><span class="zh">离落地距离</span></th>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td>
+        <td><span class="en">Locomotion ships; assembly ready for fixed-station product demos</span><span class="zh">运动控制已量产；装配可做固定工位的产品 demo</span></td>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td></tr>
+      <tr><th scope="row"><span class="en">Main bottleneck</span><span class="zh">主要瓶颈</span></th>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td>
+        <td><span class="en">Grasping and in-hand slip; teacher→RGB-student distillation is the largest loss (OmniReset: student ~50% vs teacher 90–95% in sim)</span><span class="zh">抓取与在手滑移；教师→RGB 学生蒸馏损失最大（OmniReset 仿真中学生约 50%，教师 90–95%）</span></td>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td></tr>
+      <tr><th scope="row"><span class="en">Representative work</span><span class="zh">代表工作</span></th>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td>
+        <td>IndustReal, AutoMate, OmniReset, RebarSim</td>
+        <td class="tbd"><span class="en">To fill</span><span class="zh">待补</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <footer class="page">
+    <p><span class="en">How to read this section: maturity is rated per sub-track, because one route can ship in one area and still be a lab result in another (Sim2Real locomotion versus assembly). Figures quoted on cards come from the notes linked under each route, with sources there.</span><span class="zh">阅读说明：成熟度按细分方向评级，因为同一条路线可能在某个方向已经量产、在另一个方向还停在实验室（比如 Sim2Real 的运动控制和装配）。卡片上引用的数字来自各路线下的笔记，出处见笔记。</span></p>
+    <p><span class="en">Source:</span><span class="zh">源码：</span> <a href="https://github.com/quantumiracle/physical-instinct">github.com/quantumiracle/physical-instinct</a></p>
+  </footer>
+</div>
+<script src="assets/routes.js?v=2"></script>
+</body>
+</html>
