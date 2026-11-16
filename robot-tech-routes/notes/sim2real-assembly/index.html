@@ -337,7 +337,7 @@ body{padding-top:24px}
 
   <div class="group-head"><h3>Successes</h3><span>All zero-shot, no real-robot training data</span></div>
   <figure class="vid hero wide" style="margin-top:12px;margin-bottom:14px">
-      <video src="https://rebarsim.github.io/static/videos/hero.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="RebarSim inserting real rebar into slots"></video>
+      <video src="media/rebarsim-hero.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="RebarSim inserting real rebar into slots"></video>
       <div class="cap"><div class="top"><span class="who">RebarSim · 2026</span><span class="tag rgb">8-view RGB</span></div>
       <b>Factory-batch rebar, three slots seated at once</b>
       <p>1.4 mm clearance, with rebar angle and twist pushed to the tolerance limits. Watch for the moments where it hits a slot, backs out and realigns: nothing in the reward asks for that, RL discovered it.</p>
@@ -345,21 +345,21 @@ body{padding-top:24px}
   </figure>
   <div class="vgrid three wide">
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/peg/3_16_peg_eval_highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset peg insertion, real-robot highlights"></video>
+      <video src="media/omnireset-peg-highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset peg insertion, real-robot highlights"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · 2026</span><span class="tag rgb">3-view RGB</span></div>
       <b>Peg insertion</b>
       <p>Picks the peg up from anywhere on the table, then inserts it. High success, but only 22% on the first try: most successes go through a regrasp or reinsertion.</p>
       <span class="stat">Real 85.4% · first try 22.0% · 1.49/min</span></div>
     </figure>
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/leg/3_16_leg_eval_highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset table-leg screwing, real-robot highlights"></video>
+      <video src="media/omnireset-leg-highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset table-leg screwing, real-robot highlights"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · 2026</span><span class="tag rgb">3-view RGB</span></div>
       <b>Table-leg screwing</b>
       <p>Grasp, align with the threaded hole, screw in: a multi-step contact task.</p>
       <span class="stat">Real 56.4% · first try 43.6% · 0.63/min</span></div>
     </figure>
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/drawer/3_16_drawer_eval_highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset drawer assembly, real-robot highlights"></video>
+      <video src="media/omnireset-drawer-highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset drawer assembly, real-robot highlights"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · 2026</span><span class="tag rgb">3-view RGB</span></div>
       <b>Drawer assembly</b>
       <p>Needs flipping and precise alignment; the table has a fixture and a mat. The hardest of the four tasks.</p>
@@ -368,8 +368,8 @@ body{padding-top:24px}
   </div>
 
   <figure class="vid wide" style="margin-bottom:8px">
-    <img class="strip" src="https://bingjietang718.github.io/automate/static/images/real_20.gif" width="1080" height="254" alt="AutoMate executing 20 assemblies on the real robot" loading="lazy">
-    <img class="strip" src="https://bingjietang718.github.io/automate/static/images/sim_20.gif" width="1080" height="254" alt="AutoMate executing 20 assemblies in simulation" loading="lazy">
+    <img class="strip" src="media/automate-real-20.gif" width="1080" height="254" alt="AutoMate executing 20 assemblies on the real robot" loading="lazy">
+    <img class="strip" src="media/automate-sim-20.gif" width="1080" height="254" alt="AutoMate executing 20 assemblies in simulation" loading="lazy">
     <div class="cap"><div class="top"><span class="who">AutoMate · 2024</span><span class="tag">State + geometry features</span></div>
     <b>20 assemblies: real on top, sim below</b>
     <p>The same assemblies side by side in sim and real. Parts are precise 3D prints, poses come from FoundationPose, and the plug is placed in the gripper beforehand. Contrast with RebarSim, whose parts are themselves imprecise and which does no pose estimation.</p>
@@ -380,19 +380,19 @@ body{padding-top:24px}
   <div class="group-head"><h3>Failures</h3><span>Where the sim-to-real gap shows</span></div>
   <div class="vgrid wide">
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/peg/3_16_peg_failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset peg failure cases"></video>
+      <video src="media/omnireset-peg-failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset peg failure cases"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · Peg</span><span class="tag rgb">RGB</span></div>
       <b>Peg failures</b>
       <p>The paper notes that contact strategies that rotate the part against the hole, and strategies that set the part down to regrasp, both transfer poorly to the real robot.</p></div>
     </figure>
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/leg/3_16_leg_failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset table-leg failure cases"></video>
+      <video src="media/omnireset-leg-failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset table-leg failure cases"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · Table leg</span><span class="tag rgb">RGB</span></div>
       <b>Table-leg screwing failures</b>
       <p>Watch alongside the success highlights above.</p></div>
     </figure>
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/drawer/3_16_drawer_failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset drawer failure cases"></video>
+      <video src="media/omnireset-drawer-failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset drawer failure cases"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · Drawer</span><span class="tag rgb">RGB</span></div>
       <b>Drawer assembly failures</b>
       <p>Flipping is sensitive to residual control error.</p></div>
@@ -495,13 +495,13 @@ body{padding-top:24px}
 
   <div class="vgrid two wide">
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/reset_videos/ObjectPartiallyAssembledEEGrasped_speedup.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="OmniReset partially inserted reset states"></video>
+      <video src="media/omnireset-reset-partially-inserted.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="OmniReset partially inserted reset states"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · Sim</span></div>
       <b>Reset: part in hand, partly inserted</b>
       <p>The start states for the “partly inserted” column above: each episode begins from a different half-inserted pose.</p></div>
     </figure>
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/RL+Training/64envs_leg.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="OmniReset training in 64 parallel environments"></video>
+      <video src="media/omnireset-64envs.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="OmniReset training in 64 parallel environments"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · Sim</span></div>
       <b>64 parallel envs (training uses tens of thousands)</b>
       <p>At any moment the environments are at different stages of the task. This is what reset diversity looks like.</p></div>
@@ -626,7 +626,7 @@ body{padding-top:24px}
   </figure>
 
   <figure class="vid" style="max-width:520px">
-    <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/sim_distillation_videos/policy_cameras_leg_cut.mp4" width="672" height="224" muted loop playsinline controls preload="metadata" aria-label="Camera views seen by the OmniReset student during distillation"></video>
+    <video src="media/omnireset-student-cameras.mp4" width="672" height="224" muted loop playsinline controls preload="metadata" aria-label="Camera views seen by the OmniReset student during distillation"></video>
     <div class="cap"><div class="top"><span class="who">OmniReset · Sim</span></div>
     <b>What the student sees during training</b>
     <p>Multi-view input for the same task under varied lighting, textures and camera perturbations. RebarSim randomizes the same way, with the views switched to 8 slot close-ups plus a global view.</p></div>
@@ -894,7 +894,7 @@ body{padding-top:24px}
 
   <div class="group-head"><h3>成功演示</h3><span>同为零样本、无真机训练数据</span></div>
   <figure class="vid hero wide" style="margin-top:12px;margin-bottom:14px">
-      <video src="https://rebarsim.github.io/static/videos/hero.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="RebarSim 真实钢筋入槽演示"></video>
+      <video src="media/rebarsim-hero.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="RebarSim 真实钢筋入槽演示"></video>
       <div class="cap"><div class="top"><span class="who">RebarSim · 2026</span><span class="tag rgb">8 视角 RGB</span></div>
       <b>工厂批次钢筋，三槽同时入位</b>
       <p>间隙 1.4 mm，钢筋角度和扭转都顶到公差上限。留意撞槽后退出、重新对准的片段：奖励里没有这一项，是 RL 自己学出来的。</p>
@@ -902,21 +902,21 @@ body{padding-top:24px}
   </figure>
   <div class="vgrid three wide">
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/peg/3_16_peg_eval_highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset Peg 插入真机精选"></video>
+      <video src="media/omnireset-peg-highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset Peg 插入真机精选"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · 2026</span><span class="tag rgb">3 视角 RGB</span></div>
       <b>Peg 插入</b>
       <p>从桌面任意位置抓起再插入。成功率高，但首次成功只有 22%：多数成功要经过重抓或重插。</p>
       <span class="stat">真机 85.4% · 首次 22.0% · 1.49 次/分钟</span></div>
     </figure>
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/leg/3_16_leg_eval_highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset 桌腿拧装真机精选"></video>
+      <video src="media/omnireset-leg-highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset 桌腿拧装真机精选"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · 2026</span><span class="tag rgb">3 视角 RGB</span></div>
       <b>桌腿拧装</b>
       <p>抓起、对准螺孔、旋拧，多步接触任务。</p>
       <span class="stat">真机 56.4% · 首次 43.6% · 0.63 次/分钟</span></div>
     </figure>
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/drawer/3_16_drawer_eval_highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset 抽屉组装真机精选"></video>
+      <video src="media/omnireset-drawer-highlights.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset 抽屉组装真机精选"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · 2026</span><span class="tag rgb">3 视角 RGB</span></div>
       <b>抽屉组装</b>
       <p>需要翻转和精确对位，桌面加了治具和垫子。四个任务里最难的一项。</p>
@@ -925,8 +925,8 @@ body{padding-top:24px}
   </div>
 
   <figure class="vid wide" style="margin-bottom:8px">
-    <img class="strip" src="https://bingjietang718.github.io/automate/static/images/real_20.gif" width="1080" height="254" alt="AutoMate 20 种装配体真机执行" loading="lazy">
-    <img class="strip" src="https://bingjietang718.github.io/automate/static/images/sim_20.gif" width="1080" height="254" alt="AutoMate 20 种装配体仿真执行" loading="lazy">
+    <img class="strip" src="media/automate-real-20.gif" width="1080" height="254" alt="AutoMate 20 种装配体真机执行" loading="lazy">
+    <img class="strip" src="media/automate-sim-20.gif" width="1080" height="254" alt="AutoMate 20 种装配体仿真执行" loading="lazy">
     <div class="cap"><div class="top"><span class="who">AutoMate · 2024</span><span class="tag">状态 + 几何特征</span></div>
     <b>20 种装配体：上排真机，下排仿真</b>
     <p>同一套装配体的 sim 与 real 并排。零件是精确 3D 打印件，位姿由 FoundationPose 估计，插头事先放在夹爪里。和 RebarSim 对比：后者的零件本身就不精确，也不做位姿估计。</p>
@@ -937,19 +937,19 @@ body{padding-top:24px}
   <div class="group-head"><h3>失败案例</h3><span>sim2real gap 暴露在哪</span></div>
   <div class="vgrid wide">
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/peg/3_16_peg_failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset Peg 失败案例"></video>
+      <video src="media/omnireset-peg-failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset Peg 失败案例"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · Peg</span><span class="tag rgb">RGB</span></div>
       <b>Peg 失败集锦</b>
       <p>论文指出：贴着孔转动零件的接触策略、以及放下再重抓的策略，真机迁移都比较差。</p></div>
     </figure>
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/leg/3_16_leg_failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset 桌腿失败案例"></video>
+      <video src="media/omnireset-leg-failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset 桌腿失败案例"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · 桌腿</span><span class="tag rgb">RGB</span></div>
       <b>桌腿拧装失败集锦</b>
       <p>和上面的成功精选对照着看。</p></div>
     </figure>
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/real_eval_videos/drawer/3_16_drawer_failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset 抽屉失败案例"></video>
+      <video src="media/omnireset-drawer-failures.mp4" width="1280" height="576" muted loop playsinline controls preload="metadata" aria-label="OmniReset 抽屉失败案例"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · 抽屉</span><span class="tag rgb">RGB</span></div>
       <b>抽屉组装失败集锦</b>
       <p>翻转对残余控制误差很敏感。</p></div>
@@ -1053,13 +1053,13 @@ body{padding-top:24px}
 
   <div class="vgrid two wide">
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/reset_videos/ObjectPartiallyAssembledEEGrasped_speedup.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="OmniReset 部分插入 reset 状态"></video>
+      <video src="media/omnireset-reset-partially-inserted.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="OmniReset 部分插入 reset 状态"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · 仿真</span></div>
       <b>Reset：零件已在手中、部分装入</b>
       <p>对应上图“部分插入”一列的起点：每个 episode 从不同的半插入姿态开始。</p></div>
     </figure>
     <figure class="vid">
-      <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/RL+Training/64envs_leg.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="OmniReset 64 个并行环境训练"></video>
+      <video src="media/omnireset-64envs.mp4" width="1280" height="720" muted loop playsinline controls preload="metadata" aria-label="OmniReset 64 个并行环境训练"></video>
       <div class="cap"><div class="top"><span class="who">OmniReset · 仿真</span></div>
       <b>64 个并行环境（实际训练用数万个）</b>
       <p>同一时刻各环境处于任务的不同阶段，这就是 reset 多样性的样子。</p></div>
@@ -1184,7 +1184,7 @@ body{padding-top:24px}
   </figure>
 
   <figure class="vid" style="max-width:520px">
-    <video src="https://omnireset-website.s3.us-west-004.backblazeb2.com/sim_distillation_videos/policy_cameras_leg_cut.mp4" width="672" height="224" muted loop playsinline controls preload="metadata" aria-label="OmniReset 蒸馏时学生策略的相机画面"></video>
+    <video src="media/omnireset-student-cameras.mp4" width="672" height="224" muted loop playsinline controls preload="metadata" aria-label="OmniReset 蒸馏时学生策略的相机画面"></video>
     <div class="cap"><div class="top"><span class="who">OmniReset · 仿真</span></div>
     <b>student 训练时看到的画面</b>
     <p>同一任务在不同光照、纹理、相机扰动下的多视角输入。RebarSim 的随机化思路相同，视角换成 8 个槽位特写和全局视图。</p></div>
