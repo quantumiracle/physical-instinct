@@ -67,7 +67,7 @@ footer{margin-top:56px;color:var(--faint);font-size:12px;display:flex;justify-co
 footer a{color:var(--dim);text-decoration:none} footer a:hover{color:var(--hot)}
 .hide{visibility:hidden}
 /* humanoid body map */
-.bp{margin:26px 0 0;border:1px solid var(--faint);background:rgba(5,12,8,.72);backdrop-filter:blur(2px)}
+.bp{margin:26px 0 0;border:1px solid var(--faint);background:rgba(5,12,8,.9)}
 .bp .hd{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid var(--faint);color:var(--dim);font-size:12px;flex-wrap:wrap}
 .bp-ctl{display:flex;align-items:center;gap:12px}
 .bp-lang{display:inline-flex;border:1px solid var(--faint)}
@@ -270,6 +270,6 @@ const draw=t=>{requestAnimationFrame(draw);if(t-last<55)return;last=t;
 requestAnimationFrame(draw);
 })();
 </script>
-<script src="body-map.js?v=2"></script>
+<script src="body-map.js?v=3"></script>
 </body>
 </html>

@@ -69,7 +69,7 @@ function limb(p,q,r1,r2,m,n=12,ribs=6){const d=sub(q,p),A=circle(p,d,r1,n),B=cir
   for(let k=0;k<ribs;k++){const i=Math.round(k*n/ribs)%n;seg(A[i],B[i],m)}}
 function ellipsoid(c,rx,ry,rz,m,lat,lon,wob=0){
   for(let i=1;i<lat;i++){const ph=-Math.PI/2+i/lat*Math.PI,ring=[];
-    for(let j=0;j<32;j++){const th=j/32*2*Math.PI,w=1+wob*Math.sin(th*7+i*2.1);
+    for(let j=0;j<24;j++){const th=j/24*2*Math.PI,w=1+wob*Math.sin(th*7+i*2.1);
       ring.push([c[0]+rx*Math.cos(ph)*Math.cos(th)*w,c[1]+ry*Math.sin(ph),c[2]+rz*Math.cos(ph)*Math.sin(th)*w])}
     poly(ring,m,1)}
   for(let j=0;j<lon;j++){const th=j/lon*2*Math.PI,mer=[];
@@ -166,27 +166,36 @@ function layout(){
     m.lp=wide?[m.side==="L"?b.offsetLeft+b.offsetWidth+4:b.offsetLeft-4,m.ly*H]:null});
 }
 const D=4.2,CY=.875;
-function P(p,yw=yaw){let x=p[0],y=p[1]-CY,z=p[2];const c=Math.cos(yw),s=Math.sin(yw);
-  let X=x*c+z*s,Z=-x*s+z*c;const cp=Math.cos(pitch),sp=Math.sin(pitch);let Y=y*cp-Z*sp;Z=y*sp+Z*cp;
-  const k=D/(D-Z);return [L.ox+X*k*L.sc,L.oy-Y*k*L.sc,Z]}
+// projector with the rotation precomputed once per frame
+function proj(yw){const c=Math.cos(yw),s=Math.sin(yw),cp=Math.cos(pitch),sp=Math.sin(pitch),ox=L.ox,oy=L.oy,sc=L.sc;
+  return p=>{const x=p[0],y=p[1]-CY,z=p[2],X=x*c+z*s,Z0=-x*s+z*c,Y=y*cp-Z0*sp,Z=y*sp+Z0*cp,k=D/(D-Z)*sc;return [ox+X*k,oy-Y*k,Z]}}
+let P=proj(0);
 const toInset=(q,hc,z)=>[L.ic[0]+(q[0]-hc[0])*z,L.ic[1]+(q[1]-hc[1])*z,q[2]];
-function lineCol(m){
-  if(m==="brain")return [COL.brain,1];if(m==="cere")return [COL.cere,1];
-  if(m===sel)return [COL.body,1];return [null,0]}
-function strokeSegs(list,map,hot){
-  for(const [a,b,m] of list){const A=map(a),B=map(b),[c,on]=lineCol(m),zf=Math.max(0,Math.min(1,((A[2]+B[2])/2+.25)/.5));
-    if(!!on!==hot)continue;
-    cx.strokeStyle=on?c:`rgb(${BASE})`;cx.globalAlpha=on?(.45+.55*zf):(.1+.32*zf)*(m==="shell"?.8:1);
-    cx.lineWidth=on?1.3:1;cx.beginPath();cx.moveTo(A[0],A[1]);cx.lineTo(B[0],B[1]);cx.stroke()}
+const lineCol=m=>m==="brain"?COL.brain:m==="cere"?COL.cere:m===sel?COL.body:null;
+// one path per (colour, depth band) instead of one stroke per segment
+const NB=4,BUCKET=new Map();
+function strokeSegs(list,map){
+  BUCKET.forEach(a=>a.length=0);
+  for(const [a,b,m] of list){const A=map(a),B=map(b),c=lineCol(m)||"base",
+    zf=Math.max(0,Math.min(.999,((A[2]+B[2])/2+.25)/.5)),key=c+"|"+((zf*NB)|0);
+    let arr=BUCKET.get(key);if(!arr)BUCKET.set(key,arr=[]);arr.push(A[0],A[1],B[0],B[1])}
+  const path=arr=>{cx.beginPath();for(let i=0;i<arr.length;i+=4){cx.moveTo(arr[i],arr[i+1]);cx.lineTo(arr[i+2],arr[i+3])}};
+  // base lines first, highlighted lines on top with a cheap two-pass glow
+  for(const hot of[false,true])BUCKET.forEach((arr,key)=>{if(!arr.length)return;const [c,bk]=key.split("|"),zf=(+bk+.5)/NB,on=c!=="base";
+    if(on!==hot)return;path(arr);
+    if(on){cx.strokeStyle=c;cx.globalAlpha=.16*(.45+.55*zf);cx.lineWidth=4;cx.stroke();cx.globalAlpha=.45+.55*zf;cx.lineWidth=1.3}
+    else{cx.strokeStyle=`rgb(${BASE})`;cx.globalAlpha=.1+.32*zf;cx.lineWidth=1}
+    cx.stroke()});
   cx.globalAlpha=1}
+const HS=S.filter(s=>HEAD.has(s[2]));
 let anchors=[];
 function draw(){
   if(!W)return;cx.clearRect(0,0,W,H);
   yaw=yawOff+(reduce?-.35:-.35+.5*Math.sin(tNow*.00025));
   // body
-  strokeSegs(S,P,false);cx.save();cx.shadowBlur=8;cx.shadowColor="rgba(57,255,136,.6)";strokeSegs(S,P,true);cx.restore();
+  P=proj(yaw);strokeSegs(S,P);
   // inset: zoomed head
-  const hc=P(HC),hcR=P([HC[0],HC[1]+HR,HC[2]]),yi=yaw-1.05,hci=P(HC,yi),zoom=L.ir*.78/Math.max(4,Math.abs(hc[1]-hcR[1]));
+  const hc=P(HC),hcR=P([HC[0],HC[1]+HR,HC[2]]),Pi=proj(yaw-1.05),hci=Pi(HC),zoom=L.ir*.78/Math.max(4,Math.abs(hc[1]-hcR[1]));
   const [ix,iy]=L.ic,ir=L.ir;
   cx.save();cx.strokeStyle="rgba(200,255,216,.28)";cx.setLineDash([3,4]);cx.lineWidth=1;
   cx.beginPath();cx.arc(hc[0],hc[1],Math.abs(hc[1]-hcR[1])*1.15,0,7);cx.stroke();
@@ -194,8 +203,8 @@ function draw(){
   cx.beginPath();cx.moveTo(hc[0]+hr*Math.cos(ang),hc[1]+hr*Math.sin(ang));cx.lineTo(ix-ir*Math.cos(ang),iy-ir*Math.sin(ang));cx.stroke();cx.restore();
   cx.save();cx.fillStyle="rgba(5,10,7,.88)";cx.beginPath();cx.arc(ix,iy,ir,0,7);cx.fill();
   cx.strokeStyle="rgba(200,255,216,.35)";cx.lineWidth=1;cx.stroke();cx.clip();
-  const hs=S.filter(s=>HEAD.has(s[2])),im=p=>toInset(P(p,yi),hci,zoom);
-  strokeSegs(hs,im,false);cx.shadowBlur=6;cx.shadowColor="rgba(255,61,242,.5)";strokeSegs(hs,im,true);cx.restore();
+  const im=p=>toInset(Pi(p),hci,zoom);
+  strokeSegs(HS,im);cx.restore();
   cx.fillStyle="rgba(200,255,216,.45)";cx.font="10px JetBrains Mono, monospace";cx.textAlign="center";
   cx.fillText(lang==="zh"?"细节 A · 头部侧视":"DETAIL A · HEAD, SIDE",ix,iy+ir+13);
   // anchors + leaders
@@ -218,7 +227,8 @@ cv.addEventListener("pointerup",end);cv.addEventListener("pointercancel",()=>{dr
 function hit(x,y){let best=null,bd=wide?16:20;for(const [id,p] of anchors){const d=Math.hypot(p[0]-x,p[1]-y);if(d<bd){bd=d;best=id}}return best}
 
 let vis=false,raf=0;
-const loop=t=>{raf=0;if(!vis)return;tNow=t-t0;draw();if(!reduce)raf=requestAnimationFrame(loop)};
+let last=0;// cap at ~30 fps; the rotation is slow so more frames add nothing
+const loop=t=>{raf=0;if(!vis)return;if(t-last>=32){last=t;tNow=t-t0;draw()}if(!reduce)raf=requestAnimationFrame(loop)};
 new IntersectionObserver(es=>{vis=es[0].isIntersecting;if(vis&&!raf)raf=requestAnimationFrame(loop)}).observe(stage);
 new ResizeObserver(()=>{layout();draw()}).observe(stage);
 render();
