@@ -144,6 +144,14 @@ footer a{color:var(--dim);text-decoration:none} footer a:hover{color:var(--hot)}
 
   <ul class="log" id="log" aria-live="off"></ul>
 
+  <section class="bp hide" id="bp" aria-label="Humanoid body map">
+    <div class="hd"><span>~/body $ ./schematic --humanoid --3d</span><span class="bp-ctl"><span class="bp-hint"></span><span class="bp-lang" role="group" aria-label="Language"><button data-v="en">EN</button><button data-v="zh">中</button></span></span></div>
+    <div class="bp-stage" id="bpStage"><canvas id="bpCv" aria-label="3D line drawing of the Unitree G1 humanoid. Pick a module below."></canvas><div id="bpLabels"></div><p class="bp-msg" id="bpMsg">loading model…</p><p class="bp-src">model: <a href="https://github.com/unitreerobotics/unitree_ros/tree/master/robots/g1_description">Unitree G1 URDF</a> (BSD-3), simplified</p></div>
+    <div class="bp-stack" id="bpStack"></div>
+    <div class="bp-chips" id="bpChips" role="group" aria-label="Modules"></div>
+    <div class="bp-panel" id="bpPanel" aria-live="polite"></div>
+  </section>
+
   <section class="ls hide" id="ls" aria-label="Projects">
     <div class="hd"><span>~/projects $ ls -l</span><span>total 7</span></div>
     <a class="entry" href="robot-hardware-spectrum/" style="--ic:#39ff88">
@@ -204,13 +212,6 @@ footer a{color:var(--dim);text-decoration:none} footer a:hover{color:var(--hot)}
     </div>
   </section>
 
-  <section class="bp hide" id="bp" aria-label="Humanoid body map">
-    <div class="hd"><span>~/body $ ./schematic --humanoid --3d</span><span class="bp-ctl"><span class="bp-hint"></span><span class="bp-lang" role="group" aria-label="Language"><button data-v="en">EN</button><button data-v="zh">中</button></span></span></div>
-    <div class="bp-stage" id="bpStage"><canvas id="bpCv" aria-label="3D line drawing of the Unitree G1 humanoid. Pick a module below."></canvas><div id="bpLabels"></div><p class="bp-msg" id="bpMsg">loading model…</p><p class="bp-src">model: <a href="https://github.com/unitreerobotics/unitree_ros/tree/master/robots/g1_description">Unitree G1 URDF</a> (BSD-3), simplified</p></div>
-    <div class="bp-stack" id="bpStack"></div>
-    <div class="bp-chips" id="bpChips" role="group" aria-label="Modules"></div>
-    <div class="bp-panel" id="bpPanel" aria-live="polite"></div>
-  </section>
 
   <div class="cmd hide" id="cmd"><span class="prompt">pi@instinct<i>:</i>~<i>$</i></span> <span id="typed"></span><span class="cur"></span></div>
 
