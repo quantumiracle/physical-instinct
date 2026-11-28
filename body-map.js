@@ -4,7 +4,7 @@
 // To link a module or a method to a page, add an href to its entry in MODULES below (paths are relative to the home page).
 (()=>{
 const MODULES=[
-  {id:"brain",n:"01",en:"Brain",zh:"大脑",layer:"brain",hz:"~1–10 Hz",a:null,inset:1,side:"R",
+  {id:"brain",n:"01",en:"Brain",zh:"大脑",layer:"brain",hz:"~0.1–10 Hz",a:null,inset:1,side:"R",
     role:{en:"Slow, deliberate loop. Reads the scene and the instruction, breaks the task into steps and decides what to do next.",
           zh:"慢回路，负责理解与决策：看懂场景和指令，把任务拆成步骤，决定下一步做什么。"},
     methods:[{en:"VLM reasoning & task planning",zh:"VLM 推理与任务规划"},
@@ -13,7 +13,7 @@ const MODULES=[
     train:{en:"Web-scale VLM pretraining → co-training on robot data (teleop, UMI, egocentric video) → post-training with RL or human feedback.",
            zh:"互联网规模 VLM 预训练 → 机器人数据联合训练（遥操作、UMI、第一视角视频）→ RL 或人类反馈后训练。"},
     links:[{en:"Tech Routes",zh:"技术路线",href:"robot-tech-routes/"},{en:"Models",zh:"模型",href:"robot-model-spectrum/"},{en:"Datasets",zh:"数据集",href:"robot-dataset-spectrum/"}]},
-  {id:"cere",n:"02",en:"Cerebellum",zh:"小脑",layer:"cere",hz:"~50–1000 Hz",a:null,inset:1,side:"R",
+  {id:"cere",n:"02",en:"Cerebellum",zh:"小脑",layer:"cere",hz:"~10–100 Hz",a:null,inset:1,side:"R",
     role:{en:"Fast, reflexive loop. Turns intent from the brain into stable whole-body motion: keeps balance, coordinates limbs, absorbs contact.",
           zh:"快回路，负责运动与平衡：把大脑的意图变成稳定的全身动作，保持平衡、协调四肢、吸收接触冲击。"},
     methods:[{en:"Whole-body control (WBC) & MPC",zh:"全身控制 (WBC) 与 MPC"},
@@ -42,7 +42,7 @@ const MODULES=[
           zh:"抓取与操作。从 1 自由度夹爪到 20+ 自由度灵巧手，越来越多配触觉皮肤。"},
     methods:[{en:"Grasping & pick-and-place policies",zh:"抓取与 pick-and-place 策略"},{en:"Dexterous in-hand RL",zh:"灵巧手在手操作 RL"},{en:"Tactile sensing & slip control",zh:"触觉感知与滑移控制"}],
     links:[{en:"Hardware · hands",zh:"硬件 · 灵巧手",href:"robot-hardware-spectrum/?q=hand"},{en:"Tech Routes",zh:"技术路线",href:"robot-tech-routes/"}]},
-  {id:"act",n:"07",en:"Joint actuators",zh:"关节执行器",layer:"body",hz:"torque loop ~1–10 kHz",a:[.116,.659,0],side:"R",
+  {id:"act",n:"07",en:"Joint actuators",zh:"关节执行器",layer:"body",hz:"~100 Hz–1 kHz",a:[.116,.659,0],side:"R",
     role:{en:"Motor, gearbox and driver at each joint: quasi-direct-drive, planetary, harmonic or linear. Torque density and backdrivability set what the controllers above can do.",
           zh:"每个关节的电机、减速器和驱动器：准直驱、行星、谐波或直线。扭矩密度和反驱性决定了上层控制能做到什么。"},
     methods:[{en:"Torque / current control",zh:"力矩/电流控制"},{en:"Actuator modeling & system ID",zh:"执行器建模与系统辨识"},{en:"Joint-level PD tracking",zh:"关节级 PD 跟踪"}],
