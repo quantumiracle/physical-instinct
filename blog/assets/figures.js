@@ -153,6 +153,9 @@ fleet:{T:9,height:w=>w<480?w*.95:Math.min(w*.5,360),draw(x,w,h,t){
 }}
 };
 
+// exposed so the figures can be rendered off screen (e.g. exported as GIFs)
+window.PIFigures={FIGS,colors:C,ease,seg};
+
 // ---------- runner ----------
 const figs=[...document.querySelectorAll("canvas.fig")].map(cv=>({cv,x:cv.getContext("2d"),f:FIGS[cv.dataset.fig],t0:0,vis:false,w:0,h:0})).filter(o=>o.f);
 function size(o){const w=o.cv.parentElement.clientWidth,h=Math.round(o.f.height(w)),d=Math.min(devicePixelRatio||1,2);
