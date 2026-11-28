@@ -1,7 +1,7 @@
 /* Blog: long-form essays. Same steel paper as Tech Routes; serif body for reading. */
 :root{
   --bg:#f3f5f6; --panel:#ffffff; --ink:#15212b; --muted:#5b6973; --line:#d9e0e4; --chip:#e8edf0;
-  --accent:#b5532a;
+  --accent:#b5532a; --good:#0b7a8a;
   --display:"Archivo","Noto Sans SC",system-ui,sans-serif;
   --serif:"Source Serif 4",Georgia,"Noto Serif SC",serif;
   --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
@@ -9,10 +9,10 @@
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0f1519; --panel:#161e24; --ink:#e6ecef; --muted:#93a1aa; --line:#27333b; --chip:#212c33;
-  --accent:#e0835a; color-scheme:dark}}
+  --accent:#e0835a; --good:#4fc0cf; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0f1519; --panel:#161e24; --ink:#e6ecef; --muted:#93a1aa; --line:#27333b; --chip:#212c33;
-  --accent:#e0835a; color-scheme:dark}
+  --accent:#e0835a; --good:#4fc0cf; color-scheme:dark}
 *{box-sizing:border-box}
 html{background:var(--bg)}
 body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 var(--serif);
@@ -55,6 +55,10 @@ article ul{margin:0 0 18px;padding-left:22px}
 article li{margin:4px 0}
 blockquote{margin:26px 0;padding:4px 0 4px 20px;border-left:3px solid var(--accent);font-size:21px;line-height:1.5;font-style:italic}
 blockquote p{margin:0}
+.fig-wrap{margin:30px 0 34px}
+.fig-wrap canvas{display:block;width:100%;border:1px solid var(--line);border-radius:10px;background:var(--bg)}
+.fig-wrap figcaption{margin-top:10px;font:500 12px/1.55 var(--mono);color:var(--muted)}
+.fig-wrap figcaption b{color:var(--ink);font-weight:500}
 .close{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font:500 12px var(--mono);color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .close a{color:var(--muted);text-decoration:none}.close a:hover{color:var(--accent)}
 
