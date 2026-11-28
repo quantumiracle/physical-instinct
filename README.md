@@ -12,7 +12,8 @@
 | [机器人融资追踪 Robotics Funding Tracker](https://quantumiracle.github.io/physical-instinct/robot-funding-tracker/) | 2023–2026 年具身智能公司的融资、上市和并购，320 条 | [funding.json](robot-funding-tracker/data/funding.json) |
 | [机器人仿真图谱 Robot Simulation Spectrum](https://quantumiracle.github.io/physical-instinct/robot-sim-spectrum/) | 物理引擎、仿真与学习平台、世界模型仿真和资产库，57 个 | [sims.json](robot-sim-spectrum/data/sims.json) |
 | [机器人评测图谱 Robot Benchmark Spectrum](https://quantumiracle.github.io/physical-instinct/robot-benchmark-spectrum/) | 操作、导航、人形、灵巧手、具身推理和真机评测基准，61 个 | [benchmarks.json](robot-benchmark-spectrum/data/benchmarks.json) |
-| [机器人技术路线 Robot Tech Routes](https://quantumiracle.github.io/physical-instinct/robot-tech-routes/) | VLM 大脑、VLA/WAM、Sim2Real、技能策略四条路线的对比、时间线和深度笔记（首篇：[Sim2Real 装配](robot-tech-routes/notes/sim2real-assembly/)） | — |
+| [机器人技术路线 Robot Tech Routes](https://quantumiracle.github.io/physical-instinct/robot-tech-routes/) | VLM 大脑、VLA/WAM、Sim2Real、技能策略四条路线的对比、时间线和深度笔记（首篇：[Sim2Real 装配](robot-tech-routes/sim2real/)） | — |
+| [博客 Blog](https://quantumiracle.github.io/physical-instinct/blog/) | 长文观点；首篇：The Road to General-Purpose Robotics Is Not General-Purpose（Ethan Ding） | — |
 
 所有页面支持中英文切换，数据截至 2026 年 11 月 8 日，每条记录都附来源链接。
 
